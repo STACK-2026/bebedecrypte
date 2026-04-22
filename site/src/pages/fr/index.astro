@@ -2,24 +2,20 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HomePage from "../../components/sections/HomePage.astro";
 import { siteConfig } from "../../../site.config";
-import { jsonLdHomepage, jsonLdFaq } from "../../utils/seo";
+import { jsonLdFaq } from "../../utils/seo";
 
-const title = "BébéDécrypte , On décrypte ce que les étiquettes cachent";
+// Homepage FR : BaseLayout already injects Organization + WebSite schemas.
+// We only add the FAQ schema here to avoid duplicate JSON-LD blocks.
+const title = "BébéDécrypte , décodeur indépendant d'alimentation bébé (note A à E)";
 const description =
-  "BébéDécrypte note chaque aliment et complément de A à E. Additifs, ultra-transformation, allégations trompeuses, Nutri-Score, NOVA. Indépendant, gratuit, sources ANSES + EFSA + Open Food Facts.";
+  "BébéDécrypte note chaque petit pot, lait infantile, céréale et gourde bébé vendu en France de A à E sur 8 axes. Additifs, sucres cachés, ultra-transformation, bio, allergènes. Indépendant, gratuit, sources ANSES, EFSA, Open Food Facts.";
 
 const faq = siteConfig.faq.map((item) => ({
   question: item.question,
   answer: item.answer,
 }));
 
-const jsonLd = [
-  ...(() => {
-    const h = jsonLdHomepage();
-    return Array.isArray(h) ? h : [h];
-  })(),
-  jsonLdFaq(faq),
-];
+const jsonLd = [jsonLdFaq(faq)];
 ---
 
 <BaseLayout title={title} description={description} jsonLd={jsonLd}>

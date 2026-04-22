@@ -13,9 +13,12 @@ export function organizationSchema() {
     url: SITE,
     logo: `${SITE}/favicon.svg`,
     description:
-      "Independent European nutrition decoder. Grades every food and supplement A to E using Open Food Facts, Nutri-Score, NOVA, and the EFSA additives registry. Free, transparent, no brand sponsorship.",
+      "Independent baby-food rating service. Grades every baby pot, infant formula, cereal and pouch from A to E on 8 axes (NOVA, additives, added sugars, Nutri-Score, organic, allergens, origin, simplicity), baby-specific weighting stricter before 12 months. Sources: Open Food Facts, EFSA, ANSES, RappelConso.",
     sameAs: [],
     foundingDate: "2026",
+    email: siteConfig.legal.email,
+    areaServed: ["FR", "BE", "CH", "LU"],
+    audience: { "@type": "PeopleAudience", audienceType: "parents of infants and young children" },
   };
 }
 
