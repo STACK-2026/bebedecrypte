@@ -51,12 +51,12 @@ if ENV_MASTER.exists():
     load_dotenv(ENV_MASTER)
 load_dotenv()  # local .env override
 
-# Shared Mistral+Claude audit library
-sys.path.insert(0, str(Path.home() / "stack-2026" / "scripts"))
+# Mistral+Claude audit pipeline (local copy, self-contained for the VPS runner)
+sys.path.insert(0, str(Path(__file__).parent))
 try:
-    from mistral_claude_blog_lib import generate_with_mistral_audit
+    from mistral_pipeline import generate_with_mistral_audit
 except ImportError as e:
-    print(f"[fatal] impossible d'importer mistral_claude_blog_lib depuis ~/stack-2026/scripts: {e}")
+    print(f"[fatal] impossible d'importer mistral_pipeline depuis {Path(__file__).parent}: {e}")
     sys.exit(2)
 
 # Keys
