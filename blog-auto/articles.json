@@ -7,9 +7,14 @@
     "target_age_range": "4-12m",
     "author": "Dr. Claire Vasseur",
     "reviewer": "Dr. Claire Vasseur, pédiatre nutritionniste",
-    "scheduled_date": "2026-04-27",
-    "scheduled_datetime": "2026-04-27T07:47:00",
-    "published": false
+    "scheduled_date": "2026-04-23",
+    "scheduled_datetime": "2026-04-23T07:39:18",
+    "published": true,
+    "slug": "diversification-alimentaire-etape-etape-guide-12-mois",
+    "published_at": "2026-04-22T21:02:07.663411+02:00",
+    "title_tag": "Diversification alimentaire bébé étape par étape : guide 4",
+    "meta_description": "Quand et comment commencer la diversification alimentaire de ton bébé ? Guide complet 4-12 mois avec étapes, aliments autorisés, textures et erreurs à éviter",
+    "featured_image_url": "https://images.unsplash.com/photo-1544632561-0f8a895a2b08?ixid=M3w4Nzg4MzB8MHwxfHNlYXJjaHwxfHxkaXZlcnNpZmljYXRpb24lMjBhbGltZW50YWlyZSUyMGIlQzMlQTliJUMzJUE5fGVufDB8MHx8fDE3NzY4ODM3MTd8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&crop=center&q=80"
   },
   {
     "index": 1,
