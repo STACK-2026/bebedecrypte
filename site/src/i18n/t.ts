@@ -222,12 +222,15 @@ export const tr = {
   cookie: {
     emoji: { en: "Read the label", fr: "Lis l'étiquette" },
     message: {
-      en: "We use a minimal set of cookies: essentials keep the site running, analytics help us improve the grading algorithm. No third-party ads, no resale of your data.",
-      fr: "On utilise un ensemble minimal de cookies : les essentiels font tourner le site, l'analytics nous aide à améliorer l'algorithme de notation. Pas de pub tierce, pas de revente de tes données.",
+      en: "Transparent like a clean label: essential cookies keep the site running, analytics help us sharpen the grading algorithm. No third-party ads, no data resale. You decide.",
+      fr: "Transparent comme une bonne étiquette : les cookies essentiels font tourner le site, l'analytics nous aide à affiner notre notation. Pas de pub tierce, pas de revente de tes données. C'est toi qui décides.",
     },
-    accept: { en: "Accept all", fr: "Tout accepter" },
+    accept: { en: "Accept", fr: "Accepter" },
+    reject: { en: "Reject", fr: "Refuser" },
     essential: { en: "Essential only", fr: "Essentiels uniquement" },
+    learnMore: { en: "Learn more", fr: "En savoir plus" },
     policy: { en: "Cookie policy", fr: "Politique de cookies" },
+    manage: { en: "Manage cookies", fr: "Gérer les cookies" },
   },
 
   // 404

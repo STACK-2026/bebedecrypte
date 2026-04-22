@@ -15,19 +15,19 @@ const locale = getLocale(Astro.url);
     <div class="notfound-decor" aria-hidden="true">
       <svg viewBox="0 0 120 120" fill="none">
         <defs>
-          <linearGradient id="bowlGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#16a34a" stop-opacity="0.18"/>
-            <stop offset="100%" stop-color="#065f46" stop-opacity="0.08"/>
+          <linearGradient id="bottleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#0891b2" stop-opacity="0.18"/>
+            <stop offset="100%" stop-color="#155e75" stop-opacity="0.08"/>
           </linearGradient>
         </defs>
-        <ellipse cx="60" cy="78" rx="42" ry="28" fill="url(#bowlGrad)" stroke="#16a34a" stroke-width="2.5"/>
-        <ellipse cx="60" cy="70" rx="42" ry="10" fill="none" stroke="#16a34a" stroke-width="2"/>
+        <path d="M52 22 q 8 -3 16 0 q 4 3 0 6 l -16 0 q -4 -3 0 -6 z" fill="url(#bottleGrad)" stroke="#0891b2" stroke-width="2"/>
+        <rect x="48" y="30" width="24" height="5" rx="2" fill="url(#bottleGrad)" stroke="#0891b2" stroke-width="2"/>
+        <rect x="44" y="37" width="32" height="56" rx="6" fill="url(#bottleGrad)" stroke="#0891b2" stroke-width="2.5"/>
+        <line x1="50" y1="52" x2="68" y2="52" stroke="#0891b2" stroke-width="1.5" opacity="0.6" class="bottle-level"/>
+        <line x1="50" y1="62" x2="64" y2="62" stroke="#0891b2" stroke-width="1.5" opacity="0.5" class="bottle-level"/>
+        <line x1="50" y1="72" x2="67" y2="72" stroke="#0891b2" stroke-width="1.5" opacity="0.45" class="bottle-level"/>
+        <line x1="50" y1="82" x2="60" y2="82" stroke="#0891b2" stroke-width="1.5" opacity="0.35" class="bottle-level"/>
       </svg>
-      <div class="crumbs">
-        <span class="crumb paw-wave"></span>
-        <span class="crumb paw-wave delay-1"></span>
-        <span class="crumb paw-wave delay-2"></span>
-      </div>
     </div>
 
     <div class="notfound-inner">
@@ -78,19 +78,6 @@ const locale = getLocale(Astro.url);
     pointer-events: none;
     opacity: 0.9;
   }
-  .crumbs {
-    display: flex;
-    justify-content: center;
-    gap: 0.4rem;
-    margin-top: 0.25rem;
-  }
-  .crumb {
-    width: 0.45rem;
-    height: 0.45rem;
-    border-radius: 9999px;
-    background: var(--color-accent);
-    display: inline-block;
-  }
   .notfound-inner {
     max-width: 44rem;
     margin: 7rem auto 0;
@@ -104,7 +91,7 @@ const locale = getLocale(Astro.url);
     font-weight: 900;
     line-height: 0.95;
     margin: 0 0 0.5rem;
-    background: linear-gradient(135deg, rgb(22 163 74 / 0.9), rgb(6 95 70 / 0.4));
+    background: linear-gradient(135deg, rgb(8 145 178 / 0.9), rgb(21 94 117 / 0.4));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

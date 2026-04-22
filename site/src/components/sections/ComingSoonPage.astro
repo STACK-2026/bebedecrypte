@@ -1,0 +1,177 @@
+---
+/**
+ * ComingSoonPage , generic Phase 1 placeholder with brand-consistent design.
+ *
+ * Used for /rankings, /compare, /encyclopedia, /by-age while the data pipeline
+ * and programmatic pages are being built. Keeps the parent on-brand and hands
+ * them methodology or blog while the catalogue spins up.
+ */
+import { getLocale, type Locale, localeUrl } from "../../i18n/t";
+
+export interface Props {
+  /** i18n key, used only for meta. */
+  slug: string;
+  /** FR + EN title + lede + body. */
+  copy: {
+    eyebrow: { fr: string; en: string };
+    title: { fr: string; en: string };
+    lede: { fr: string; en: string };
+    expect: { fr: string[]; en: string[] };
+    eta: { fr: string; en: string };
+  };
+}
+
+const locale: Locale = getLocale(Astro.url);
+const { copy } = Astro.props;
+---
+
+<article class="coming-soon">
+  <div class="cs-decor" aria-hidden="true">
+    <svg viewBox="0 0 120 140" fill="none">
+      <defs>
+        <linearGradient id="csBottle" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#0891b2" stop-opacity="0.18"/>
+          <stop offset="100%" stop-color="#155e75" stop-opacity="0.08"/>
+        </linearGradient>
+      </defs>
+      <path d="M52 22 q 8 -3 16 0 q 4 3 0 6 l -16 0 q -4 -3 0 -6 z" fill="url(#csBottle)" stroke="#0891b2" stroke-width="2"/>
+      <rect x="48" y="30" width="24" height="5" rx="2" fill="url(#csBottle)" stroke="#0891b2" stroke-width="2"/>
+      <rect x="44" y="37" width="32" height="72" rx="6" fill="url(#csBottle)" stroke="#0891b2" stroke-width="2.5"/>
+      <line x1="50" y1="52" x2="68" y2="52" stroke="#0891b2" stroke-width="1.5" opacity="0.6" class="bottle-level"/>
+      <line x1="50" y1="64" x2="64" y2="64" stroke="#0891b2" stroke-width="1.5" opacity="0.5" class="bottle-level"/>
+      <line x1="50" y1="76" x2="67" y2="76" stroke="#0891b2" stroke-width="1.5" opacity="0.45" class="bottle-level"/>
+      <line x1="50" y1="88" x2="60" y2="88" stroke="#0891b2" stroke-width="1.5" opacity="0.35" class="bottle-level"/>
+    </svg>
+  </div>
+
+  <div class="cs-inner">
+    <p class="eyebrow fade-up">{locale === "fr" ? copy.eyebrow.fr : copy.eyebrow.en}</p>
+    <h1 class="fade-up">{locale === "fr" ? copy.title.fr : copy.title.en}</h1>
+    <p class="lede fade-up">{locale === "fr" ? copy.lede.fr : copy.lede.en}</p>
+
+    <div class="cs-card fade-up">
+      <p class="cs-card-label">{locale === "fr" ? "Ce que tu vas y trouver" : "What you will find here"}</p>
+      <ul class="stagger-children">
+        {(locale === "fr" ? copy.expect.fr : copy.expect.en).map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+      <p class="cs-eta">{locale === "fr" ? copy.eta.fr : copy.eta.en}</p>
+    </div>
+
+    <div class="cs-ctas fade-up">
+      <a href={localeUrl("/methodology", locale)} class="btn-primary hover-shine">
+        {locale === "fr" ? "Lire la méthodologie complète" : "Read the full methodology"}
+      </a>
+      <a href={localeUrl("/blog", locale)} class="btn-secondary">
+        {locale === "fr" ? "Voir le blog" : "Read the blog"}
+      </a>
+    </div>
+
+    <p class="cs-follow">
+      {locale === "fr"
+        ? "Reste au courant par email quand cette section ouvre , on promet : pas de spam, un email quand c'est prêt."
+        : "Get an email when this section opens , we promise: no spam, one email when it ships."}
+    </p>
+  </div>
+</article>
+
+<style>
+  .coming-soon {
+    max-width: 52rem;
+    margin: 3rem auto 5rem;
+    padding: 0 1.5rem;
+    position: relative;
+  }
+  .cs-decor {
+    position: absolute;
+    top: -1rem;
+    right: 2rem;
+    width: 120px;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  @media (max-width: 640px) { .cs-decor { display: none; } }
+
+  .cs-inner {
+    position: relative;
+    z-index: 1;
+  }
+  .eyebrow {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-primary-dark);
+    margin: 0 0 0.75rem;
+  }
+  h1 {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+  }
+  .lede {
+    color: var(--color-ink-soft);
+    font-size: 1.1rem;
+    line-height: 1.65;
+    margin-bottom: 2.5rem;
+  }
+
+  .cs-card {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-primary);
+    border-radius: 0 1rem 1rem 0;
+    padding: 1.5rem 1.75rem;
+    margin: 0 0 2rem;
+  }
+  .cs-card-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-primary-dark);
+    font-weight: 800;
+    margin: 0 0 0.75rem;
+  }
+  .cs-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.25rem;
+    display: grid;
+    gap: 0.5rem;
+  }
+  .cs-card li {
+    color: var(--color-ink-soft);
+    line-height: 1.6;
+    padding-left: 1.35rem;
+    position: relative;
+  }
+  .cs-card li::before {
+    content: "·";
+    position: absolute;
+    left: 0.3rem;
+    top: -0.1rem;
+    color: var(--color-primary);
+    font-weight: 900;
+    font-size: 1.5rem;
+  }
+  .cs-eta {
+    margin: 0;
+    font-size: 0.88rem;
+    color: var(--color-ink-soft);
+    padding-top: 0.75rem;
+    border-top: 1px dashed var(--color-border);
+  }
+
+  .cs-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-bottom: 2rem;
+  }
+  .cs-follow {
+    font-size: 0.85rem;
+    color: var(--color-ink-soft);
+    margin-top: 1rem;
+  }
+</style>

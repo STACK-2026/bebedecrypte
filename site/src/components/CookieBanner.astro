@@ -3,14 +3,14 @@ import { tr, t, getLocale, localeUrl } from "../i18n/t";
 const locale = getLocale(Astro.url);
 ---
 
-<div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-hidden="true">
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-desc" aria-hidden="true">
   <div class="cookie-inner">
     <div class="cookie-icon" aria-hidden="true">
       <svg viewBox="0 0 48 48" fill="none">
         <defs>
           <linearGradient id="cg" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#0f766e"/>
-            <stop offset="100%" stop-color="#065f46"/>
+            <stop offset="0%" stop-color="#0891b2"/>
+            <stop offset="100%" stop-color="#155e75"/>
           </linearGradient>
         </defs>
         <rect x="10" y="8" width="24" height="30" rx="2.5" fill="url(#cg)"/>
@@ -23,16 +23,16 @@ const locale = getLocale(Astro.url);
     </div>
     <div class="cookie-content">
       <p id="cookie-title" class="cookie-title">{t(tr.cookie.emoji, locale)}</p>
-      <p class="cookie-message">{t(tr.cookie.message, locale)}</p>
+      <p id="cookie-desc" class="cookie-message">{t(tr.cookie.message, locale)}</p>
       <div class="cookie-actions">
+        <button type="button" class="cookie-btn cookie-btn-reject" data-cookie-reject>
+          {t(tr.cookie.reject, locale)}
+        </button>
         <button type="button" class="cookie-btn cookie-btn-primary" data-cookie-accept>
           {t(tr.cookie.accept, locale)}
         </button>
-        <button type="button" class="cookie-btn cookie-btn-secondary" data-cookie-essential>
-          {t(tr.cookie.essential, locale)}
-        </button>
-        <a href={localeUrl("/cookie-policy", locale)} class="cookie-link">
-          {t(tr.cookie.policy, locale)}
+        <a href={localeUrl("/cookie-policy", locale)} class="cookie-btn cookie-btn-link" data-cookie-learn>
+          {t(tr.cookie.learnMore, locale)}
         </a>
       </div>
     </div>
@@ -45,13 +45,13 @@ const locale = getLocale(Astro.url);
     bottom: 1rem;
     left: 1rem;
     right: 1rem;
-    max-width: 34rem;
+    max-width: 36rem;
     margin: 0 auto;
     z-index: 60;
     background: #ffffff;
     border: 1px solid var(--color-border);
     border-radius: 1rem;
-    box-shadow: 0 30px 80px -20px rgb(15 23 42 / 0.25), 0 10px 30px -10px rgb(15 118 110 / 0.15);
+    box-shadow: 0 30px 80px -20px rgb(15 23 42 / 0.25), 0 10px 30px -10px rgb(8 145 178 / 0.18);
     padding: 1rem 1.25rem;
     transform: translateY(140%);
     opacity: 0;
@@ -106,38 +106,44 @@ const locale = getLocale(Astro.url);
     font-family: inherit;
     font-weight: 700;
     font-size: 0.78rem;
-    padding: 0.5rem 0.9rem;
-    border-radius: 0.5rem;
+    padding: 0.5rem 0.95rem;
+    border-radius: 0.55rem;
     cursor: pointer;
     border: 1.5px solid transparent;
     transition: all 220ms ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
   }
   .cookie-btn-primary {
     background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
     color: #ffffff;
-    box-shadow: 0 4px 12px -4px rgb(15 118 110 / 0.45);
+    box-shadow: 0 4px 12px -4px rgb(8 145 178 / 0.45);
   }
   .cookie-btn-primary:hover {
     transform: translateY(-1px);
-    box-shadow: 0 6px 18px -4px rgb(15 118 110 / 0.55);
+    box-shadow: 0 6px 18px -4px rgb(8 145 178 / 0.55);
   }
-  .cookie-btn-secondary {
+  .cookie-btn-reject {
     background: #ffffff;
     color: var(--color-ink);
     border-color: var(--color-border);
   }
-  .cookie-btn-secondary:hover {
+  .cookie-btn-reject:hover {
     border-color: var(--color-primary);
     color: var(--color-primary-dark);
   }
-  .cookie-link {
-    font-size: 0.75rem;
-    font-weight: 600;
+  .cookie-btn-link {
+    background: transparent;
     color: var(--color-ink-soft);
     text-decoration: underline;
-    text-underline-offset: 2px;
+    text-underline-offset: 3px;
+    padding: 0.5rem 0.5rem;
+    border-color: transparent;
   }
-  .cookie-link:hover {
+  .cookie-btn-link:hover {
     color: var(--color-primary-dark);
   }
   @media (prefers-reduced-motion: reduce) {
@@ -147,8 +153,43 @@ const locale = getLocale(Astro.url);
 </style>
 
 <script>
-  const KEY = "nd-cookie-choice";
+  // Consent storage : CNIL 13 mois max
+  const KEY = "ls_cookie_consent";
+  const MONTHS_13_MS = 13 * 30 * 24 * 60 * 60 * 1000;
+
+  type Consent = {
+    status: "accepted" | "rejected";
+    timestamp: number;
+  };
+
   const banner = document.getElementById("cookie-banner") as HTMLElement | null;
+
+  function readConsent(): Consent | null {
+    try {
+      const raw = localStorage.getItem(KEY);
+      if (!raw) return null;
+      const parsed = JSON.parse(raw) as Consent;
+      if (!parsed || !parsed.timestamp) return null;
+      if (Date.now() - parsed.timestamp > MONTHS_13_MS) {
+        localStorage.removeItem(KEY);
+        return null;
+      }
+      return parsed;
+    } catch {
+      return null;
+    }
+  }
+
+  function writeConsent(status: "accepted" | "rejected") {
+    const payload: Consent = { status, timestamp: Date.now() };
+    try {
+      localStorage.setItem(KEY, JSON.stringify(payload));
+    } catch {
+      /* storage unavailable, ignore */
+    }
+    const eventName = status === "accepted" ? "ls:consent-accepted" : "ls:consent-rejected";
+    window.dispatchEvent(new CustomEvent(eventName, { detail: payload }));
+  }
 
   function show() {
     if (!banner) return;
@@ -162,17 +203,34 @@ const locale = getLocale(Astro.url);
     banner.setAttribute("aria-hidden", "true");
   }
 
-  const stored = localStorage.getItem(KEY);
-  if (!stored) {
+  const existing = readConsent();
+  if (!existing) {
     setTimeout(show, 900);
   }
 
   document.querySelector("[data-cookie-accept]")?.addEventListener("click", () => {
-    localStorage.setItem(KEY, "all");
+    writeConsent("accepted");
     hide();
   });
-  document.querySelector("[data-cookie-essential]")?.addEventListener("click", () => {
-    localStorage.setItem(KEY, "essential");
+
+  document.querySelector("[data-cookie-reject]")?.addEventListener("click", () => {
+    writeConsent("rejected");
     hide();
   });
+
+  // Footer link "Gerer les cookies" : ouvre a nouveau la banniere sans ecraser la decision existante
+  document.addEventListener("click", (e) => {
+    const target = e.target as HTMLElement | null;
+    if (!target) return;
+    const trigger = target.closest<HTMLElement>("[data-cookie-manage], #manage-cookies, .js-manage-cookies");
+    if (!trigger) return;
+    e.preventDefault();
+    show();
+  });
+
+  // Expose a read helper for analytics/other scripts
+  (window as unknown as { hasValidConsent?: () => boolean }).hasValidConsent = () => {
+    const c = readConsent();
+    return Boolean(c && c.status === "accepted");
+  };
 </script>

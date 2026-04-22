@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
+import AutoGlossaire from "../components/AutoGlossaire.astro";
 import { siteConfig } from "../../site.config";
 import { fullUrl } from "../utils/config";
 import { jsonLdArticle, jsonLdBreadcrumbs } from "../utils/seo";
@@ -123,4 +124,5 @@ const jsonLd = [
       <slot />
     </div>
   </article>
+  <AutoGlossaire />
 </BaseLayout>

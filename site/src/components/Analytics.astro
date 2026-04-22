@@ -15,8 +15,19 @@ const SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsIn
   }
 
   // Only track if consent given or not yet asked (first visit)
-  const consent = document.cookie.match(/adaptetoi_consent=([^;]+)/);
-  if (consent && consent[1] === "declined") return;
+  // Gate on CNIL-compliant ls_cookie_consent localStorage key (13 months max)
+  try {
+    var raw = localStorage.getItem("ls_cookie_consent");
+    if (raw) {
+      var parsed = JSON.parse(raw);
+      var MONTHS_13_MS = 13 * 30 * 24 * 60 * 60 * 1000;
+      if (parsed && parsed.timestamp && Date.now() - parsed.timestamp > MONTHS_13_MS) {
+        // expired, do not track (user must re-consent)
+        return;
+      }
+      if (parsed && parsed.status === "rejected") return;
+    }
+  } catch (e) { /* storage unavailable, continue */ }
 
   const bot = isBot();
 

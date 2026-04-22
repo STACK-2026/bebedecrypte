@@ -2,7 +2,7 @@
 import { siteConfig } from "../../site.config";
 ---
 
-<div id="quiz-container" class="bg-white rounded-2xl border border-gray-100 shadow-xl p-6 md:p-10 text-left scale-reveal overflow-hidden relative" role="region" aria-label="Diagnostic nutrition bebe">
+<div id="quiz-container" class="bg-white rounded-2xl border border-gray-100 shadow-xl p-6 md:p-10 text-left scale-reveal overflow-hidden relative" role="region" aria-label="Diagnostic nutrition bébé">
   <div class="absolute top-0 left-0 right-0 h-1 gradient-animated" style={`background: linear-gradient(90deg, ${siteConfig.colors.primary}, ${siteConfig.colors.accent}, ${siteConfig.colors.secondary}, ${siteConfig.colors.primary});`}></div>
 
   <div class="text-center mb-8">
@@ -10,8 +10,8 @@ import { siteConfig } from "../../site.config";
       <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35" /></svg>
       Diagnostic express gratuit
     </span>
-    <h2 class="text-xl md:text-2xl font-bold" id="quiz-title" style="letter-spacing: -0.03em;">Ton bebe mange-t-il bien ? Diagnostic en 5 questions</h2>
-    <p class="text-gray-400 text-sm mt-2" id="quiz-subtitle">5 questions, 1 minute. Zero inscription, zero email.</p>
+    <h2 class="text-xl md:text-2xl font-bold" id="quiz-title" style="letter-spacing: -0.03em;">Ton bébé mange-t-il bien ? Diagnostic en 5 questions</h2>
+    <p class="text-gray-400 text-sm mt-2" id="quiz-subtitle">5 questions, 1 minute. Zéro inscription, zéro email.</p>
   </div>
 
   <div id="quiz-question" class="min-h-[260px]" aria-live="polite" aria-atomic="true"></div>
@@ -34,19 +34,19 @@ import { siteConfig } from "../../site.config";
   const questions: { q: string; options: Option[]; key: string }[] = [
     {
       key: "age",
-      q: "Quel age a ton bebe ?",
+      q: "Quel âge a ton bébé ?",
       options: [
-        { text: "0 a 3 mois (lait exclusif)", emoji: "👶", tag: "age-0-3" },
-        { text: "4 a 5 mois (debut diversification)", emoji: "🍼", tag: "age-4-5" },
-        { text: "6 a 8 mois (purees et premiers morceaux)", emoji: "🥕", tag: "age-6-8" },
-        { text: "9 a 12 mois (textures variees)", emoji: "🍠", tag: "age-9-12" },
-        { text: "12 a 24 mois (repas famille adapte)", emoji: "🍝", tag: "age-12-24" },
+        { text: "0 à 3 mois (lait exclusif)", emoji: "👶", tag: "age-0-3" },
+        { text: "4 à 5 mois (début diversification)", emoji: "🍼", tag: "age-4-5" },
+        { text: "6 à 8 mois (purées et premiers morceaux)", emoji: "🥕", tag: "age-6-8" },
+        { text: "9 à 12 mois (textures variées)", emoji: "🍠", tag: "age-9-12" },
+        { text: "12 à 24 mois (repas famille adapté)", emoji: "🍝", tag: "age-12-24" },
         { text: "24 mois et plus", emoji: "🧒", tag: "age-24" },
       ],
     },
     {
       key: "industriel",
-      q: "Quelle part de son alimentation vient d'aliments industriels (petits pots, gourdes, cereales infantiles) ?",
+      q: "Quelle part de son alimentation vient d'aliments industriels (petits pots, gourdes, céréales infantiles) ?",
       options: [
         { text: "Moins de 20% (tout fait maison ou presque)", emoji: "🥘", industriel: 0, vigilance: 3 },
         { text: "Entre 20 et 50%", emoji: "🍲", industriel: 1, vigilance: 2 },
@@ -56,35 +56,35 @@ import { siteConfig } from "../../site.config";
     },
     {
       key: "literacy",
-      q: "As-tu deja lu en detail la liste d'ingredients d'un produit bebe achete ?",
+      q: "As-tu déjà lu en détail la liste d'ingrédients d'un produit bébé acheté ?",
       options: [
-        { text: "Jamais, je regarde juste le rayon bebe", emoji: "🙈", literacy: 0 },
+        { text: "Jamais, je regarde juste le rayon bébé", emoji: "🙈", literacy: 0 },
         { text: "Rarement, quand un doute me prend", emoji: "👀", literacy: 1 },
         { text: "De temps en temps, surtout sur les nouveaux produits", emoji: "🔍", literacy: 2 },
-        { text: "Systematiquement, je decode chaque etiquette", emoji: "🧠", literacy: 3 },
+        { text: "Systématiquement, je décode chaque étiquette", emoji: "🧠", literacy: 3 },
       ],
     },
     {
       key: "type",
-      q: "Tu achetes principalement :",
+      q: "Tu achètes principalement :",
       options: [
-        { text: "Marques industrielles generalistes (Blédina, Nestlé)", emoji: "🛒", industriel: 2, vigilance: 1 },
-        { text: "Marques bio specialisees bebe (Babybio, Hipp, Holle)", emoji: "🌱", industriel: 1, vigilance: 2 },
-        { text: "MDD supermarche (U Bio, Carrefour Baby)", emoji: "🏷️", industriel: 2, vigilance: 1 },
-        { text: "Fait maison a 90%", emoji: "👩‍🍳", industriel: 0, vigilance: 3 },
-        { text: "Un mix equilibre de plusieurs sources", emoji: "🔀", industriel: 1, vigilance: 2 },
+        { text: "Marques industrielles généralistes (Blédina, Nestlé)", emoji: "🛒", industriel: 2, vigilance: 1 },
+        { text: "Marques bio spécialisées bébé (Babybio, Hipp, Holle)", emoji: "🌱", industriel: 1, vigilance: 2 },
+        { text: "MDD supermarché (U Bio, Carrefour Baby)", emoji: "🏷️", industriel: 2, vigilance: 1 },
+        { text: "Fait maison à 90%", emoji: "👩‍🍳", industriel: 0, vigilance: 3 },
+        { text: "Un mix équilibré de plusieurs sources", emoji: "🔀", industriel: 1, vigilance: 2 },
       ],
     },
     {
       key: "inquietude",
-      q: "Ton inquietude principale actuelle :",
+      q: "Ton inquiétude principale actuelle :",
       options: [
-        { text: "Les sucres caches et le gout trop sucre", emoji: "🍬", tag: "sucres" },
-        { text: "Les additifs et emulsifiants", emoji: "🧪", tag: "additifs" },
+        { text: "Les sucres cachés et le goût trop sucré", emoji: "🍬", tag: "sucres" },
+        { text: "Les additifs et émulsifiants", emoji: "🧪", tag: "additifs" },
         { text: "Les pesticides et contaminants", emoji: "☣️", tag: "pesticides" },
-        { text: "La qualite nutritionnelle reelle", emoji: "🥦", tag: "nutrition" },
-        { text: "Les allergenes et l'introduction", emoji: "🥜", tag: "allergenes" },
-        { text: "Les rappels produits et la securite", emoji: "⚠️", tag: "rappels" },
+        { text: "La qualité nutritionnelle réelle", emoji: "🥦", tag: "nutrition" },
+        { text: "Les allergènes et l'introduction", emoji: "🥜", tag: "allergenes" },
+        { text: "Les rappels produits et la sécurité", emoji: "⚠️", tag: "rappels" },
       ],
     },
   ];
@@ -110,30 +110,30 @@ import { siteConfig } from "../../site.config";
   function concernLink(tag: string | undefined): { label: string; href: string; icon: string } {
     switch (tag) {
       case "sucres":
-        return { label: "Decoder les sucres caches dans les produits bebe", href: "/encyclopedia/sucres-caches", icon: "🍯" };
+        return { label: "Décoder les sucres cachés dans les produits bébé", href: "/encyclopedia", icon: "🍯" };
       case "additifs":
-        return { label: "Encyclopedie des additifs : E471, E407, E150d", href: "/encyclopedia", icon: "🧪" };
+        return { label: "Encyclopédie des additifs : E471, E407, E150d", href: "/encyclopedia", icon: "🧪" };
       case "pesticides":
-        return { label: "Classement bio et pesticides bebe", href: "/rankings/bio", icon: "🌾" };
+        return { label: "Classement bio et pesticides bébé", href: "/rankings", icon: "🌾" };
       case "nutrition":
-        return { label: "Methodologie : comment on note la nutrition reelle", href: "/methodology", icon: "📊" };
+        return { label: "Méthodologie : comment on note la nutrition réelle", href: "/methodology", icon: "📊" };
       case "allergenes":
-        return { label: "Introduire les allergenes : les bonnes fenetres", href: "/encyclopedia/allergenes-bebe", icon: "🥜" };
+        return { label: "Introduire les allergènes : les bonnes fenêtres", href: "/encyclopedia", icon: "🥜" };
       case "rappels":
-        return { label: "Suivi des rappels RappelConso sur produits bebe", href: "/rankings", icon: "🚨" };
+        return { label: "Suivi des rappels RappelConso sur produits bébé", href: "/rankings", icon: "🚨" };
       default:
-        return { label: "Explorer le classement complet BebeDecrypte", href: "/rankings", icon: "⭐" };
+        return { label: "Explorer le classement complet BébéDécrypte", href: "/rankings", icon: "⭐" };
     }
   }
 
   function ageGuide(ageTag: string | undefined): { label: string; href: string; icon: string } {
-    if (ageTag === "age-0-3") return { label: "Comparer les laits 1er age notes A ou B", href: "/rankings/laits-infantiles", icon: "🍼" };
-    if (ageTag === "age-4-5") return { label: "Demarrer la diversification : le guide complet", href: "/blog", icon: "🥄" };
-    if (ageTag === "age-6-8") return { label: "Purees et petits pots : notre top 2026", href: "/rankings", icon: "🥕" };
-    if (ageTag === "age-9-12") return { label: "Premiers morceaux : produits valides par les pediatres", href: "/rankings", icon: "🍠" };
-    if (ageTag === "age-12-24") return { label: "Repas famille et produits adaptes", href: "/rankings", icon: "🍝" };
-    if (ageTag === "age-24") return { label: "Eviter les pieges du rayon enfant", href: "/blog", icon: "🧒" };
-    return { label: "Catalogue de tous les produits notes", href: "/rankings", icon: "📖" };
+    if (ageTag === "age-0-3") return { label: "Comparer les laits 1er âge notés A ou B", href: "/rankings", icon: "🍼" };
+    if (ageTag === "age-4-5") return { label: "Démarrer la diversification : le guide complet", href: "/blog", icon: "🥄" };
+    if (ageTag === "age-6-8") return { label: "Purées et petits pots : notre top 2026", href: "/rankings", icon: "🥕" };
+    if (ageTag === "age-9-12") return { label: "Premiers morceaux : produits validés par les pédiatres", href: "/rankings", icon: "🍠" };
+    if (ageTag === "age-12-24") return { label: "Repas famille et produits adaptés", href: "/rankings", icon: "🍝" };
+    if (ageTag === "age-24") return { label: "Éviter les pièges du rayon enfant", href: "/blog", icon: "🧒" };
+    return { label: "Catalogue de tous les produits notés", href: "/rankings", icon: "📖" };
   }
 
   function computeResult(answers: (Option | null)[]): Result {
@@ -143,7 +143,6 @@ import { siteConfig } from "../../site.config";
     const ageTag = answers[0]?.tag;
     const concernTag = answers[4]?.tag;
 
-    // Profil detection : priorite literacy, vigilance, industriel
     let profile: Result;
 
     if (literacy >= 2 && vigilance >= 4) {
@@ -151,9 +150,9 @@ import { siteConfig } from "../../site.config";
         id: "expert",
         emoji: "🧠",
         title: "Parent expert",
-        text: "Tu decodes deja les etiquettes comme un pro. Ton bebe est dans le top 10% des enfants francais pour la qualite d'alimentation. On te propose d'aller encore plus loin : comparer les nuances entre marques bio premium et optimiser les 10% restants.",
+        text: "Tu décodes déjà les étiquettes comme un pro. Ton bébé est dans le top 10% des enfants français pour la qualité d'alimentation. On te propose d'aller encore plus loin : comparer les nuances entre marques bio premium et optimiser les 10% restants.",
         recommendations: [
-          { label: "Comparateur detaille des marques bio bebe", href: "/compare", icon: "⚖️" },
+          { label: "Comparateur détaillé des marques bio bébé", href: "/compare", icon: "⚖️" },
           ageGuide(ageTag),
           concernLink(concernTag),
         ],
@@ -165,13 +164,13 @@ import { siteConfig } from "../../site.config";
         id: "vigilant",
         emoji: "🔎",
         title: "Parent vigilant",
-        text: "Tu fais attention a ce que mange ton bebe et c'est visible. Il te manque juste les bons outils pour passer de 'j'essaie bien' a 'je sais exactement'. Notre classement et nos fiches additifs vont te faire gagner des heures de recherche.",
+        text: "Tu fais attention à ce que mange ton bébé et c'est visible. Il te manque juste les bons outils pour passer de « j'essaie bien » à « je sais exactement ». Notre classement et nos fiches additifs vont te faire gagner des heures de recherche.",
         recommendations: [
-          { label: "Methodologie de notation BebeDecrypte", href: "/methodology", icon: "📏" },
+          { label: "Méthodologie de notation BébéDécrypte", href: "/methodology", icon: "📏" },
           ageGuide(ageTag),
           concernLink(concernTag),
         ],
-        primaryCta: { label: "Decouvrir le classement 2026", href: "/rankings" },
+        primaryCta: { label: "Découvrir le classement 2026", href: "/rankings" },
         color: colors.primary,
       };
     } else if (industriel >= 3 || (literacy === 0 && vigilance <= 2)) {
@@ -179,23 +178,23 @@ import { siteConfig } from "../../site.config";
         id: "perdu",
         emoji: "🌀",
         title: "Parent perdu dans les rayons",
-        text: "Tu n'es pas seul : 60% des parents francais renoncent a lire les etiquettes bebe tellement elles sont complexes. Aucun jugement. On a construit BebeDecrypte exactement pour toi : une note claire de A a E, zero jargon, les verdicts pret-a-utiliser au supermarche.",
+        text: "Tu n'es pas seul : 60% des parents français renoncent à lire les étiquettes bébé tellement elles sont complexes. Aucun jugement. On a construit BébéDécrypte exactement pour toi : une note claire de A à E, zéro jargon, les verdicts prêts à utiliser au supermarché.",
         recommendations: [
-          { label: "Top 20 produits bebe notes A ou B", href: "/rankings", icon: "🏆" },
+          { label: "Top 20 produits bébé notés A ou B", href: "/rankings", icon: "🏆" },
           ageGuide(ageTag),
-          { label: "5 pieges a eviter au rayon bebe", href: "/blog", icon: "⚠️" },
+          { label: "5 pièges à éviter au rayon bébé", href: "/blog", icon: "⚠️" },
         ],
-        primaryCta: { label: "Voir les produits notes A", href: "/rankings" },
+        primaryCta: { label: "Voir les produits notés A", href: "/rankings" },
         color: colors.accent,
       };
     } else {
       profile = {
         id: "presse",
         emoji: "⏱️",
-        title: "Parent presse",
-        text: "Tu sais que la qualite compte mais tu manques de temps pour decoder chaque etiquette. Notre classement te donne le verdict en 2 secondes par produit. Scan rapide, decision immediate, zero culpabilite au retour a la maison.",
+        title: "Parent pressé",
+        text: "Tu sais que la qualité compte mais tu manques de temps pour décoder chaque étiquette. Notre classement te donne le verdict en 2 secondes par produit. Scan rapide, décision immédiate, zéro culpabilité au retour à la maison.",
         recommendations: [
-          { label: "Top picks express par categorie", href: "/rankings", icon: "⚡" },
+          { label: "Top picks express par catégorie", href: "/rankings", icon: "⚡" },
           ageGuide(ageTag),
           concernLink(concernTag),
         ],
@@ -309,13 +308,13 @@ import { siteConfig } from "../../site.config";
   function renderResult() {
     if (!container || !bar || !pText || !sText) return;
     bar.style.width = "100%";
-    pText.textContent = "Termine";
+    pText.textContent = "Terminé";
     const r = computeResult(answers);
     sText.textContent = `Profil : ${r.title}`;
     const title = document.getElementById("quiz-title");
     const subtitle = document.getElementById("quiz-subtitle");
     if (title) title.textContent = "Ton profil parent";
-    if (subtitle) subtitle.textContent = "Voici tes 3 pistes prioritaires, calculees sur tes reponses.";
+    if (subtitle) subtitle.textContent = "Voici tes 3 pistes prioritaires, calculées sur tes réponses.";
     container.style.opacity = "0";
     container.style.transform = "scale(0.96)";
     setTimeout(() => {
@@ -335,7 +334,7 @@ import { siteConfig } from "../../site.config";
             <p class="text-gray-500 leading-relaxed mb-6 max-w-lg mx-auto">${r.text}</p>
           </div>
           <div class="space-y-2 mb-6">
-            <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2 text-center">Tes 3 pistes pour ton bebe</p>
+            <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-2 text-center">Tes 3 pistes pour ton bébé</p>
             ${recosHtml}
           </div>
           <div class="flex flex-col sm:flex-row gap-3 justify-center">
@@ -347,7 +346,7 @@ import { siteConfig } from "../../site.config";
               Recommencer le diagnostic
             </button>
           </div>
-          <p class="text-xs text-gray-400 mt-6 text-center">100% gratuit. Aucun produit a vendre. Aucun email demande.</p>
+          <p class="text-xs text-gray-400 mt-6 text-center">100% gratuit. Aucun produit à vendre. Aucun email demandé.</p>
         </div>
       `;
       requestAnimationFrame(() => {
@@ -359,8 +358,8 @@ import { siteConfig } from "../../site.config";
         currentQ = 0;
         for (let i = 0; i < answers.length; i++) answers[i] = null;
         if (sText) sText.textContent = "";
-        if (title) title.textContent = "Ton bebe mange-t-il bien ? Diagnostic en 5 questions";
-        if (subtitle) subtitle.textContent = "5 questions, 1 minute. Zero inscription, zero email.";
+        if (title) title.textContent = "Ton bébé mange-t-il bien ? Diagnostic en 5 questions";
+        if (subtitle) subtitle.textContent = "5 questions, 1 minute. Zéro inscription, zéro email.";
         renderQuestion();
       });
     }, 250);

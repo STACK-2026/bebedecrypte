@@ -12,15 +12,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const GET: APIRoute = async ({ props }) => {
   const p = (props as any).product;
-  const gradeColor = GRADE_COLOURS[p.score as keyof typeof GRADE_COLOURS] || "#16a34a";
+  const gradeColor = GRADE_COLOURS[p.score as keyof typeof GRADE_COLOURS] || "#0891b2";
   const name = p.name.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
   const brand = p.brand.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
 
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#065f46"/>
-      <stop offset="100%" stop-color="#16a34a"/>
+      <stop offset="0%" stop-color="#155e75"/>
+      <stop offset="100%" stop-color="#0891b2"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>

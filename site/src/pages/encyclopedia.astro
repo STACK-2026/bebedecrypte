@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ComingSoonPage from "../components/sections/ComingSoonPage.astro";
+
+const copy = {
+  eyebrow: { fr: "Encyclopédie", en: "Encyclopedia" },
+  title: {
+    fr: "L'encyclopédie des additifs bébé ouvre avec le catalogue",
+    en: "The baby additives encyclopedia opens with the catalog",
+  },
+  lede: {
+    fr: "E471, E150d, maltodextrine, sirop de glucose, carraghénane, huile de palme. Chaque additif récurrent dans l'alimentation bébé sera monographié ici : fonction, risques EFSA, position ANSES, interdit ou non avant 3 ans, produits bébé concernés dans notre catalogue.",
+    en: "E471, E150d, maltodextrin, glucose syrup, carrageenan, palm oil. Every additive recurring in baby food will get a full page here: function, EFSA risks, ANSES stance, allowed or not before age 3, affected baby products from our catalog.",
+  },
+  expect: {
+    fr: [
+      "~100 additifs E les plus fréquents sur les produits bébé FR",
+      "Position ANSES officielle + avis EFSA récent pour chaque additif",
+      "Liste des produits du catalogue qui contiennent l'additif (lien direct)",
+      "Maltodextrine, huile de palme, sucres cachés traités comme des additifs à part entière",
+    ],
+    en: [
+      "~100 most frequent E-additives in FR baby products",
+      "Official ANSES stance + recent EFSA opinion for each additive",
+      "List of catalog products that contain the additive (direct link)",
+      "Maltodextrin, palm oil, hidden sugars handled as first-class additives",
+    ],
+  },
+  eta: {
+    fr: "Ouverture prévue , fin mai 2026, après le catalogue.",
+    en: "Planned opening , late May 2026, after the catalog.",
+  },
+};
+
+const title = "Encyclopédie additifs bébé | BébéDécrypte";
+const description =
+  "Monographies des additifs alimentaires dans les produits bébé : fonction, avis EFSA, position ANSES, produits concernés. E471, E150d, maltodextrine, huile de palme et plus.";
+---
+
+<BaseLayout title={title} description={description}>
+  <ComingSoonPage slug="encyclopedia" copy={copy} />
+</BaseLayout>
