@@ -1,0 +1,164 @@
+---
+/**
+ * DecodeReveal , BebeDecrypte signature text effect
+ *
+ * The target text first appears as a stack of E-numbers / sneaky ingredient
+ * tokens (what the label is really made of), then gets "decoded" left to
+ * right into the honest human-readable words. This is the brand gesture:
+ * we lift the pastel packaging to show the truth underneath.
+ *
+ * Use on hero H1, section eyebrows, or any headline where you want the
+ * "decoded" feeling.
+ *
+ * Pure JS + CSS. Zero runtime framework. Respects prefers-reduced-motion.
+ */
+
+interface Props {
+  text: string;
+  /** Milliseconds between frames. */
+  speed?: number;
+  /** Number of frames before reaching the resolved text. */
+  frames?: number;
+  /** Extra classes on the wrapper span. */
+  class?: string;
+  /** When to start: on load, when scrolled into view, or on hover. */
+  trigger?: "load" | "scroll" | "hover";
+}
+
+const {
+  text,
+  speed = 55,
+  frames = 26,
+  class: className = "",
+  trigger = "scroll",
+} = Astro.props;
+---
+
+<span
+  class={`decode-reveal ${className}`}
+  data-decode-text={text}
+  data-decode-speed={speed}
+  data-decode-frames={frames}
+  data-decode-trigger={trigger}
+  aria-label={text}
+  style="font-variant-numeric: tabular-nums;"
+>{text}</span>
+
+<script>
+  function initDecode() {
+    // Pool of label-specific tokens. We keep two letters per token so the
+    // visual rhythm matches the final characters and the text does not
+    // collapse width mid-animation.
+    const TOKENS = [
+      "E1", "E2", "E3", "E4", "E5", "E6", "E9",
+      "Na", "Cl", "Sr", "Ac", "Mg", "Fe", "Zn",
+      "//", "..", "~~", "--", "**", "++",
+      "bio", "nov", "sug", "yum", "?!", "?_",
+    ];
+    const SINGLE = "ABCDEFGHJKLMNOPRSTUVWXYZabcdefhijklmnprstuvwxyz0123456789*/";
+
+    function randomFiller(len) {
+      let out = "";
+      while (out.length < len) {
+        if (Math.random() < 0.35) {
+          const tok = TOKENS[Math.floor(Math.random() * TOKENS.length)];
+          out += tok;
+        } else {
+          out += SINGLE[Math.floor(Math.random() * SINGLE.length)];
+        }
+      }
+      return out.slice(0, len);
+    }
+
+    document.querySelectorAll(".decode-reveal:not([data-decode-init])").forEach((el) => {
+      const elem = el;
+      elem.setAttribute("data-decode-init", "1");
+      const target = elem.dataset.decodeText || "";
+      const speed = parseInt(elem.dataset.decodeSpeed || "55", 10);
+      const frames = parseInt(elem.dataset.decodeFrames || "26", 10);
+      const trigger = elem.dataset.decodeTrigger || "scroll";
+      const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (reducedMotion) {
+        elem.textContent = target;
+        return;
+      }
+
+      function play() {
+        let frame = 0;
+        const interval = setInterval(() => {
+          frame++;
+          const progress = frame / frames;
+          const resolvedLen = Math.floor(progress * target.length);
+          let out = "";
+          for (let i = 0; i < target.length; i++) {
+            if (i < resolvedLen) {
+              out += target[i];
+            } else if (target[i] === " ") {
+              out += " ";
+            } else {
+              // each step: new random filler char
+              out += SINGLE[Math.floor(Math.random() * SINGLE.length)];
+            }
+          }
+          // sprinkle occasional E-numbers in the unresolved tail for atmosphere
+          if (frame < frames - 2 && Math.random() < 0.25 && resolvedLen < target.length - 3) {
+            const fillerLen = target.length - resolvedLen;
+            const filler = randomFiller(fillerLen);
+            out = out.slice(0, resolvedLen) + filler;
+            // but keep spaces as spaces for stable baseline
+            for (let i = resolvedLen; i < target.length; i++) {
+              if (target[i] === " ") {
+                out = out.slice(0, i) + " " + out.slice(i + 1);
+              }
+            }
+          }
+          elem.textContent = out;
+          if (frame >= frames) {
+            clearInterval(interval);
+            elem.textContent = target;
+          }
+        }, speed);
+      }
+
+      if (trigger === "load") {
+        play();
+      } else if (trigger === "scroll") {
+        if ("IntersectionObserver" in window) {
+          const obs = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  play();
+                  obs.unobserve(elem);
+                }
+              });
+            },
+            { threshold: 0.3 },
+          );
+          obs.observe(elem);
+        } else {
+          play();
+        }
+      } else if (trigger === "hover") {
+        elem.addEventListener("mouseenter", play);
+      }
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initDecode);
+  } else {
+    initDecode();
+  }
+</script>
+
+<style>
+  .decode-reveal {
+    display: inline-block;
+    min-width: 0.5ch;
+    font-family: inherit;
+    color: inherit;
+    white-space: pre;
+  }
+</style>

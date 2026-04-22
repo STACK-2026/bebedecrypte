@@ -1,0 +1,39 @@
+---
+// Analytics tracker - Supabase page_views + bot detection
+// Inlined in BaseLayout, no external dependencies
+const SB_URL = "https://commbksqnwhpsyenjzuf.supabase.co";
+const SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNvbW1ia3NxbndocHN5ZW5qenVmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYwNzM3MjUsImV4cCI6MjA5MTY0OTcyNX0.6igBrd7TAiC5CamU5hmHfEd-JBb4MJuvGAyGHo6tJpU";
+---
+
+<script define:vars={{ SB_URL, SB_ANON }}>
+(function() {
+  // Bot detection
+  function isBot() {
+    const ua = navigator.userAgent || "";
+    const bots = /bot|crawl|spider|slurp|facebookexternalhit|linkedinbot|twitterbot|whatsapp|telegram|googlebot|bingbot|yandex|baidu|duckduckbot|sogou|exabot|ia_archiver|semrush|ahrefs|mj12bot|dotbot|petalbot|bytespider|gptbot|claudebot|perplexitybot|amazonbot|applebot|ccbot|Nexus 5X Build\/MMB29P/i;
+    return bots.test(ua);
+  }
+
+  // Only track if consent given or not yet asked (first visit)
+  const consent = document.cookie.match(/adaptetoi_consent=([^;]+)/);
+  if (consent && consent[1] === "declined") return;
+
+  const bot = isBot();
+
+  fetch(SB_URL + "/rest/v1/page_views", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "apikey": SB_ANON,
+      "Authorization": "Bearer " + SB_ANON,
+      "Prefer": "return=minimal",
+    },
+    body: JSON.stringify({
+      path: window.location.pathname,
+      referrer: document.referrer || null,
+      user_agent: navigator.userAgent,
+      is_bot: bot,
+    }),
+  }).catch(function() {});
+})();
+</script>

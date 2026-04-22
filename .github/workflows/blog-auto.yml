@@ -1,0 +1,89 @@
+name: blog-auto
+
+# Daily blog publisher , Mistral + Claude-audit pipeline.
+#
+# Runs weekdays at 06:30 UTC (= 08:30 Europe/Paris in summer CEST).
+# publish.py itself adds in-window randomisation inside 07:00-09:00 Paris.
+#
+# runs-on self-hosted (VPS Hetzner) because LLM runs are long (10-14 min) and
+# would burn the 2000 min/month GitHub Actions quota. Timeout 30 min gives
+# headroom for Mistral draft + Claude audit + Mistral fix.
+#
+# concurrency cancel-in-progress false queues overlapping crons instead of
+# killing them , critical because publish.py commits state to articles.json.
+
+on:
+  schedule:
+    - cron: '30 6 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (no commit, no external calls)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+      force:
+        description: 'Force publish next pending article (ignore scheduled_datetime)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+env:
+  TZ: Europe/Paris
+
+permissions:
+  contents: write
+
+concurrency:
+  group: blog-auto-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: self-hosted
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        working-directory: blog-auto
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Configure git identity
+        run: |
+          git config user.name "bebedecrypte-bot"
+          git config user.email "bot@bebedecrypte.com"
+
+      - name: Run publish.py
+        working-directory: blog-auto
+        env:
+          SITE_URL: https://bebedecrypte.com
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          BING_URL_SUBMISSION_KEY: ${{ secrets.BING_URL_SUBMISSION_KEY }}
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+          FORCE_PUBLISH: ${{ github.event.inputs.force || 'false' }}
+        run: |
+          ARGS=""
+          if [ "${FORCE_PUBLISH}" = "true" ]; then ARGS="$ARGS --force"; fi
+          python3 publish.py $ARGS

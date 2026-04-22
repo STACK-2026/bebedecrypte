@@ -1,0 +1,72 @@
+name: deploy-site
+
+# Builds the Astro site and deploys to Cloudflare Pages (direct upload).
+#
+# Runs on:
+#   - push to main touching site/** or src/content/**
+#   - completion of blog-auto or rebuild-guard workflows
+#     (bot commits via GITHUB_TOKEN do NOT trigger `on: push`, see STACK-2026 rule)
+#   - manual workflow_dispatch
+#
+# runs-on ubuntu-latest is required for STACK-2026 public repos because VPS
+# runners mis-handle `allows_public_repositories`. Quota cost ~360 min/month
+# (within the GitHub free 2000 min/month budget).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'src/content/**'
+      - '.github/workflows/deploy-site.yml'
+  workflow_run:
+    workflows: ['blog-auto', 'rebuild-guard']
+    types: [completed]
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  deployments: write
+
+concurrency:
+  group: deploy-site-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install dependencies
+        working-directory: site
+        run: npm ci
+
+      - name: Build Astro site
+        working-directory: site
+        env:
+          SITE_URL: https://bebedecrypte.com
+          PUBLIC_SUPABASE_URL: ${{ secrets.PUBLIC_SUPABASE_URL }}
+          PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.PUBLIC_SUPABASE_ANON_KEY }}
+        run: npm run build
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: site
+          command: pages deploy dist --project-name=bebedecrypte --branch=main

@@ -1,0 +1,522 @@
+---
+import { getLocale, type Locale } from "../../i18n/t";
+import { WEIGHTS, GRADE_THRESHOLDS } from "../../lib/scoring";
+
+const locale: Locale = getLocale(Astro.url);
+
+const axes = [
+  {
+    key: "nova",
+    weight: WEIGHTS.nova,
+    en: {
+      title: "NOVA ultra-processing class",
+      body: "The NOVA classification (University of São Paulo) ranks foods from 1 (unprocessed / minimally processed) to 4 (ultra-processed). For baby food this is the single strongest signal: infant metabolism, microbiota and immune system are in active development, and ultra-processed food is linked to higher risk of later-life metabolic disease. NOVA 1 scores 100 here, NOVA 4 drops to 10 , the steepest drop in our algorithm.",
+    },
+    fr: {
+      title: "Classification NOVA (ultra-transformation)",
+      body: "La classification NOVA (Université de São Paulo) range les aliments de 1 (non transformé ou peu transformé) à 4 (ultra-transformé). Sur l'alimentation bébé c'est le signal le plus fort : métabolisme, microbiote et immunité du nourrisson sont en plein développement, et les ultra-transformés sont associés à un risque accru de maladies métaboliques adultes. NOVA 1 vaut 100, NOVA 4 tombe à 10, c'est la pénalité la plus sévère de notre algorithme.",
+    },
+  },
+  {
+    key: "additives",
+    weight: WEIGHTS.additives,
+    en: {
+      title: "Additive risk (EFSA + ANSES, baby-specific)",
+      body: "Every E-number is cross-referenced against the EFSA food additives database and ANSES opinions. Each additive carries a baby-specific risk score from 0 (neutral) to 3 (avoid under 3 years). Penalties are automatically doubled on products targeting under-12-month infants: ANSES has publicly recommended strict limitation of additive exposure before age 3, because infant liver, kidneys and intestinal barrier are still maturing.",
+    },
+    fr: {
+      title: "Risque additifs (EFSA + ANSES, spécifique bébé)",
+      body: "Chaque code E est croisé avec la base EFSA des additifs alimentaires et les avis ANSES. Chaque additif porte un score de risque spécifique bébé de 0 (neutre) à 3 (à éviter avant 3 ans). Les pénalités sont automatiquement doublées sur les produits destinés aux moins de 12 mois : l'ANSES recommande publiquement une limitation stricte de l'exposition aux additifs avant 3 ans, car le foie, les reins et la barrière intestinale du nourrisson sont encore en maturation.",
+    },
+  },
+  {
+    key: "addedSugars",
+    weight: WEIGHTS.addedSugars,
+    en: {
+      title: "Added and hidden sugars",
+      body: "We scan the ingredient list for every known added-sugar token: sucrose, glucose syrup, fructose syrup, corn syrup, maltodextrin, dextrose, honey, concentrated fruit juice, agave syrup, rice syrup. A single occurrence triggers a 30-point penalty on products for 12 months and up, 45 points on products for under-12-month infants (honey before 12 months is also a botulism risk). Each additional added-sugar ingredient lowers the score further.",
+    },
+    fr: {
+      title: "Sucres ajoutés et cachés",
+      body: "On scanne la liste d'ingrédients pour chaque token connu de sucre ajouté : saccharose, sirop de glucose, sirop de fructose, sirop de maïs, maltodextrine, dextrose, miel, jus de fruit concentré, sirop d'agave, sirop de riz. Une seule occurrence déclenche une pénalité de 30 points dès 12 mois, 45 points sur les produits pour les moins de 12 mois (le miel avant 12 mois représente aussi un risque de botulisme). Chaque ingrédient sucrant supplémentaire continue de baisser la note.",
+    },
+  },
+  {
+    key: "nutriScore",
+    weight: WEIGHTS.nutriScore,
+    en: {
+      title: "Official Nutri-Score (under-weighted)",
+      body: "We use the official Nutri-Score published by Santé publique France as a sanity check on macronutrient balance. It captures positive nutrients (fibre, protein, fruits, vegetables) vs negative ones (saturated fat, sugar, salt). We under-weight it to 10% because the Nutri-Score was designed for the adult diet and does not penalise ultra-processing or additives, which are our top baby-specific concerns. A = 95, E = 15.",
+    },
+    fr: {
+      title: "Nutri-Score officiel (sous-pondéré)",
+      body: "On utilise le Nutri-Score officiel publié par Santé publique France comme garde-fou sur l'équilibre macronutritionnel. Il capte les nutriments positifs (fibres, protéines, fruits, légumes) face aux négatifs (graisses saturées, sucre, sel). On le sous-pondère à 10% car le Nutri-Score a été conçu pour l'alimentation adulte et ne pénalise ni l'ultra-transformation ni les additifs, nos priorités bébé. A = 95, E = 15.",
+    },
+  },
+  {
+    key: "bio",
+    weight: WEIGHTS.bio,
+    en: {
+      title: "Organic certification",
+      body: "Certified organic (AB, EU-Organic, Demeter) signals low pesticide exposure and no synthetic fertilisers, which is a measurable benefit for a developing organism. A certified product scores 100 here, a non-certified product scores 40. Organic is also 7x more represented in the French baby-food market than in overall food , parents are willing to pay for that signal, we reward it.",
+    },
+    fr: {
+      title: "Certification bio",
+      body: "Une certification officielle (AB, UE Bio, Demeter) signale une exposition pesticides moindre et l'absence d'engrais synthétiques, bénéfice mesurable pour un organisme en développement. Un produit certifié obtient 100 ici, un produit non certifié obtient 40. Le bio est aussi 7 fois plus représenté sur le marché bébé français que sur l'alimentaire global : les parents achètent le signal, on le valorise.",
+    },
+  },
+  {
+    key: "allergens",
+    weight: WEIGHTS.allergens,
+    en: {
+      title: "Allergen transparency",
+      body: "We reward clear, up-front allergen declaration and penalise ambiguous traces listed everywhere on the label. A product with a clean declaration and no \"may contain\" hedging scores higher than one that lists six hypothetical allergens to escape liability. Parents need actionable information, not a legal shield.",
+    },
+    fr: {
+      title: "Transparence allergènes",
+      body: "On récompense une déclaration allergènes claire et affirmée, on pénalise les « peut contenir des traces » multipliés. Un produit avec une déclaration nette et zéro mention floue obtient mieux qu'un produit qui liste six allergènes hypothétiques pour se couvrir. Les parents ont besoin d'informations actionnables, pas d'un bouclier juridique.",
+    },
+  },
+  {
+    key: "origin",
+    weight: WEIGHTS.origin,
+    en: {
+      title: "Manufacturing origin",
+      body: "Made in France adds traceability, shorter supply chains and tighter EU regulatory oversight. A product with a \"Made in France\" or equivalent label scores 100 here, Made in Europe scores 70, unspecified origin scores 40. This is a minor axis (3%) but it pushes the score on tight ties.",
+    },
+    fr: {
+      title: "Origine de fabrication",
+      body: "Made in France = traçabilité, circuits courts, cadre réglementaire UE plus strict. Un produit avec « Fabriqué en France » ou équivalent obtient 100, « Made in Europe » obtient 70, origine non précisée 40. Axe mineur (3%) mais départage les scores serrés.",
+    },
+  },
+  {
+    key: "simplicity",
+    weight: WEIGHTS.simplicity,
+    en: {
+      title: "Recipe simplicity",
+      body: "For baby food, fewer ingredients is almost always better. A pot with 3 ingredients (carrots, water, lemon juice) beats a pot with 14 ingredients including thickeners, flavour enhancers and vitamin premix. 3 ingredients or fewer: 100. 5: 85. 8: 65. 12: 45. 18+: 25. Minor axis (2%) but a strong signal on processing craft.",
+    },
+    fr: {
+      title: "Simplicité de la recette",
+      body: "Sur l'alimentation bébé, moins d'ingrédients = presque toujours mieux. Un pot à 3 ingrédients (carotte, eau, jus de citron) bat un pot à 14 ingrédients incluant épaississants, exhausteurs de goût et prémix vitamines. 3 ingrédients ou moins : 100. 5 : 85. 8 : 65. 12 : 45. 18+ : 25. Axe mineur (2%) mais fort signal sur le soin de fabrication.",
+    },
+  },
+];
+
+const weightPct = {
+  nova: Math.round(WEIGHTS.nova * 100),
+  additives: Math.round(WEIGHTS.additives * 100),
+  addedSugars: Math.round(WEIGHTS.addedSugars * 100),
+  nutriScore: Math.round(WEIGHTS.nutriScore * 100),
+  bio: Math.round(WEIGHTS.bio * 100),
+  allergens: Math.round(WEIGHTS.allergens * 100),
+  origin: Math.round(WEIGHTS.origin * 100),
+  simplicity: Math.round(WEIGHTS.simplicity * 100),
+};
+---
+
+<article class="methodology-page">
+  <header class="m-header">
+    <p class="eyebrow">{locale === "fr" ? "Méthodologie" : "Methodology"}</p>
+    <h1 class="fade-up">
+      {locale === "fr"
+        ? "Comment BébéDécrypte calcule chaque note"
+        : "How BébéDécrypte computes every grade"}
+    </h1>
+    <p class="lede fade-up">
+      {locale === "fr"
+        ? "Chaque produit reçoit une note unique de A à E, composée de huit axes pondérés spécifiques à l'alimentation infantile. Aucun jugement humain, aucune influence sponsor, aucune IA black-box. L'algorithme est déterministe et reproductible : même liste d'ingrédients, même note, à chaque fois."
+        : "Every product receives a single A to E grade composed from eight weighted axes tuned for infant nutrition. No human judgement, no sponsor influence, no black-box AI. The algorithm is deterministic and reproducible: same ingredient list, same grade, every time."}
+    </p>
+  </header>
+
+  <aside class="tldr" data-speakable>
+    <p class="tldr-label">{locale === "fr" ? "TL;DR" : "TL;DR"}</p>
+    <p>
+      <strong>{locale === "fr" ? "La note BébéDécrypte" : "The BébéDécrypte Score"}</strong>
+      {locale === "fr"
+        ? ` combine huit axes pondérés : NOVA ultra-transformation (${weightPct.nova}%), additifs EFSA spécifique bébé (${weightPct.additives}%), sucres ajoutés et cachés (${weightPct.addedSugars}%), Nutri-Score officiel (${weightPct.nutriScore}%), certification bio (${weightPct.bio}%), transparence allergènes (${weightPct.allergens}%), origine France (${weightPct.origin}%), simplicité de la recette (${weightPct.simplicity}%). Le score de 0 à 100 est traduit en lettre A (≥ 85), B (≥ 70), C (≥ 55), D (≥ 40), E (< 40). Pondération automatiquement durcie pour les produits destinés aux moins de 12 mois.`
+        : ` combines eight weighted axes: NOVA ultra-processing (${weightPct.nova}%), baby-specific EFSA additive risk (${weightPct.additives}%), added and hidden sugars (${weightPct.addedSugars}%), official Nutri-Score (${weightPct.nutriScore}%), organic certification (${weightPct.bio}%), allergen transparency (${weightPct.allergens}%), French origin (${weightPct.origin}%), recipe simplicity (${weightPct.simplicity}%). The 0-100 score maps to a letter A (≥ 85), B (≥ 70), C (≥ 55), D (≥ 40), E (< 40). Weighting is automatically tightened for products targeting under-12-month infants.`}</p>
+  </aside>
+
+  <section class="m-section">
+    <h2 class="fade-up">{locale === "fr" ? "La note A à E en un coup d'œil" : "The A to E grade at a glance"}</h2>
+    <div class="grade-scale fade-up">
+      <div class="grade-item">
+        <span class="grade grade-lg grade-a">A</span>
+        <p><strong>{locale === "fr" ? "Excellent" : "Excellent"}</strong><span>{GRADE_THRESHOLDS.A}-100</span></p>
+      </div>
+      <div class="grade-item">
+        <span class="grade grade-lg grade-b">B</span>
+        <p><strong>{locale === "fr" ? "Bon" : "Good"}</strong><span>{GRADE_THRESHOLDS.B}-{GRADE_THRESHOLDS.A - 1}</span></p>
+      </div>
+      <div class="grade-item">
+        <span class="grade grade-lg grade-c">C</span>
+        <p><strong>{locale === "fr" ? "Moyen" : "Average"}</strong><span>{GRADE_THRESHOLDS.C}-{GRADE_THRESHOLDS.B - 1}</span></p>
+      </div>
+      <div class="grade-item">
+        <span class="grade grade-lg grade-d">D</span>
+        <p><strong>{locale === "fr" ? "Médiocre" : "Poor"}</strong><span>{GRADE_THRESHOLDS.D}-{GRADE_THRESHOLDS.C - 1}</span></p>
+      </div>
+      <div class="grade-item">
+        <span class="grade grade-lg grade-e">E</span>
+        <p><strong>{locale === "fr" ? "À éviter" : "Avoid"}</strong><span>0-{GRADE_THRESHOLDS.D - 1}</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="m-section">
+    <h2 class="fade-up">{locale === "fr" ? "Les huit axes pondérés" : "The eight weighted axes"}</h2>
+    <p class="m-section-lede fade-up">
+      {locale === "fr"
+        ? "Chaque axe est noté de 0 à 100, puis multiplié par son poids. Les huit contributions sont additionnées pour produire le score final. L'ordre ci-dessous reflète l'importance sur l'alimentation bébé, pas l'ordre alphabétique."
+        : "Each axis is scored from 0 to 100, then multiplied by its weight. The eight contributions are summed to produce the final score. The order below reflects importance for baby food, not alphabetical order."}
+    </p>
+    <div class="subscores stagger-children">
+      {axes.map((axis, i) => (
+        <div class="subscore-card">
+          <div class="subscore-head">
+            <div class="subscore-num">{String(i + 1).padStart(2, "0")}</div>
+            <div class="subscore-weight">
+              <span class="subscore-weight-num">{Math.round(axis.weight * 100)}%</span>
+              <span class="subscore-weight-label">{locale === "fr" ? "du score final" : "of final score"}</span>
+            </div>
+          </div>
+          <h3>{locale === "fr" ? axis.fr.title : axis.en.title}</h3>
+          <p>{locale === "fr" ? axis.fr.body : axis.en.body}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="m-section">
+    <h2 class="fade-up">{locale === "fr" ? "Pondération bébé automatique" : "Automatic baby-specific weighting"}</h2>
+    <p class="fade-up">
+      {locale === "fr"
+        ? "Sur tout produit destiné aux moins de 12 mois, l'algorithme durcit automatiquement deux axes : la pénalité par additif est quasiment doublée, et la pénalité sucres ajoutés passe de 30 à 45 points dès le premier ingrédient sucrant détecté. Le miel détecté sur un produit pour moins de 12 mois déclenche un avertissement explicite (risque de botulisme infantile, position ANSES et OMS). Les céréales infantiles enrichies au sucre et les laits de croissance aromatisés ne peuvent pas atteindre A sans reformulation."
+        : "On any product targeting under-12-month infants, the algorithm automatically tightens two axes: the per-additive penalty is nearly doubled, and the added-sugar penalty jumps from 30 to 45 points on the first detected sweetening ingredient. Honey on a product for under 12 months triggers an explicit warning (infant botulism risk, ANSES and WHO stance). Infant cereals enriched with sugar and flavoured follow-on formulas cannot reach A without reformulation."}
+    </p>
+  </section>
+
+  <section class="m-section">
+    <h2 class="fade-up">{locale === "fr" ? "Formule complète" : "Full formula"}</h2>
+    <pre class="formula">Score = {weightPct.nova}% · NOVA
+      + {weightPct.additives}% · Additifs EFSA (baby-tuned)
+      + {weightPct.addedSugars}% · Sucres ajoutés
+      + {weightPct.nutriScore}% · Nutri-Score
+      + {weightPct.bio}% · Bio
+      + {weightPct.allergens}% · Allergènes
+      + {weightPct.origin}% · Origine
+      + {weightPct.simplicity}% · Simplicité
+    </pre>
+    <p>
+      {locale === "fr"
+        ? "Les poids sont publics. Toute modification est versionnée et annoncée dans le journal. Même composition = même note. Chaque fiche produit expose les huit sous-scores, tu peux recalculer à la main."
+        : "Weights are public. Any change is versioned and announced in the journal. Same composition = same grade. Each product page exposes the eight sub-scores, you can recompute by hand."}
+    </p>
+  </section>
+
+  <section class="m-section">
+    <h2 class="fade-up">{locale === "fr" ? "Avertissements surlignés" : "Surfaced warnings"}</h2>
+    <p class="fade-up">
+      {locale === "fr"
+        ? "Même sur un produit avec une note moyenne (C), certains signaux méritent un avertissement explicite sur la fiche :"
+        : "Even on a product with an average grade (C), some signals deserve an explicit warning on the page:"}
+    </p>
+    <ul class="not-list fade-up">
+      <li><strong>{locale === "fr" ? "Huile de palme détectée" : "Palm oil detected"}</strong></li>
+      <li><strong>{locale === "fr" ? "Maltodextrine (sucre caché)" : "Maltodextrin (hidden sugar)"}</strong></li>
+      <li><strong>{locale === "fr" ? "Miel avant 12 mois (risque botulisme)" : "Honey before 12 months (botulism risk)"}</strong></li>
+      <li><strong>{locale === "fr" ? "Ultra-transformé (NOVA 4)" : "Ultra-processed (NOVA 4)"}</strong></li>
+      <li><strong>{locale === "fr" ? "Additifs à risque (ANSES)" : "Risky additives (ANSES-flagged)"}</strong></li>
+      <li><strong>{locale === "fr" ? "Sucres élevés (≥ 10 g / 100 g)" : "High free sugars (≥ 10 g / 100 g)"}</strong></li>
+      <li><strong>{locale === "fr" ? "Sel élevé (≥ 0,75 g / 100 g)" : "High salt (≥ 0.75 g / 100 g)"}</strong></li>
+      <li><strong>{locale === "fr" ? "Rappel produit actif (RappelConso / DGCCRF)" : "Active recall (RappelConso / DGCCRF)"}</strong></li>
+    </ul>
+  </section>
+
+  <section class="m-section">
+    <h2 class="fade-up">{locale === "fr" ? "Nos sources officielles" : "Our official sources"}</h2>
+    <ul class="sources-list fade-up">
+      <li>
+        <strong>Open Food Facts</strong>
+        <span>{locale === "fr" ? "Base collaborative européenne, licence ODbL, ~2 300 produits bébé FR." : "European collaborative database, ODbL licence, ~2,300 FR baby food products."}</span>
+      </li>
+      <li>
+        <strong>EFSA</strong>
+        <span>{locale === "fr" ? "European Food Safety Authority, base des additifs, avis scientifiques, réévaluation continue." : "European Food Safety Authority, additives registry, scientific opinions, rolling reevaluation."}</span>
+      </li>
+      <li>
+        <strong>ANSES</strong>
+        <span>{locale === "fr" ? "Agence nationale de sécurité sanitaire, études INCA 3, avis nutrition infantile." : "French national food safety agency, INCA 3 studies, infant nutrition opinions."}</span>
+      </li>
+      <li>
+        <strong>ESPGHAN</strong>
+        <span>{locale === "fr" ? "European Society for Paediatric Gastroenterology, Hepatology and Nutrition, guidelines diversification." : "European Society for Paediatric Gastroenterology, Hepatology and Nutrition, complementary-feeding guidelines."}</span>
+      </li>
+      <li>
+        <strong>NOVA</strong>
+        <span>{locale === "fr" ? "Classification ultra-transformation, Université de São Paulo." : "Ultra-processing classification, University of São Paulo."}</span>
+      </li>
+      <li>
+        <strong>RappelConso / DGCCRF</strong>
+        <span>{locale === "fr" ? "Flux officiel des rappels produits en France, synchronisé quotidiennement." : "Official French product recall feed, daily sync."}</span>
+      </li>
+      <li>
+        <strong>Nutri-Score</strong>
+        <span>{locale === "fr" ? "Logo nutritionnel officiel FR, Santé publique France." : "Official FR nutrition logo, Santé publique France."}</span>
+      </li>
+      <li>
+        <strong>OMS</strong>
+        <span>{locale === "fr" ? "Recommandations internationales sur l'alimentation du nourrisson et du jeune enfant." : "International guidance on infant and young-child feeding."}</span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="m-section">
+    <h2 class="fade-up">{locale === "fr" ? "Ce que nous ne faisons PAS" : "What we do NOT do"}</h2>
+    <ul class="not-list fade-up">
+      <li>
+        <strong>{locale === "fr" ? "Aucun paiement pour changer une note" : "No payment to change a grade"}</strong>
+        {locale === "fr" ? " : aucune marque ne peut acheter un upgrade, jamais, aucune exception." : " : no brand can buy an upgrade, ever, no exception."}
+      </li>
+      <li>
+        <strong>{locale === "fr" ? "Aucun scoring opaque" : "No opaque scoring"}</strong>
+        {locale === "fr"
+          ? " : chaque axe, chaque poids, chaque pénalité et chaque avertissement sont visibles sur chaque fiche produit."
+          : " : every axis, weight, penalty and warning is visible on every product page."}
+      </li>
+      <li>
+        <strong>{locale === "fr" ? "Aucun jugement moral" : "No moral judgement"}</strong>
+        {locale === "fr"
+          ? " : on note une composition face à des sources officielles, pas une marque, un packaging ou un style de parent."
+          : " : we rate a composition against official sources, not a brand, a packaging, or a parenting style."}
+      </li>
+      <li>
+        <strong>{locale === "fr" ? "Aucun avis médical individuel" : "No individualised medical advice"}</strong>
+        {locale === "fr"
+          ? " : nos notes sont informatives. Pour tout terrain allergique, suivi de croissance, APLV ou régime spécifique, consulte ton pédiatre. BébéDécrypte n'est pas un cabinet médical."
+          : " : our grades are informational. For allergic backgrounds, growth monitoring, CMPA or special diets, consult your paediatrician. BébéDécrypte is not a medical practice."}
+      </li>
+    </ul>
+  </section>
+
+  <section class="m-section">
+    <h2 class="fade-up">{locale === "fr" ? "Mises à jour et révisions" : "Updates and revisions"}</h2>
+    <p class="fade-up">
+      {locale === "fr"
+        ? "Notre base produits est synchronisée avec Open Food Facts chaque semaine. Le flux RappelConso / DGCCRF est synchronisé quotidiennement : tout produit rappelé est signalé dans l'heure. Quand une marque change sa formulation ou qu'un avis EFSA / ANSES révise un additif, les notes concernées sont recalculées automatiquement. L'historique des révisions de l'algorithme est public."
+        : "Our product database is synced with Open Food Facts every week. The RappelConso / DGCCRF recall feed is synced daily: any recalled product is flagged within an hour. When a brand changes its formulation or an EFSA / ANSES opinion revises an additive, affected grades are recomputed automatically. The algorithm revision history is public."}
+    </p>
+  </section>
+</article>
+
+<style>
+  .methodology-page {
+    max-width: 52rem;
+    margin: 2rem auto 4rem;
+    padding: 0 1rem;
+  }
+  .m-header {
+    max-width: 44rem;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  .eyebrow {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-primary-dark);
+    margin-bottom: 0.75rem;
+  }
+  .m-header h1 {
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+  .lede { color: var(--color-ink-soft); font-size: 1.1rem; }
+
+  .tldr {
+    max-width: 48rem;
+    margin: 0 auto 3rem;
+    background: var(--color-bg-soft);
+    border-left: 4px solid var(--color-primary);
+    border-radius: 0 0.75rem 0.75rem 0;
+    padding: 1.25rem 1.5rem;
+  }
+  .tldr-label {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-primary-dark);
+    margin: 0 0 0.5rem;
+    font-weight: 700;
+  }
+  .tldr p:last-child {
+    margin: 0;
+    color: var(--color-ink);
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .m-section { margin-bottom: 3rem; }
+  .m-section > h2 {
+    font-size: 1.45rem;
+    color: var(--color-primary-dark);
+    margin: 0 0 1.25rem;
+  }
+  .m-section p {
+    color: var(--color-ink-soft);
+    line-height: 1.75;
+  }
+  .m-section-lede { margin-bottom: 1.5rem; }
+
+  .grade-scale {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+  @media (min-width: 640px) { .grade-scale { grid-template-columns: repeat(5, 1fr); } }
+  .grade-item {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 1rem;
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 0.875rem;
+  }
+  @media (min-width: 640px) {
+    .grade-item { flex-direction: column; text-align: center; gap: 0.6rem; }
+  }
+  .grade-item p { margin: 0; display: flex; flex-direction: column; gap: 0.15rem; }
+  .grade-item strong {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    font-size: 0.95rem;
+  }
+  .grade-item span {
+    font-size: 0.72rem;
+    color: var(--color-ink-soft);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .subscores {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  @media (min-width: 640px) { .subscores { grid-template-columns: repeat(2, 1fr); } }
+  .subscore-card {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 0.875rem;
+    padding: 1.5rem;
+    transition: transform 320ms var(--ease-out-expo), box-shadow 320ms var(--ease-out-expo), border-color 320ms ease;
+  }
+  .subscore-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: color-mix(in srgb, var(--color-primary) 30%, var(--color-border));
+  }
+  .subscore-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+  .subscore-num {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--color-primary);
+    opacity: 0.4;
+    line-height: 1;
+  }
+  .subscore-weight {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.15rem;
+  }
+  .subscore-weight-num {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--color-primary-dark);
+  }
+  .subscore-weight-label {
+    font-size: 0.65rem;
+    color: var(--color-ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .subscore-card h3 {
+    font-size: 1.15rem;
+    color: var(--color-primary-dark);
+    margin: 0 0 0.5rem;
+  }
+  .subscore-card p { font-size: 0.95rem; margin: 0; }
+
+  .formula {
+    background: #0c1a17;
+    color: #67e8f9;
+    padding: 1.25rem 1.5rem;
+    border-radius: 0.75rem;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    margin: 0 0 1.25rem;
+    overflow-x: auto;
+  }
+
+  .sources-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+  @media (min-width: 640px) { .sources-list { grid-template-columns: repeat(2, 1fr); } }
+  .sources-list li {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 0.65rem;
+    padding: 0.85rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .sources-list strong {
+    color: var(--color-primary-dark);
+    font-weight: 800;
+    font-size: 0.92rem;
+  }
+  .sources-list span {
+    color: var(--color-ink-soft);
+    font-size: 0.85rem;
+  }
+
+  .not-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .not-list li {
+    padding: 0.9rem 1.1rem;
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    margin-bottom: 0.55rem;
+    color: var(--color-ink-soft);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .not-list strong {
+    color: var(--color-ink);
+    font-weight: 700;
+  }
+</style>

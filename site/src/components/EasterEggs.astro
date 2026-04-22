@@ -1,0 +1,285 @@
+---
+/**
+ * BebeDecrypte Easter Eggs , Konami-style keyboard listener + brand-themed effects.
+ *
+ * Type one of the secret codes to trigger an effect :
+ *   bebe     -> burst of baby bottles falling from top
+ *   decode   -> reveal every piece of text as E-numbers for 2s then restore
+ *   rappel   -> red alert strip sweeps across the page (RappelConso parody)
+ *   nova4    -> screen shakes + ultra-processed warning
+ *   bio      -> green leaves fall (Demeter mode)
+ *
+ * Console : ASCII logo + stealth hint.
+ */
+---
+
+<script>
+  // Console ASCII Art
+  console.log(`
+  ╔═══════════════════════════════════════════════╗
+  ║                                               ║
+  ║    ██████╗ ███████╗██████╗ ███████╗           ║
+  ║    ██╔══██╗██╔════╝██╔══██╗██╔════╝           ║
+  ║    ██████╔╝█████╗  ██████╔╝█████╗             ║
+  ║    ██╔══██╗██╔══╝  ██╔══██╗██╔══╝             ║
+  ║    ██████╔╝███████╗██████╔╝███████╗           ║
+  ║    ╚═════╝ ╚══════╝╚═════╝ ╚══════╝           ║
+  ║                                               ║
+  ║    ██████╗ ███████╗ ██████╗██████╗ ██╗   ██╗  ║
+  ║    ██╔══██╗██╔════╝██╔════╝██╔══██╗╚██╗ ██╔╝  ║
+  ║    ██║  ██║█████╗  ██║     ██████╔╝ ╚████╔╝   ║
+  ║    ██║  ██║██╔══╝  ██║     ██╔══██╗  ╚██╔╝    ║
+  ║    ██████╔╝███████╗╚██████╗██║  ██║   ██║     ║
+  ║    ╚═════╝ ╚══════╝ ╚═════╝╚═╝  ╚═╝   ╚═╝     ║
+  ║                                               ║
+  ║  On decrypte ce qu'il y a vraiment            ║
+  ║  dans le pot de ton bebe.                     ║
+  ║                                               ║
+  ║  https://bebedecrypte.com                     ║
+  ║                                               ║
+  ║  Easter eggs ? Tape : bebe, decode,           ║
+  ║  rappel, nova4, bio  (5 effets).              ║
+  ║                                               ║
+  ╚═══════════════════════════════════════════════╝
+  `);
+
+  // In-app browser detection (TikTok / Instagram / FB)
+  (function detectInApp() {
+    const ua = navigator.userAgent || "";
+    const isInApp = /musical_ly|BytedanceWebview|TikTok|FBAN|FBAV|Instagram/i.test(ua);
+    if (isInApp && !sessionStorage.getItem("inapp_dismissed")) {
+      const banner = document.createElement("div");
+      banner.style.cssText = "position:fixed;top:0;left:0;right:0;z-index:100000;padding:12px 16px;background:rgba(0,0,0,0.7);backdrop-filter:blur(12px);color:white;font-size:13px;text-align:center;display:flex;align-items:center;justify-content:center;gap:8px;";
+      banner.innerHTML = `
+        <span style="flex:1">Pour une meilleure experience, ouvre dans ton navigateur (3 points en haut a droite).</span>
+        <button id="dismiss-inapp" style="background:rgba(255,255,255,0.2);border:none;color:white;padding:4px 10px;border-radius:20px;font-size:12px;cursor:pointer;">OK</button>
+      `;
+      document.body.prepend(banner);
+      document.getElementById("dismiss-inapp")?.addEventListener("click", () => {
+        banner.remove();
+        sessionStorage.setItem("inapp_dismissed", "1");
+      });
+    }
+  })();
+
+  // Easter egg keyboard listener
+  let buffer = "";
+  const maxLen = 7; // longest trigger = "decode" / "rappel" / "nova4" / "bebe" / "bio"
+
+  window.addEventListener("keydown", (e) => {
+    const key = e.key.toLowerCase();
+    if (key.length !== 1) return;
+    buffer = (buffer + key).slice(-maxLen);
+
+    if (buffer.endsWith("bebe")) triggerBottles();
+    if (buffer.endsWith("decode")) triggerDecode();
+    if (buffer.endsWith("rappel")) triggerRecallStrip();
+    if (buffer.endsWith("nova4")) triggerNovaShake();
+    if (buffer.endsWith("bio")) triggerLeaves();
+  });
+
+  // ====================================================
+  // BOTTLES (bebe)
+  // Baby bottles fall from top, gentle rain effect.
+  // ====================================================
+  function triggerBottles() {
+    const canvas = document.createElement("canvas");
+    canvas.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:99999;";
+    document.body.appendChild(canvas);
+    const ctx = canvas.getContext("2d")!;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const N = 40;
+    const particles: { x: number; y: number; vx: number; vy: number; size: number; rotation: number; vr: number; life: number }[] = [];
+    for (let i = 0; i < N; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: -50 - Math.random() * 400,
+        vx: (Math.random() - 0.5) * 1.2,
+        vy: 2 + Math.random() * 3,
+        size: 18 + Math.random() * 18,
+        rotation: Math.random() * 360,
+        vr: (Math.random() - 0.5) * 2,
+        life: 1,
+      });
+    }
+
+    function drawBottle(size: number) {
+      // stylized bottle in cyan palette
+      ctx.fillStyle = "#fefce8";
+      ctx.fillRect(-size * 0.35, -size * 0.2, size * 0.7, size * 0.9);
+      ctx.fillStyle = "#0891b2";
+      ctx.fillRect(-size * 0.2, -size * 0.45, size * 0.4, size * 0.18);
+      ctx.fillStyle = "#155e75";
+      ctx.fillRect(-size * 0.25, -size * 0.3, size * 0.5, size * 0.08);
+      ctx.strokeStyle = "#0891b2";
+      ctx.lineWidth = 1.2;
+      for (let lvl = 0; lvl < 3; lvl++) {
+        ctx.beginPath();
+        ctx.moveTo(-size * 0.3, size * 0.05 + lvl * size * 0.18);
+        ctx.lineTo(size * 0.15, size * 0.05 + lvl * size * 0.18);
+        ctx.stroke();
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      let alive = false;
+      for (const p of particles) {
+        if (p.life <= 0) continue;
+        alive = true;
+        p.x += p.vx;
+        p.y += p.vy;
+        p.rotation += p.vr;
+        if (p.y > canvas.height + 60) p.life = 0;
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate((p.rotation * Math.PI) / 180);
+        drawBottle(p.size);
+        ctx.restore();
+      }
+      if (alive) requestAnimationFrame(animate);
+      else canvas.remove();
+    }
+    requestAnimationFrame(animate);
+  }
+
+  // ====================================================
+  // DECODE (decode)
+  // Replaces every readable text node with E-numbers for 2s
+  // then restores everything. Brand signature easter egg.
+  // ====================================================
+  function triggerDecode() {
+    const POOL = ["E102", "E150d", "E250", "E471", "E407", "E621", "E102", "E330", "E322", "E415"];
+    const originals = new Map<Node, string>();
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+    const nodes: Text[] = [];
+    let cur = walker.nextNode();
+    while (cur) {
+      if (cur.nodeValue && cur.nodeValue.trim().length > 1 && cur.parentElement && !["SCRIPT", "STYLE"].includes(cur.parentElement.tagName)) {
+        nodes.push(cur as Text);
+      }
+      cur = walker.nextNode();
+    }
+    for (const n of nodes) {
+      originals.set(n, n.nodeValue || "");
+      const len = (n.nodeValue || "").length;
+      let out = "";
+      while (out.length < len) {
+        out += POOL[Math.floor(Math.random() * POOL.length)] + " ";
+      }
+      n.nodeValue = out.slice(0, len);
+    }
+    setTimeout(() => {
+      for (const [node, original] of originals) node.nodeValue = original;
+    }, 2200);
+  }
+
+  // ====================================================
+  // RECALL STRIP (rappel)
+  // Red alert banner sweeps across top of screen, mock-RappelConso.
+  // ====================================================
+  function triggerRecallStrip() {
+    const strip = document.createElement("div");
+    strip.style.cssText = "position:fixed;top:0;left:-100%;right:0;height:50px;z-index:99999;background:linear-gradient(90deg,#dc2626,#b91c1c);color:#fff;display:flex;align-items:center;gap:14px;padding:0 24px;font-family:system-ui,sans-serif;font-weight:800;font-size:14px;letter-spacing:0.05em;transition:left 0.6s cubic-bezier(0.2,0.9,0.2,1);pointer-events:none;box-shadow:0 8px 24px rgba(0,0,0,0.2);";
+    strip.innerHTML = "<span style='font-size:18px'>!</span><span>RAPPEL PRODUIT , LOT FICTIF , CONSULTE RAPPELCONSO.GOUV.FR POUR LES VRAIS RAPPELS</span>";
+    document.body.appendChild(strip);
+    requestAnimationFrame(() => { strip.style.left = "0%"; });
+    setTimeout(() => { strip.style.left = "100%"; }, 3500);
+    setTimeout(() => strip.remove(), 4500);
+  }
+
+  // ====================================================
+  // NOVA4 SHAKE (nova4)
+  // Page shakes briefly + warning toast "Ultra-transforme detecte"
+  // ====================================================
+  function triggerNovaShake() {
+    const style = document.createElement("style");
+    style.textContent = `
+      @keyframes ee-shake {
+        0%, 100% { transform: translate(0, 0); }
+        10% { transform: translate(-6px, 2px); }
+        20% { transform: translate(5px, -3px); }
+        30% { transform: translate(-4px, 4px); }
+        40% { transform: translate(4px, -2px); }
+        50% { transform: translate(-3px, 3px); }
+        60% { transform: translate(3px, -4px); }
+        70% { transform: translate(-2px, 2px); }
+        80% { transform: translate(2px, -1px); }
+        90% { transform: translate(-1px, 1px); }
+      }
+      body { animation: ee-shake 0.7s linear 2 !important; }
+    `;
+    document.head.appendChild(style);
+
+    const toast = document.createElement("div");
+    toast.style.cssText = "position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:99999;background:#0c0a09;color:#f59e0b;padding:14px 22px;border-radius:10px;font-family:system-ui,sans-serif;font-weight:800;font-size:13px;letter-spacing:0.05em;border:1px solid #f59e0b;box-shadow:0 16px 40px rgba(0,0,0,0.4);";
+    toast.innerHTML = "NOVA 4 , ULTRA-TRANSFORME DETECTE";
+    document.body.appendChild(toast);
+
+    setTimeout(() => { style.remove(); toast.remove(); }, 1800);
+  }
+
+  // ====================================================
+  // LEAVES (bio)
+  // Small green leaves drift down , Demeter mode.
+  // ====================================================
+  function triggerLeaves() {
+    const canvas = document.createElement("canvas");
+    canvas.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:99999;";
+    document.body.appendChild(canvas);
+    const ctx = canvas.getContext("2d")!;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const N = 60;
+    const leaves: { x: number; y: number; vx: number; vy: number; rot: number; vr: number; size: number; color: string }[] = [];
+    const greens = ["#84cc16", "#65a30d", "#4d7c0f", "#15803d", "#16a34a"];
+    for (let i = 0; i < N; i++) {
+      leaves.push({
+        x: Math.random() * canvas.width,
+        y: -30 - Math.random() * 600,
+        vx: (Math.random() - 0.5) * 1.5,
+        vy: 1.5 + Math.random() * 2.2,
+        rot: Math.random() * 360,
+        vr: (Math.random() - 0.5) * 4,
+        size: 10 + Math.random() * 12,
+        color: greens[Math.floor(Math.random() * greens.length)],
+      });
+    }
+
+    function drawLeaf(size: number, color: string) {
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.ellipse(0, 0, size * 0.55, size, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = "rgba(12, 10, 9, 0.35)";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(0, -size);
+      ctx.lineTo(0, size);
+      ctx.stroke();
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      let alive = false;
+      for (const l of leaves) {
+        if (l.y > canvas.height + 40) continue;
+        alive = true;
+        l.x += l.vx + Math.sin(l.y * 0.02) * 0.6;
+        l.y += l.vy;
+        l.rot += l.vr;
+        ctx.save();
+        ctx.translate(l.x, l.y);
+        ctx.rotate((l.rot * Math.PI) / 180);
+        drawLeaf(l.size, l.color);
+        ctx.restore();
+      }
+      if (alive) requestAnimationFrame(animate);
+      else canvas.remove();
+    }
+    requestAnimationFrame(animate);
+  }
+</script>

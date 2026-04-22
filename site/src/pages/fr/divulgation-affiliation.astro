@@ -1,0 +1,119 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "Divulgation d'affiliation · PetFoodRate";
+const description = "Comment PetFoodRate se finance : liens d'affiliation, transparence totale, zéro sponsoring des marques notées. Notes A à E indépendantes.";
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="legal-page">
+    <header class="legal-header">
+      <p class="eyebrow">Transparence</p>
+      <h1>Divulgation d'affiliation</h1>
+      <p class="lede">
+        PetFoodRate est un service de notation pet food indépendant. Les notes A à E sont attribuées sans contrepartie financière. Pour rester gratuit, on utilise ponctuellement des liens d'affiliation. Voici comment ça marche, sans filtre.
+      </p>
+    </header>
+
+    <section class="legal-section">
+      <h2>Qu'est-ce qu'un lien d'affiliation ?</h2>
+      <p>
+        Quand tu cliques sur un bouton « Voir sur Zooplus » depuis PetFoodRate, tu arrives sur le site partenaire via un lien tracké. Si tu achètes dans les jours qui suivent, la boutique reverse une petite commission à PetFoodRate (en général entre 3 et 8 % du panier). Le prix payé est exactement le même que si tu étais arrivé directement : zéro surcoût pour toi.
+      </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>Avec quels partenaires travaillons-nous ?</h2>
+      <p>Au 22 avril 2026 :</p>
+      <ul>
+        <li><strong>Zooplus FR</strong> · partenaire affilié validé via le réseau Awin. Catalogue large (chien, chat, petits animaux, oiseaux).</li>
+        <li>Autres partenaires en attente de validation : Maxi Zoo FR, Just Russel FR, Edgard &amp; Cooper.</li>
+      </ul>
+      <p>Seuls les produits pertinents et disponibles chez nos partenaires affichent un bouton « Voir sur ». Les autres fiches restent purement informatives.</p>
+    </section>
+
+    <section class="legal-section">
+      <h2>L'affiliation influence-t-elle les notes ?</h2>
+      <p>
+        Non. Les scores A à E sont calculés par notre méthodologie publique (composition analysée, sous-scores protéines, nutrition, indésirables, transparence, adaptabilité espèce). Aucune marque ne peut « acheter » une meilleure note. Aucun partenaire affilié n'a accès à nos grilles avant publication. Aucune des notes n'est modifiée après acceptation d'un partenariat.
+      </p>
+      <p>
+        Concrètement : une marque notée D reste notée D, qu'elle soit vendue chez un partenaire affilié ou pas. Les marques distributeur (Auchan, Carrefour, U, Leclerc…) ne sont pas vendues par nos partenaires, elles sont notées au même titre que les autres.
+      </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>Comment reconnaître un lien d'affiliation ?</h2>
+      <p>
+        Chaque CTA sponsorisé est signalé : badge « Partenaire affilié », bouton distinct (vert), mention explicite du caractère affilié. Les liens passent par notre redirection <code>/go/{"{"}id-du-produit{"}"}</code> pour nous permettre de mesurer les clics côté PetFoodRate. Ces liens portent l'attribut <code>rel="sponsored nofollow"</code> conformément aux recommandations Google.
+      </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>Tes droits en tant qu'utilisateur</h2>
+      <ul>
+        <li>Tu peux utiliser PetFoodRate sans jamais cliquer sur un lien d'affiliation, toutes les notes et analyses restent accessibles.</li>
+        <li>Tu peux retirer ton consentement aux cookies de mesure d'audience via la bannière de cookies (pied de page).</li>
+        <li>Les données de clics affiliés ne contiennent aucune information personnelle identifiable. On stocke : identifiant produit, partenaire, référent, pays, date. Pas d'adresse IP conservée au-delà du strict nécessaire.</li>
+      </ul>
+    </section>
+
+    <section class="legal-section">
+      <h2>Une question ?</h2>
+      <p>
+        Écris-nous à <a href="mailto:contact@petfoodrate.com">contact@petfoodrate.com</a>. On répond sous 48 h en semaine.
+      </p>
+    </section>
+  </article>
+
+  <style>
+    .legal-page {
+      max-width: 44rem;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 5rem;
+    }
+    .legal-header {
+      margin-bottom: 2.5rem;
+    }
+    .eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #16a34a;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin: 0 0 0.5rem;
+    }
+    .legal-page h1 {
+      font-size: 2.25rem;
+      line-height: 1.15;
+      margin: 0 0 1rem;
+    }
+    .lede {
+      font-size: 1.1rem;
+      line-height: 1.55;
+      color: var(--text-muted, #475569);
+      margin: 0;
+    }
+    .legal-section {
+      margin-top: 2.25rem;
+    }
+    .legal-section h2 {
+      font-size: 1.35rem;
+      margin: 0 0 0.6rem;
+    }
+    .legal-section p {
+      line-height: 1.65;
+      margin: 0 0 0.75rem;
+    }
+    .legal-section ul {
+      margin: 0.5rem 0 1rem 1.25rem;
+      line-height: 1.65;
+    }
+    .legal-section code {
+      background: rgba(34, 197, 94, 0.08);
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.92em;
+    }
+  </style>
+</BaseLayout>

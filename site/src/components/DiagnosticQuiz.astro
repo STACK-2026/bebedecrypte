@@ -1,0 +1,201 @@
+---
+import { siteConfig } from "../../site.config";
+---
+
+<div id="quiz-container" class="bg-white rounded-2xl border border-gray-100 shadow-xl p-6 md:p-10 text-left scale-reveal overflow-hidden relative">
+  <div class="absolute top-0 left-0 right-0 h-1 gradient-animated" style={`background: linear-gradient(90deg, ${siteConfig.colors.primary}, ${siteConfig.colors.accent}, ${siteConfig.colors.secondary}, ${siteConfig.colors.primary});`}></div>
+
+  <div class="text-center mb-8">
+    <span class="inline-flex items-center gap-2 bg-accent/10 text-accent text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+      Diagnostic express gratuit
+    </span>
+    <h2 class="text-xl md:text-2xl font-bold" id="quiz-title" style="letter-spacing: -0.03em;">L'IA menace-t-elle ton métier ?</h2>
+    <p class="text-gray-400 text-sm mt-2" id="quiz-subtitle">5 questions, 1 minute. Zéro inscription, zéro email.</p>
+  </div>
+
+  <div id="quiz-question" class="min-h-[260px]"></div>
+
+  <div class="mt-6">
+    <div class="flex justify-between text-xs text-gray-400 mb-1.5">
+      <span id="quiz-progress-text">Question 1/5</span>
+      <span id="quiz-score-text"></span>
+    </div>
+    <div class="w-full bg-gray-100 rounded-full h-1.5">
+      <div id="quiz-progress-bar" class="h-1.5 rounded-full transition-all duration-700 ease-out" style={`background: linear-gradient(90deg, ${siteConfig.colors.primary}, ${siteConfig.colors.accent}); width: 0%;`}></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const questions = [
+    {
+      q: "Dans ton travail quotidien, quelle part de tes tâches est répétitive et prévisible ?",
+      options: [
+        { text: "Très peu, je fais surtout du sur-mesure", score: 3, emoji: "🎨" },
+        { text: "Un mélange de routine et de créativité", score: 2, emoji: "⚖️" },
+        { text: "Beaucoup de procédures standardisées", score: 1, emoji: "📋" },
+        { text: "Presque tout est procédurier", score: 0, emoji: "🔄" },
+      ],
+    },
+    {
+      q: "Pourquoi un client aurait besoin de toi plutôt que d'une IA ?",
+      options: [
+        { text: "Mon jugement, mon réseau, ma créativité", score: 3, emoji: "🧠" },
+        { text: "Mon expérience terrain dans mon secteur", score: 2, emoji: "🎯" },
+        { text: "Ma fiabilité et ma disponibilité", score: 1, emoji: "🤝" },
+        { text: "Bonne question, je ne sais pas trop", score: 0, emoji: "🤔" },
+      ],
+    },
+    {
+      q: "Combien d'outils d'intelligence artificielle utilises-tu au quotidien ?",
+      options: [
+        { text: "3 ou plus (ChatGPT, Copilot, Midjourney...)", score: 3, emoji: "🚀" },
+        { text: "1 à 2, régulièrement", score: 2, emoji: "💡" },
+        { text: "J'ai essayé mais pas plus", score: 1, emoji: "👀" },
+        { text: "Aucun pour l'instant", score: 0, emoji: "🙈" },
+      ],
+    },
+    {
+      q: "Ton métier repose-t-il sur les relations humaines (négociation, empathie, gestion d'équipe) ?",
+      options: [
+        { text: "Oui, c'est le cœur de ce que je fais", score: 3, emoji: "❤️" },
+        { text: "En partie, pas uniquement", score: 2, emoji: "💬" },
+        { text: "Peu, je travaille surtout seul", score: 1, emoji: "💻" },
+        { text: "Non, c'est essentiellement technique", score: 0, emoji: "⚙️" },
+      ],
+    },
+    {
+      q: "Si l'IA faisait la moitié de ton travail demain, tu ferais quoi du temps gagné ?",
+      options: [
+        { text: "Plus de stratégie, de créativité, de relation client", score: 3, emoji: "📈" },
+        { text: "J'ai des idées mais il faut que je me forme", score: 2, emoji: "📚" },
+        { text: "Je ne sais pas encore, faut que j'y réfléchisse", score: 1, emoji: "💭" },
+        { text: "Je serais inquiet pour mon poste", score: 0, emoji: "😟" },
+      ],
+    },
+  ];
+
+  const results = [
+    { min: 0, max: 4, emoji: "🔴", title: "Ton métier est en danger", text: "Ton profil est très exposé à l'automatisation. Mais la bonne nouvelle : toutes les ressources pour comprendre et agir sont gratuites sur Adapte-toi. Commence par la fiche de ton métier.", cta: { label: "Consulter les fiches métier gratuitement", href: "/metiers" }, color: "#E63946" },
+    { min: 5, max: 8, emoji: "🟠", title: "Ton métier va changer", text: "Tu as des atouts, mais aussi des points faibles face à l'IA. Nos guides gratuits t'expliquent exactement quels outils apprendre et comment te former sans dépenser un centime.", cta: { label: "Se former gratuitement", href: "/guides" }, color: "#F77F00" },
+    { min: 9, max: 12, emoji: "🟡", title: "Tu es bien positionné", text: "Tes compétences humaines te protègent. Continue à intégrer l'IA dans ton quotidien. Notre annuaire d'outils gratuit t'aide à trouver les bons outils pour ton métier.", cta: { label: "Découvrir les outils IA", href: "/outils" }, color: "#EAB308" },
+    { min: 13, max: 15, emoji: "🟢", title: "Tu es prêt pour demain", text: "Tu fais partie des professionnels les mieux préparés. Tu comprends les outils, tu as les bonnes compétences. Ton expérience peut aider les autres.", cta: { label: "Partager ton expérience", href: "/temoignages" }, color: "#22C55E" },
+  ];
+
+  let currentQ = 0;
+  let score = 0;
+  const container = document.getElementById("quiz-question");
+  const bar = document.getElementById("quiz-progress-bar");
+  const pText = document.getElementById("quiz-progress-text");
+  const sText = document.getElementById("quiz-score-text");
+
+  function renderQuestion() {
+    if (!container || !bar || !pText) return;
+    const q = questions[currentQ];
+    bar.style.width = `${(currentQ / questions.length) * 100}%`;
+    pText.textContent = `Question ${currentQ + 1}/${questions.length}`;
+    container.style.opacity = "0";
+    container.style.transform = "translateY(8px)";
+    setTimeout(() => {
+      container.innerHTML = `
+        <p class="font-semibold text-lg mb-6 leading-relaxed" style="letter-spacing:-0.01em;">${q.q}</p>
+        <div class="space-y-2.5" id="opts">
+          ${q.options.map((opt) => `
+            <button class="quiz-opt w-full text-left px-4 py-3.5 rounded-xl border-2 border-gray-100 transition-all text-sm leading-relaxed group cursor-pointer" data-score="${opt.score}">
+              <span class="inline-flex items-center gap-3">
+                <span class="text-lg flex-shrink-0">${opt.emoji}</span>
+                <span class="group-hover:text-gray-900 text-gray-600 transition-colors">${opt.text}</span>
+              </span>
+            </button>
+          `).join("")}
+        </div>
+      `;
+      requestAnimationFrame(() => {
+        container.style.transition = "opacity 0.4s ease, transform 0.4s ease";
+        container.style.opacity = "1";
+        container.style.transform = "translateY(0)";
+      });
+      const opts = container.querySelectorAll(".quiz-opt") as NodeListOf<HTMLElement>;
+      opts.forEach((opt, i) => {
+        opt.style.opacity = "0";
+        opt.style.transform = "translateX(-12px)";
+        setTimeout(() => {
+          opt.style.transition = "opacity 0.35s ease, transform 0.35s ease, border-color 0.15s, background 0.15s, box-shadow 0.15s";
+          opt.style.opacity = "1";
+          opt.style.transform = "translateX(0)";
+        }, 60 + i * 70);
+      });
+      opts.forEach((opt) => {
+        opt.addEventListener("mouseenter", () => {
+          opt.style.borderColor = "rgba(230,57,70,0.3)";
+          opt.style.boxShadow = "0 0 0 1px rgba(230,57,70,0.1)";
+        });
+        opt.addEventListener("mouseleave", () => {
+          opt.style.borderColor = "";
+          opt.style.boxShadow = "";
+        });
+        opt.addEventListener("click", () => {
+          score += parseInt(opt.dataset.score || "0");
+          opts.forEach((o) => { o.style.opacity = "0.3"; o.style.pointerEvents = "none"; o.style.transform = "scale(0.98)"; });
+          opt.style.opacity = "1";
+          opt.style.transform = "scale(1.02)";
+          opt.style.borderColor = "#E63946";
+          opt.style.background = "rgba(230,57,70,0.04)";
+          opt.style.boxShadow = "0 0 0 2px rgba(230,57,70,0.15)";
+          setTimeout(() => {
+            currentQ++;
+            if (currentQ < questions.length) renderQuestion();
+            else renderResult();
+          }, 500);
+        });
+      });
+    }, 200);
+  }
+
+  function renderResult() {
+    if (!container || !bar || !pText || !sText) return;
+    bar.style.width = "100%";
+    pText.textContent = "Terminé";
+    sText.textContent = `${score}/${questions.length * 3} points`;
+    const r = results.find((r) => score >= r.min && score <= r.max) || results[0];
+    const title = document.getElementById("quiz-title");
+    const subtitle = document.getElementById("quiz-subtitle");
+    if (title) title.textContent = "Ton résultat";
+    if (subtitle) subtitle.textContent = "";
+    container.style.opacity = "0";
+    container.style.transform = "scale(0.96)";
+    setTimeout(() => {
+      container.innerHTML = `
+        <div class="text-center py-4">
+          <div class="text-6xl mb-4">${r.emoji}</div>
+          <h3 class="text-2xl md:text-3xl font-bold mb-4" style="color:${r.color}; letter-spacing:-0.03em;">${r.title}</h3>
+          <p class="text-gray-500 leading-relaxed mb-8 max-w-md mx-auto">${r.text}</p>
+          <div class="flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="${r.cta.href}" class="inline-flex items-center justify-center gap-2 text-white font-semibold px-7 py-3.5 rounded-full transition-all hover:scale-[1.03] active:scale-[0.98] text-sm" style="background:${r.color}; box-shadow: 0 2px 4px 0 rgba(255,255,255,0.3) inset, 0 4px 15px -3px ${r.color}40;">
+              ${r.cta.label}
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            </a>
+            <button id="quiz-restart" class="inline-flex items-center justify-center gap-2 text-gray-500 font-medium px-6 py-3 rounded-full border border-gray-200 hover:border-gray-300 hover:text-gray-700 transition-all text-sm">
+              Recommencer
+            </button>
+          </div>
+          <p class="text-xs text-gray-400 mt-6">100% gratuit. Aucune formation à vendre. Aucun email demandé.</p>
+        </div>
+      `;
+      requestAnimationFrame(() => {
+        container.style.transition = "opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1)";
+        container.style.opacity = "1";
+        container.style.transform = "scale(1)";
+      });
+      document.getElementById("quiz-restart")?.addEventListener("click", () => {
+        currentQ = 0; score = 0; sText.textContent = "";
+        if (title) title.textContent = "L'IA menace-t-elle ton métier ?";
+        if (subtitle) subtitle.textContent = "5 questions, 1 minute. Zéro inscription, zéro email.";
+        renderQuestion();
+      });
+    }, 250);
+  }
+
+  renderQuestion();
+</script>

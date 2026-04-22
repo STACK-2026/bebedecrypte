@@ -1,0 +1,51 @@
+name: rebuild-guard
+
+# Daily marker commit , forces a Cloudflare Pages rebuild so Astro picks up
+# any blog article whose `date` has crossed `now`.
+#
+# Astro getStaticPaths filters posts with `date <= now` at BUILD TIME, so a
+# post scheduled for tomorrow will not appear until the next build. This
+# workflow commits a marker file once a day (05:00 UTC = 07:00 Paris CEST)
+# which triggers deploy-site.yml via workflow_run.
+
+on:
+  schedule:
+    - cron: '0 5 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  marker:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Bump rebuild marker
+        run: |
+          mkdir -p site
+          TODAY=$(date -u +%Y-%m-%d)
+          NOW=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          CURRENT=""
+          if [ -f site/.build-trigger ]; then
+            CURRENT=$(head -n 1 site/.build-trigger | cut -d'T' -f1)
+          fi
+          if [ "$CURRENT" = "$TODAY" ]; then
+            echo "Marker already bumped today ($TODAY), skipping."
+            exit 0
+          fi
+          echo "$NOW" > site/.build-trigger
+          git config user.name "rebuild-guard-bot"
+          git config user.email "rebuild-guard@bebedecrypte.com"
+          git add site/.build-trigger
+          if git diff --cached --quiet; then
+            echo "No change to commit."
+            exit 0
+          fi
+          git commit -m "chore(rebuild-guard): daily marker ${TODAY}"
+          git push

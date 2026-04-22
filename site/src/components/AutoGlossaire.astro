@@ -1,0 +1,356 @@
+---
+/**
+ * AutoGlossaire : scan .prose et enrobe les termes en tooltips riches.
+ * Tout est inline pour éviter tout conflit de bundle/timing.
+ */
+import { glossaire, glossaireAliases } from "../data/glossaire";
+
+const serialized = JSON.stringify({ g: glossaire, a: glossaireAliases });
+---
+
+<script is:inline define:vars={{ PAYLOAD: serialized }}>
+  (function () {
+    var DATA;
+    try { DATA = JSON.parse(PAYLOAD); } catch (e) { console.warn("Glossaire parse failed", e); return; }
+    if (!DATA || !DATA.g || !DATA.a) return;
+
+    var aliasKeys = Object.keys(DATA.a).sort(function (a, b) { return b.length - a.length; });
+
+    function escapeHtml(s) {
+      return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    }
+    function escapeRegex(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+
+    function slugifyKey(s) {
+      return String(s).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^\w\s-]/g, "").replace(/\s+/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
+    }
+
+    // Linkify une def/exemple vers d'autres entrées glossaire (max 3 liens, skip self)
+    function linkifyDefinition(text, selfKey) {
+      if (!text) return "";
+      var keys = aliasKeys; // déjà trié par longueur décroissante
+      var used = { };
+      if (selfKey) used[selfKey] = true;
+      var tokens = [{ kind: "text", value: text }];
+      var added = 0;
+      var MAX = 3;
+
+      for (var i = 0; i < keys.length && added < MAX; i++) {
+        var alias = keys[i];
+        var canonical = DATA.a[alias];
+        if (!canonical || used[canonical]) continue;
+
+        var next = [];
+        var consumed = false;
+        for (var j = 0; j < tokens.length; j++) {
+          var tok = tokens[j];
+          if (tok.kind !== "text" || consumed) { next.push(tok); continue; }
+          var re = new RegExp("(^|[^A-Za-zÀ-ÿ0-9])(" + escapeRegex(alias) + ")(?=$|[^A-Za-zÀ-ÿ0-9])", "i");
+          var m = tok.value.match(re);
+          if (!m || m.index === undefined) { next.push(tok); continue; }
+          var prefix = (m[1] || "").length;
+          var start = m.index + prefix;
+          var matched = m[2];
+          var before = tok.value.substring(0, start);
+          var after = tok.value.substring(start + matched.length);
+          if (before) next.push({ kind: "text", value: before });
+          next.push({ kind: "link", value: matched, key: canonical });
+          if (after) next.push({ kind: "text", value: after });
+          used[canonical] = true;
+          consumed = true;
+          added++;
+        }
+        tokens = next;
+      }
+
+      var out = "";
+      for (var k = 0; k < tokens.length; k++) {
+        var t = tokens[k];
+        if (t.kind === "text") out += escapeHtml(t.value);
+        else out += '<a href="/glossaire#' + slugifyKey(t.key) + '" class="glossaire-inline-link">' + escapeHtml(t.value) + '</a>';
+      }
+      return out;
+    }
+
+    function wrapTerms() {
+      var proseList = document.querySelectorAll(".prose");
+      if (!proseList.length) return;
+
+      proseList.forEach(function (prose) {
+        if (prose.dataset.glossaireDone === "1") return;
+        prose.dataset.glossaireDone = "1";
+
+        var walker = document.createTreeWalker(prose, NodeFilter.SHOW_TEXT, {
+          acceptNode: function (node) {
+            var parent = node.parentElement;
+            if (!parent) return NodeFilter.FILTER_REJECT;
+            var tag = parent.tagName.toLowerCase();
+            if (tag === "h1" || tag === "h2" || tag === "h3" || tag === "h4" || tag === "a" || tag === "code" || tag === "pre" || tag === "button") {
+              return NodeFilter.FILTER_REJECT;
+            }
+            if (parent.closest(".glossaire-term")) return NodeFilter.FILTER_REJECT;
+            return NodeFilter.FILTER_ACCEPT;
+          }
+        });
+
+        var nodes = [];
+        var n;
+        while ((n = walker.nextNode())) nodes.push(n);
+
+        var used = Object.create(null);
+
+        nodes.forEach(function (textNode) {
+          var text = textNode.textContent || "";
+          for (var i = 0; i < aliasKeys.length; i++) {
+            var alias = aliasKeys[i];
+            var key = DATA.a[alias];
+            if (!key || used[key]) continue;
+
+            // Unicode word boundary fallback : support latin + accentués
+            var re = new RegExp("(^|[^A-Za-zÀ-ÿ0-9])(" + escapeRegex(alias) + ")(?=$|[^A-Za-zÀ-ÿ0-9])", "i");
+            var m = text.match(re);
+            if (!m || m.index === undefined) continue;
+
+            var entry = DATA.g[key];
+            if (!entry) continue;
+            used[key] = true;
+
+            var prefix = (m[1] || "").length;
+            var matchStart = m.index + prefix;
+            var matched = m[2];
+            var before = text.substring(0, matchStart);
+            var after = text.substring(matchStart + matched.length);
+
+            var frag = document.createDocumentFragment();
+            if (before) frag.appendChild(document.createTextNode(before));
+
+            var span = document.createElement("span");
+            span.className = "glossaire-term";
+            span.tabIndex = 0;
+            span.setAttribute("role", "button");
+            span.setAttribute("aria-label", "Définition : " + matched);
+            span.setAttribute("aria-expanded", "false");
+            span.innerHTML =
+              '<span class="glossaire-label">' + escapeHtml(matched) + '</span>' +
+              '<span class="glossaire-tooltip" role="tooltip">' +
+                '<span class="glossaire-tooltip-title">' + escapeHtml(key) + '</span>' +
+                '<span class="glossaire-tooltip-def">' + linkifyDefinition(entry.definition, key) + '</span>' +
+                '<span class="glossaire-tooltip-example"><strong>Ex.</strong> ' + linkifyDefinition(entry.example, key) + '</span>' +
+                '<span class="glossaire-tooltip-links">' +
+                  '<a href="' + escapeHtml(entry.internalLink.href) + '" class="glossaire-tooltip-internal">→ ' + escapeHtml(entry.internalLink.label) + '</a>' +
+                  '<a href="' + escapeHtml(entry.externalSource.url) + '" target="_blank" rel="noopener nofollow" class="glossaire-tooltip-external">Source : ' + escapeHtml(entry.externalSource.label) + ' ↗</a>' +
+                '</span>' +
+              '</span>';
+            frag.appendChild(span);
+            if (after) frag.appendChild(document.createTextNode(after));
+
+            if (textNode.parentNode) textNode.parentNode.replaceChild(frag, textNode);
+            return; // passe au prochain text node
+          }
+        });
+      });
+    }
+
+    function bindTapBehavior() {
+      document.addEventListener("click", function (e) {
+        var target = e.target;
+        if (!target || !target.closest) return;
+        var term = target.closest(".glossaire-term");
+        document.querySelectorAll(".glossaire-term[aria-expanded='true']").forEach(function (el) {
+          if (el !== term) el.setAttribute("aria-expanded", "false");
+        });
+        if (term && window.innerWidth < 768) {
+          if (target.closest("a")) return;
+          var expanded = term.getAttribute("aria-expanded") === "true";
+          term.setAttribute("aria-expanded", expanded ? "false" : "true");
+          if (!expanded) e.preventDefault();
+        }
+      });
+    }
+
+    function start() {
+      try { wrapTerms(); bindTapBehavior(); }
+      catch (err) { console.warn("Glossaire init error", err); }
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", start);
+    } else {
+      start();
+    }
+  })();
+</script>
+
+<style is:global>
+  .glossaire-term {
+    position: relative;
+    display: inline;
+    cursor: help;
+  }
+
+  .glossaire-label {
+    border-bottom: 1.5px dotted var(--color-primary, #E63946);
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .glossaire-term:hover .glossaire-label,
+  .glossaire-term:focus .glossaire-label,
+  .glossaire-term[aria-expanded="true"] .glossaire-label {
+    border-bottom-style: solid;
+    border-color: var(--color-primary, #E63946);
+    background-color: color-mix(in srgb, var(--color-primary, #E63946) 8%, transparent);
+  }
+
+  .glossaire-tooltip {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    width: max(280px, min(92vw, 360px));
+    padding: 16px 18px;
+    background: var(--color-secondary, #1D3557);
+    color: white;
+    border-radius: 14px;
+    font-size: 13px;
+    line-height: 1.55;
+    box-shadow: 0 16px 44px -8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    pointer-events: none;
+    z-index: 1000;
+    font-family: var(--font-body);
+    font-weight: 400;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    white-space: normal;
+  }
+
+  .glossaire-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 7px solid transparent;
+    border-top-color: var(--color-secondary, #1D3557);
+  }
+
+  .glossaire-term:hover .glossaire-tooltip,
+  .glossaire-term:focus .glossaire-tooltip,
+  .glossaire-term:focus-within .glossaire-tooltip,
+  .glossaire-term[aria-expanded="true"] .glossaire-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+  }
+
+  .glossaire-tooltip-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-accent, #F77F00);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .glossaire-tooltip-def {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .glossaire-tooltip-example {
+    display: block;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 8px 10px;
+    background: rgba(255, 255, 255, 0.06);
+    border-left: 2px solid var(--color-accent, #F77F00);
+    border-radius: 4px;
+  }
+
+  .glossaire-tooltip-example strong {
+    color: var(--color-accent, #F77F00);
+    margin-right: 4px;
+  }
+
+  .glossaire-tooltip-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 2px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 12px;
+  }
+
+  .glossaire-tooltip-internal {
+    color: var(--color-accent, #F77F00);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .glossaire-tooltip-internal:hover {
+    text-decoration: underline;
+  }
+
+  .glossaire-tooltip-external {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+  }
+
+  .glossaire-tooltip-external:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+  /* Cross-link : terme glossaire à l'intérieur d'une def/exemple */
+  .glossaire-inline-link {
+    color: white;
+    text-decoration: none;
+    background-image: linear-gradient(transparent 70%, rgba(247, 127, 0, 0.45) 70%);
+    background-size: 100% 100%;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    padding: 0 1px;
+    border-radius: 2px;
+  }
+
+  .glossaire-inline-link:hover,
+  .glossaire-inline-link:focus {
+    color: var(--color-secondary, #1D3557);
+    background-image: none;
+    background-color: var(--color-accent, #F77F00);
+    text-decoration: none;
+  }
+
+  @media (max-width: 640px) {
+    .glossaire-tooltip {
+      position: fixed;
+      bottom: 16px;
+      left: 16px;
+      right: 16px;
+      top: auto;
+      width: auto;
+      transform: translateY(8px);
+    }
+    .glossaire-tooltip::after {
+      display: none;
+    }
+    .glossaire-term:hover .glossaire-tooltip,
+    .glossaire-term:focus .glossaire-tooltip,
+    .glossaire-term:focus-within .glossaire-tooltip,
+    .glossaire-term[aria-expanded="true"] .glossaire-tooltip {
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .glossaire-tooltip {
+      transition: none;
+    }
+  }
+</style>

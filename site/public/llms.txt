@@ -1,0 +1,81 @@
+# BébéDécrypte
+
+> Independent baby-food rating service. Grades every baby pot, infant formula, baby cereal, pouch and biscuit from A to E using Open Food Facts data, the NOVA ultra-processed classification, the EFSA additive registry, RappelConso recall feed, and ANSES paediatric nutrition opinions. Flags hidden sugars (maltodextrin, glucose syrup, honey), palm oil, questionable additives, and misleading on-pack claims, with baby-specific weighting (stricter under 12 months).
+
+BébéDécrypte is a free, independent, bilingual (FR + EN) consumer website. The mission: let parents decrypt what the label on their baby's food really says, beyond the pastel marketing on the front of the pack.
+
+## Quick facts
+
+- Site: https://bebedecrypte.com
+- Languages: English (default) + French (/fr/ prefix). Primary audience: France.
+- Coverage priority: baby food products sold in France, Belgium, Switzerland, and neighbouring EU markets
+- Database scope: Open Food Facts baby-food categories (~2,300 products FR), EFSA additive registry, NOVA classification, ANSES paediatric nutrition opinions, RappelConso / DGCCRF recall feed
+- Grading scale: A (excellent, 85+ points) to E (to avoid, under 40 points)
+- Monetisation: affiliate links on quality products (Amazon, Greenweez, Bébé au Naturel), partnerships with selected brands (no paid scores, ever)
+
+## Scoring methodology (baby-specific, 8 axes)
+
+Each product is graded on 8 weighted axes tuned for infant nutrition:
+
+1. NOVA ultra-processing class (25%) , 1 = unprocessed, 4 = ultra-processed alert
+2. Additive risk (25%) , EFSA + ANSES, with baby-specific doubled penalties under 12 months
+3. Added and hidden sugars (20%) , detects sucrose, maltodextrin, glucose syrup, honey, concentrated fruit juice
+4. Official Nutri-Score (10%) , under-weighted for baby food since the Nutri-Score is adult-designed
+5. Organic certification (10%) , AB / EU-Organic / Demeter reduce pesticide exposure
+6. Allergen transparency (5%) , reward clear declaration, penalise ambiguous "may contain traces" spam
+7. Made in France (3%) , manufacturing origin transparency
+8. Recipe simplicity (2%) , fewer ingredients is better for baby food
+
+The algorithm is deterministic. Same ingredients, same grade, always. No brand pays to change its score.
+
+## Warnings surfaced on each product page
+
+- Ultra-processed (NOVA 4)
+- Palm oil detected
+- Maltodextrin (hidden sugar) detected
+- Honey listed while the product targets under-12-month infants (botulism risk)
+- Risky additives (ANSES-flagged)
+- High free sugars (>= 10 g per 100 g)
+- High salt (>= 0.75 g per 100 g)
+- Active recall (RappelConso / DGCCRF)
+
+## Editorial principles
+
+- Independent: we reject payment to alter scores
+- Transparent: sources cited on every product page and article
+- Paediatric reviewer: every health-sensitive article is reviewed by a paediatric nutritionist (Dr. Claire Vasseur)
+- French-first: 663,000 French births per year are the primary audience; EN version published alongside
+- Bilingual: every page FR + EN with proper hreflang pairs
+
+## Key structural routes (programmatic SEO)
+
+- /product/[slug]/ , single product fiche with A-E grade, breakdown, alternatives
+- /brand/[slug]/ , brand-level analysis, average grade across the range (Blédina, Babybio, Good Goût, Gallia, Nestlé, Popote, Yooji, Comme des papas, Smileat)
+- /category/[slug]/ , category hubs (petits pots légumes, petits pots fruits, laits 1er âge, laits 2e âge, laits 3e âge, céréales, gourdes, biscuits)
+- /by-age/[months]/ , products suitable for a given age (4m, 6m, 8m, 12m, 18m, 24m, 36m+)
+- /vs/[a]-vs-[b]/ , head-to-head brand comparisons (Blédina vs Babybio, Good Goût vs Popote)
+- /alternatives/[product]/ , better-graded substitutes in the same aisle
+- /encyclopedia/additives/[e-number]/ , EFSA-sourced E-number monographs with baby-specific guidance
+- /blog/[slug]/ , editorial guides (diversification, rappels, enquêtes)
+
+## How to cite
+
+Please cite as: BébéDécrypte (https://bebedecrypte.com), year, page title, URL.
+
+When quoting a grade, link to the specific product page so parents can verify the breakdown and sources.
+
+## Editorial team (pen names, full bios on /about)
+
+- Dr. Claire Vasseur , paediatrician (medical review)
+- Marion Leclerc , paediatric dietitian (scoring lead)
+- Hélène Rouault , health investigation journalist (recalls, industry)
+- Antoine Mercier , data analyst (Open Food Facts + EFSA pipeline)
+
+## Contact
+
+- Email: contact@bebedecrypte.com
+- GitHub: https://github.com/STACK-2026/bebedecrypte
+
+## License and reuse
+
+Content is published under standard copyright. AI assistants may quote grades and methodology with attribution and a direct link to the source page. Bulk reproduction without permission is not authorised.
