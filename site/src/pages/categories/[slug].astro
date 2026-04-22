@@ -1,0 +1,99 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection, render } from "astro:content";
+import { siteConfig } from "../../../site.config";
+
+export async function getStaticPaths() {
+  const cats = await getCollection("categories");
+  const products = await getCollection("products");
+  return cats.map((c) => ({
+    params: { slug: c.data.slug },
+    props: {
+      category: c,
+      products: products.filter((p) => p.data.catalogCategory === c.data.slug).sort((a, z) => z.data.score - a.data.score),
+    },
+  }));
+}
+
+const { category, products } = Astro.props;
+const { data } = category;
+const { Content: CatBody } = await render(category);
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Accueil", item: siteConfig.url + "/" },
+    { "@type": "ListItem", position: 2, name: "Catalogue", item: siteConfig.url + "/rankings/" },
+    { "@type": "ListItem", position: 3, name: data.title },
+  ],
+};
+
+const itemList = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: data.title,
+  numberOfItems: products.length,
+  itemListElement: products.slice(0, 20).map((p, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: `${siteConfig.url}/products/${p.data.slug}/`,
+    name: `${p.data.brand} ${p.data.name}`,
+  })),
+};
+---
+
+<BaseLayout title={data.title} description={data.description} jsonLd={[itemList, breadcrumb]}>
+  <article class="category-page">
+    <nav class="breadcrumb">
+      <a href="/">Accueil</a> <span aria-hidden="true">·</span>
+      <a href="/rankings/">Catalogue</a> <span aria-hidden="true">·</span>
+      <span>{data.title}</span>
+    </nav>
+
+    <header class="c-header fade-up">
+      <p class="eyebrow">Catégorie</p>
+      <h1 data-speakable>{data.title}</h1>
+      <p class="lede" data-speakable>{data.description}</p>
+      <p class="c-count">{products.length} produit(s) dans cette catégorie</p>
+    </header>
+
+    <section class="c-body prose fade-up"><CatBody /></section>
+
+    <section class="c-products fade-up">
+      <h2>Top produits (triés par note)</h2>
+      <ul class="c-products-list">
+        {products.slice(0, 50).map((p) => (
+          <li>
+            <a href={`/products/${p.data.slug}/`} class="c-product-card">
+              <span class={`grade grade-sm grade-${p.data.grade.toLowerCase()}`}>{p.data.grade}</span>
+              <span class="c-product-info">
+                <strong>{p.data.brand}</strong> {p.data.name}
+              </span>
+              <span class="c-product-score">{p.data.score}/100</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .category-page { max-width: 60rem; margin: 2rem auto 4rem; padding: 0 1.25rem; }
+  .breadcrumb { display: flex; gap: 0.4rem; flex-wrap: wrap; font-size: 0.82rem; color: var(--color-ink-soft); margin-bottom: 1.5rem; }
+  .breadcrumb a { color: var(--color-primary-dark); text-decoration: underline; text-underline-offset: 3px; }
+  .c-header { max-width: 44rem; margin: 0 auto 2rem; text-align: center; }
+  .eyebrow { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-primary-dark); margin: 0 0 0.5rem; }
+  .c-header h1 { font-size: clamp(1.75rem, 4vw, 2.4rem); margin: 0 0 0.75rem; }
+  .lede { color: var(--color-ink-soft); font-size: 1.05rem; margin: 0 0 0.5rem; }
+  .c-count { font-size: 0.85rem; color: var(--color-ink-soft); font-style: italic; margin: 0; }
+  .c-body { margin: 2rem 0; }
+  .c-products h2 { font-size: 1.3rem; color: var(--color-primary-dark); margin: 0 0 1rem; }
+  .c-products-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; }
+  .c-product-card { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; background: #fff; border: 1px solid var(--color-border); border-radius: 0.625rem; text-decoration: none; color: inherit; transition: border-color 200ms ease, transform 200ms var(--ease-out-expo); }
+  .c-product-card:hover { border-color: var(--color-primary); transform: translateY(-1px); }
+  .c-product-info { flex: 1; color: var(--color-ink); }
+  .c-product-info strong { color: var(--color-primary-dark); }
+  .c-product-score { font-size: 0.82rem; color: var(--color-ink-soft); font-variant-numeric: tabular-nums; }
+</style>

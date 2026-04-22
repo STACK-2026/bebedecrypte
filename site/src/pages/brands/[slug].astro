@@ -1,0 +1,111 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection, render } from "astro:content";
+import { siteConfig } from "../../../site.config";
+
+export async function getStaticPaths() {
+  const brands = await getCollection("brands");
+  const products = await getCollection("products");
+  return brands.map((b) => ({
+    params: { slug: b.data.slug },
+    props: {
+      brand: b,
+      products: products.filter((p) => p.data.brandSlug === b.data.slug).sort((a, z) => z.data.score - a.data.score),
+    },
+  }));
+}
+
+const { brand, products } = Astro.props;
+const { data } = brand;
+const { Content: BrandBody } = await render(brand);
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Accueil", item: siteConfig.url + "/" },
+    { "@type": "ListItem", position: 2, name: "Catalogue", item: siteConfig.url + "/rankings/" },
+    { "@type": "ListItem", position: 3, name: data.brand },
+  ],
+};
+
+const itemList = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: `Produits ${data.brand}`,
+  numberOfItems: products.length,
+  itemListElement: products.map((p, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: `${siteConfig.url}/products/${p.data.slug}/`,
+    name: p.data.name,
+  })),
+};
+
+const gradeColors: Record<string, string> = { A: "var(--grade-a)", B: "var(--grade-b)", C: "var(--grade-c)", D: "var(--grade-d)", E: "var(--grade-e)" };
+---
+
+<BaseLayout title={data.title} description={data.description} jsonLd={[itemList, breadcrumb]}>
+  <article class="brand-page">
+    <nav class="breadcrumb">
+      <a href="/">Accueil</a> <span aria-hidden="true">·</span>
+      <a href="/rankings/">Catalogue</a> <span aria-hidden="true">·</span>
+      <span>{data.brand}</span>
+    </nav>
+
+    <header class="b-header fade-up">
+      <div class="b-grade" style={`background: ${gradeColors[data.averageGrade] || "#0891b2"};`} aria-label={`Note moyenne ${data.averageGrade}`}>
+        <span class="b-grade-letter">{data.averageGrade}</span>
+        <span class="b-grade-score">{data.averageScore}/100</span>
+      </div>
+      <div class="b-title">
+        <p class="eyebrow">Marque</p>
+        <h1 data-speakable>{data.brand}</h1>
+        <p class="lede" data-speakable>{data.description}</p>
+        <p class="b-count">{data.productCount} produit(s) au catalogue BébéDécrypte</p>
+      </div>
+    </header>
+
+    <section class="b-body fade-up prose">
+      <BrandBody />
+    </section>
+
+    <section class="b-products fade-up">
+      <h2>Tous les produits {data.brand} notés</h2>
+      <ul class="b-products-list">
+        {products.map((p) => (
+          <li>
+            <a href={`/products/${p.data.slug}/`} class="b-product-card">
+              <span class={`grade grade-sm grade-${p.data.grade.toLowerCase()}`}>{p.data.grade}</span>
+              <span class="b-product-name">{p.data.name}</span>
+              <span class="b-product-score">{p.data.score}/100</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .brand-page { max-width: 56rem; margin: 2rem auto 4rem; padding: 0 1.25rem; }
+  .breadcrumb { display: flex; gap: 0.4rem; flex-wrap: wrap; font-size: 0.82rem; color: var(--color-ink-soft); margin-bottom: 1.5rem; }
+  .breadcrumb a { color: var(--color-primary-dark); text-decoration: underline; text-underline-offset: 3px; }
+  .b-header { display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; margin-bottom: 2rem; align-items: center; }
+  @media (max-width: 640px) { .b-header { grid-template-columns: 1fr; text-align: center; } }
+  .b-grade { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 6rem; height: 6rem; border-radius: 1rem; color: #fff; box-shadow: 0 8px 28px -6px rgb(12 10 9 / 0.25); }
+  .b-grade-letter { font-family: var(--font-display); font-weight: 900; font-size: 2.5rem; line-height: 1; }
+  .b-grade-score { font-size: 0.75rem; opacity: 0.85; }
+  .eyebrow { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-primary-dark); margin: 0 0 0.5rem; }
+  .b-title h1 { font-size: clamp(1.75rem, 4vw, 2.4rem); margin: 0 0 0.5rem; }
+  .lede { color: var(--color-ink-soft); margin: 0 0 0.5rem; }
+  .b-count { font-size: 0.85rem; color: var(--color-ink-soft); margin: 0; font-style: italic; }
+  .b-body { margin: 2rem 0; }
+  .b-products { margin-top: 2rem; }
+  .b-products h2 { font-size: 1.3rem; color: var(--color-primary-dark); margin: 0 0 1rem; }
+  .b-products-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; }
+  .b-product-card { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; background: #fff; border: 1px solid var(--color-border); border-radius: 0.625rem; text-decoration: none; color: inherit; transition: border-color 200ms ease, transform 200ms var(--ease-out-expo); }
+  .b-product-card:hover { border-color: var(--color-primary); transform: translateY(-1px); }
+  .b-product-name { flex: 1; color: var(--color-ink); }
+  .b-product-score { font-size: 0.82rem; color: var(--color-ink-soft); font-variant-numeric: tabular-nums; }
+</style>

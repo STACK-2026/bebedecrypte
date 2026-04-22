@@ -1,0 +1,78 @@
+---
+slug: "bledina-bledichef-hachis-parmentier"
+brand: "Blédina"
+brandSlug: "bledina"
+name: "Blédichef - Hachis parmentier"
+title: "Blédina Blédichef - Hachis parmentier , note C"
+description: "Note BebeDecrypte C (61/100). Analyse NOVA, additifs, sucres et allergènes du Blédichef - Hachis parmentier de Blédina."
+grade: "C"
+score: 61
+nutriScore: ""
+nova: 4
+barcode: "3041090779862"
+additives: ["en:e14xx", "en:e300"]
+ingredients: "Pommes de terre 56,8% - Lait écrémé 15,0% - Eau de cuisson - Viande de bœuf (VBF) 9,0% - Oignons - Amidon transformé de maïs - Beurre (lait) - Huile de colza, huile végétales [(colza, tournesol), vitamine E) - Sel - Arômes - Antioxydant : Acide ascorbique."
+ingredientCount: 13
+image: "https://images.openfoodfacts.org/images/products/304/109/077/9862/front_fr.6.400.jpg"
+imageAlt: "Blédina Blédichef - Hachis parmentier"
+categories: ["Aliments pour bébé", "Dès 12 mois", "Plats principaux pour bébé", "Assiettes pour bébé"]
+catalogCategory: "petits-pots"
+ageRange: "4 à 6 mois"
+targetAgeMonths: 6
+warnings: ["Produit ultra-transformé (NOVA 4)"]
+sources:
+  - "Open Food Facts (ODbL)"
+  - "Classification NOVA (Université de São Paulo)"
+  - "Nutri-Score (Santé publique France)"
+  - "Base additifs EFSA / ANSES"
+sourceUrl: "https://world.openfoodfacts.org/product/3041090779862"
+lastReviewed: "2026-04-22"
+reviewedBy: "Dr. Claire Vasseur"
+publishedDate: "2026-04-22"
+lang: "fr"
+draft: false
+---
+
+# Blédina Blédichef - Hachis parmentier
+
+**Note BebeDecrypte : C (61/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+
+- Tranche d'âge visée : 4 à 6 mois
+- Classification NOVA : 4 sur 4
+- Nombre d'ingrédients : 13
+- Conditionnement : 230 g
+
+## Composition
+
+Pommes de terre 56,8% - Lait écrémé 15,0% - Eau de cuisson - Viande de bœuf (VBF) 9,0% - Oignons - Amidon transformé de maïs - Beurre (lait) - Huile de colza, huile végétales [(colza, tournesol), vitamine E) - Sel - Arômes - Antioxydant : Acide ascorbique.
+
+## Détail de la note
+
+| Critère | Score sur 100 | Poids |
+|---|---|---|
+| Transformation (NOVA) | 10 | 25% |
+| Additifs | 90 | 25% |
+| Sucres ajoutés | 100 | 20% |
+| Nutri-Score | 55 | 10% |
+| Bio | 40 | 10% |
+| Transparence allergènes | 90 | 5% |
+| Origine France | 40 | 3% |
+| Simplicité de la recette | 25 | 2% |
+
+## Points de vigilance
+
+- Produit ultra-transformé (NOVA 4)
+
+## Alternatives mieux notées dans Petits pots
+
+- [Simple comme... Simple comme une.... Purée](/fr/produits/simple-comme-simple-comme-une-puree/) , note A (95/100)
+- [Babybio Tendresse de petits légumes riz](/fr/produits/babybio-tendresse-de-petits-legumes-riz/) , note A (94/100)
+- [BABYBIO BOLS LEGUMES SAUMON MACARONI 2X200G](/fr/produits/babybio-bols-legumes-saumon-macaroni-2x200g/) , note A (94/100)
+- [Babybio Douceur de pomme d'aquitaine et myrtille](/fr/produits/babybio-douceur-de-pomme-d-aquitaine-et-myrtille-2/) , note A (94/100)
+
+## Méthodologie
+
+Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+
+Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
+

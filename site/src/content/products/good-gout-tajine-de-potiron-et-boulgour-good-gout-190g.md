@@ -1,0 +1,74 @@
+---
+slug: "good-gout-tajine-de-potiron-et-boulgour-good-gout-190g"
+brand: "Good Gout"
+brandSlug: "good-gout"
+name: "Tajine de potiron et boulgour-Good Gout-190g"
+title: "Good Gout Tajine de potiron et boulgour-Good Gout-190g , note B"
+description: "Note BebeDecrypte B (79/100). Analyse NOVA, additifs, sucres et allergènes du Tajine de potiron et boulgour-Good Gout-190g de Good Gout."
+grade: "B"
+score: 79
+nutriScore: ""
+nova: 3
+barcode: "3770002327104"
+additives: []
+ingredients: "67% de potiron bio, eau de cuisson, 9% boulgour (gluten) bio, 3% abricots secs bio, 1% huile d'olive vierge extra bio."
+ingredientCount: 7
+image: "https://images.openfoodfacts.org/images/products/377/000/232/7104/front_fr.12.400.jpg"
+imageAlt: "Good Gout Tajine de potiron et boulgour-Good Gout-190g"
+categories: ["Aliments pour bébé"]
+catalogCategory: "petits-pots"
+ageRange: "4 à 6 mois"
+targetAgeMonths: 6
+warnings: []
+sources:
+  - "Open Food Facts (ODbL)"
+  - "Classification NOVA (Université de São Paulo)"
+  - "Nutri-Score (Santé publique France)"
+  - "Base additifs EFSA / ANSES"
+sourceUrl: "https://world.openfoodfacts.org/product/3770002327104"
+lastReviewed: "2026-04-22"
+reviewedBy: "Dr. Claire Vasseur"
+publishedDate: "2026-04-22"
+lang: "fr"
+draft: false
+---
+
+# Good Gout Tajine de potiron et boulgour-Good Gout-190g
+
+**Note BebeDecrypte : B (79/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+
+- Tranche d'âge visée : 4 à 6 mois
+- Classification NOVA : 3 sur 4
+- Nombre d'ingrédients : 7
+- Conditionnement : 190g
+
+## Composition
+
+67% de potiron bio, eau de cuisson, 9% boulgour (gluten) bio, 3% abricots secs bio, 1% huile d'olive vierge extra bio.
+
+## Détail de la note
+
+| Critère | Score sur 100 | Poids |
+|---|---|---|
+| Transformation (NOVA) | 45 | 25% |
+| Additifs | 100 | 25% |
+| Sucres ajoutés | 100 | 20% |
+| Nutri-Score | 55 | 10% |
+| Bio | 100 | 10% |
+| Transparence allergènes | 90 | 5% |
+| Origine France | 40 | 3% |
+| Simplicité de la recette | 65 | 2% |
+
+## Alternatives mieux notées dans Petits pots
+
+- [Simple comme... Simple comme une.... Purée](/fr/produits/simple-comme-simple-comme-une-puree/) , note A (95/100)
+- [Babybio Tendresse de petits légumes riz](/fr/produits/babybio-tendresse-de-petits-legumes-riz/) , note A (94/100)
+- [BABYBIO BOLS LEGUMES SAUMON MACARONI 2X200G](/fr/produits/babybio-bols-legumes-saumon-macaroni-2x200g/) , note A (94/100)
+- [Babybio Douceur de pomme d'aquitaine et myrtille](/fr/produits/babybio-douceur-de-pomme-d-aquitaine-et-myrtille-2/) , note A (94/100)
+
+## Méthodologie
+
+Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+
+Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
+

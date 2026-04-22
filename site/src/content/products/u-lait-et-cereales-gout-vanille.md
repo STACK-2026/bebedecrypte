@@ -1,0 +1,79 @@
+---
+slug: "u-lait-et-cereales-gout-vanille"
+brand: "U"
+brandSlug: "u"
+name: "Lait et céréales goût vanille"
+title: "U Lait et céréales goût vanille , note D"
+description: "Note BebeDecrypte D (45/100). Analyse NOVA, additifs, sucres et allergènes du Lait et céréales goût vanille de U."
+grade: "D"
+score: 45
+nutriScore: ""
+nova: 4
+barcode: "3256226057190"
+additives: ["en:e306", "en:e322", "en:e322i"]
+ingredients: "Lait de suite 91,2% [lait partiellement écrémé (france), eau, lactose, maltodextrine de maïs, huile de colza et de tournesol (dont antioxydant : extrait riche en tocophérols), émulsifiant : lecithine de tournesol, arôme, minéraux : sulfate de fer - sulfate de zinc - sulfate de cuivre - iodure de potassium, vitamines (dont lactose) : a-d3-e-k-c-b1-b2-b3-b5-b6-b8-b9-b12], préparation à base de céréales 8,8% [farines 2,9% (farine de riz partiellement hydrolysée et farine de maïs, farine de riz), su"
+ingredientCount: 24
+image: "https://images.openfoodfacts.org/images/products/325/622/605/7190/front_fr.15.400.jpg"
+imageAlt: "U Lait et céréales goût vanille"
+categories: ["Aliments pour bébé", "Laits pour bébé", "Céréales pour bébé"]
+catalogCategory: "laits-infantiles"
+ageRange: "4 à 6 mois"
+targetAgeMonths: 6
+warnings: ["Présence de maltodextrine (sucre caché)", "Produit ultra-transformé (NOVA 4)"]
+sources:
+  - "Open Food Facts (ODbL)"
+  - "Classification NOVA (Université de São Paulo)"
+  - "Nutri-Score (Santé publique France)"
+  - "Base additifs EFSA / ANSES"
+sourceUrl: "https://world.openfoodfacts.org/product/3256226057190"
+lastReviewed: "2026-04-22"
+reviewedBy: "Dr. Claire Vasseur"
+publishedDate: "2026-04-22"
+lang: "fr"
+draft: false
+---
+
+# U Lait et céréales goût vanille
+
+**Note BebeDecrypte : D (45/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+
+- Tranche d'âge visée : 4 à 6 mois
+- Classification NOVA : 4 sur 4
+- Nombre d'ingrédients : 24
+- Conditionnement : 2 bouteilles de 250 ml
+
+## Composition
+
+Lait de suite 91,2% [lait partiellement écrémé (france), eau, lactose, maltodextrine de maïs, huile de colza et de tournesol (dont antioxydant : extrait riche en tocophérols), émulsifiant : lecithine de tournesol, arôme, minéraux : sulfate de fer - sulfate de zinc - sulfate de cuivre - iodure de potassium, vitamines (dont lactose) : a-d3-e-k-c-b1-b2-b3-b5-b6-b8-b9-b12], préparation à base de céréales 8,8% [farines 2,9% (farine de riz partiellement hydrolysée et farine de maïs, farine de riz), sucre, amidon de maïs, maltodextrine de maïs, arôme naturel de vanille, vitamine b1].
+
+## Détail de la note
+
+| Critère | Score sur 100 | Poids |
+|---|---|---|
+| Transformation (NOVA) | 10 | 25% |
+| Additifs | 85 | 25% |
+| Sucres ajoutés | 27 | 20% |
+| Nutri-Score | 55 | 10% |
+| Bio | 40 | 10% |
+| Transparence allergènes | 90 | 5% |
+| Origine France | 40 | 3% |
+| Simplicité de la recette | 10 | 2% |
+
+## Points de vigilance
+
+- Présence de maltodextrine (sucre caché)
+- Produit ultra-transformé (NOVA 4)
+
+## Alternatives mieux notées dans Laits infantiles
+
+- [Etikébio Alimentation Bébé Bio / Préparation Lait De Brebis Bébé / Préparation Brebis 2è Et 3è âge](/fr/produits/etikebio-alimentation-bebe-bio-preparation-lait-de-brebis-bebe-prepara/) , note B (80/100)
+- [Holle Lait pour nourrisson en poudre](/fr/produits/holle-lait-pour-nourrisson-en-poudre/) , note B (80/100)
+- [Babybio Babybio caprea 3](/fr/produits/babybio-babybio-caprea-3/) , note B (80/100)
+- [Holle Lait pour nourrisson  1](/fr/produits/holle-lait-pour-nourrisson-1/) , note B (80/100)
+
+## Méthodologie
+
+Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+
+Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
+

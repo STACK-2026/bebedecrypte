@@ -1,0 +1,80 @@
+---
+slug: "carrefour-carrefour-classic-lait-de-croissance-1-3-ans"
+brand: "Carrefour"
+brandSlug: "carrefour"
+name: "Carrefour Classic' Lait de Croissance 1-3 Ans"
+title: "Carrefour Carrefour Classic' Lait de Croissance 1-3 Ans , note E"
+description: "Note BebeDecrypte E (38/100). Analyse NOVA, additifs, sucres et allergènes du Carrefour Classic' Lait de Croissance 1-3 Ans de Carrefour."
+grade: "E"
+score: 38
+nutriScore: ""
+nova: 4
+barcode: "5400101094284"
+additives: ["en:e330", "en:e471", "en:e525"]
+ingredients: "Lait écrémé, eau, lactose, maltodextrine, huiles végétales (colza, tournesol), émulsifiant : mono - et diglycérides d'acides gras, correcteurs d'acidité : acide citrique - hydroxyde de potassium, arôme, minéraux (sulfate de cuivre, diphosphate ferrique, oxyde de magnésium, sulfate de manganèse, sulfate de zinc, hydroxyde de calcium, citrate de potassium, lactate ferreux), vitamines (A, D, E, K, B1, B12, B2, niacine, acide pantothénique, B6, acide folique, C, biotine), arôme naturel."
+ingredientCount: 34
+image: "https://images.openfoodfacts.org/images/products/540/010/109/4284/front_fr.8.400.jpg"
+imageAlt: "Carrefour Carrefour Classic' Lait de Croissance 1-3 Ans"
+categories: ["Aliments pour bébé", "Laits pour bébé", "Baby-lait", "Epicerie"]
+catalogCategory: "laits-infantiles"
+ageRange: "4 à 6 mois"
+targetAgeMonths: 6
+warnings: ["Présence de maltodextrine (sucre caché)", "Produit ultra-transformé (NOVA 4)", "Contient 1 additif(s) à risque élevé selon l'ANSES."]
+sources:
+  - "Open Food Facts (ODbL)"
+  - "Classification NOVA (Université de São Paulo)"
+  - "Nutri-Score (Santé publique France)"
+  - "Base additifs EFSA / ANSES"
+sourceUrl: "https://world.openfoodfacts.org/product/5400101094284"
+lastReviewed: "2026-04-22"
+reviewedBy: "Dr. Claire Vasseur"
+publishedDate: "2026-04-22"
+lang: "fr"
+draft: false
+---
+
+# Carrefour Carrefour Classic' Lait de Croissance 1-3 Ans
+
+**Note BebeDecrypte : E (38/100).** Ce produit est classé E, à éviter. Composition trop problématique pour un enfant en bas âge.
+
+- Tranche d'âge visée : 4 à 6 mois
+- Classification NOVA : 4 sur 4
+- Nombre d'ingrédients : 34
+- Conditionnement : 1 l
+
+## Composition
+
+Lait écrémé, eau, lactose, maltodextrine, huiles végétales (colza, tournesol), émulsifiant : mono - et diglycérides d'acides gras, correcteurs d'acidité : acide citrique - hydroxyde de potassium, arôme, minéraux (sulfate de cuivre, diphosphate ferrique, oxyde de magnésium, sulfate de manganèse, sulfate de zinc, hydroxyde de calcium, citrate de potassium, lactate ferreux), vitamines (A, D, E, K, B1, B12, B2, niacine, acide pantothénique, B6, acide folique, C, biotine), arôme naturel.
+
+## Détail de la note
+
+| Critère | Score sur 100 | Poids |
+|---|---|---|
+| Transformation (NOVA) | 10 | 25% |
+| Additifs | 50 | 25% |
+| Sucres ajoutés | 38 | 20% |
+| Nutri-Score | 55 | 10% |
+| Bio | 40 | 10% |
+| Transparence allergènes | 90 | 5% |
+| Origine France | 40 | 3% |
+| Simplicité de la recette | 10 | 2% |
+
+## Points de vigilance
+
+- Présence de maltodextrine (sucre caché)
+- Produit ultra-transformé (NOVA 4)
+- Contient 1 additif(s) à risque élevé selon l'ANSES.
+
+## Alternatives mieux notées dans Laits infantiles
+
+- [Etikébio Alimentation Bébé Bio / Préparation Lait De Brebis Bébé / Préparation Brebis 2è Et 3è âge](/fr/produits/etikebio-alimentation-bebe-bio-preparation-lait-de-brebis-bebe-prepara/) , note B (80/100)
+- [Holle Lait pour nourrisson en poudre](/fr/produits/holle-lait-pour-nourrisson-en-poudre/) , note B (80/100)
+- [Babybio Babybio caprea 3](/fr/produits/babybio-babybio-caprea-3/) , note B (80/100)
+- [Holle Lait pour nourrisson  1](/fr/produits/holle-lait-pour-nourrisson-1/) , note B (80/100)
+
+## Méthodologie
+
+Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+
+Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
+

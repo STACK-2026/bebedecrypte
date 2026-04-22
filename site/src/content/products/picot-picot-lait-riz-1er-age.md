@@ -1,0 +1,68 @@
+---
+slug: "picot-picot-lait-riz-1er-age"
+brand: "Picot"
+brandSlug: "picot"
+name: "Picot Lait Riz 1er âge"
+title: "Picot Picot Lait Riz 1er âge , note B"
+description: "Note BebeDecrypte B (76/100). Analyse NOVA, additifs, sucres et allergènes du Picot Lait Riz 1er âge de Picot."
+grade: "B"
+score: 76
+nutriScore: ""
+nova: null
+barcode: "3551100624179"
+additives: []
+ingredients: ""
+ingredientCount: 0
+image: "https://images.openfoodfacts.org/images/products/355/110/062/4179/front_fr.14.400.jpg"
+imageAlt: "Picot Picot Lait Riz 1er âge"
+categories: ["Produits laitiers", "Laits (fluide et poudre)", "Aliments pour bébé", "Laits", "Laits pour bébé"]
+catalogCategory: "laits-infantiles"
+ageRange: "4 à 6 mois"
+targetAgeMonths: 6
+warnings: []
+sources:
+  - "Open Food Facts (ODbL)"
+  - "Classification NOVA (Université de São Paulo)"
+  - "Nutri-Score (Santé publique France)"
+  - "Base additifs EFSA / ANSES"
+sourceUrl: "https://world.openfoodfacts.org/product/3551100624179"
+lastReviewed: "2026-04-22"
+reviewedBy: "Dr. Claire Vasseur"
+publishedDate: "2026-04-22"
+lang: "fr"
+draft: false
+---
+
+# Picot Picot Lait Riz 1er âge
+
+**Note BebeDecrypte : B (76/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+
+- Tranche d'âge visée : 4 à 6 mois
+- Nombre d'ingrédients : 0
+
+## Détail de la note
+
+| Critère | Score sur 100 | Poids |
+|---|---|---|
+| Transformation (NOVA) | 50 | 25% |
+| Additifs | 100 | 25% |
+| Sucres ajoutés | 100 | 20% |
+| Nutri-Score | 55 | 10% |
+| Bio | 40 | 10% |
+| Transparence allergènes | 90 | 5% |
+| Origine France | 100 | 3% |
+| Simplicité de la recette | 60 | 2% |
+
+## Alternatives mieux notées dans Laits infantiles
+
+- [Etikébio Alimentation Bébé Bio / Préparation Lait De Brebis Bébé / Préparation Brebis 2è Et 3è âge](/fr/produits/etikebio-alimentation-bebe-bio-preparation-lait-de-brebis-bebe-prepara/) , note B (80/100)
+- [Holle Lait pour nourrisson en poudre](/fr/produits/holle-lait-pour-nourrisson-en-poudre/) , note B (80/100)
+- [Babybio Babybio caprea 3](/fr/produits/babybio-babybio-caprea-3/) , note B (80/100)
+- [Holle Lait pour nourrisson  1](/fr/produits/holle-lait-pour-nourrisson-1/) , note B (80/100)
+
+## Méthodologie
+
+Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+
+Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
+

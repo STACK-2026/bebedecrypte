@@ -1,0 +1,79 @@
+---
+slug: "pomette-laits-cereales-vanille-bio-2-250ml-6-mois"
+brand: "POMETTE"
+brandSlug: "pomette"
+name: "Laits & Céréales vanille BIO 2*250ml - 6 mois"
+title: "POMETTE Laits & Céréales vanille BIO 2*250ml - 6 mois , note D"
+description: "Note BebeDecrypte D (52/100). Analyse NOVA, additifs, sucres et allergènes du Laits & Céréales vanille BIO 2*250ml - 6 mois de POMETTE."
+grade: "D"
+score: 52
+nutriScore: ""
+nova: 4
+barcode: "3250393000508"
+additives: ["en:e322", "en:e331"]
+ingredients: "Lait partiellement écrémé*, eau, céréales 5,4 %* (farines* 2,85% (farine de riz*, farine de riz partiellement hydrolysée*, farine de millet*, farine de quinoa*, vitamine B1), amidon de maïs*, maltodextrine de maïs*), maltodextrine de maïs*, sucre de canne*, huiles végétales* (huile de colza*, huile de tournesol*, huile de tournesol oléique*), arôme naturel de vanille, émulsifiant : lécithines*, minéraux (phosphate de calcium, sulfate de fer, sulfate de cuivre, sulfate de zinc, iodure de potassiu"
+ingredientCount: 44
+image: "https://images.openfoodfacts.org/images/products/325/039/300/0508/front_fr.11.400.jpg"
+imageAlt: "POMETTE Laits & Céréales vanille BIO 2*250ml - 6 mois"
+categories: ["Produits laitiers", "Aliments pour bébé", "Laits pour bébé"]
+catalogCategory: "laits-infantiles"
+ageRange: "4 à 6 mois"
+targetAgeMonths: 6
+warnings: ["Présence de maltodextrine (sucre caché)", "Produit ultra-transformé (NOVA 4)"]
+sources:
+  - "Open Food Facts (ODbL)"
+  - "Classification NOVA (Université de São Paulo)"
+  - "Nutri-Score (Santé publique France)"
+  - "Base additifs EFSA / ANSES"
+sourceUrl: "https://world.openfoodfacts.org/product/3250393000508"
+lastReviewed: "2026-04-22"
+reviewedBy: "Dr. Claire Vasseur"
+publishedDate: "2026-04-22"
+lang: "fr"
+draft: false
+---
+
+# POMETTE Laits & Céréales vanille BIO 2*250ml - 6 mois
+
+**Note BebeDecrypte : D (52/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+
+- Tranche d'âge visée : 4 à 6 mois
+- Classification NOVA : 4 sur 4
+- Nombre d'ingrédients : 44
+- Conditionnement : 250 ml
+
+## Composition
+
+Lait partiellement écrémé*, eau, céréales 5,4 %* (farines* 2,85% (farine de riz*, farine de riz partiellement hydrolysée*, farine de millet*, farine de quinoa*, vitamine B1), amidon de maïs*, maltodextrine de maïs*), maltodextrine de maïs*, sucre de canne*, huiles végétales* (huile de colza*, huile de tournesol*, huile de tournesol oléique*), arôme naturel de vanille, émulsifiant : lécithines*, minéraux (phosphate de calcium, sulfate de fer, sulfate de cuivre, sulfate de zinc, iodure de potassium), correcteur d'acidité : citrate de sodium, vitamines (A, D3, E, K, B1, B2, B3, B5, B6, B8, B9, B12, C, dont lait). *Ingrédients issus de l'agriculture biologique
+
+## Détail de la note
+
+| Critère | Score sur 100 | Poids |
+|---|---|---|
+| Transformation (NOVA) | 10 | 25% |
+| Additifs | 90 | 25% |
+| Sucres ajoutés | 30 | 20% |
+| Nutri-Score | 55 | 10% |
+| Bio | 100 | 10% |
+| Transparence allergènes | 90 | 5% |
+| Origine France | 40 | 3% |
+| Simplicité de la recette | 10 | 2% |
+
+## Points de vigilance
+
+- Présence de maltodextrine (sucre caché)
+- Produit ultra-transformé (NOVA 4)
+
+## Alternatives mieux notées dans Laits infantiles
+
+- [Etikébio Alimentation Bébé Bio / Préparation Lait De Brebis Bébé / Préparation Brebis 2è Et 3è âge](/fr/produits/etikebio-alimentation-bebe-bio-preparation-lait-de-brebis-bebe-prepara/) , note B (80/100)
+- [Holle Lait pour nourrisson en poudre](/fr/produits/holle-lait-pour-nourrisson-en-poudre/) , note B (80/100)
+- [Babybio Babybio caprea 3](/fr/produits/babybio-babybio-caprea-3/) , note B (80/100)
+- [Holle Lait pour nourrisson  1](/fr/produits/holle-lait-pour-nourrisson-1/) , note B (80/100)
+
+## Méthodologie
+
+Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+
+Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
+
