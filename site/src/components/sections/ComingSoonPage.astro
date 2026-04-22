@@ -46,8 +46,8 @@ const { copy } = Astro.props;
 
   <div class="cs-inner">
     <p class="eyebrow fade-up">{locale === "fr" ? copy.eyebrow.fr : copy.eyebrow.en}</p>
-    <h1 class="fade-up">{locale === "fr" ? copy.title.fr : copy.title.en}</h1>
-    <p class="lede fade-up">{locale === "fr" ? copy.lede.fr : copy.lede.en}</p>
+    <h1 class="fade-up" data-speakable>{locale === "fr" ? copy.title.fr : copy.title.en}</h1>
+    <p class="lede fade-up" data-speakable>{locale === "fr" ? copy.lede.fr : copy.lede.en}</p>
 
     <div class="cs-card fade-up">
       <h2 class="cs-card-label">{locale === "fr" ? "Ce que tu vas y trouver" : "What you will find here"}</h2>

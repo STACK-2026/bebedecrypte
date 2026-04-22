@@ -7,12 +7,12 @@ const locale: Locale = getLocale(Astro.url);
 <article class="about-page">
   <header class="a-header">
     <p class="eyebrow">{locale === "fr" ? "À propos" : "About"}</p>
-    <h1 class="fade-up">
+    <h1 class="fade-up" data-speakable>
       {locale === "fr"
         ? "On décrypte ce qu'il y a vraiment dans le pot de ton bébé."
         : "We decode what your baby's label hides."}
     </h1>
-    <p class="lede fade-up">
+    <p class="lede fade-up" data-speakable>
       {locale === "fr"
         ? "BébéDécrypte note chaque petit pot, lait infantile, céréale et gourde de A à E. Indépendant. Transparent. Relu par une pédiatre. Aucune marque ne paie pour changer une note."
         : "BébéDécrypte grades every baby pot, infant formula, cereal and pouch from A to E. Independent. Transparent. Reviewed by a paediatrician. No brand pays to change a grade."}
