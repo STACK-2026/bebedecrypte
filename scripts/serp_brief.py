@@ -35,7 +35,7 @@ if ENV_MASTER.exists():
     load_dotenv(ENV_MASTER)
 load_dotenv()
 
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "")
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "") or os.getenv("GEMINI_API_KEY", "")
 
 SCRIPT_DIR = Path(__file__).parent
 REPO_DIR = SCRIPT_DIR.parent
@@ -48,13 +48,13 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(me
 log = logging.getLogger("serp_brief")
 
 
-BRIEF_PROMPT_TEMPLATE = """Tu es un strategiste SEO et GEO (Generative Engine Optimization) specialise en niche : pet food, ingredient analysis, brand comparison (cat, dog, bird, rabbit, etc.).
+BRIEF_PROMPT_TEMPLATE = """Tu es un strategiste SEO et GEO (Generative Engine Optimization) francais specialise en alimentation infantile (0 a 36 mois : laits infantiles, diversification, petits pots, cereales, gourdes, biscuits bebe).
 
-Execute une recherche Google.com pour la requete ci-dessous. Lis attentivement les 10 premiers resultats. Identifie ce qui ranke, les angles communs, les angles faibles, et ce qu'il faut faire pour battre le top 3.
+Execute une recherche Google.fr pour la requete ci-dessous. Lis attentivement les 10 premiers resultats. Identifie ce qui ranke, les angles communs, les angles faibles, et ce qu'il faut faire pour battre le top 3.
 
 REQUETE : "{keyword}"
-MARCHE CIBLE : EN international + FR, pet owners researching food quality and brand transparency
-NOTRE POSITIONNEMENT : PetFoodRate, the Nutri-Score for pet food, A-E grading on 5 criteria (ingredients, nutrition, safety, transparency, fit)
+MARCHE CIBLE : France, parents francophones, bebes 0 a 36 mois
+NOTRE POSITIONNEMENT : BebeDecrypte, comparateur independant francais, grille A a E publique sur 8 criteres (NOVA, additifs EFSA, sucres caches, Nutri-Score, bio, allergenes, made in France, simplicite). Reviewer medical : Dr. Claire Vasseur, pediatre nutritionniste.
 
 Retourne UNIQUEMENT ce JSON strict (aucun texte autour, pas de bloc markdown, pas de commentaire) :
 
@@ -85,7 +85,7 @@ Retourne UNIQUEMENT ce JSON strict (aucun texte autour, pas de bloc markdown, pa
     "fait precis 3"
   ],
   "entities_to_mention": ["nom entite 1 (marque, organisme, etude)", "entite 2", "entite 3"],
-  "target_word_count": 3000,
+  "target_word_count": 3500,
   "intent_type": "informational",
   "featured_snippet_opportunity": "format du snippet a viser (definition, liste, tableau, steps) + formulation cible",
   "serp_features_detected": ["AI Overview", "People Also Ask", "Featured Snippet", "Video", "Image Pack"]
@@ -93,15 +93,17 @@ Retourne UNIQUEMENT ce JSON strict (aucun texte autour, pas de bloc markdown, pa
 
 Regles pour le JSON :
 - JSON strict, champs tous remplis (meme vides : [] ou \"\")
-- Response language: match REQUETE language (EN or FR)
+- Reponse en francais
 - Prise en compte des SERP features visibles (AI Overview, PAA, etc.)
-- Orientation GEO : pense LLM citability (ChatGPT, Perplexity, AI Overviews)"""
+- Orientation GEO : pense LLM citability (ChatGPT, Perplexity, AI Overviews)
+- Priorite aux sources autorite du marche bebe : ANSES, ESPGHAN, OMS, EFSA, INSERM, Sante publique France, RappelConso
+- Cible 3500+ mots pour articles piliers (standard STACK-2026)"""
 
 
 def gemini_serp_brief(keyword: str, retries: int = 3) -> dict:
     """Call Gemini 2.5 Pro with Google Search grounding and parse JSON brief."""
     if not GOOGLE_API_KEY:
-        raise RuntimeError("GOOGLE_API_KEY manquant (cf ~/stack-2026/.env.master)")
+        raise RuntimeError("GOOGLE_API_KEY (ou GEMINI_API_KEY) manquant (cf ~/stack-2026/.env.master)")
 
     payload = {
         "contents": [{"parts": [{"text": BRIEF_PROMPT_TEMPLATE.format(keyword=keyword)}]}],

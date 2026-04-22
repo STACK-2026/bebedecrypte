@@ -20,3 +20,4 @@ coverage/
 *.tsbuildinfo
 pending/raw/
 pending/tmp/
+pending/*.jsonl
