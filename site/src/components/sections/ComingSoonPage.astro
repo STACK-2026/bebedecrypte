@@ -50,7 +50,7 @@ const { copy } = Astro.props;
     <p class="lede fade-up">{locale === "fr" ? copy.lede.fr : copy.lede.en}</p>
 
     <div class="cs-card fade-up">
-      <p class="cs-card-label">{locale === "fr" ? "Ce que tu vas y trouver" : "What you will find here"}</p>
+      <h2 class="cs-card-label">{locale === "fr" ? "Ce que tu vas y trouver" : "What you will find here"}</h2>
       <ul class="stagger-children">
         {(locale === "fr" ? copy.expect.fr : copy.expect.en).map((item) => (
           <li>{item}</li>
