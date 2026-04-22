@@ -1,0 +1,164 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { glossaire, glossaireCategories } from "../../data/glossaire";
+import { siteConfig } from "../../../site.config";
+import { getLocale, localeUrl } from "../../i18n/t";
+
+const locale = getLocale(Astro.url);
+const fr = locale === "fr";
+
+type GE = typeof glossaire[keyof typeof glossaire];
+const entries: Array<[string, GE]> = Object.entries(glossaire);
+
+const byCategory: Record<string, Array<[string, GE]>> = {};
+for (const [key, value] of entries) {
+  const cat = value.category;
+  (byCategory[cat] ||= []).push([key, value]);
+}
+for (const cat of Object.keys(byCategory)) {
+  byCategory[cat].sort(([a], [b]) => a.localeCompare(b));
+}
+
+const categoryLabels: Record<string, { fr: string; en: string }> = {
+  nutrition: { fr: "Nutrition & scoring", en: "Nutrition & scoring" },
+  additifs: { fr: "Additifs", en: "Additives" },
+  labels: { fr: "Labels & certifications", en: "Labels & certifications" },
+  allergenes: { fr: "Allergènes", en: "Allergens" },
+  laits: { fr: "Laits infantiles", en: "Infant formulas" },
+  securite: { fr: "Sécurité & rappels", en: "Safety & recalls" },
+};
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: fr ? "Accueil" : "Home", item: siteConfig.url + localeUrl("/", locale) },
+    { "@type": "ListItem", position: 2, name: fr ? "Glossaire" : "Glossary" },
+  ],
+};
+
+const faq = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  name: fr ? "Glossaire BébéDécrypte" : "BébéDécrypte Glossary",
+  description: fr ? "Glossaire des termes nutrition et alimentation bébé" : "Baby-nutrition glossary",
+  hasDefinedTerm: entries.slice(0, 30).map(([key, value]) => ({
+    "@type": "DefinedTerm",
+    name: key,
+    description: value.definition.split("EN:")[0].trim().slice(0, 320),
+    inDefinedTermSet: { "@id": `${siteConfig.url}${localeUrl("/glossaire/", locale)}` },
+  })),
+};
+
+const title = fr
+  ? `Glossaire alimentation bébé , ${entries.length} termes décryptés | BébéDécrypte`
+  : `Baby food glossary , ${entries.length} terms decoded | BébéDécrypte`;
+const description = fr
+  ? `Glossaire complet : NOVA, Nutri-Score, maltodextrine, E471, APLV, bio AB, RappelConso, ESPGHAN, ANSES et ${entries.length - 8} autres termes nutrition bébé décryptés en 100 mots chacun. Sources officielles citées.`
+  : `Complete glossary: NOVA, Nutri-Score, maltodextrin, E471, CMPA, organic AB, RappelConso, ESPGHAN, ANSES and ${entries.length - 8} more baby-nutrition terms decoded in 100 words each. Official sources cited.`;
+---
+
+<BaseLayout title={title} description={description} jsonLd={[breadcrumb, faq]}>
+  <article class="glossaire">
+    <nav class="breadcrumb" aria-label={fr ? "Fil d'Ariane" : "Breadcrumb"}>
+      <a href={localeUrl("/", locale)}>{fr ? "Accueil" : "Home"}</a>
+      <span aria-hidden="true">·</span>
+      <span>{fr ? "Glossaire" : "Glossary"}</span>
+    </nav>
+
+    <header class="g-header fade-up">
+      <p class="eyebrow">{fr ? "Glossaire" : "Glossary"}</p>
+      <h1 data-speakable>{fr ? "Tous les termes de l'alimentation bébé, décryptés" : "Every baby-food term, decoded"}</h1>
+      <p class="lede" data-speakable>
+        {fr
+          ? `${entries.length} termes nutrition, additifs, allergènes, labels et laits infantiles expliqués en 100 mots chacun, avec un exemple concret et la source officielle (ANSES, EFSA, ESPGHAN, OMS, RappelConso, FAO).`
+          : `${entries.length} nutrition, additive, allergen, label and infant-formula terms explained in 100 words each, with a concrete example and the official source (ANSES, EFSA, ESPGHAN, WHO, RappelConso, FAO).`}
+      </p>
+
+      <nav class="g-toc" aria-label={fr ? "Catégories" : "Categories"}>
+        {Object.keys(byCategory).sort().map((cat) => (
+          <a href={`#cat-${cat}`} class="g-toc-chip">
+            {categoryLabels[cat]?.[locale] || cat} <span class="g-toc-count">{byCategory[cat].length}</span>
+          </a>
+        ))}
+      </nav>
+    </header>
+
+    {Object.keys(byCategory).sort().map((cat) => (
+      <section class="g-section fade-up" id={`cat-${cat}`}>
+        <h2>{categoryLabels[cat]?.[locale] || cat}</h2>
+        <div class="g-list">
+          {byCategory[cat].map(([key, entry]) => {
+            const frText = entry.definition.split("EN:")[0].trim();
+            const enText = entry.definition.split("EN:")[1]?.trim() || frText;
+            return (
+              <article class="g-entry" id={`term-${key}`}>
+                <h3 class="g-term">{key}</h3>
+                <p class="g-def" data-speakable>{fr ? frText : enText}</p>
+                <p class="g-example"><strong>{fr ? "Exemple" : "Example"} :</strong> {entry.example}</p>
+                <div class="g-links">
+                  <a href={localeUrl(entry.internalLink.href, locale)} class="g-internal">→ {entry.internalLink.label}</a>
+                  <a href={entry.externalSource.url} rel="noopener external" target="_blank" class="g-external">{fr ? "Source :" : "Source:"} {entry.externalSource.label} ↗</a>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+    ))}
+
+    <section class="g-cta fade-up">
+      <h2>{fr ? "Envie d'aller plus loin ?" : "Want to go deeper?"}</h2>
+      <p>
+        {fr
+          ? "Notre méthodologie publique explique comment ces termes sont combinés en une note A à E, déterministe et reproductible sur chaque produit."
+          : "Our public methodology shows how these terms combine into a deterministic, reproducible A to E grade on every product."}
+      </p>
+      <div class="g-cta-btns">
+        <a href={localeUrl("/methodology", locale)} class="btn-primary hover-shine">
+          {fr ? "Lire la méthodologie" : "Read the methodology"}
+        </a>
+        <a href={localeUrl("/authors/", locale)} class="btn-secondary">
+          {fr ? "Voir l'équipe" : "Meet the team"}
+        </a>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .glossaire { max-width: 64rem; margin: 2rem auto 4rem; padding: 0 1.25rem; }
+  .breadcrumb { display: flex; gap: 0.5rem; flex-wrap: wrap; font-size: 0.88rem; color: var(--color-ink-soft); margin-bottom: 1.5rem; }
+  .breadcrumb a { color: var(--color-primary-dark); text-decoration: underline; text-underline-offset: 3px; }
+  .g-header { max-width: 44rem; margin: 0 auto 3rem; text-align: center; }
+  .eyebrow { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-primary-dark); margin: 0 0 0.75rem; }
+  .g-header h1 { font-size: clamp(2rem, 4.5vw, 2.6rem); margin: 0 0 1rem; }
+  .lede { color: var(--color-ink-soft); font-size: 1.08rem; line-height: 1.65; }
+  .g-toc { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1.75rem; }
+  .g-toc-chip { background: #ffffff; border: 1px solid var(--color-border); border-radius: 9999px; padding: 0.4rem 0.9rem; font-size: 0.85rem; color: var(--color-primary-dark); text-decoration: none; font-weight: 600; transition: all 200ms var(--ease-out-expo); }
+  .g-toc-chip:hover { border-color: var(--color-primary); background: var(--color-bg-soft); }
+  .g-toc-count { background: var(--color-bg-paper); padding: 0.1rem 0.4rem; border-radius: 9999px; font-size: 0.72rem; margin-left: 0.35rem; color: var(--color-ink-soft); }
+
+  .g-section { margin-bottom: 3rem; scroll-margin-top: 2rem; }
+  .g-section > h2 { font-size: 1.5rem; color: var(--color-primary-dark); margin: 0 0 1.25rem; border-bottom: 2px solid var(--color-border); padding-bottom: 0.5rem; }
+
+  .g-list { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+  @media (min-width: 768px) { .g-list { grid-template-columns: repeat(2, 1fr); } }
+
+  .g-entry { background: #ffffff; border: 1px solid var(--color-border); border-radius: 0.875rem; padding: 1.25rem 1.4rem; scroll-margin-top: 2rem; transition: border-color 200ms ease, box-shadow 200ms ease; }
+  .g-entry:hover { border-color: color-mix(in srgb, var(--color-primary) 30%, var(--color-border)); box-shadow: var(--shadow-card); }
+  .g-term { font-size: 1.05rem; font-weight: 800; color: var(--color-primary-dark); margin: 0 0 0.6rem; text-transform: capitalize; letter-spacing: -0.01em; }
+  .g-def { font-size: 0.92rem; line-height: 1.6; color: var(--color-ink); margin: 0 0 0.75rem; }
+  .g-example { font-size: 0.85rem; color: var(--color-ink-soft); line-height: 1.55; margin: 0 0 0.75rem; padding: 0.5rem 0.75rem; background: var(--color-bg-soft); border-radius: 0.5rem; border-left: 3px solid var(--color-accent); }
+  .g-example strong { color: var(--color-ink); }
+  .g-links { display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.82rem; }
+  .g-internal { color: var(--color-primary-dark); text-decoration: none; font-weight: 600; }
+  .g-internal:hover { text-decoration: underline; }
+  .g-external { color: var(--color-ink-soft); text-decoration: none; font-style: italic; }
+  .g-external:hover { text-decoration: underline; color: var(--color-primary-dark); }
+
+  .g-cta { margin-top: 3rem; padding: 2rem; background: var(--color-bg-soft); border-radius: 1rem; text-align: center; }
+  .g-cta h2 { font-size: 1.35rem; color: var(--color-primary-dark); margin: 0 0 0.75rem; }
+  .g-cta p { color: var(--color-ink-soft); max-width: 36rem; margin: 0 auto 1.5rem; line-height: 1.6; }
+  .g-cta-btns { display: flex; flex-wrap: wrap; gap: 0.85rem; justify-content: center; }
+</style>

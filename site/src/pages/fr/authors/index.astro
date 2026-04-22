@@ -1,0 +1,91 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { AUTHORS } from "../../../data/authors";
+import { siteConfig } from "../../../../site.config";
+import { getLocale, localeUrl } from "../../../i18n/t";
+
+const locale = getLocale(Astro.url);
+const fr = locale === "fr";
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: fr ? "Accueil" : "Home", item: siteConfig.url + localeUrl("/", locale) },
+    { "@type": "ListItem", position: 2, name: fr ? "Équipe éditoriale" : "Editorial team" },
+  ],
+};
+
+const peopleList = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: AUTHORS.map((a, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    item: {
+      "@type": "Person",
+      name: a.name,
+      url: `${siteConfig.url}${localeUrl(`/authors/${a.slug}/`, locale)}`,
+      jobTitle: fr ? a.role.fr : a.role.en,
+    },
+  })),
+};
+
+const title = fr
+  ? "Équipe éditoriale BébéDécrypte , pédiatre, diététicienne, journaliste, data"
+  : "BébéDécrypte editorial team , paediatrician, dietitian, journalist, data";
+const description = fr
+  ? "Quatre professionnels signent BébéDécrypte : une pédiatre nutritionniste, une diététicienne pédiatrique, une journaliste d'investigation santé et un analyste data agroalimentaire. Pen names assumés, bios complètes."
+  : "Four professionals publish BébéDécrypte: a paediatric nutritionist, a paediatric dietitian, a health investigation journalist and a food data analyst. Editorial pen names, full bios.";
+---
+
+<BaseLayout title={title} description={description} jsonLd={[peopleList, breadcrumb]}>
+  <article class="authors-page">
+    <nav class="breadcrumb" aria-label={fr ? "Fil d'Ariane" : "Breadcrumb"}>
+      <a href={localeUrl("/", locale)}>{fr ? "Accueil" : "Home"}</a>
+      <span aria-hidden="true">·</span>
+      <span>{fr ? "Équipe éditoriale" : "Editorial team"}</span>
+    </nav>
+
+    <header class="authors-header fade-up">
+      <p class="eyebrow">{fr ? "Équipe éditoriale" : "Editorial team"}</p>
+      <h1 data-speakable>{fr ? "Qui écrit et relit BébéDécrypte ?" : "Who writes and reviews BébéDécrypte?"}</h1>
+      <p class="lede" data-speakable>
+        {fr
+          ? "Quatre professionnels, quatre compétences. Pédiatrie, diététique pédiatrique, journalisme santé, data agroalimentaire. Pen names éditoriaux assumés, bios complètes, relecture clinique obligatoire sur les sujets santé."
+          : "Four professionals, four competences. Paediatrics, paediatric dietetics, health journalism, food data. Editorial pen names disclosed, full bios, mandatory clinical review on health topics."}
+      </p>
+    </header>
+
+    <section class="authors-grid stagger-children">
+      {AUTHORS.map((a) => (
+        <a href={localeUrl(`/authors/${a.slug}/`, locale)} class="author-card hover-glow">
+          <div class="author-avatar" style={`background: ${a.avatarBg};`} aria-hidden="true">{a.initials}</div>
+          <h2>{a.name}</h2>
+          <p class="author-role">{fr ? a.role.fr : a.role.en}</p>
+          <p class="author-short">{fr ? a.short.fr : a.short.en}</p>
+          <span class="author-link">{fr ? "Lire la fiche" : "Read bio"} →</span>
+        </a>
+      ))}
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .authors-page { max-width: 64rem; margin: 2rem auto 4rem; padding: 0 1.25rem; }
+  .breadcrumb { display: flex; gap: 0.5rem; flex-wrap: wrap; font-size: 0.88rem; color: var(--color-ink-soft); margin-bottom: 1.5rem; }
+  .breadcrumb a { color: var(--color-primary-dark); text-decoration: underline; text-underline-offset: 3px; }
+  .authors-header { max-width: 44rem; margin: 0 auto 3rem; text-align: center; }
+  .eyebrow { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-primary-dark); margin: 0 0 0.75rem; }
+  h1 { font-size: clamp(2rem, 4.5vw, 2.6rem); margin: 0 0 1rem; }
+  .lede { color: var(--color-ink-soft); font-size: 1.05rem; line-height: 1.65; }
+  .authors-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+  @media (min-width: 640px) { .authors-grid { grid-template-columns: repeat(2, 1fr); } }
+  .author-card { padding: 1.5rem; background: #ffffff; border: 1px solid var(--color-border); border-radius: 1rem; text-decoration: none; color: inherit; transition: transform 300ms var(--ease-out-expo), box-shadow 300ms var(--ease-out-expo), border-color 300ms ease; display: flex; flex-direction: column; gap: 0.5rem; }
+  .author-card:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--color-primary) 30%, var(--color-border)); }
+  .author-avatar { width: 3rem; height: 3rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; font-size: 0.9rem; margin-bottom: 0.5rem; }
+  .author-card h2 { font-size: 1.05rem; margin: 0; color: var(--color-ink); }
+  .author-role { font-size: 0.78rem; font-weight: 700; color: var(--color-primary); text-transform: uppercase; letter-spacing: 0.06em; margin: 0; }
+  .author-short { font-size: 0.9rem; color: var(--color-ink-soft); line-height: 1.6; margin: 0; flex: 1; }
+  .author-link { font-size: 0.88rem; color: var(--color-primary-dark); font-weight: 700; }
+</style>

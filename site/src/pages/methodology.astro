@@ -1,11 +1,39 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import MethodologyPage from "../components/sections/MethodologyPage.astro";
+import { siteConfig } from "../../site.config";
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url + "/" },
+    { "@type": "ListItem", position: 2, name: "Methodology" },
+  ],
+};
+
+const webPage = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "@id": `${siteConfig.url}/methodology/#article`,
+  headline: "How BébéDécrypte scores every baby food product , 8-axis methodology",
+  url: `${siteConfig.url}/methodology/`,
+  inLanguage: "en-US",
+  publisher: { "@id": `${siteConfig.url}/#organization` },
+  about: [
+    { "@type": "Thing", name: "NOVA classification" },
+    { "@type": "Thing", name: "EFSA additives registry" },
+    { "@type": "Thing", name: "ANSES paediatric nutrition opinions" },
+    { "@type": "Thing", name: "Nutri-Score" },
+  ],
+  speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable]"] },
+};
 ---
 
 <BaseLayout
   title="Methodology , How BébéDécrypte scores every product | BébéDécrypte"
   description="BébéDécrypte uses a deterministic 8-axis scoring system (NOVA, EFSA additives, added sugars, Nutri-Score, organic, allergens, origin, simplicity) tuned for infant nutrition to grade every baby food product from A to E. Baby-specific weighting stricter under 12 months."
+  jsonLd={[webPage, breadcrumb]}
 >
   <MethodologyPage />
 </BaseLayout>

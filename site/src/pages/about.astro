@@ -1,11 +1,33 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import AboutPage from "../components/sections/AboutPage.astro";
+import { siteConfig } from "../../site.config";
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url + "/" },
+    { "@type": "ListItem", position: 2, name: "About" },
+  ],
+};
+
+const aboutPage = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": `${siteConfig.url}/about/#about`,
+  url: `${siteConfig.url}/about/`,
+  name: "About BébéDécrypte",
+  description: "Independent editorial rating service for baby food, reviewed by a paediatrician.",
+  publisher: { "@id": `${siteConfig.url}/#organization` },
+  inLanguage: "en-US",
+};
 ---
 
 <BaseLayout
-  title="About BébéDécrypte , Independent food label decoder"
-  description="BébéDécrypte is an independent European editorial rating service that grades every food and supplement from A to E. Free, transparent methodology, no brand sponsorship."
+  title="About BébéDécrypte , Independent baby food label decoder"
+  description="BébéDécrypte is an independent European editorial rating service that grades every baby pot, infant formula, cereal and pouch from A to E. Free, transparent 8-axis methodology, paediatrician-reviewed, no brand sponsorship."
+  jsonLd={[aboutPage, breadcrumb]}
 >
   <AboutPage />
 </BaseLayout>
