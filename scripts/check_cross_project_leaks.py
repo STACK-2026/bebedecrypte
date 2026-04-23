@@ -31,9 +31,15 @@ from pathlib import Path
 
 # ---------------------------------------------------------------------------
 # Pinned identity , update when the project ref / domain changes.
-# `own_tokens` lists the brand-name strings that are legitimate in this repo
-# (and therefore must NOT be flagged as sibling references even if they are
-# in the shared KNOWN_SIBLING_BRAND_TOKENS map).
+#
+# A STACK-2026 repo can legitimately reference MORE than its single primary
+# Supabase project :
+#   , a split site + app (marketing site Supabase + Lovable app Supabase)
+#   , a legitimate cross-project easter egg or portfolio link
+# So SELF_PROJECT carries three allow-lists :
+#   , `own_tokens` : brand strings the scanner must not flag
+#   , `own_domains` : domain suffixes the scanner must not flag
+#   , `own_supabase_refs` : Supabase project refs the scanner must not flag
 # ---------------------------------------------------------------------------
 SELF_PROJECT = {
     "name": "bebedecrypte",
@@ -41,6 +47,8 @@ SELF_PROJECT = {
     "domain": "bebedecrypte.com",
     "cf_pages_project": "bebedecrypte",
     "own_tokens": {"BébéDécrypte", "BebeDecrypte", "bebedecrypte.com"},
+    "own_domains": {"bebedecrypte.com"},
+    "own_supabase_refs": {"feqdpvahksbamwutazkl"},
 }
 
 # Known sibling STACK-2026 Supabase refs. Anything in this map that is not
@@ -62,6 +70,8 @@ KNOWN_SIBLING_SUPABASE_REFS = {
     "ctdduvzobmjtcfsmorjr": "ukheatpumpguide",
     "eikxsaktrbuowetvymsn": "ratingcafe",
     "apuyeakgxjgdcfssrtek": "lobservatoiredespros",
+    # App splits (separate Supabase for Lovable-hosted product apps, same owner)
+    "gfhloroqncrfzahkaihn": "petfoodrate-app",
 }
 
 KNOWN_SIBLING_DOMAINS = {
@@ -105,8 +115,6 @@ KNOWN_SIBLING_BRAND_TOKENS = {
     "bebedecrypte.com": "BébéDécrypte",
     "PetFoodRate": "PetFoodRate",
     "petfoodrate.com": "PetFoodRate",
-    "Zooplus FR": "PetFoodRate affiliate merchant",
-    "zooplus.fr": "PetFoodRate affiliate merchant",
     "DecrypteBot": "DecrypteBot",
     "Decryptebot": "DecrypteBot",
     "decryptebot.com": "DecrypteBot",
@@ -146,6 +154,9 @@ RUNTIME_PATH_PREFIXES = (
 IGNORE_DIRS = {
     ".git", "node_modules", "dist", ".astro", ".wrangler", ".next",
     "public/_astro", "coverage", ".cache",
+    # Internal affiliate / merchant research notes that legitimately compare
+    # shortlists across multiple STACK-2026 projects.
+    "awin", "affiliate-research",
 }
 IGNORE_FILES = {
     "package-lock.json", "yarn.lock", "pnpm-lock.yaml",
@@ -188,6 +199,11 @@ def scan(root: Path) -> list[dict]:
     violations: list[dict] = []
     self_ref = SELF_PROJECT["supabase_ref"]
     self_domain = SELF_PROJECT["domain"]
+    allowed_refs = set(SELF_PROJECT.get("own_supabase_refs") or {self_ref})
+    allowed_refs.add(self_ref)
+    allowed_domains = set(SELF_PROJECT.get("own_domains") or {self_domain})
+    allowed_domains.add(self_domain)
+    own_tokens = set(SELF_PROJECT.get("own_tokens") or ())
 
     for f in iter_files(root):
         try:
@@ -198,7 +214,7 @@ def scan(root: Path) -> list[dict]:
         # Supabase ref inside a *.supabase.co URL
         for m in SUPABASE_REF_RE.finditer(text):
             ref = m.group(1)
-            if ref == self_ref:
+            if ref in allowed_refs:
                 continue
             sibling = KNOWN_SIBLING_SUPABASE_REFS.get(ref)
             violations.append(
@@ -214,7 +230,7 @@ def scan(root: Path) -> list[dict]:
         # Supabase ref inside a JWT payload (anon / service keys)
         for m in JWT_REF_RE.finditer(text):
             ref = m.group(1)
-            if ref == self_ref:
+            if ref in allowed_refs:
                 continue
             sibling = KNOWN_SIBLING_SUPABASE_REFS.get(ref)
             violations.append(
@@ -232,7 +248,7 @@ def scan(root: Path) -> list[dict]:
         rel = str(f.relative_to(root))
         if rel.startswith(RUNTIME_PATH_PREFIXES):
             for domain, owner in KNOWN_SIBLING_DOMAINS.items():
-                if domain == self_domain:
+                if domain in allowed_domains:
                     continue
                 needle = f"//{domain}"
                 idx = text.find(needle)
@@ -256,8 +272,8 @@ def scan(root: Path) -> list[dict]:
             idx = text.find(ref)
             if idx == -1:
                 continue
-            # Skip if the ref is part of a known self match
-            if ref == self_ref:
+            # Skip if the ref is part of the allow-list (main project + app split)
+            if ref in allowed_refs:
                 continue
             violations.append(
                 {
@@ -273,7 +289,6 @@ def scan(root: Path) -> list[dict]:
         # meta titles, legal copy, OG images, etc.). Skip tokens that
         # legitimately belong to the current project (SELF_PROJECT.own_tokens).
         if rel.startswith(RUNTIME_PATH_PREFIXES):
-            own_tokens = SELF_PROJECT.get("own_tokens", set())
             for token, owner in KNOWN_SIBLING_BRAND_TOKENS.items():
                 if token in own_tokens:
                     continue
