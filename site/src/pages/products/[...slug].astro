@@ -23,19 +23,63 @@ const breadcrumb = {
   ],
 };
 
+const productUrl = `${siteConfig.url}/products/${data.slug}/`;
+const reviewDate = (data.lastReviewed || data.publishedDate || new Date()).toISOString
+  ? (data.lastReviewed || data.publishedDate || new Date()).toISOString().split("T")[0]
+  : "2026-04-22";
+
+// Best-effort age mapping (months to PeopleAudience suggestedMinAge)
+const audienceMinAge = data.targetAgeMonths && data.targetAgeMonths > 0 ? data.targetAgeMonths / 12 : undefined;
+
 const productLd = {
   "@context": "https://schema.org",
   "@type": "Product",
+  "@id": productUrl + "#product",
   name: `${data.brand} ${data.name}`,
-  brand: { "@type": "Brand", name: data.brand },
+  url: productUrl,
+  brand: {
+    "@type": "Brand",
+    name: data.brand,
+    url: `${siteConfig.url}/brands/${data.brandSlug}/`,
+  },
   description: data.description,
   ...(data.image ? { image: data.image } : {}),
-  ...(data.barcode ? { gtin13: data.barcode } : {}),
+  ...(data.barcode
+    ? {
+        gtin: data.barcode,
+        gtin13: data.barcode,
+        sku: data.barcode,
+        productID: `ean:${data.barcode}`,
+        identifier: { "@type": "PropertyValue", propertyID: "EAN", value: data.barcode },
+      }
+    : {}),
   category: data.catalogCategory,
   additionalType: "https://schema.org/FoodProduct",
+  ...(audienceMinAge !== undefined
+    ? {
+        audience: {
+          "@type": "PeopleAudience",
+          suggestedMinAge: audienceMinAge,
+          audienceType: "Infant",
+        },
+      }
+    : {}),
+  ...(data.nutriScore
+    ? { additionalProperty: { "@type": "PropertyValue", name: "Nutri-Score", value: String(data.nutriScore).toUpperCase() } }
+    : {}),
   review: {
     "@type": "Review",
-    author: { "@type": "Organization", name: "BébéDécrypte", url: siteConfig.url },
+    name: `Analyse BébéDécrypte ${data.brand} ${data.name}`,
+    author: {
+      "@type": "Person",
+      name: data.reviewedBy ? data.reviewedBy.split(",")[0].trim() : "BébéDécrypte Editorial",
+      url: siteConfig.url + "/authors/",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "BébéDécrypte",
+      url: siteConfig.url,
+    },
     reviewRating: {
       "@type": "Rating",
       ratingValue: data.score,
@@ -44,7 +88,7 @@ const productLd = {
       alternateName: data.grade,
     },
     reviewBody: data.description,
-    datePublished: data.lastReviewed || data.publishedDate || "2026-04-22",
+    datePublished: reviewDate,
   },
 };
 
@@ -70,7 +114,7 @@ const gradeColors: Record<string, string> = { A: "var(--grade-a)", B: "var(--gra
       <div class="p-title">
         <p class="p-brand"><a href={`/brands/${data.brandSlug}/`}>{data.brand}</a></p>
         <h1 data-speakable>{data.name}</h1>
-        <p class="p-meta">{data.ageRange ? `Tranche d'âge : ${data.ageRange}` : ""}</p>
+        <p class="p-meta" data-speakable>Note BébéDécrypte : {data.grade} ({data.score}/100). {data.ageRange ? `Tranche d'âge : ${data.ageRange}.` : ""}</p>
       </div>
       {data.image && (
         <figure class="p-image">
@@ -80,7 +124,7 @@ const gradeColors: Record<string, string> = { A: "var(--grade-a)", B: "var(--gra
     </header>
 
     {data.warnings && data.warnings.length > 0 && (
-      <aside class="p-warnings fade-up" role="alert">
+      <aside class="p-warnings fade-up" role="alert" data-speakable>
         <p class="p-warnings-label">⚠ Points d'attention</p>
         <ul>{data.warnings.map((w: string) => <li>{w}</li>)}</ul>
       </aside>

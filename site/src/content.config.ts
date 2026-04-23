@@ -41,6 +41,9 @@ const blog = defineCollection({
         })
       )
       .optional(),
+    // Emit MedicalWebPage JSON-LD when the article covers infant or paediatric
+    // health topics (allergens, diversification, formula, botulism, etc.).
+    medical: z.boolean().default(false),
   }),
 });
 

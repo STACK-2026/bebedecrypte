@@ -42,10 +42,31 @@ const itemList = {
   })),
 };
 
+const brandLd = {
+  "@context": "https://schema.org",
+  "@type": "Brand",
+  "@id": `${siteConfig.url}/brands/${data.slug}/#brand`,
+  name: data.brand,
+  url: `${siteConfig.url}/brands/${data.slug}/`,
+  ...(products.length > 0
+    ? {
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: data.averageScore,
+          bestRating: 100,
+          worstRating: 0,
+          ratingCount: products.length,
+          reviewCount: products.length,
+          alternateName: data.averageGrade,
+        },
+      }
+    : {}),
+};
+
 const gradeColors: Record<string, string> = { A: "var(--grade-a)", B: "var(--grade-b)", C: "var(--grade-c)", D: "var(--grade-d)", E: "var(--grade-e)" };
 ---
 
-<BaseLayout title={data.title} description={data.description} jsonLd={[itemList, breadcrumb]}>
+<BaseLayout title={data.title} description={data.description} jsonLd={[brandLd, itemList, breadcrumb]}>
   <article class="brand-page">
     <nav class="breadcrumb">
       <a href="/">Accueil</a> <span aria-hidden="true">·</span>

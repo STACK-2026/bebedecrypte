@@ -10,6 +10,7 @@ tags: ["diversification alimentaire bébé", "diversification 4 mois", "diversif
 keywords: "diversification alimentaire bébé, diversification 4 mois, diversification 6 mois, diversification 8 mois, diversification 12 mois"
 lang: fr
 draft: false
+medical: true
 image: "https://images.unsplash.com/photo-1544632561-0f8a895a2b08?ixid=M3w4Nzg4MzB8MHwxfHNlYXJjaHwxfHxkaXZlcnNpZmljYXRpb24lMjBhbGltZW50YWlyZSUyMGIlQzMlQTliJUMzJUE5fGVufDB8MHx8fDE3NzY4ODM3MTd8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&crop=center&q=80"
 imageAlt: "toddler sitting in front of bowl on top of table"
 howTo:

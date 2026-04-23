@@ -26,6 +26,7 @@ interface Props {
   reviewedBy?: string;
   howTo?: HowToInput;
   faq?: FaqItem[];
+  medical?: boolean;
 }
 
 const {
@@ -43,6 +44,7 @@ const {
   reviewedBy,
   howTo,
   faq,
+  medical = false,
 } = Astro.props;
 
 const ogBrandImage = `/og/${slug}.png`;
@@ -97,6 +99,38 @@ if (howTo) {
 }
 if (faq && faq.length > 0) {
   jsonLd.push(jsonLdFaq(faq));
+}
+if (medical) {
+  jsonLd.push({
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "@id": articleUrl + "#medical",
+    name: title,
+    url: articleUrl,
+    description,
+    lastReviewed: lastReviewed ? reviewedStr : dateStr,
+    audience: {
+      "@type": "PeopleAudience",
+      audienceType: "Parents of infants and toddlers",
+      suggestedMinAge: 0,
+      suggestedMaxAge: 3,
+    },
+    ...(reviewerData
+      ? {
+          reviewedBy: {
+            "@type": "Person",
+            name: reviewerData.name,
+            url: `${siteConfig.url}/authors/${reviewerData.slug}/`,
+            jobTitle: reviewerData.role.fr,
+            knowsAbout: reviewerData.specialities.fr,
+          },
+        }
+      : {}),
+    about: {
+      "@type": "MedicalCondition",
+      name: category || "Nutrition infantile",
+    },
+  });
 }
 ---
 
