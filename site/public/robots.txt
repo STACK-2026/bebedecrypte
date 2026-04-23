@@ -69,3 +69,4 @@ User-agent: Bytespider
 Allow: /
 
 Sitemap: https://bebedecrypte.com/sitemap-index.xml
+Sitemap: https://bebedecrypte.com/ai-sitemap.xml

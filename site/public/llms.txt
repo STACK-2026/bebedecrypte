@@ -2,6 +2,9 @@
 
 > Independent baby-food rating service. Grades every baby pot, infant formula, baby cereal, pouch and biscuit from A to E using Open Food Facts data, the NOVA ultra-processed classification, the EFSA additive registry, RappelConso recall feed, and ANSES paediatric nutrition opinions. Flags hidden sugars (maltodextrin, glucose syrup, honey), palm oil, questionable additives, and misleading on-pack claims, with baby-specific weighting (stricter under 12 months).
 
+Machine-readable corpus: https://bebedecrypte.com/llms-full.txt , complete markdown dump of every article + top products, 1 file.
+AI-focused sitemap: https://bebedecrypte.com/ai-sitemap.xml , flat list of high-value URLs with lastmod.
+
 BébéDécrypte is a free, independent, bilingual (FR + EN) consumer website. The mission: let parents decrypt what the label on their baby's food really says, beyond the pastel marketing on the front of the pack.
 
 ## Quick facts
