@@ -8,7 +8,17 @@ import { siteConfig } from "./site.config.ts";
 
 export default defineConfig({
   site: siteConfig.url,
-  integrations: [sitemap({ lastmod: new Date() })],
+  integrations: [
+    sitemap({
+      lastmod: new Date(),
+      filter: (page) => {
+        // Exclude ComingSoon stubs from sitemap , they are noIndex in HTML too.
+        const excluded = ["/rankings/", "/compare/", "/encyclopedia/", "/by-age/"];
+        const path = new URL(page).pathname;
+        return !excluded.some((p) => path === p || path === "/fr" + p);
+      },
+    }),
+  ],
   i18n: {
     defaultLocale: "en",
     locales: ["en", "fr"],

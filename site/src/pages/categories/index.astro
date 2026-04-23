@@ -1,0 +1,125 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { siteConfig } from "../../../site.config";
+
+const catsCol = await getCollection("categories");
+const productsCol = await getCollection("products");
+
+const cats = catsCol
+  .map((c) => {
+    const products = productsCol.filter((p) => p.data.catalogCategory === c.data.slug);
+    const avg = products.length
+      ? Math.round(products.reduce((s, p) => s + (p.data.score || 0), 0) / products.length)
+      : 0;
+    return {
+      slug: c.data.slug,
+      title: c.data.title,
+      description: c.data.description,
+      productCount: products.length,
+      brandCount: c.data.brandCount as number,
+      averageScore: avg,
+    };
+  })
+  .sort((a, z) => z.productCount - a.productCount);
+
+const title = "Catégories d'alimentation bébé , petits pots, laits, céréales, gourdes | BébéDécrypte";
+const description = `Les catégories d'alimentation bébé notées A à E : ${cats.map((c) => c.title.toLowerCase()).join(", ")}. Classement indépendant sur 8 axes nutrition infantile.`;
+
+const itemList = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Catégories d'alimentation bébé",
+  numberOfItems: cats.length,
+  itemListElement: cats.map((c, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: `${siteConfig.url}/categories/${c.slug}/`,
+    name: c.title,
+  })),
+};
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Accueil", item: siteConfig.url + "/" },
+    { "@type": "ListItem", position: 2, name: "Catégories", item: siteConfig.url + "/categories/" },
+  ],
+};
+
+function gradeFromScore(s: number): string {
+  if (s >= 85) return "A";
+  if (s >= 70) return "B";
+  if (s >= 55) return "C";
+  if (s >= 40) return "D";
+  return "E";
+}
+
+const gradeColors: Record<string, string> = {
+  A: "var(--grade-a)",
+  B: "var(--grade-b)",
+  C: "var(--grade-c)",
+  D: "var(--grade-d)",
+  E: "var(--grade-e)",
+};
+---
+
+<BaseLayout title={title} description={description} jsonLd={[itemList, breadcrumb]}>
+  <article class="hub-page">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a> <span aria-hidden="true">·</span>
+      <span>Catégories</span>
+    </nav>
+
+    <header class="hub-header fade-up">
+      <p class="eyebrow">Rayons bébé</p>
+      <h1 data-speakable>Catégories d'alimentation bébé</h1>
+      <p class="lede" data-speakable>
+        Parcours les rayons bébé triés par note moyenne. Petits pots, laits infantiles, céréales, gourdes, biscuits : chaque catégorie a son propre barème et ses alertes spécifiques (additifs, sucres cachés, miel avant 12 mois, huile de palme).
+      </p>
+    </header>
+
+    <section class="cat-grid">
+      {cats.map((c) => {
+        const g = gradeFromScore(c.averageScore);
+        return (
+          <a href={`/categories/${c.slug}/`} class="cat-card fade-up">
+            <div class="cat-grade" style={`background: ${gradeColors[g]};`}>
+              <span class="cat-grade-letter">{g}</span>
+              <span class="cat-grade-score">{c.averageScore}/100</span>
+            </div>
+            <div class="cat-body">
+              <h2>{c.title}</h2>
+              <p>{c.description}</p>
+              <p class="cat-meta">
+                <strong>{c.productCount}</strong> produit{c.productCount > 1 ? "s" : ""}
+                {c.brandCount ? <> · <strong>{c.brandCount}</strong> marque{c.brandCount > 1 ? "s" : ""}</> : null}
+              </p>
+            </div>
+          </a>
+        );
+      })}
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .hub-page { max-width: 64rem; margin: 2rem auto 4rem; padding: 0 1.25rem; }
+  .breadcrumb { display: flex; gap: 0.4rem; flex-wrap: wrap; font-size: 0.82rem; color: var(--color-ink-soft); margin-bottom: 1.5rem; }
+  .breadcrumb a { color: var(--color-primary-dark); text-decoration: underline; text-underline-offset: 3px; }
+  .hub-header { margin-bottom: 2.5rem; }
+  .eyebrow { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-primary-dark); margin: 0 0 0.5rem; }
+  .hub-header h1 { font-size: clamp(1.75rem, 4vw, 2.4rem); margin: 0 0 0.75rem; }
+  .lede { color: var(--color-ink-soft); max-width: 46rem; line-height: 1.6; margin: 0; }
+  .cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 1rem; }
+  .cat-card { display: flex; gap: 1rem; padding: 1.25rem; background: #fff; border: 1px solid var(--color-border); border-radius: 0.875rem; text-decoration: none; color: inherit; transition: border-color 200ms ease, transform 200ms var(--ease-out-expo), box-shadow 200ms ease; }
+  .cat-card:hover { border-color: var(--color-primary); transform: translateY(-2px); box-shadow: 0 8px 24px -8px rgb(12 10 9 / 0.12); }
+  .cat-grade { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 4.5rem; height: 4.5rem; border-radius: 0.75rem; color: #fff; flex-shrink: 0; }
+  .cat-grade-letter { font-family: var(--font-display); font-weight: 900; font-size: 1.75rem; line-height: 1; }
+  .cat-grade-score { font-size: 0.65rem; opacity: 0.85; margin-top: 0.1rem; }
+  .cat-body { flex: 1; min-width: 0; }
+  .cat-body h2 { font-size: 1.15rem; color: var(--color-primary-dark); margin: 0 0 0.4rem; }
+  .cat-body p { color: var(--color-ink-soft); font-size: 0.88rem; line-height: 1.5; margin: 0 0 0.5rem; }
+  .cat-meta { font-size: 0.82rem; color: var(--color-ink); margin: 0; font-variant-numeric: tabular-nums; }
+</style>

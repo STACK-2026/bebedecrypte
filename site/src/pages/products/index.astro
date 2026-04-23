@@ -1,0 +1,171 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { siteConfig } from "../../../site.config";
+
+const productsCol = await getCollection("products");
+const catsCol = await getCollection("categories");
+
+const allProducts = productsCol
+  .map((p) => ({
+    slug: p.data.slug,
+    brand: p.data.brand,
+    brandSlug: p.data.brandSlug,
+    name: p.data.name,
+    grade: p.data.grade as string,
+    score: p.data.score as number,
+    catalogCategory: p.data.catalogCategory as string,
+  }))
+  .sort((a, z) => z.score - a.score);
+
+const byGrade: Record<string, typeof allProducts> = { A: [], B: [], C: [], D: [], E: [] };
+for (const p of allProducts) {
+  if (byGrade[p.grade]) byGrade[p.grade].push(p);
+}
+
+const categories = catsCol.map((c) => ({
+  slug: c.data.slug,
+  title: c.data.title,
+  productCount: allProducts.filter((p) => p.catalogCategory === c.data.slug).length,
+}));
+
+const title = `Les ${allProducts.length} produits bébé notés A à E | BébéDécrypte`;
+const description = `Tous les produits d'alimentation bébé notés de A à E sur 8 axes (NOVA, additifs, sucres cachés, bio, allergènes). ${byGrade.A.length} notes A, ${byGrade.B.length} notes B. Parcours par marque, catégorie ou note.`;
+
+const itemList = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Tous les produits bébé notés",
+  numberOfItems: allProducts.length,
+  itemListElement: allProducts.slice(0, 100).map((p, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: `${siteConfig.url}/products/${p.slug}/`,
+    name: `${p.brand} ${p.name}`,
+  })),
+};
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Accueil", item: siteConfig.url + "/" },
+    { "@type": "ListItem", position: 2, name: "Produits", item: siteConfig.url + "/products/" },
+  ],
+};
+
+const gradeLabels: Record<string, string> = {
+  A: "Excellent",
+  B: "Bien noté",
+  C: "Correct, à surveiller",
+  D: "Qualité insuffisante",
+  E: "À éviter",
+};
+
+const gradeColors: Record<string, string> = {
+  A: "var(--grade-a)",
+  B: "var(--grade-b)",
+  C: "var(--grade-c)",
+  D: "var(--grade-d)",
+  E: "var(--grade-e)",
+};
+---
+
+<BaseLayout title={title} description={description} jsonLd={[itemList, breadcrumb]}>
+  <article class="hub-page">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a> <span aria-hidden="true">·</span>
+      <span>Produits</span>
+    </nav>
+
+    <header class="hub-header fade-up">
+      <p class="eyebrow">Catalogue</p>
+      <h1 data-speakable>Les {allProducts.length} produits bébé notés de A à E</h1>
+      <p class="lede" data-speakable>
+        Parcours le catalogue BébéDécrypte par note, par catégorie ou par marque. Chaque produit est analysé sur 8 axes bébé : NOVA, additifs EFSA, sucres cachés (maltodextrine, sirop de glucose, miel), Nutri-Score, bio, allergènes, origine et simplicité de recette.
+      </p>
+    </header>
+
+    <section class="browse-section fade-up">
+      <h2 class="section-title">Parcourir par catégorie</h2>
+      <ul class="tag-list">
+        {categories.map((c) => (
+          <li>
+            <a href={`/categories/${c.slug}/`} class="tag">
+              <span class="tag-label">{c.title}</span>
+              <span class="tag-count">{c.productCount}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="browse-section fade-up">
+      <h2 class="section-title">Parcourir par marque</h2>
+      <p class="section-lede">108 marques analysées, de Blédina à Yooji en passant par Babybio et Good Goût.</p>
+      <p><a href="/brands/" class="btn-secondary">Voir toutes les marques &rarr;</a></p>
+    </section>
+
+    {(["A", "B", "C", "D", "E"] as const).map((g) => (
+      <section class="grade-section fade-up">
+        <header class="grade-header">
+          <span class="grade-pill" style={`background: ${gradeColors[g]};`}>{g}</span>
+          <div>
+            <h2>{gradeLabels[g]}</h2>
+            <p class="grade-count">{byGrade[g].length} produit{byGrade[g].length > 1 ? "s" : ""} noté{byGrade[g].length > 1 ? "s" : ""} {g}</p>
+          </div>
+        </header>
+        <ul class="product-list">
+          {byGrade[g].slice(0, 24).map((p) => (
+            <li>
+              <a href={`/products/${p.slug}/`} class="product-card">
+                <span class="p-score">{p.score}</span>
+                <span class="p-meta">
+                  <span class="p-brand">{p.brand}</span>
+                  <span class="p-name">{p.name}</span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+        {byGrade[g].length > 24 && (
+          <p class="see-more">Voir tous les produits notés {g} : parcours <a href="/brands/">les marques</a> ou <a href="/categories/">les catégories</a> pour filtrer.</p>
+        )}
+      </section>
+    ))}
+  </article>
+</BaseLayout>
+
+<style>
+  .hub-page { max-width: 64rem; margin: 2rem auto 4rem; padding: 0 1.25rem; }
+  .breadcrumb { display: flex; gap: 0.4rem; flex-wrap: wrap; font-size: 0.82rem; color: var(--color-ink-soft); margin-bottom: 1.5rem; }
+  .breadcrumb a { color: var(--color-primary-dark); text-decoration: underline; text-underline-offset: 3px; }
+  .hub-header { margin-bottom: 2rem; }
+  .eyebrow { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-primary-dark); margin: 0 0 0.5rem; }
+  .hub-header h1 { font-size: clamp(1.75rem, 4vw, 2.4rem); margin: 0 0 0.75rem; }
+  .lede { color: var(--color-ink-soft); max-width: 46rem; line-height: 1.6; margin: 0; }
+  .browse-section { margin: 2.5rem 0; padding: 1.5rem; background: var(--color-bg-soft); border-radius: 0.875rem; }
+  .section-title { font-family: var(--font-display); font-size: 1.2rem; color: var(--color-primary-dark); margin: 0 0 0.75rem; }
+  .section-lede { color: var(--color-ink-soft); font-size: 0.9rem; margin: 0 0 0.85rem; }
+  .tag-list { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .tag { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.85rem; background: #fff; border: 1px solid var(--color-border); border-radius: 999px; text-decoration: none; color: var(--color-ink); font-size: 0.88rem; transition: border-color 200ms ease, transform 200ms var(--ease-out-expo); }
+  .tag:hover { border-color: var(--color-primary); transform: translateY(-1px); }
+  .tag-label { font-weight: 600; }
+  .tag-count { font-size: 0.72rem; color: var(--color-ink-soft); background: var(--color-bg-soft); padding: 0.1rem 0.5rem; border-radius: 999px; font-variant-numeric: tabular-nums; }
+  .btn-secondary { display: inline-block; padding: 0.6rem 1rem; background: #fff; border: 1px solid var(--color-primary); color: var(--color-primary-dark); border-radius: 0.625rem; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+  .btn-secondary:hover { background: var(--color-primary); color: #fff; }
+  .grade-section { margin: 2.5rem 0; }
+  .grade-header { display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+  .grade-pill { display: flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; border-radius: 0.75rem; color: #fff; font-family: var(--font-display); font-weight: 900; font-size: 1.5rem; }
+  .grade-header h2 { font-size: 1.2rem; color: var(--color-ink); margin: 0 0 0.15rem; }
+  .grade-count { font-size: 0.85rem; color: var(--color-ink-soft); margin: 0; }
+  .product-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); gap: 0.45rem; }
+  .product-card { display: flex; align-items: center; gap: 0.7rem; padding: 0.65rem 0.85rem; background: #fff; border: 1px solid var(--color-border); border-radius: 0.625rem; text-decoration: none; color: inherit; transition: border-color 200ms ease, transform 200ms var(--ease-out-expo); }
+  .product-card:hover { border-color: var(--color-primary); transform: translateY(-1px); }
+  .p-score { flex-shrink: 0; min-width: 2.4rem; text-align: center; font-family: var(--font-display); font-weight: 800; color: var(--color-primary-dark); font-variant-numeric: tabular-nums; }
+  .p-meta { display: flex; flex-direction: column; min-width: 0; }
+  .p-brand { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-ink-soft); }
+  .p-name { font-size: 0.88rem; color: var(--color-ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .see-more { font-size: 0.85rem; color: var(--color-ink-soft); margin: 0.75rem 0 0; }
+  .see-more a { color: var(--color-primary-dark); }
+</style>
