@@ -2,23 +2,42 @@
 """Guardrail , scan the repo for cross-project data leaks.
 
 Fails (exit 1) when it finds:
-  , a Supabase project ref that is not the one pinned for this project
+  , a Supabase project ref that is not listed in SELF_PROJECT.own_supabase_refs
   , a Cloudflare Pages project name belonging to another STACK-2026 site
   , hardcoded analytics or tracker constants from a sibling project
   , a site domain from another STACK-2026 project in runtime code
 
 Why : on 2026-04-23 we discovered that public/tracker.js and
 src/components/Analytics.astro had been copy-pasted from PetFoodRate and from
-another unknown Supabase project, shipping BébéDécrypte visitor data to those
-sibling databases for a full day.
+Adapte-toi, shipping BébéDécrypte visitor data to those sibling Supabase
+projects for ~24 hours. Two more contaminations were caught when propagating
+this scanner to sibling repos : a PetFoodRate blog post that mixed Karmastro's
+astro-nutrition angle into veterinary content, and a Litière Agglomérante OG
+cover template that still carried the Expert Menuiserie wordmark.
 Never again. This check must run on every CI push.
 
-Config lives at the top of this file (SELF_PROJECT) so it is
-obvious when this script is forked to another repo.
+Runbook (CI fails with 'FAIL : N cross-project reference(s) found') :
+  1. Read every flagged line. Decide if the reference is :
+     a. A real leak (wrong Supabase ref in .env, copy-pasted tracker, etc.)
+        -> delete or rewrite the file to use import.meta.env + fail-closed.
+     b. Legitimate cross-link (split site/app, portfolio easter egg, etc.)
+        -> add the ref/domain/token to SELF_PROJECT's own_* allow-list.
+     c. Documentation / postmortem / README that narrates the incident.
+        -> add the filename to IGNORE_FILES.
+  2. Re-run the scanner locally : `python3 scripts/check_cross_project_leaks.py`
+  3. Commit + push. CI must turn green before merge.
+
+Propagating this file to a new STACK-2026 repo :
+  1. Copy scripts/check_cross_project_leaks.py and
+     .github/workflows/cross-project-leaks.yml into the new repo.
+  2. Update the four SELF_PROJECT fields (name, supabase_ref, domain,
+     cf_pages_project) and the three own_* allow-lists.
+  3. Add the new repo's Supabase ref + domain + brand tokens to
+     KNOWN_SIBLING_SUPABASE_REFS / KNOWN_SIBLING_DOMAINS / KNOWN_SIBLING_BRAND_TOKENS
+     in every OTHER sibling repo (so they flag the newcomer when contaminated).
 
 Usage:
   python3 scripts/check_cross_project_leaks.py
-  python3 scripts/check_cross_project_leaks.py --fix        # delete offending files if safe
   python3 scripts/check_cross_project_leaks.py --json       # machine-readable output
 """
 from __future__ import annotations
