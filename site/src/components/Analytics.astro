@@ -1,50 +1,74 @@
 ---
-// Analytics tracker - Supabase page_views + bot detection
-// Inlined in BaseLayout, no external dependencies
-const SB_URL = "https://commbksqnwhpsyenjzuf.supabase.co";
-const SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNvbW1ia3NxbndocHN5ZW5qenVmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYwNzM3MjUsImV4cCI6MjA5MTY0OTcyNX0.6igBrd7TAiC5CamU5hmHfEd-JBb4MJuvGAyGHo6tJpU";
+// Analytics tracker , Supabase page_views + bot detection.
+//
+// Fail-closed : reads PUBLIC_SUPABASE_URL + PUBLIC_SUPABASE_ANON_KEY from the
+// build environment (CF Pages env vars). If either is missing OR the URL does
+// not match the pinned BébéDécrypte project ref, the tracker renders nothing
+// and logs a build warning. This guarantees no cross-project data leak, even
+// if someone copies the file from another STACK-2026 repo.
+
+const EXPECTED_PROJECT_REF = "feqdpvahksbamwutazkl"; // BébéDécrypte Supabase, pinned
+
+const rawUrl = import.meta.env.PUBLIC_SUPABASE_URL as string | undefined;
+const rawKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY as string | undefined;
+
+function isValidBebedecrypteSupabase(url: string | undefined): url is string {
+  if (!url) return false;
+  try {
+    const host = new URL(url).hostname;
+    return host === `${EXPECTED_PROJECT_REF}.supabase.co`;
+  } catch {
+    return false;
+  }
+}
+
+const ok = isValidBebedecrypteSupabase(rawUrl) && !!rawKey;
+
+if (!ok) {
+  // eslint-disable-next-line no-console
+  console.warn(
+    `[Analytics] disabled , expected PUBLIC_SUPABASE_URL=https://${EXPECTED_PROJECT_REF}.supabase.co, got ${rawUrl ?? "(unset)"}. No tracking will be sent.`
+  );
+}
+
+const SB_URL = ok ? rawUrl : "";
+const SB_ANON = ok ? rawKey : "";
 ---
 
-<script define:vars={{ SB_URL, SB_ANON }}>
+{ok && (
+  <script define:vars={{ SB_URL, SB_ANON }}>
+{`
 (function() {
-  // Bot detection
   function isBot() {
-    const ua = navigator.userAgent || "";
-    const bots = /bot|crawl|spider|slurp|facebookexternalhit|linkedinbot|twitterbot|whatsapp|telegram|googlebot|bingbot|yandex|baidu|duckduckbot|sogou|exabot|ia_archiver|semrush|ahrefs|mj12bot|dotbot|petalbot|bytespider|gptbot|claudebot|perplexitybot|amazonbot|applebot|ccbot|Nexus 5X Build\/MMB29P/i;
-    return bots.test(ua);
+    var ua = navigator.userAgent || "";
+    return /bot|crawl|spider|slurp|facebookexternalhit|linkedinbot|twitterbot|whatsapp|telegram|googlebot|bingbot|yandex|baidu|duckduckbot|sogou|exabot|ia_archiver|semrush|ahrefs|mj12bot|dotbot|petalbot|bytespider|gptbot|claudebot|perplexitybot|amazonbot|applebot|ccbot/i.test(ua);
   }
-
-  // Only track if consent given or not yet asked (first visit)
-  // Gate on CNIL-compliant ls_cookie_consent localStorage key (13 months max)
   try {
     var raw = localStorage.getItem("ls_cookie_consent");
     if (raw) {
       var parsed = JSON.parse(raw);
       var MONTHS_13_MS = 13 * 30 * 24 * 60 * 60 * 1000;
-      if (parsed && parsed.timestamp && Date.now() - parsed.timestamp > MONTHS_13_MS) {
-        // expired, do not track (user must re-consent)
-        return;
-      }
+      if (parsed && parsed.timestamp && Date.now() - parsed.timestamp > MONTHS_13_MS) return;
       if (parsed && parsed.status === "rejected") return;
     }
-  } catch (e) { /* storage unavailable, continue */ }
-
-  const bot = isBot();
-
+  } catch (e) { /* no storage */ }
+  var bot = isBot();
   fetch(SB_URL + "/rest/v1/page_views", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       "apikey": SB_ANON,
       "Authorization": "Bearer " + SB_ANON,
-      "Prefer": "return=minimal",
+      "Prefer": "return=minimal"
     },
     body: JSON.stringify({
       path: window.location.pathname,
       referrer: document.referrer || null,
       user_agent: navigator.userAgent,
-      is_bot: bot,
-    }),
+      is_bot: bot
+    })
   }).catch(function() {});
 })();
-</script>
+`}
+  </script>
+)}

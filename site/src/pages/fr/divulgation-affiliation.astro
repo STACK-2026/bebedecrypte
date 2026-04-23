@@ -1,8 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
-const title = "Divulgation d'affiliation · PetFoodRate";
-const description = "Comment PetFoodRate se finance : liens d'affiliation, transparence totale, zéro sponsoring des marques notées. Notes A à E indépendantes.";
+const title = "Divulgation d'affiliation · BébéDécrypte";
+const description = "Comment BébéDécrypte se finance : liens d'affiliation, transparence totale, zéro sponsoring des marques notées. Notes A à E indépendantes sur l'alimentation bébé.";
 ---
 
 <BaseLayout title={title} description={description}>
@@ -11,49 +11,51 @@ const description = "Comment PetFoodRate se finance : liens d'affiliation, trans
       <p class="eyebrow">Transparence</p>
       <h1>Divulgation d'affiliation</h1>
       <p class="lede">
-        PetFoodRate est un service de notation pet food indépendant. Les notes A à E sont attribuées sans contrepartie financière. Pour rester gratuit, on utilise ponctuellement des liens d'affiliation. Voici comment ça marche, sans filtre.
+        BébéDécrypte est un service indépendant de notation de l'alimentation bébé. Les notes A à E sont attribuées sans contrepartie financière des marques. Pour rester gratuit, on utilise ponctuellement des liens d'affiliation. Voici comment ça marche, sans filtre.
       </p>
     </header>
 
     <section class="legal-section">
       <h2>Qu'est-ce qu'un lien d'affiliation ?</h2>
       <p>
-        Quand tu cliques sur un bouton « Voir sur Zooplus » depuis PetFoodRate, tu arrives sur le site partenaire via un lien tracké. Si tu achètes dans les jours qui suivent, la boutique reverse une petite commission à PetFoodRate (en général entre 3 et 8 % du panier). Le prix payé est exactement le même que si tu étais arrivé directement : zéro surcoût pour toi.
+        Quand tu cliques sur un bouton « Acheter sur Amazon » ou « Voir sur Greenweez » depuis BébéDécrypte, tu arrives sur le site partenaire via un lien tracké. Si tu achètes dans les jours qui suivent, la boutique reverse une petite commission à BébéDécrypte (en général entre 3 et 8 % du panier). Le prix payé est exactement le même que si tu étais arrivé directement : zéro surcoût pour toi.
       </p>
     </section>
 
     <section class="legal-section">
       <h2>Avec quels partenaires travaillons-nous ?</h2>
-      <p>Au 22 avril 2026 :</p>
+      <p>Au 23 avril 2026 :</p>
       <ul>
-        <li><strong>Zooplus FR</strong> · partenaire affilié validé via le réseau Awin. Catalogue large (chien, chat, petits animaux, oiseaux).</li>
-        <li>Autres partenaires en attente de validation : Maxi Zoo FR, Just Russel FR, Edgard &amp; Cooper.</li>
+        <li><strong>Amazon</strong> · programme Amazon Partenaires FR, pour les pots bébé, laits infantiles et accessoires vendus sur Amazon.fr.</li>
+        <li><strong>Greenweez</strong> · enseigne bio française, validée via le réseau Awin. Catalogue bio sélectif (Babybio, Good Goût, Popote, Yooji).</li>
+        <li><strong>Bébé au Naturel</strong> · boutique spécialisée (gourdes réutilisables, kits diversification bio, gammes sans allergènes).</li>
+        <li>Partenaires en cours de validation : quelques programmes directs de marques bio bébé.</li>
       </ul>
-      <p>Seuls les produits pertinents et disponibles chez nos partenaires affichent un bouton « Voir sur ». Les autres fiches restent purement informatives.</p>
+      <p>Seuls les produits réellement disponibles chez nos partenaires affichent un bouton « Acheter sur ». Les autres fiches restent purement informatives.</p>
     </section>
 
     <section class="legal-section">
       <h2>L'affiliation influence-t-elle les notes ?</h2>
       <p>
-        Non. Les scores A à E sont calculés par notre méthodologie publique (composition analysée, sous-scores protéines, nutrition, indésirables, transparence, adaptabilité espèce). Aucune marque ne peut « acheter » une meilleure note. Aucun partenaire affilié n'a accès à nos grilles avant publication. Aucune des notes n'est modifiée après acceptation d'un partenariat.
+        Non. Les scores A à E sont calculés par notre <a href="/fr/methodology/">méthodologie publique</a> sur 8 axes pondérés (ultra-transformation NOVA, additifs EFSA, sucres ajoutés et cachés, Nutri-Score, bio, transparence allergènes, origine France, simplicité de recette). Aucune marque ne peut « acheter » une meilleure note. Aucun partenaire affilié n'a accès à nos grilles avant publication. Aucune des notes n'est modifiée après acceptation d'un partenariat. Un produit partenaire peut, et le fait régulièrement, obtenir un D ou un E.
       </p>
       <p>
-        Concrètement : une marque notée D reste notée D, qu'elle soit vendue chez un partenaire affilié ou pas. Les marques distributeur (Auchan, Carrefour, U, Leclerc…) ne sont pas vendues par nos partenaires, elles sont notées au même titre que les autres.
+        Concrètement : les marques distributeur (Auchan, Carrefour, U, Leclerc, Lidl…) sont notées au même titre que les autres, même si on n'a pas de commission dessus.
       </p>
     </section>
 
     <section class="legal-section">
       <h2>Comment reconnaître un lien d'affiliation ?</h2>
       <p>
-        Chaque CTA sponsorisé est signalé : badge « Partenaire affilié », bouton distinct (vert), mention explicite du caractère affilié. Les liens passent par notre redirection <code>/go/{"{"}id-du-produit{"}"}</code> pour nous permettre de mesurer les clics côté PetFoodRate. Ces liens portent l'attribut <code>rel="sponsored nofollow"</code> conformément aux recommandations Google.
+        Chaque CTA sponsorisé est signalé : badge « Partenaire affilié », bouton distinct en ambre, mention explicite du caractère affilié. Ces liens portent l'attribut <code>rel="sponsored nofollow"</code> conformément aux recommandations Google et s'ouvrent dans un nouvel onglet.
       </p>
     </section>
 
     <section class="legal-section">
       <h2>Tes droits en tant qu'utilisateur</h2>
       <ul>
-        <li>Tu peux utiliser PetFoodRate sans jamais cliquer sur un lien d'affiliation, toutes les notes et analyses restent accessibles.</li>
-        <li>Tu peux retirer ton consentement aux cookies de mesure d'audience via la bannière de cookies (pied de page).</li>
+        <li>Tu peux utiliser BébéDécrypte sans jamais cliquer sur un lien d'affiliation, toutes les notes, fiches produit et analyses restent accessibles.</li>
+        <li>Tu peux retirer ton consentement aux cookies de mesure d'audience via la bannière de cookies (lien « Gérer les cookies » en pied de page).</li>
         <li>Les données de clics affiliés ne contiennent aucune information personnelle identifiable. On stocke : identifiant produit, partenaire, référent, pays, date. Pas d'adresse IP conservée au-delà du strict nécessaire.</li>
       </ul>
     </section>
@@ -61,7 +63,7 @@ const description = "Comment PetFoodRate se finance : liens d'affiliation, trans
     <section class="legal-section">
       <h2>Une question ?</h2>
       <p>
-        Écris-nous à <a href="mailto:contact@petfoodrate.com">contact@petfoodrate.com</a>. On répond sous 48 h en semaine.
+        Écris-nous à <a href="mailto:contact@bebedecrypte.com">contact@bebedecrypte.com</a>. On répond sous 48 h en semaine.
       </p>
     </section>
   </article>
@@ -91,26 +93,16 @@ const description = "Comment PetFoodRate se finance : liens d'affiliation, trans
     .lede {
       font-size: 1.1rem;
       line-height: 1.55;
-      color: var(--text-muted, #475569);
+      color: var(--color-ink-soft);
       margin: 0;
     }
-    .legal-section {
-      margin-top: 2.25rem;
-    }
-    .legal-section h2 {
-      font-size: 1.35rem;
-      margin: 0 0 0.6rem;
-    }
-    .legal-section p {
-      line-height: 1.65;
-      margin: 0 0 0.75rem;
-    }
-    .legal-section ul {
-      margin: 0.5rem 0 1rem 1.25rem;
-      line-height: 1.65;
-    }
+    .legal-section { margin-top: 2.25rem; }
+    .legal-section h2 { font-size: 1.35rem; margin: 0 0 0.6rem; color: var(--color-primary-dark); }
+    .legal-section p { line-height: 1.65; margin: 0 0 0.75rem; color: var(--color-ink-soft); }
+    .legal-section ul { margin: 0.5rem 0 1rem 1.25rem; line-height: 1.65; color: var(--color-ink-soft); }
+    .legal-section a { color: var(--color-primary-dark); }
     .legal-section code {
-      background: rgba(34, 197, 94, 0.08);
+      background: rgba(8, 145, 178, 0.08);
       padding: 0.1rem 0.4rem;
       border-radius: 4px;
       font-size: 0.92em;
