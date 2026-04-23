@@ -1,42 +1,163 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ComingSoonPage from "../components/sections/ComingSoonPage.astro";
+import { getCollection } from "astro:content";
+import { siteConfig } from "../../site.config";
 
-const copy = {
-  eyebrow: { fr: "Par âge", en: "By age" },
-  title: {
-    fr: "Les produits filtrés par âge, du 4 mois au 3 ans",
-    en: "Products filtered by age, from 4 months to 3 years",
-  },
-  lede: {
-    fr: "Chaque âge a ses règles : avant 6 mois, que du lait maternel ou du lait infantile 1er âge. De 6 à 12 mois, diversification progressive, aucun sucre ajouté, aucun miel. De 12 à 36 mois, introduction prudente des textures et des saveurs. Notre pondération s'adapte automatiquement : plus strict avant 12 mois.",
-    en: "Every age has its rules: before 6 months, breast milk or first-age formula only. 6 to 12 months, progressive complementary feeding, no added sugar, no honey. 12 to 36 months, careful introduction of textures and flavours. Our weighting adapts automatically: stricter before 12 months.",
-  },
-  expect: {
-    fr: [
-      "Pages dédiées 4 mois, 6 mois, 8 mois, 12 mois, 18 mois, 24 mois, 3 ans et +",
-      "Pour chaque âge : les produits adaptés du catalogue, notés A à E, triés par score",
-      "Guide pratique de ce qui est autorisé, recommandé et interdit à chaque âge",
-      "Les produits marketing « dès X mois » dont la composition ne tient pas la promesse",
-    ],
-    en: [
-      "Dedicated pages for 4m, 6m, 8m, 12m, 18m, 24m, 3 years and up",
-      "For each age : age-appropriate catalog products, graded A to E, sorted by score",
-      "Practical guide of what is allowed, recommended, forbidden at each age",
-      "Products marketed \"from X months\" whose composition does not match the claim",
-    ],
-  },
-  eta: {
-    fr: "Ouverture prévue , semaine du 29 avril 2026, avec le catalogue.",
-    en: "Planned opening , week of 29 April 2026, with the catalog.",
-  },
+const products = await getCollection("products");
+
+// Group products by the age bucket they target. Bucket = first age in siteConfig.ages
+// that the product's targetAgeMonths can feed into. Example : 4-month pot is visible
+// in the 4m and 6m brackets, not yet in 8m / 12m.
+const AGE_BUCKETS = [
+  { key: "4m", label: "4 mois", labelEn: "4 months", months: 4, intro: "Démarrage diversification, purées lisses (légume seul, fruits mixés). ANSES + OMS : ne jamais avant 4 mois." },
+  { key: "6m", label: "6 mois", labelEn: "6 months", months: 6, intro: "Introduction protéines (viande, poisson, œuf), céréales infantiles, premiers allergènes (un par un)." },
+  { key: "8m", label: "8 mois", labelEn: "8 months", months: 8, intro: "Textures grumeleuses, morceaux fondants, début de la mastication. Élargir les saveurs." },
+  { key: "12m", label: "12 mois", labelEn: "12 months", months: 12, intro: "Presque alimentation familiale. Interdit : miel, sel ajouté, aliments durs entiers (noix, raisin)." },
+  { key: "18m", label: "18 mois", labelEn: "18 months", months: 18, intro: "Autonomie à la cuillère, appétit irrégulier normal. Limiter sucre et ultra-transformés." },
+  { key: "24m", label: "24 mois", labelEn: "24 months", months: 24, intro: "Néophobie possible (refus de nouveaux aliments). Offrir sans forcer, répéter l'exposition." },
+  { key: "36m", label: "3 ans et plus", labelEn: "3 years and over", months: 36, intro: "Diversification finie. Continuer de traquer les additifs et les sucres cachés dans l'offre industrielle." },
+];
+
+const byBucket = AGE_BUCKETS.map((b) => {
+  const eligible = products.filter((p) => {
+    const age = p.data.targetAgeMonths || 0;
+    return age > 0 && age <= b.months;
+  });
+  const bestA = eligible.filter((p) => p.data.grade === "A").sort((a, z) => z.data.score - a.data.score).slice(0, 4);
+  const bestB = eligible.filter((p) => p.data.grade === "B").sort((a, z) => z.data.score - a.data.score).slice(0, 4);
+  return {
+    ...b,
+    total: eligible.length,
+    bestA,
+    bestB,
+  };
+});
+
+const title = "Alimentation bébé par âge , sélection notée A à E | BébéDécrypte";
+const description = "Sélection d'alimentation bébé par tranche d'âge : 4 mois, 6 mois, 8 mois, 12 mois, 18 mois, 24 mois, 3 ans+. Purées, petits pots, laits infantiles, céréales et gourdes notés sur 8 axes bébé.";
+
+const itemList = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Alimentation bébé par tranche d'âge",
+  numberOfItems: AGE_BUCKETS.length,
+  itemListElement: byBucket.map((b, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: b.label,
+    description: b.intro,
+  })),
 };
 
-const title = "Baby food by age | BébéDécrypte";
-const description =
-  "Baby food products filtered by age (4m, 6m, 8m, 12m, 18m, 24m, 3y+). Complementary feeding guides and strict weighting under 12 months.";
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Accueil", item: siteConfig.url + "/" },
+    { "@type": "ListItem", position: 2, name: "Par âge", item: siteConfig.url + "/by-age/" },
+  ],
+};
 ---
 
-<BaseLayout title={title} description={description} noIndex={true}>
-  <ComingSoonPage slug="by-age" copy={copy} />
+<BaseLayout title={title} description={description} jsonLd={[itemList, breadcrumb]}>
+  <article class="hub-page">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a> <span aria-hidden="true">·</span>
+      <span>Par âge</span>
+    </nav>
+
+    <header class="hub-header fade-up">
+      <p class="eyebrow">Guide par âge</p>
+      <h1 data-speakable>Alimentation bébé par tranche d'âge</h1>
+      <p class="lede" data-speakable>
+        Ce que ton bébé peut manger à chaque étape, et les produits du catalogue BébéDécrypte notés A ou B dans chaque bracket. Les seuils s'appuient sur les recommandations ANSES, ESPGHAN et OMS sur la diversification alimentaire du nourrisson.
+      </p>
+    </header>
+
+    {byBucket.map((b) => (
+      <section class="age-block fade-up">
+        <header class="age-header">
+          <h2 id={`age-${b.key}`}>{b.label}</h2>
+          <p class="age-intro">{b.intro}</p>
+          <p class="age-count">
+            <strong>{b.total}</strong> produit{b.total > 1 ? "s" : ""} adapté{b.total > 1 ? "s" : ""} jusqu'à {b.label}.
+          </p>
+        </header>
+
+        {b.bestA.length > 0 && (
+          <div class="picks">
+            <h3>Top A <span class="picks-note">(excellent)</span></h3>
+            <ul class="product-list">
+              {b.bestA.map((p) => (
+                <li>
+                  <a href={`/products/${p.data.slug}/`} class="product-card">
+                    <span class={`grade grade-sm grade-${p.data.grade.toLowerCase()}`}>{p.data.grade}</span>
+                    <span class="p-meta">
+                      <span class="p-brand">{p.data.brand}</span>
+                      <span class="p-name">{p.data.name}</span>
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {b.bestB.length > 0 && (
+          <div class="picks">
+            <h3>Top B <span class="picks-note">(bien noté)</span></h3>
+            <ul class="product-list">
+              {b.bestB.map((p) => (
+                <li>
+                  <a href={`/products/${p.data.slug}/`} class="product-card">
+                    <span class={`grade grade-sm grade-${p.data.grade.toLowerCase()}`}>{p.data.grade}</span>
+                    <span class="p-meta">
+                      <span class="p-brand">{p.data.brand}</span>
+                      <span class="p-name">{p.data.name}</span>
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </section>
+    ))}
+
+    <section class="nav-footer fade-up">
+      <p>Besoin du tableau complet des textures, aliments autorisés et allergènes par âge ?</p>
+      <p>
+        <a href="/blog/diversification-alimentaire-etape-etape-guide-12-mois/" class="btn-secondary">
+          Lire le guide complet diversification 4 à 12 mois →
+        </a>
+      </p>
+    </section>
+  </article>
 </BaseLayout>
+
+<style>
+  .hub-page { max-width: 64rem; margin: 2rem auto 4rem; padding: 0 1.25rem; }
+  .breadcrumb { display: flex; gap: 0.4rem; flex-wrap: wrap; font-size: 0.82rem; color: var(--color-ink-soft); margin-bottom: 1.5rem; }
+  .breadcrumb a { color: var(--color-primary-dark); text-decoration: underline; text-underline-offset: 3px; }
+  .hub-header { margin-bottom: 2.5rem; }
+  .eyebrow { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-primary-dark); margin: 0 0 0.5rem; }
+  .hub-header h1 { font-size: clamp(1.75rem, 4vw, 2.4rem); margin: 0 0 0.75rem; }
+  .lede { color: var(--color-ink-soft); max-width: 48rem; line-height: 1.6; margin: 0; }
+  .age-block { margin: 2.5rem 0; padding: 1.5rem; background: var(--color-bg-soft); border-radius: 0.875rem; border: 1px solid var(--color-border); }
+  .age-header h2 { font-family: var(--font-display); font-size: 1.4rem; color: var(--color-primary-dark); margin: 0 0 0.5rem; }
+  .age-intro { color: var(--color-ink); font-size: 0.95rem; margin: 0 0 0.4rem; line-height: 1.55; }
+  .age-count { font-size: 0.82rem; color: var(--color-ink-soft); margin: 0 0 1rem; font-variant-numeric: tabular-nums; }
+  .picks { margin-top: 1rem; }
+  .picks h3 { font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-ink-soft); margin: 0 0 0.6rem; }
+  .picks-note { font-weight: 500; text-transform: none; letter-spacing: 0; color: var(--color-ink-soft); }
+  .product-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: 0.45rem; }
+  .product-card { display: flex; align-items: center; gap: 0.65rem; padding: 0.6rem 0.85rem; background: #fff; border: 1px solid var(--color-border); border-radius: 0.6rem; text-decoration: none; color: inherit; transition: border-color 200ms ease, transform 200ms var(--ease-out-expo); }
+  .product-card:hover { border-color: var(--color-primary); transform: translateY(-1px); }
+  .p-meta { display: flex; flex-direction: column; min-width: 0; }
+  .p-brand { font-size: 0.66rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-ink-soft); }
+  .p-name { font-size: 0.86rem; color: var(--color-ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .nav-footer { margin-top: 3rem; padding: 1.5rem; background: #fff; border: 1px solid var(--color-border); border-radius: 0.75rem; text-align: center; }
+  .nav-footer p { color: var(--color-ink-soft); margin: 0 0 0.75rem; }
+  .btn-secondary { display: inline-block; padding: 0.7rem 1.2rem; background: var(--color-primary); color: #fff; border-radius: 0.5rem; text-decoration: none; font-weight: 600; }
+  .btn-secondary:hover { background: var(--color-primary-dark); }
+</style>

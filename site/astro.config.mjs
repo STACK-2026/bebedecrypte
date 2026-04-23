@@ -12,10 +12,11 @@ export default defineConfig({
     sitemap({
       lastmod: new Date(),
       filter: (page) => {
-        // Exclude ComingSoon stubs from sitemap , they are noIndex in HTML too.
-        const excluded = ["/rankings/", "/compare/", "/encyclopedia/", "/by-age/"];
+        // /rankings/ is now a soft redirect to /products/, keep it out of the sitemap
+        // to avoid Google flagging a redirect chain.
+        const excluded = ["/rankings/", "/fr/rankings/"];
         const path = new URL(page).pathname;
-        return !excluded.some((p) => path === p || path === "/fr" + p);
+        return !excluded.includes(path);
       },
     }),
   ],

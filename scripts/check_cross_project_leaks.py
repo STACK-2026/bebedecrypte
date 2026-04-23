@@ -104,8 +104,13 @@ IGNORE_FILES = {
     "package-lock.json", "yarn.lock", "pnpm-lock.yaml",
     # The check script references sibling refs on purpose , skip.
     "check_cross_project_leaks.py",
-    # Memory references for pipeline/self reference, not runtime.
+    # Post-incident documentation may reference the offending project refs
+    # by name (CLAUDE.md narrates the 2026-04-23 data leak).
+    "CLAUDE.md",
+    "README.md",
     "PIPELINE_MATRIX.md",
+    "INCIDENT.md",
+    "SESSION_AUDIT.md",
 }
 IGNORE_EXTS = {
     ".woff", ".woff2", ".ttf", ".otf", ".png", ".jpg", ".jpeg", ".webp",

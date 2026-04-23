@@ -1,42 +1,167 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ComingSoonPage from "../components/sections/ComingSoonPage.astro";
+import { getCollection } from "astro:content";
+import { siteConfig } from "../../site.config";
 
-const copy = {
-  eyebrow: { fr: "Comparer", en: "Compare" },
-  title: {
-    fr: "Compare deux produits bébé côte à côte, objectivement",
-    en: "Compare two baby food products side by side, objectively",
-  },
-  lede: {
-    fr: "Blédina vs Babybio, Good Goût vs Popote, un petit pot vs sa version bio, un lait 1er âge vs un lait 2e âge. On aligne les 8 axes, les additifs, les sucres cachés, les warnings, et on te dit lequel choisir , sans rond-de-jambe commercial.",
-    en: "Blédina vs Babybio, Good Goût vs Popote, a baby pot vs its organic version, first-age vs follow-on formula. We line up all 8 axes, additives, hidden sugars, warnings, and tell you which one to pick , with zero commercial spin.",
-  },
-  expect: {
-    fr: [
-      "Sélection de 2 produits depuis le catalogue ou la recherche",
-      "Comparaison axe par axe, ingredient par ingredient",
-      "Warnings alignés côte à côte (sucre, additifs, huile de palme, NOVA 4...)",
-      "Verdict clair avec la différence chiffrée sur 100",
-    ],
-    en: [
-      "Pick any 2 products from the catalog or search",
-      "Axis-by-axis, ingredient-by-ingredient diff",
-      "Warnings aligned side by side (sugar, additives, palm oil, NOVA 4...)",
-      "Clear verdict with the numeric gap on 100",
-    ],
-  },
-  eta: {
-    fr: "Ouverture prévue , mi-mai 2026, juste après le catalogue.",
-    en: "Planned opening , mid-May 2026, right after the catalog.",
-  },
+const brandsCol = await getCollection("brands");
+const productsCol = await getCollection("products");
+
+const brandsWithStats = brandsCol
+  .map((b) => {
+    const products = productsCol.filter((p) => p.data.brandSlug === b.data.slug);
+    return {
+      slug: b.data.slug,
+      name: b.data.brand,
+      averageGrade: b.data.averageGrade,
+      averageScore: b.data.averageScore,
+      productCount: products.length,
+    };
+  })
+  .filter((b) => b.productCount >= 2)
+  .sort((a, z) => z.productCount - a.productCount);
+
+const topBrands = brandsWithStats.slice(0, 12);
+
+// Curated editorial duels , the comparisons parents actually search for.
+const EDITORIAL_DUELS = [
+  { left: "bledina", right: "babybio", angle: "Leader industriel vs leader bio, la comparaison historique" },
+  { left: "bledina", right: "good-gout", angle: "Industriel classique vs bio premium jeune marque" },
+  { left: "babybio", right: "good-gout", angle: "Deux références bio, mais positionnement et recettes très différents" },
+  { left: "gallia", right: "aptamil", angle: "Laits infantiles : Danone France contre Danone UK" },
+  { left: "nestle", right: "gallia", angle: "Deux géants du lait infantile, historique et bases protéiques différentes" },
+  { left: "popote", right: "yooji", angle: "Bio frais vs bio surgelé, deux alternatives aux petits pots" },
+];
+
+const brandBySlug = Object.fromEntries(brandsWithStats.map((b) => [b.slug, b]));
+const duels = EDITORIAL_DUELS.map((d) => ({
+  ...d,
+  leftBrand: brandBySlug[d.left],
+  rightBrand: brandBySlug[d.right],
+})).filter((d) => d.leftBrand && d.rightBrand);
+
+const title = "Comparer les marques d'alimentation bébé , Blédina, Babybio, Good Goût... | BébéDécrypte";
+const description = "Comparaisons de marques d'alimentation bébé basées sur la note moyenne A à E et les 8 axes BébéDécrypte. Blédina vs Babybio, Gallia vs Aptamil, Popote vs Yooji et plus.";
+
+const itemList = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Comparaisons de marques BébéDécrypte",
+  numberOfItems: duels.length,
+  itemListElement: duels.map((d, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: `${d.leftBrand.name} vs ${d.rightBrand.name}`,
+    description: d.angle,
+  })),
 };
 
-const title = "Compare two baby food products side by side | BébéDécrypte";
-const description =
-  "Compare any two baby food products side by side: Blédina vs Babybio, Good Goût vs Popote. 8 axes, additives, hidden sugars, warnings aligned. Clear verdict with numeric gap.";
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Accueil", item: siteConfig.url + "/" },
+    { "@type": "ListItem", position: 2, name: "Comparateur", item: siteConfig.url + "/compare/" },
+  ],
+};
+
+const gradeColors: Record<string, string> = { A: "var(--grade-a)", B: "var(--grade-b)", C: "var(--grade-c)", D: "var(--grade-d)", E: "var(--grade-e)" };
 ---
 
-<BaseLayout title={title} description={description} noIndex={true}>
-  <ComingSoonPage slug="compare" copy={copy} />
+<BaseLayout title={title} description={description} jsonLd={[itemList, breadcrumb]}>
+
+  <article class="hub-page">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a> <span aria-hidden="true">·</span>
+      <span>Comparateur</span>
+    </nav>
+
+    <header class="hub-header fade-up">
+      <p class="eyebrow">Duels de marques</p>
+      <h1 data-speakable>Comparer les marques d'alimentation bébé</h1>
+      <p class="lede" data-speakable>
+        Un choix de petits pots ou de laits infantiles se joue presque toujours entre deux ou trois marques en rayon. On a sorti les comparaisons que les parents nous demandent le plus, avec la note moyenne BébéDécrypte de chaque marque et le nombre de produits analysés.
+      </p>
+    </header>
+
+    <section class="duels-grid">
+      {duels.map((d) => (
+        <article class="duel-card fade-up">
+          <header class="duel-head">
+            <div class="vs-brand">
+              <span class="vs-grade" style={`background: ${gradeColors[d.leftBrand.averageGrade]};`}>{d.leftBrand.averageGrade}</span>
+              <a href={`/brands/${d.leftBrand.slug}/`}>
+                <span class="vs-name">{d.leftBrand.name}</span>
+                <span class="vs-score">{d.leftBrand.averageScore}/100 · {d.leftBrand.productCount} produits</span>
+              </a>
+            </div>
+            <span class="vs">vs</span>
+            <div class="vs-brand vs-brand-right">
+              <span class="vs-grade" style={`background: ${gradeColors[d.rightBrand.averageGrade]};`}>{d.rightBrand.averageGrade}</span>
+              <a href={`/brands/${d.rightBrand.slug}/`}>
+                <span class="vs-name">{d.rightBrand.name}</span>
+                <span class="vs-score">{d.rightBrand.averageScore}/100 · {d.rightBrand.productCount} produits</span>
+              </a>
+            </div>
+          </header>
+          <p class="duel-angle">{d.angle}</p>
+        </article>
+      ))}
+    </section>
+
+    <section class="top-brands fade-up">
+      <h2>Les 12 marques les plus complètes de notre catalogue</h2>
+      <p class="tb-lede">Classées par nombre de produits analysés. Clique pour voir la fiche complète avec l'AggregateRating et la liste exhaustive.</p>
+      <ul class="brand-list">
+        {topBrands.map((b) => (
+          <li>
+            <a href={`/brands/${b.slug}/`} class="brand-card">
+              <span class="vs-grade sm" style={`background: ${gradeColors[b.averageGrade]};`}>{b.averageGrade}</span>
+              <span class="b-meta">
+                <span class="b-name">{b.name}</span>
+                <span class="b-stat">{b.averageScore}/100 · {b.productCount} produits</span>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p class="tb-cta"><a href="/brands/" class="btn-secondary">Voir toutes les marques →</a></p>
+    </section>
+  </article>
 </BaseLayout>
+
+<style>
+  .hub-page { max-width: 64rem; margin: 2rem auto 4rem; padding: 0 1.25rem; }
+  .breadcrumb { display: flex; gap: 0.4rem; flex-wrap: wrap; font-size: 0.82rem; color: var(--color-ink-soft); margin-bottom: 1.5rem; }
+  .breadcrumb a { color: var(--color-primary-dark); text-decoration: underline; text-underline-offset: 3px; }
+  .hub-header { margin-bottom: 2.5rem; }
+  .eyebrow { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-primary-dark); margin: 0 0 0.5rem; }
+  .hub-header h1 { font-size: clamp(1.75rem, 4vw, 2.4rem); margin: 0 0 0.75rem; }
+  .lede { color: var(--color-ink-soft); max-width: 48rem; line-height: 1.6; margin: 0; }
+  .duels-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); gap: 1rem; margin-bottom: 3rem; }
+  .duel-card { background: #fff; border: 1px solid var(--color-border); border-radius: 0.875rem; padding: 1.15rem 1.25rem; transition: transform 200ms var(--ease-out-expo), border-color 200ms ease; }
+  .duel-card:hover { transform: translateY(-2px); border-color: var(--color-primary); }
+  .duel-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem; }
+  .vs-brand { display: flex; gap: 0.5rem; align-items: center; flex: 1; min-width: 0; }
+  .vs-brand-right { justify-content: flex-end; text-align: right; }
+  .vs-brand-right .vs-grade { order: 2; }
+  .vs-brand-right a { order: 1; text-align: right; }
+  .vs-grade { display: inline-flex; align-items: center; justify-content: center; width: 2.25rem; height: 2.25rem; border-radius: 0.5rem; color: #fff; font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; flex-shrink: 0; }
+  .vs-grade.sm { width: 2rem; height: 2rem; font-size: 0.95rem; }
+  .vs-brand a { text-decoration: none; color: inherit; display: flex; flex-direction: column; min-width: 0; }
+  .vs-name { font-weight: 700; color: var(--color-primary-dark); font-size: 0.95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .vs-score { font-size: 0.74rem; color: var(--color-ink-soft); font-variant-numeric: tabular-nums; }
+  .vs { font-family: var(--font-display); font-weight: 800; font-size: 0.8rem; color: var(--color-ink-soft); text-transform: uppercase; letter-spacing: 0.08em; flex-shrink: 0; }
+  .duel-angle { font-size: 0.88rem; color: var(--color-ink-soft); line-height: 1.5; margin: 0; font-style: italic; }
+  .top-brands { padding: 1.75rem; background: var(--color-bg-soft); border-radius: 0.875rem; border: 1px solid var(--color-border); }
+  .top-brands h2 { font-family: var(--font-display); font-size: 1.15rem; color: var(--color-primary-dark); margin: 0 0 0.4rem; }
+  .tb-lede { color: var(--color-ink-soft); font-size: 0.9rem; margin: 0 0 1rem; }
+  .brand-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 0.45rem; }
+  .brand-card { display: flex; align-items: center; gap: 0.55rem; padding: 0.5rem 0.7rem; background: #fff; border: 1px solid var(--color-border); border-radius: 0.5rem; text-decoration: none; color: inherit; transition: border-color 200ms ease; }
+  .brand-card:hover { border-color: var(--color-primary); }
+  .b-meta { display: flex; flex-direction: column; min-width: 0; }
+  .b-name { font-weight: 600; color: var(--color-ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 0.9rem; }
+  .b-stat { font-size: 0.72rem; color: var(--color-ink-soft); font-variant-numeric: tabular-nums; }
+  .tb-cta { margin-top: 1rem; }
+  .btn-secondary { display: inline-block; padding: 0.6rem 1rem; background: var(--color-primary); color: #fff; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+  .btn-secondary:hover { background: var(--color-primary-dark); }
+</style>

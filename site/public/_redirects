@@ -1,3 +1,10 @@
 # Cloudflare Pages redirects
-# Format: /old-url /new-url 301
-# Add redirects here when migrating from Shopify
+
+# Legacy rankings URL , unified with the product catalogue on 2026-04-23.
+# Kept as an Astro page with meta-refresh + canonical for JS-disabled crawlers ;
+# CF Pages serves the 301 first when the path is visited directly.
+/rankings /products/ 301
+/fr/rankings /fr/products/ 301
+
+# Legacy sitemap.xml (pre-audit leak fixed on 2026-04-23)
+/sitemap.xml /sitemap-index.xml 301

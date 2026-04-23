@@ -1,0 +1,177 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { siteConfig } from "../../site.config";
+import { getLocale, localeUrl } from "../i18n/t";
+
+const locale = getLocale(Astro.url);
+
+const copy = {
+  fr: {
+    code: "500",
+    eyebrow: "Erreur serveur",
+    title: "On n'a pas pu décrypter cette page",
+    body: "Quelque chose a cassé côté BébéDécrypte. On est prévenu, on regarde. En attendant, retour à l'analyse normale , rien n'est perdu.",
+    retry: "Réessayer",
+    home: "Retour à l'accueil",
+    catalogue: "Parcourir les produits",
+    tip: "Si ça persiste :",
+    email: "contact@bebedecrypte.com",
+  },
+  en: {
+    code: "500",
+    eyebrow: "Server error",
+    title: "We could not decrypt this page",
+    body: "Something broke on our side. We are on it. Meanwhile, regular browsing is back , nothing is lost.",
+    retry: "Try again",
+    home: "Back to home",
+    catalogue: "Browse products",
+    tip: "If it persists:",
+    email: "contact@bebedecrypte.com",
+  },
+};
+
+const c = copy[locale === "fr" ? "fr" : "en"];
+---
+
+<BaseLayout title={`${c.title} | ${siteConfig.name}`} description={c.body} noIndex>
+  <section class="server-error">
+    <div class="decor" aria-hidden="true">
+      <svg viewBox="0 0 120 120" fill="none">
+        <defs>
+          <linearGradient id="err-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#dc2626" stop-opacity="0.2" />
+            <stop offset="100%" stop-color="#b91c1c" stop-opacity="0.08" />
+          </linearGradient>
+        </defs>
+        <path d="M52 22 q 8 -3 16 0 q 4 3 0 6 l -16 0 q -4 -3 0 -6 z" fill="url(#err-grad)" stroke="#dc2626" stroke-width="2" />
+        <rect x="48" y="30" width="24" height="5" rx="2" fill="url(#err-grad)" stroke="#dc2626" stroke-width="2" />
+        <rect x="44" y="37" width="32" height="56" rx="6" fill="url(#err-grad)" stroke="#dc2626" stroke-width="2.5" />
+        <line x1="52" y1="52" x2="66" y2="66" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" />
+        <line x1="66" y1="52" x2="52" y2="66" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" />
+        <line x1="50" y1="76" x2="62" y2="76" stroke="#dc2626" stroke-width="1.4" opacity="0.5" />
+        <line x1="50" y1="84" x2="58" y2="84" stroke="#dc2626" stroke-width="1.4" opacity="0.4" />
+      </svg>
+    </div>
+    <div class="inner">
+      <p class="eyebrow">{c.eyebrow}</p>
+      <p class="code" aria-hidden="true">{c.code}</p>
+      <h1>{c.title}</h1>
+      <p class="lede">{c.body}</p>
+
+      <div class="ctas">
+        <button type="button" class="btn-primary" id="retry-btn" onclick="location.reload();">{c.retry}</button>
+        <a href={localeUrl("/", locale)} class="btn-secondary">{c.home}</a>
+        <a href={localeUrl("/products", locale)} class="btn-secondary">{c.catalogue}</a>
+      </div>
+
+      <p class="tip">{c.tip} <a href={`mailto:${c.email}`}>{c.email}</a></p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .server-error {
+    padding: 5rem 1rem 6rem;
+    background: linear-gradient(180deg, rgb(254 226 226 / 0.6) 0%, #fff 55%);
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .decor {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    pointer-events: none;
+    opacity: 0.9;
+  }
+  .inner {
+    max-width: 44rem;
+    margin: 7rem auto 0;
+    text-align: center;
+    position: relative;
+  }
+  .eyebrow {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--color-alert);
+    margin: 0 0 0.5rem;
+  }
+  .code {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: clamp(4.5rem, 12vw, 7.5rem);
+    font-weight: 900;
+    line-height: 0.95;
+    margin: 0 0 0.75rem;
+    background: linear-gradient(135deg, rgb(220 38 38 / 0.95), rgb(185 28 28 / 0.45));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -0.04em;
+  }
+  .server-error h1 {
+    margin-bottom: 1rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  }
+  .lede {
+    color: var(--color-ink-soft);
+    font-size: 1.05rem;
+    max-width: 34rem;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+  }
+  .ctas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.15rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 0.625rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 18px -6px rgb(8 145 178 / 0.45);
+    transition: transform 200ms var(--ease-out-expo), background 200ms ease;
+  }
+  .btn-primary:hover { background: var(--color-primary-dark); transform: translateY(-1px); }
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.7rem 1.15rem;
+    background: #fff;
+    color: var(--color-primary-dark);
+    border: 1px solid var(--color-primary);
+    border-radius: 0.625rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+    transition: background 200ms ease;
+  }
+  .btn-secondary:hover { background: var(--color-bg-soft); }
+  .tip {
+    font-size: 0.85rem;
+    color: var(--color-ink-soft);
+    margin: 0;
+  }
+  .tip a {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+</style>
