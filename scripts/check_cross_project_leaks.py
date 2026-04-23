@@ -31,60 +31,107 @@ from pathlib import Path
 
 # ---------------------------------------------------------------------------
 # Pinned identity , update when the project ref / domain changes.
+# `own_tokens` lists the brand-name strings that are legitimate in this repo
+# (and therefore must NOT be flagged as sibling references even if they are
+# in the shared KNOWN_SIBLING_BRAND_TOKENS map).
 # ---------------------------------------------------------------------------
 SELF_PROJECT = {
     "name": "bebedecrypte",
     "supabase_ref": "feqdpvahksbamwutazkl",
     "domain": "bebedecrypte.com",
     "cf_pages_project": "bebedecrypte",
+    "own_tokens": {"BébéDécrypte", "BebeDecrypte", "bebedecrypte.com"},
 }
 
-# Known sibling STACK-2026 Supabase refs , add new ones here. Anything in this
-# list inside our repo is an automatic fail.
+# Known sibling STACK-2026 Supabase refs. Anything in this map that is not
+# the current SELF_PROJECT ref is an automatic fail in runtime code.
+# Mapping audited and cross-referenced 2026-04-23. When a new project joins
+# STACK-2026, add its ref here and re-propagate this file to every repo.
 KNOWN_SIBLING_SUPABASE_REFS = {
+    "feqdpvahksbamwutazkl": "bebedecrypte",
     "bhmmidfnovtkcxljjfpd": "petfoodrate",
     "rxdcejlofnhjicupzikx": "econono",
     "clxawcqusiclyjzhczph": "decryptebot",
     "afvtxiklivnmakqixkml": "scoreimmo",
-    "b204f9fc7ea4030ad3dbb6c75cec7d93": "bebedecrypte CF zone (keep)",
-    # Explicit unknowns flagged historically , still fail if encountered.
-    "commbksqnwhpsyenjzuf": "unknown (flagged 2026-04-23)",
+    "nkjbmbdrvejemzrggxvr": "karmastro",
+    "commbksqnwhpsyenjzuf": "adapte-toi",
+    "iihjnnytqdkdyzvohwhn": "dentalimplantquote",
+    "ovptmntzrrrjxstzzceu": "getskinscore",
+    "zrgchcrhufdbreykipkj": "nutridecrypte",
+    "wnulejloqvyroskknljb": "pulsari",
+    "ctdduvzobmjtcfsmorjr": "ukheatpumpguide",
+    "eikxsaktrbuowetvymsn": "ratingcafe",
+    "apuyeakgxjgdcfssrtek": "lobservatoiredespros",
 }
 
 KNOWN_SIBLING_DOMAINS = {
+    "bebedecrypte.com": "BébéDécrypte",
     "petfoodrate.com": "PetFoodRate",
     "econono.com": "Econono",
     "decryptebot.com": "DecrypteBot",
     "score-immo.fr": "ScoreImmo",
     "karmastro.com": "Karmastro",
     "expert-menuiserie.fr": "Expert Menuiserie",
-    "litiereagglomerante.com": "Litière Agglomérante",
+    "litiere-agglomerante.com": "Litière Agglomérante",
+    "litiereagglomerante.com": "Litière Agglomérante (alias)",
     "orthoptimal.fr": "Orthoptimal",
     "minedeteint.com": "Mine de Teint",
     "adapte-toi.com": "Adapte-toi",
-    "dentalimplantquote.com": "Dental Implant Quote",
+    "dentalimplantquote.co": "Dental Implant Quote",
+    "dentalimplantquote.com": "Dental Implant Quote (alias)",
     "getpulsari.com": "Pulsari",
     "ukheatpumpguide.com": "UK Heat Pump Guide",
     "getskinscore.com": "Skin Score",
     "nutridecrypte.com": "NutriDécrypte",
-    "bebedecrypte.com": "self (keep)",
+    "ratingcafe.com": "Rating Cafe",
+    "lobservatoiredespros.com": "L'Observatoire des Pros",
 }
 
 # Brand names from sibling projects. Detecting them as plain strings in .astro /
 # .ts / .js / .md / .json catches copy-paste contamination of legal pages, meta
 # tags, OG images, CTAs, etc. "Zooplus" is flagged because it is the affiliate
 # merchant wired to PetFoodRate ; BébéDécrypte uses Amazon + Greenweez only.
+# Brand tokens , only include strings that are unambiguously a sibling
+# project reference when they appear in runtime code. We deliberately avoid
+# common French / English words that collide with the project names :
+#   , "Adapte-toi" is a valid French imperative ("adapt yourself")
+#   , "Econono" starts like "économique"
+#   , "Mine de Teint" clashes with the "mine de rien" idiom
+# For those ambiguous projects, the domain match + Supabase ref checks are
+# enough to catch real contamination.
 KNOWN_SIBLING_BRAND_TOKENS = {
+    "BébéDécrypte": "BébéDécrypte",
+    "BebeDecrypte": "BébéDécrypte",
+    "bebedecrypte.com": "BébéDécrypte",
     "PetFoodRate": "PetFoodRate",
-    "petfoodrate": "PetFoodRate",
+    "petfoodrate.com": "PetFoodRate",
     "Zooplus FR": "PetFoodRate affiliate merchant",
     "zooplus.fr": "PetFoodRate affiliate merchant",
-    "Score-Immo": "ScoreImmo",
-    "ScoreImmo": "ScoreImmo",
     "DecrypteBot": "DecrypteBot",
+    "Decryptebot": "DecrypteBot",
+    "decryptebot.com": "DecrypteBot",
     "NutriDécrypte": "NutriDécrypte",
     "NutriDecrypte": "NutriDécrypte",
+    "nutridecrypte.com": "NutriDécrypte",
     "Karmastro": "Karmastro",
+    "karmastro.com": "Karmastro",
+    "Score-Immo": "ScoreImmo",
+    "ScoreImmo": "ScoreImmo",
+    "score-immo.fr": "ScoreImmo",
+    "Expert Menuiserie": "Expert Menuiserie",
+    "expert-menuiserie.fr": "Expert Menuiserie",
+    "Dental Implant Quote": "Dental Implant Quote",
+    "dentalimplantquote.co": "Dental Implant Quote",
+    "SkinScore": "GetSkinScore",
+    "getskinscore.com": "GetSkinScore",
+    "Pulsari": "Pulsari",
+    "getpulsari.com": "Pulsari",
+    "UK Heat Pump Guide": "UK Heat Pump Guide",
+    "ukheatpumpguide.com": "UK Heat Pump Guide",
+    "Rating Cafe": "Rating Cafe",
+    "ratingcafe.com": "Rating Cafe",
+    "L'Observatoire des Pros": "Observatoire des Pros",
+    "lobservatoiredespros.com": "Observatoire des Pros",
 }
 
 # Only scan runtime source / content / public in this repo ; legal postmortems
@@ -181,9 +228,9 @@ def scan(root: Path) -> list[dict]:
             )
 
         # Sibling domains mentioned in runtime code (HTML, TS, JS, Astro).
-        # We only flag fully-qualified references inside src/ and public/.
+        # We only flag fully-qualified references inside src/public/functions.
         rel = str(f.relative_to(root))
-        if rel.startswith(("site/src/", "site/public/", "src/", "public/")):
+        if rel.startswith(RUNTIME_PATH_PREFIXES):
             for domain, owner in KNOWN_SIBLING_DOMAINS.items():
                 if domain == self_domain:
                     continue
@@ -223,9 +270,13 @@ def scan(root: Path) -> list[dict]:
             )
 
         # Sibling brand tokens in runtime source (catches "PetFoodRate" in
-        # meta titles, legal copy, OG images, etc.).
+        # meta titles, legal copy, OG images, etc.). Skip tokens that
+        # legitimately belong to the current project (SELF_PROJECT.own_tokens).
         if rel.startswith(RUNTIME_PATH_PREFIXES):
+            own_tokens = SELF_PROJECT.get("own_tokens", set())
             for token, owner in KNOWN_SIBLING_BRAND_TOKENS.items():
+                if token in own_tokens:
+                    continue
                 idx = text.find(token)
                 if idx == -1:
                     continue
