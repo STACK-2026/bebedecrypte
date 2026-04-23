@@ -39,7 +39,7 @@ export const siteConfig = {
   // SEO
   author: "BébéDécrypte Editorial",
   twitterHandle: "",
-  ogImage: "/og-default.svg",
+  ogImage: "/og-default.png",
   keywords: [
     "alimentation bébé",
     "petit pot bébé",

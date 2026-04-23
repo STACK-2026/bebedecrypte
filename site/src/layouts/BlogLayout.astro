@@ -37,6 +37,8 @@ const {
   reviewedBy,
 } = Astro.props;
 
+const ogBrandImage = `/og/${slug}.png`;
+
 const dateStr = date.toISOString().split("T")[0];
 const reviewedStr = lastReviewed ? lastReviewed.toISOString().split("T")[0] : dateStr;
 
@@ -74,7 +76,7 @@ const jsonLd = [
   title={`${title} | ${siteConfig.name}`}
   description={description}
   canonicalUrl={articleUrl}
-  ogImage={image}
+  ogImage={ogBrandImage}
   ogType="article"
   publishedTime={dateStr}
   jsonLd={jsonLd}
