@@ -4,8 +4,12 @@ import Breadcrumbs from "../components/Breadcrumbs.astro";
 import AutoGlossaire from "../components/AutoGlossaire.astro";
 import { siteConfig } from "../../site.config";
 import { fullUrl } from "../utils/config";
-import { jsonLdArticle, jsonLdBreadcrumbs } from "../utils/seo";
+import { jsonLdArticle, jsonLdBreadcrumbs, jsonLdFaq, jsonLdHowTo } from "../utils/seo";
 import { AUTHORS } from "../data/authors";
+
+interface HowToStep { name: string; text: string; }
+interface HowToInput { name: string; description?: string; totalTime?: string; steps: HowToStep[]; }
+interface FaqItem { question: string; answer: string; }
 
 interface Props {
   title: string;
@@ -20,6 +24,8 @@ interface Props {
   keywords?: string;
   lastReviewed?: Date;
   reviewedBy?: string;
+  howTo?: HowToInput;
+  faq?: FaqItem[];
 }
 
 const {
@@ -35,6 +41,8 @@ const {
   keywords,
   lastReviewed,
   reviewedBy,
+  howTo,
+  faq,
 } = Astro.props;
 
 const ogBrandImage = `/og/${slug}.png`;
@@ -50,10 +58,23 @@ const breadcrumbs = [
   { name: title, url: articleUrl },
 ];
 
-const authorData = AUTHORS.find((a) => a.name === author);
-const reviewerData = reviewedBy ? AUTHORS.find((a) => a.name === reviewedBy) : undefined;
+// Robust lookup : accept "Dr. Claire Vasseur, pédiatre nutritionniste" by matching the
+// clean name prefix (before the first comma).
+function lookupAuthor(raw: string | undefined) {
+  if (!raw) return undefined;
+  const cleanName = raw.split(",")[0].trim();
+  return AUTHORS.find((a) => a.name === cleanName || a.name === raw);
+}
 
-const jsonLd = [
+const authorData = lookupAuthor(author);
+const reviewerData = lookupAuthor(reviewedBy);
+const reviewerCleanName = reviewedBy ? reviewedBy.split(",")[0].trim() : undefined;
+
+const reviewedDateFr = lastReviewed
+  ? lastReviewed.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })
+  : null;
+
+const jsonLd: object[] = [
   jsonLdArticle({
     title,
     description,
@@ -64,12 +85,19 @@ const jsonLd = [
     author,
     authorRole: authorData?.role.fr,
     authorSpecialities: authorData?.specialities.fr,
-    reviewedBy,
+    reviewedBy: reviewerCleanName,
     reviewedByRole: reviewerData?.role.fr,
     keywords: keywords?.split(",").map((k) => k.trim()),
   }),
   jsonLdBreadcrumbs(breadcrumbs),
 ];
+
+if (howTo) {
+  jsonLd.push(jsonLdHowTo({ ...howTo, image: image || `${siteConfig.url}${ogBrandImage}` }));
+}
+if (faq && faq.length > 0) {
+  jsonLd.push(jsonLdFaq(faq));
+}
 ---
 
 <BaseLayout
@@ -92,7 +120,7 @@ const jsonLd = [
       )}
       <h1 class="mb-4">{title}</h1>
       <div class="flex items-center gap-4 text-gray-500 text-sm flex-wrap">
-        <a href={`/authors/${author?.toLowerCase().replace(/\s+/g, '-')}/`} class="text-primary-dark font-semibold hover:underline">{author}</a>
+        <a href={`/authors/${(authorData?.slug) ?? author?.toLowerCase().replace(/\s+/g, '-')}/`} class="text-primary-dark font-semibold hover:underline">{author}</a>
         <span>|</span>
         <time datetime={dateStr}>
           {date.toLocaleDateString("fr-FR", {
@@ -101,11 +129,6 @@ const jsonLd = [
             year: "numeric",
           })}
         </time>
-        {reviewedBy && (
-          <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full border border-green-200">
-            Reviewed {reviewedStr} by {reviewedBy}
-          </span>
-        )}
       </div>
       {tags.length > 0 && (
         <div class="flex flex-wrap gap-2 mt-4">
@@ -115,6 +138,35 @@ const jsonLd = [
             </span>
           ))}
         </div>
+      )}
+
+      {reviewerData && (
+        <aside class="reviewer-badge" aria-label="Relecture médicale">
+          <span class="reviewer-avatar" style={`background: ${reviewerData.avatarBg};`} aria-hidden="true">
+            {reviewerData.initials}
+          </span>
+          <div class="reviewer-body">
+            <p class="reviewer-label">
+              <span class="reviewer-icon" aria-hidden="true">✓</span>
+              Relu par un professionnel de santé
+            </p>
+            <p class="reviewer-name">
+              <a href={`/authors/${reviewerData.slug}/`}>{reviewerData.name}</a> <span class="reviewer-role">&middot; {reviewerData.role.fr}</span>
+            </p>
+            {reviewedDateFr && (
+              <p class="reviewer-date">Dernière relecture clinique le {reviewedDateFr}</p>
+            )}
+          </div>
+        </aside>
+      )}
+      {!reviewerData && reviewedBy && (
+        <aside class="reviewer-badge reviewer-badge-fallback" aria-label="Relecture">
+          <span class="reviewer-avatar" aria-hidden="true">✓</span>
+          <div class="reviewer-body">
+            <p class="reviewer-label">Relu par {reviewedBy}</p>
+            {reviewedDateFr && <p class="reviewer-date">Dernière relecture le {reviewedDateFr}</p>}
+          </div>
+        </aside>
       )}
     </header>
 
@@ -134,6 +186,91 @@ const jsonLd = [
     <div class="prose max-w-none">
       <slot />
     </div>
+
+    {faq && faq.length > 0 && (
+      <section class="article-faq" aria-labelledby="article-faq-title">
+        <h2 id="article-faq-title">Questions fréquentes</h2>
+        <dl>
+          {faq.map((item) => (
+            <div class="faq-item">
+              <dt data-speakable>{item.question}</dt>
+              <dd data-speakable set:html={item.answer}></dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    )}
   </article>
   <AutoGlossaire />
 </BaseLayout>
+
+<style>
+  .reviewer-badge {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1.25rem;
+    padding: 0.85rem 1rem;
+    background: linear-gradient(90deg, rgb(5 150 105 / 0.08), rgb(5 150 105 / 0.02));
+    border: 1px solid rgb(5 150 105 / 0.35);
+    border-radius: 0.75rem;
+  }
+  .reviewer-badge-fallback {
+    background: rgb(245 158 11 / 0.08);
+    border-color: rgb(245 158 11 / 0.4);
+  }
+  .reviewer-avatar {
+    flex-shrink: 0;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 999px;
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px -4px rgb(12 10 9 / 0.25);
+  }
+  .reviewer-body { display: flex; flex-direction: column; gap: 0.1rem; min-width: 0; }
+  .reviewer-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgb(4 120 87);
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .reviewer-badge-fallback .reviewer-label { color: rgb(180 83 9); }
+  .reviewer-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 999px;
+    background: rgb(5 150 105);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 900;
+  }
+  .reviewer-name { margin: 0; font-size: 0.92rem; color: var(--color-ink); }
+  .reviewer-name a { color: var(--color-primary-dark); font-weight: 700; text-decoration: none; }
+  .reviewer-name a:hover { text-decoration: underline; }
+  .reviewer-role { color: var(--color-ink-soft); font-weight: 500; }
+  .reviewer-date { font-size: 0.75rem; color: var(--color-ink-soft); font-style: italic; margin: 0; }
+
+  .article-faq { max-width: 48rem; margin: 3rem auto 0; padding: 1.5rem; background: var(--color-bg-soft); border-radius: 0.875rem; border: 1px solid var(--color-border); }
+  .article-faq h2 { font-family: var(--font-display); font-size: 1.25rem; color: var(--color-primary-dark); margin: 0 0 1rem; }
+  .article-faq dl { margin: 0; }
+  .article-faq .faq-item { padding: 0.9rem 0; border-bottom: 1px solid var(--color-border); }
+  .article-faq .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .article-faq dt { font-weight: 700; color: var(--color-ink); font-size: 0.98rem; margin-bottom: 0.4rem; }
+  .article-faq dd { margin: 0; color: var(--color-ink-soft); font-size: 0.92rem; line-height: 1.55; }
+  .article-faq dd :global(p) { margin: 0 0 0.5rem; }
+  .article-faq dd :global(p:last-child) { margin-bottom: 0; }
+</style>

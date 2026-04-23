@@ -196,3 +196,27 @@ export function jsonLdBreadcrumbs(
     })),
   };
 }
+
+/** JSON-LD for HowTo */
+export function jsonLdHowTo(howTo: {
+  name: string;
+  description?: string;
+  totalTime?: string;
+  steps: Array<{ name: string; text: string }>;
+  image?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: howTo.name,
+    ...(howTo.description ? { description: howTo.description } : {}),
+    ...(howTo.totalTime ? { totalTime: howTo.totalTime } : {}),
+    ...(howTo.image ? { image: howTo.image } : {}),
+    step: howTo.steps.map((s, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+    })),
+  };
+}

@@ -1,6 +1,6 @@
 ---
-title: "Diversification alimentaire bébé étape par étape : guide 4"
-description: "Quand et comment commencer la diversification alimentaire de ton bébé ? Guide complet 4-12 mois avec étapes, aliments autorisés, textures et erreurs à éviter"
+title: "Diversification alimentaire bébé étape par étape : guide 4 à 12 mois"
+description: "Quand et comment commencer la diversification alimentaire de ton bébé ? Guide 4-12 mois avec étapes, aliments autorisés, textures et erreurs à éviter."
 date: 2026-04-23
 lastReviewed: 2026-04-22
 author: "Dr. Claire Vasseur"
@@ -12,6 +12,32 @@ lang: fr
 draft: false
 image: "https://images.unsplash.com/photo-1544632561-0f8a895a2b08?ixid=M3w4Nzg4MzB8MHwxfHNlYXJjaHwxfHxkaXZlcnNpZmljYXRpb24lMjBhbGltZW50YWlyZSUyMGIlQzMlQTliJUMzJUE5fGVufDB8MHx8fDE3NzY4ODM3MTd8MA&ixlib=rb-4.1.0&w=1200&h=630&fit=crop&crop=center&q=80"
 imageAlt: "toddler sitting in front of bowl on top of table"
+howTo:
+  name: "Réussir la diversification alimentaire de son bébé en 5 étapes"
+  description: "Méthode pas à pas pour introduire les aliments solides entre 4 et 12 mois, en suivant les recommandations de l'ANSES et de l'OMS."
+  totalTime: "P8M"
+  steps:
+    - name: "Vérifier les signes de maturité (4 à 6 mois)"
+      text: "Avant de commencer, assure-toi que ton bébé tient assis avec un peu d'aide, qu'il s'intéresse à la nourriture et qu'il a perdu le réflexe de protrusion de la langue. Selon l'ANSES, l'âge idéal se situe entre 4 et 6 mois révolus. Demande confirmation à ton pédiatre si ton bébé est né prématurément."
+    - name: "Introduire un légume à la fois (4 à 6 mois)"
+      text: "Commence par une cuillère à café de purée lisse d'un seul légume doux (carotte, courgette, patate douce, haricot vert), au déjeuner, en complément du lait. Attends 2 à 3 jours avant d'introduire un nouveau légume pour détecter une éventuelle intolérance."
+    - name: "Ajouter les fruits puis les protéines (6 mois)"
+      text: "Après 2 semaines de légumes, introduis les fruits mixés (pomme, poire, banane). À 6 mois, ajoute des protéines animales (10 g de viande ou poisson, 1/4 d'œuf bien cuit) et les céréales infantiles sans gluten. Introduis les allergènes (œuf, arachide, poisson) un par un, en surveillant les réactions."
+    - name: "Passer aux textures grumeleuses (8 mois)"
+      text: "Vers 8 mois, remplace progressivement les purées lisses par des textures grumeleuses et des morceaux fondants bien cuits. La mastication stimule le développement oral-moteur et prépare la transition vers l'alimentation familiale."
+    - name: "Aligner sur l'alimentation familiale (12 mois)"
+      text: "À 12 mois, ton bébé mange presque comme le reste de la famille. Évite absolument sel ajouté, sucre ajouté, miel (risque de botulisme jusqu'à 12 mois), et aliments durs entiers (noix, carotte crue, raisin entier). Privilégie les produits peu transformés : sur BébéDécrypte, filtre les petits pots notés A ou B."
+faq:
+  - question: "À quel âge commencer la diversification alimentaire de mon bébé ?"
+    answer: "L'ANSES et l'OMS recommandent de commencer la diversification alimentaire entre 4 et 6 mois révolus, jamais avant 4 mois. L'âge exact dépend des signes de maturité de ton bébé : tenue assise, intérêt pour la nourriture, disparition du réflexe de protrusion. Consulte ton pédiatre avant de commencer, surtout en cas de prématurité."
+  - question: "Quels aliments introduire en premier ?"
+    answer: "Commence toujours par un légume doux mixé (carotte, courgette, patate douce ou haricot vert), à raison d'une cuillère à café au déjeuner. Attends 2 à 3 jours avant d'introduire un nouveau légume pour surveiller les réactions. Les fruits mixés arrivent 2 semaines plus tard. Les protéines animales (viande, poisson, œuf) et les céréales infantiles s'ajoutent à partir de 6 mois."
+  - question: "Quand introduire les allergènes majeurs (œuf, arachide, poisson) ?"
+    answer: "Les recommandations actuelles (ESPGHAN 2023) encouragent l'introduction précoce des allergènes entre 4 et 6 mois, un à un, en petite quantité, en présence d'un adulte. Cette introduction précoce réduit le risque d'allergies alimentaires. En cas d'antécédents familiaux d'allergie sévère, parles-en à ton pédiatre ou à un allergologue avant d'introduire l'arachide ou l'œuf cru."
+  - question: "Mon bébé refuse la cuillère, que faire ?"
+    answer: "Le refus est fréquent au début. Ne force jamais, n'insiste pas : cela peut créer une aversion durable. Propose à nouveau le même aliment plusieurs jours plus tard, quand ton bébé est détendu et pas trop affamé. Il faut parfois 8 à 15 expositions à un aliment pour qu'un bébé l'accepte. La Diversification Menée par l'Enfant (DME) peut être une alternative à partir de 6 mois."
+  - question: "Puis-je donner du miel à mon bébé de 8 mois ?"
+    answer: "Non. Le miel est strictement interdit avant 12 mois, même en petite quantité, même cuit. Il peut contenir des spores de Clostridium botulinum qui provoquent le botulisme infantile, une maladie grave chez le nourrisson. Lis toujours les étiquettes : certaines céréales et biscuits industriels ciblés bébé contiennent du miel, c'est un défaut rédhibitoire dans le scoring BébéDécrypte."
 ---
 
 ---

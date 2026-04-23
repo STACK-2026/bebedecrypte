@@ -17,6 +17,30 @@ const blog = defineCollection({
     lang: z.enum(["en", "fr"]).default("en"),
     lastReviewed: z.coerce.date().optional(),
     reviewedBy: z.string().optional(),
+    // Optional structured data enrichment , emit HowTo + FAQPage JSON-LD when provided
+    howTo: z
+      .object({
+        name: z.string(),
+        description: z.string().optional(),
+        totalTime: z.string().optional(),
+        steps: z
+          .array(
+            z.object({
+              name: z.string(),
+              text: z.string(),
+            })
+          )
+          .min(2),
+      })
+      .optional(),
+    faq: z
+      .array(
+        z.object({
+          question: z.string(),
+          answer: z.string(),
+        })
+      )
+      .optional(),
   }),
 });
 
