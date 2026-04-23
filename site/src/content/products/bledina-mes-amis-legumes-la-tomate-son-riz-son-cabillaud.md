@@ -4,7 +4,7 @@ brand: "Blédina"
 brandSlug: "bledina"
 name: "Mes amis légumes (La Tomate son riz & son cabillaud)"
 title: "Blédina Mes amis légumes (La Tomate son riz & son cabillaud) , note C"
-description: "Note BebeDecrypte C (64/100). Analyse NOVA, additifs, sucres et allergènes du Mes amis légumes (La Tomate son riz & son cabillaud) de Blédina."
+description: "Note BébéDécrypte C (64/100). Analyse NOVA, additifs, sucres et allergènes du Mes amis légumes (La Tomate son riz & son cabillaud) de Blédina."
 grade: "C"
 score: 64
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Blédina Mes amis légumes (La Tomate son riz & son cabillaud)
-
-**Note BebeDecrypte : C (64/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (64/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -68,7 +66,7 @@ Purée de tomates 39 % - riz cuit 15,6 % - carottes - eau de cuisson - cabillaud
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

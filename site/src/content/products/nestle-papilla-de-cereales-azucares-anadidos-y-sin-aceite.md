@@ -4,7 +4,7 @@ brand: "Nestlé"
 brandSlug: "nestle"
 name: "Papilla de cereales azúcares añadidos y sin aceite"
 title: "Nestlé Papilla de cereales azúcares añadidos y sin aceite , note C"
-description: "Note BebeDecrypte C (58/100). Analyse NOVA, additifs, sucres et allergènes du Papilla de cereales azúcares añadidos y sin aceite de Nestlé."
+description: "Note BébéDécrypte C (58/100). Analyse NOVA, additifs, sucres et allergènes du Papilla de cereales azúcares añadidos y sin aceite de Nestlé."
 grade: "C"
 score: 58
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Nestlé Papilla de cereales azúcares añadidos y sin aceite
-
-**Note BebeDecrypte : C (58/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (58/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ Harinas (99,2%) (trigo hidrolizada, trigo, cebada, centeno, maíz y avena), sale
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

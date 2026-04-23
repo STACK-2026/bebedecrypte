@@ -4,7 +4,7 @@ brand: "Nestlé"
 brandSlug: "nestle"
 name: "Lait de croissance céréales de 1 à 3 ans"
 title: "Nestlé Lait de croissance céréales de 1 à 3 ans , note D"
-description: "Note BebeDecrypte D (50/100). Analyse NOVA, additifs, sucres et allergènes du Lait de croissance céréales de 1 à 3 ans de Nestlé."
+description: "Note BébéDécrypte D (50/100). Analyse NOVA, additifs, sucres et allergènes du Lait de croissance céréales de 1 à 3 ans de Nestlé."
 grade: "D"
 score: 50
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Nestlé Lait de croissance céréales de 1 à 3 ans
-
-**Note BebeDecrypte : D (50/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (50/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -72,7 +70,7 @@ Eau, lait écrémé, céréales 4,9% farines (blé, orge, seigle, maïs, avoine)
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

@@ -2,7 +2,7 @@
 slug: "beech-nut"
 brand: "Beech-Nut"
 title: "Marque Beech-Nut , note moyenne A"
-description: "Analyse BebeDecrypte de la marque Beech-Nut : 1 produits notés, moyenne 93/100, grade A."
+description: "Analyse BébéDécrypte de la marque Beech-Nut : 1 produits notés, moyenne 93/100, grade A."
 averageGrade: "A"
 averageScore: 93
 productCount: 1
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Beech-Nut
-
-**Note moyenne BebeDecrypte : A (93/100)** sur 1 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : A (93/100)** sur 1 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -30,5 +28,5 @@ draft: false
 
 - [Saumon fumé bio](/fr/produits/beech-nut-saumon-fume-bio/) , note A (93/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

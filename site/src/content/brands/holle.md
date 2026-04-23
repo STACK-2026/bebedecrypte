@@ -2,7 +2,7 @@
 slug: "holle"
 brand: "Holle"
 title: "Marque Holle , note moyenne B"
-description: "Analyse BebeDecrypte de la marque Holle : 16 produits notés, moyenne 74/100, grade B."
+description: "Analyse BébéDécrypte de la marque Holle : 16 produits notés, moyenne 74/100, grade B."
 averageGrade: "B"
 averageScore: 74
 productCount: 16
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Holle
-
-**Note moyenne BebeDecrypte : B (74/100)** sur 16 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (74/100)** sur 16 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -45,5 +43,5 @@ draft: false
 - [Lait Infantile 1 Age](/fr/produits/holle-lait-infantile-1-age/) , note C (65/100)
 - [Little Farm Biscuits](/fr/produits/holle-little-farm-biscuits/) , note C (64/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

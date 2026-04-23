@@ -4,7 +4,7 @@ brand: "NOVALAC"
 brandSlug: "novalac"
 name: "Riz - Alternative végétale à base de protéines de riz"
 title: "NOVALAC Riz - Alternative végétale à base de protéines de riz , note D"
-description: "Note BebeDecrypte D (40/100). Analyse NOVA, additifs, sucres et allergènes du Riz - Alternative végétale à base de protéines de riz de NOVALAC."
+description: "Note BébéDécrypte D (40/100). Analyse NOVA, additifs, sucres et allergènes du Riz - Alternative végétale à base de protéines de riz de NOVALAC."
 grade: "D"
 score: 40
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# NOVALAC Riz - Alternative végétale à base de protéines de riz
-
-**Note BebeDecrypte : D (40/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (40/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ Maltodextrines, huiles végétales (palme, colza, tournesol, coprah), hydrolysat
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

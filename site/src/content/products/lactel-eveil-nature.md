@@ -4,7 +4,7 @@ brand: "Lactel"
 brandSlug: "lactel"
 name: "Eveil Nature"
 title: "Lactel Eveil Nature , note D"
-description: "Note BebeDecrypte D (44/100). Analyse NOVA, additifs, sucres et allergènes du Eveil Nature de Lactel."
+description: "Note BébéDécrypte D (44/100). Analyse NOVA, additifs, sucres et allergènes du Eveil Nature de Lactel."
 grade: "D"
 score: 44
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Lactel Eveil Nature
-
-**Note BebeDecrypte : D (44/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (44/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ lactosérum déminéralisé, lait écrémé, huiles végétales (colza, tourneso
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

@@ -4,7 +4,7 @@ brand: "BLÉDINA"
 brandSlug: "bledina"
 name: "Purée Panais Dinde"
 title: "BLÉDINA Purée Panais Dinde , note B"
-description: "Note BebeDecrypte B (73/100). Analyse NOVA, additifs, sucres et allergènes du Purée Panais Dinde de BLÉDINA."
+description: "Note BébéDécrypte B (73/100). Analyse NOVA, additifs, sucres et allergènes du Purée Panais Dinde de BLÉDINA."
 grade: "B"
 score: 73
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# BLÉDINA Purée Panais Dinde
-
-**Note BebeDecrypte : B (73/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (73/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -68,7 +66,7 @@ Panais 38,9% - Pomme de terre 24,6% - eau de cuisson - Viande de dinde 8% - Butt
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

@@ -2,7 +2,7 @@
 slug: "lupilu"
 brand: "Lupilu"
 title: "Marque Lupilu , note moyenne B"
-description: "Analyse BebeDecrypte de la marque Lupilu : 4 produits notés, moyenne 70/100, grade B."
+description: "Analyse BébéDécrypte de la marque Lupilu : 4 produits notés, moyenne 70/100, grade B."
 averageGrade: "B"
 averageScore: 70
 productCount: 4
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Lupilu
-
-**Note moyenne BebeDecrypte : B (70/100)** sur 4 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (70/100)** sur 4 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -33,5 +31,5 @@ draft: false
 - [Spelt & Banana Biscuits](/fr/produits/lupilu-spelt-banana-biscuits/) , note C (66/100)
 - [Dinkel Kekse](/fr/produits/lupilu-dinkel-kekse/) , note C (63/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

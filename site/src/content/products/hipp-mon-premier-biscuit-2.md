@@ -4,7 +4,7 @@ brand: "Hipp"
 brandSlug: "hipp"
 name: "Mon Premier Biscuit"
 title: "Hipp Mon Premier Biscuit , note C"
-description: "Note BebeDecrypte C (59/100). Analyse NOVA, additifs, sucres et allergènes du Mon Premier Biscuit de Hipp."
+description: "Note BébéDécrypte C (59/100). Analyse NOVA, additifs, sucres et allergènes du Mon Premier Biscuit de Hipp."
 grade: "C"
 score: 59
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Hipp Mon Premier Biscuit
-
-**Note BebeDecrypte : C (59/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (59/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Classification NOVA : 3 sur 4
@@ -73,7 +71,7 @@ Farine de _froment_* 45%, amidon de froment*, sucre*, huile de tournesol*, _lait
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

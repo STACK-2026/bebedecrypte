@@ -4,7 +4,7 @@ brand: "U"
 brandSlug: "u"
 name: "Pots pour bébé dessert pomme et poire avec morceaux U_TOUT_PETITS Bio"
 title: "U Pots pour bébé dessert pomme et poire avec morceaux U_TOUT_PETITS Bio , note A"
-description: "Note BebeDecrypte A (89/100). Analyse NOVA, additifs, sucres et allergènes du Pots pour bébé dessert pomme et poire avec morceaux U_TOUT_PETITS Bio de U."
+description: "Note BébéDécrypte A (89/100). Analyse NOVA, additifs, sucres et allergènes du Pots pour bébé dessert pomme et poire avec morceaux U_TOUT_PETITS Bio de U."
 grade: "A"
 score: 89
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# U Pots pour bébé dessert pomme et poire avec morceaux U_TOUT_PETITS Bio
-
-**Note BebeDecrypte : A (89/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
+**Note BébéDécrypte : A (89/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -72,7 +70,7 @@ Pommes ( purée et morceaux) * 59.9 % , purée de poires* 40 %, antioxydant : ac
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

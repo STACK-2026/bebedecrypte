@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-score_products.py , read pending/off_raw.jsonl, run BebeDecrypte scoring,
+score_products.py , read pending/off_raw.jsonl, run BébéDécrypte scoring,
 emit pending/scored_products.jsonl with grade + breakdown + warnings + slug.
 
 Does NOT modify scoring_engine.py : we only import and call compute_grade().
@@ -33,7 +33,7 @@ OUT_PATH = REPO_ROOT / "pending" / "scored_products.jsonl"
 
 # ---------------------------------------------------------------------------
 # Category mapping , used to (a) infer target age and (b) group the product
-# into a BebeDecrypte catalog category for the site.
+# into a BébéDécrypte catalog category for the site.
 # ---------------------------------------------------------------------------
 
 # Catalog categories on the site. These slugs drive /fr/categories/<slug>/.

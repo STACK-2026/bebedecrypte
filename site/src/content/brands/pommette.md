@@ -2,7 +2,7 @@
 slug: "pommette"
 brand: "Pommette"
 title: "Marque Pommette , note moyenne C"
-description: "Analyse BebeDecrypte de la marque Pommette : 4 produits notés, moyenne 65/100, grade C."
+description: "Analyse BébéDécrypte de la marque Pommette : 4 produits notés, moyenne 65/100, grade C."
 averageGrade: "C"
 averageScore: 65
 productCount: 4
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Pommette
-
-**Note moyenne BebeDecrypte : C (65/100)** sur 4 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : C (65/100)** sur 4 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -33,5 +31,5 @@ draft: false
 - [Lait de croissance BIO 25cl](/fr/produits/pommette-lait-de-croissance-bio-25cl/) , note D (54/100)
 - [Mon premier Biscuits bio 120g Pommette BIO](/fr/produits/pommette-mon-premier-biscuits-bio-120g-pommette-bio/) , note D (52/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

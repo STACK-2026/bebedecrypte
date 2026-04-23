@@ -4,7 +4,7 @@ brand: "Nutricia"
 brandSlug: "nutricia"
 name: "Lait Nutricia Crois 1L Des 10 Mois"
 title: "Nutricia Lait Nutricia Crois 1L Des 10 Mois , note C"
-description: "Note BebeDecrypte C (60/100). Analyse NOVA, additifs, sucres et allergènes du Lait Nutricia Crois 1L Des 10 Mois de Nutricia."
+description: "Note BébéDécrypte C (60/100). Analyse NOVA, additifs, sucres et allergènes du Lait Nutricia Crois 1L Des 10 Mois de Nutricia."
 grade: "C"
 score: 60
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Nutricia Lait Nutricia Crois 1L Des 10 Mois
-
-**Note BebeDecrypte : C (60/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (60/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -71,7 +69,7 @@ Lait de suite pour nourrissonsa partir de 10 mois et aliment lacté liquide dest
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

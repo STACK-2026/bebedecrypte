@@ -2,7 +2,7 @@
 slug: "novalac"
 brand: "Novalac"
 title: "Marque Novalac , note moyenne C"
-description: "Analyse BebeDecrypte de la marque Novalac : 9 produits notés, moyenne 56/100, grade C."
+description: "Analyse BébéDécrypte de la marque Novalac : 9 produits notés, moyenne 56/100, grade C."
 averageGrade: "C"
 averageScore: 56
 productCount: 9
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Novalac
-
-**Note moyenne BebeDecrypte : C (56/100)** sur 9 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : C (56/100)** sur 9 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -38,5 +36,5 @@ draft: false
 - [Lait de croissance](/fr/produits/novalac-lait-de-croissance/) , note D (43/100)
 - [Riz - Alternative végétale à base de protéines de riz](/fr/produits/novalac-riz-alternative-vegetale-a-base-de-proteines-de-riz/) , note D (40/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

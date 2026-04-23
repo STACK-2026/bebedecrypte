@@ -4,7 +4,7 @@ brand: "Casino"
 brandSlug: "casino"
 name: "Légumes verts Pâtes avec morceaux repas du soir"
 title: "Casino Légumes verts Pâtes avec morceaux repas du soir , note B"
-description: "Note BebeDecrypte B (73/100). Analyse NOVA, additifs, sucres et allergènes du Légumes verts Pâtes avec morceaux repas du soir de Casino."
+description: "Note BébéDécrypte B (73/100). Analyse NOVA, additifs, sucres et allergènes du Légumes verts Pâtes avec morceaux repas du soir de Casino."
 grade: "B"
 score: 73
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Casino Légumes verts Pâtes avec morceaux repas du soir
-
-**Note BebeDecrypte : B (73/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (73/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -68,7 +66,7 @@ Eau, légumes verts 25 % (épinards 56 %, haricots verts 32 %, petits pois 12 %)
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

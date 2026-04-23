@@ -2,7 +2,7 @@
 slug: "mellin"
 brand: "Mellin"
 title: "Marque Mellin , note moyenne B"
-description: "Analyse BebeDecrypte de la marque Mellin : 15 produits notés, moyenne 74/100, grade B."
+description: "Analyse BébéDécrypte de la marque Mellin : 15 produits notés, moyenne 74/100, grade B."
 averageGrade: "B"
 averageScore: 74
 productCount: 15
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Mellin
-
-**Note moyenne BebeDecrypte : B (74/100)** sur 15 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (74/100)** sur 15 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -44,5 +42,5 @@ draft: false
 - [Biscotto con miele](/fr/produits/mellin-biscotto-con-miele/) , note C (69/100)
 - [Melissa Camomilla Verbena](/fr/produits/mellin-melissa-camomilla-verbena/) , note C (69/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

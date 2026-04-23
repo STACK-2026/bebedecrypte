@@ -4,7 +4,7 @@ brand: "U"
 brandSlug: "u"
 name: "Assiette écrasé pomme terre et jambon"
 title: "U Assiette écrasé pomme terre et jambon , note B"
-description: "Note BebeDecrypte B (72/100). Analyse NOVA, additifs, sucres et allergènes du Assiette écrasé pomme terre et jambon de U."
+description: "Note BébéDécrypte B (72/100). Analyse NOVA, additifs, sucres et allergènes du Assiette écrasé pomme terre et jambon de U."
 grade: "B"
 score: 72
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# U Assiette écrasé pomme terre et jambon
-
-**Note BebeDecrypte : B (72/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (72/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -68,7 +66,7 @@ Eau, pommes de terre 24,4%, pommes de terre réhydratées 17%, viande de, porc [
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

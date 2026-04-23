@@ -2,7 +2,7 @@
 slug: "bebe-m"
 brand: "Bébé M"
 title: "Marque Bébé M , note moyenne B"
-description: "Analyse BebeDecrypte de la marque Bébé M : 1 produits notés, moyenne 83/100, grade B."
+description: "Analyse BébéDécrypte de la marque Bébé M : 1 produits notés, moyenne 83/100, grade B."
 averageGrade: "B"
 averageScore: 83
 productCount: 1
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Bébé M
-
-**Note moyenne BebeDecrypte : B (83/100)** sur 1 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (83/100)** sur 1 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -30,5 +28,5 @@ draft: false
 
 - [Céréales & Légumes](/fr/produits/bebe-m-cereales-legumes/) , note B (83/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

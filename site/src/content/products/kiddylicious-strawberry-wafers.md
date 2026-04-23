@@ -4,7 +4,7 @@ brand: "Kiddylicious"
 brandSlug: "kiddylicious"
 name: "Strawberry Wafers"
 title: "Kiddylicious Strawberry Wafers , note C"
-description: "Note BebeDecrypte C (61/100). Analyse NOVA, additifs, sucres et allergènes du Strawberry Wafers de Kiddylicious."
+description: "Note BébéDécrypte C (61/100). Analyse NOVA, additifs, sucres et allergènes du Strawberry Wafers de Kiddylicious."
 grade: "C"
 score: 61
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Kiddylicious Strawberry Wafers
-
-**Note BebeDecrypte : C (61/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (61/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ Farine de riz au jasmin (80%), amidon de tapioca, concentré de jus de raisin, f
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

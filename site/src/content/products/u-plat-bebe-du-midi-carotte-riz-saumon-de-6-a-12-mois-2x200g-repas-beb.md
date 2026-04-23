@@ -4,7 +4,7 @@ brand: "U"
 brandSlug: "u"
 name: "Plat bébé du midi Carotte, riz & saumon, de 6 à 12 mois - 2x200g - Repas bébé"
 title: "U Plat bébé du midi Carotte, riz & saumon, de 6 à 12 mois - 2x200g - Repas bébé , note A"
-description: "Note BebeDecrypte A (92/100). Analyse NOVA, additifs, sucres et allergènes du Plat bébé du midi Carotte, riz & saumon, de 6 à 12 mois - 2x200g - Repas bébé"
+description: "Note BébéDécrypte A (92/100). Analyse NOVA, additifs, sucres et allergènes du Plat bébé du midi Carotte, riz & saumon, de 6 à 12 mois - 2x200g - Repas bébé"
 grade: "A"
 score: 92
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# U Plat bébé du midi Carotte, riz & saumon, de 6 à 12 mois - 2x200g - Repas bébé
-
-**Note BebeDecrypte : A (92/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
+**Note BébéDécrypte : A (92/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -68,7 +66,7 @@ Carotte* 45%, eau, riz cuit* 13.5% (eau, riz*), panais* 10%, SAUMON* 9%, persil*
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

@@ -4,7 +4,7 @@ brand: "BabyBio"
 brandSlug: "babybio"
 name: "Petits Biscuits à la noisette"
 title: "BabyBio Petits Biscuits à la noisette , note C"
-description: "Note BebeDecrypte C (63/100). Analyse NOVA, additifs, sucres et allergènes du Petits Biscuits à la noisette de BabyBio."
+description: "Note BébéDécrypte C (63/100). Analyse NOVA, additifs, sucres et allergènes du Petits Biscuits à la noisette de BabyBio."
 grade: "C"
 score: 63
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# BabyBio Petits Biscuits à la noisette
-
-**Note BebeDecrypte : C (63/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (63/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Classification NOVA : 3 sur 4
@@ -72,7 +70,7 @@ Farine de _blé_ de France 58%, sucre de canne, sucre glace de canne (sucre de c
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

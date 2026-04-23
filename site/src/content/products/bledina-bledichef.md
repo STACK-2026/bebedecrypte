@@ -4,7 +4,7 @@ brand: "bledina"
 brandSlug: "bledina"
 name: "Bledichef"
 title: "bledina Bledichef , note B"
-description: "Note BebeDecrypte B (72/100). Analyse NOVA, additifs, sucres et allergènes du Bledichef de bledina."
+description: "Note BébéDécrypte B (72/100). Analyse NOVA, additifs, sucres et allergènes du Bledichef de bledina."
 grade: "B"
 score: 72
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# bledina Bledichef
-
-**Note BebeDecrypte : B (72/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (72/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -68,7 +66,7 @@ Eau - Patates douces 14,9% - Pommes de terre 14,7% - Mais 9,87% - Viande de poul
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

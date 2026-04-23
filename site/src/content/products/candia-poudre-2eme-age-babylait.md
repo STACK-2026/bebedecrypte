@@ -4,7 +4,7 @@ brand: "Candia"
 brandSlug: "candia"
 name: "Poudre 2Eme Age Babylait"
 title: "Candia Poudre 2Eme Age Babylait , note D"
-description: "Note BebeDecrypte D (42/100). Analyse NOVA, additifs, sucres et allergènes du Poudre 2Eme Age Babylait de Candia."
+description: "Note BébéDécrypte D (42/100). Analyse NOVA, additifs, sucres et allergènes du Poudre 2Eme Age Babylait de Candia."
 grade: "D"
 score: 42
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Candia Poudre 2Eme Age Babylait
-
-**Note BebeDecrypte : D (42/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (42/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ Lait écrémé, huiles végétales (colza, coprah, tournesol oléique, maïs), l
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

@@ -4,7 +4,7 @@ brand: "mots d'enfants"
 brandSlug: "mots-d-enfants"
 name: "Pomme Banane Mot d'enfant"
 title: "mots d'enfants Pomme Banane Mot d'enfant , note B"
-description: "Note BebeDecrypte B (82/100). Analyse NOVA, additifs, sucres et allergènes du Pomme Banane Mot d'enfant de mots d'enfants."
+description: "Note BébéDécrypte B (82/100). Analyse NOVA, additifs, sucres et allergènes du Pomme Banane Mot d'enfant de mots d'enfants."
 grade: "B"
 score: 82
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# mots d'enfants Pomme Banane Mot d'enfant
-
-**Note BebeDecrypte : B (82/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (82/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -72,7 +70,7 @@ PUree de pommes 54,44 %, purée de banane 45%, jus de concentré de citron, anti
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

@@ -2,7 +2,7 @@
 slug: "alnatura"
 brand: "Alnatura"
 title: "Marque Alnatura , note moyenne C"
-description: "Analyse BebeDecrypte de la marque Alnatura : 1 produits notés, moyenne 67/100, grade C."
+description: "Analyse BébéDécrypte de la marque Alnatura : 1 produits notés, moyenne 67/100, grade C."
 averageGrade: "C"
 averageScore: 67
 productCount: 1
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Alnatura
-
-**Note moyenne BebeDecrypte : C (67/100)** sur 1 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : C (67/100)** sur 1 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -30,5 +28,5 @@ draft: false
 
 - [Biscuits à l'épeautre](/fr/produits/alnatura-biscuits-a-l-epeautre/) , note C (67/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

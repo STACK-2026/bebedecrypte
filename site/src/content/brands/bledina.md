@@ -2,7 +2,7 @@
 slug: "bledina"
 brand: "Blédina"
 title: "Marque Blédina , note moyenne C"
-description: "Analyse BebeDecrypte de la marque Blédina : 110 produits notés, moyenne 69/100, grade C."
+description: "Analyse BébéDécrypte de la marque Blédina : 110 produits notés, moyenne 69/100, grade C."
 averageGrade: "C"
 averageScore: 69
 productCount: 110
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Blédina
-
-**Note moyenne BebeDecrypte : C (69/100)** sur 110 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : C (69/100)** sur 110 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -139,5 +137,5 @@ draft: false
 - [Blédiscuit Junior](/fr/produits/bledina-blediscuit-junior/) , note E (39/100)
 - [Mon 1er Biscuit au Chocolat](/fr/produits/bledina-mon-1er-biscuit-au-chocolat/) , note E (38/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

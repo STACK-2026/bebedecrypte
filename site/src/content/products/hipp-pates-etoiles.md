@@ -4,7 +4,7 @@ brand: "Hipp"
 brandSlug: "hipp"
 name: "Pates Etoiles"
 title: "Hipp Pates Etoiles , note A"
-description: "Note BebeDecrypte A (93/100). Analyse NOVA, additifs, sucres et allergènes du Pates Etoiles de Hipp."
+description: "Note BébéDécrypte A (93/100). Analyse NOVA, additifs, sucres et allergènes du Pates Etoiles de Hipp."
 grade: "A"
 score: 93
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Hipp Pates Etoiles
-
-**Note BebeDecrypte : A (93/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
+**Note BébéDécrypte : A (93/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -69,7 +67,7 @@ Semoule de _blé_ dur*, vitamine B1.
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

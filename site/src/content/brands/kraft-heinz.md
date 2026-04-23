@@ -2,7 +2,7 @@
 slug: "kraft-heinz"
 brand: "Kraft Heinz"
 title: "Marque Kraft Heinz , note moyenne B"
-description: "Analyse BebeDecrypte de la marque Kraft Heinz : 16 produits notés, moyenne 73/100, grade B."
+description: "Analyse BébéDécrypte de la marque Kraft Heinz : 16 produits notés, moyenne 73/100, grade B."
 averageGrade: "B"
 averageScore: 73
 productCount: 16
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Kraft Heinz
-
-**Note moyenne BebeDecrypte : B (73/100)** sur 16 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (73/100)** sur 16 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -45,5 +43,5 @@ draft: false
 - [Camomilla estratto solubile](/fr/produits/kraft-heinz-camomilla-estratto-solubile/) , note C (69/100)
 - [Plasmon Plasmon Camomilla 360GR Barattolo](/fr/produits/kraft-heinz-plasmon-plasmon-camomilla-360gr-barattolo/) , note C (69/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

@@ -2,7 +2,7 @@
 slug: "auchan-baby"
 brand: "Auchan Baby"
 title: "Marque Auchan Baby , note moyenne B"
-description: "Analyse BebeDecrypte de la marque Auchan Baby : 4 produits notés, moyenne 72/100, grade B."
+description: "Analyse BébéDécrypte de la marque Auchan Baby : 4 produits notés, moyenne 72/100, grade B."
 averageGrade: "B"
 averageScore: 72
 productCount: 4
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Auchan Baby
-
-**Note moyenne BebeDecrypte : B (72/100)** sur 4 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (72/100)** sur 4 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -33,5 +31,5 @@ draft: false
 - [Baby croissance 3](/fr/produits/auchan-baby-baby-croissance-3/) , note C (60/100)
 - [Croissance Nature - 3 - de 10 mois à 3 ans](/fr/produits/auchan-baby-croissance-nature-3-de-10-mois-a-3-ans/) , note C (60/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

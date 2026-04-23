@@ -4,7 +4,7 @@ brand: "Cuétara"
 brandSlug: "cuetara"
 name: "Tosta Rica"
 title: "Cuétara Tosta Rica , note E"
-description: "Note BebeDecrypte E (37/100). Analyse NOVA, additifs, sucres et allergènes du Tosta Rica de Cuétara."
+description: "Note BébéDécrypte E (37/100). Analyse NOVA, additifs, sucres et allergènes du Tosta Rica de Cuétara."
 grade: "E"
 score: 37
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Cuétara Tosta Rica
-
-**Note BebeDecrypte : E (37/100).** Ce produit est classé E, à éviter. Composition trop problématique pour un enfant en bas âge.
+**Note BébéDécrypte : E (37/100).** Ce produit est classé E, à éviter. Composition trop problématique pour un enfant en bas âge.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Classification NOVA : 4 sur 4
@@ -74,7 +72,7 @@ Lécithine, carbonate de sodium , carbonate d’ammonium, e150d, e223
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

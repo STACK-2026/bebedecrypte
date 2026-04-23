@@ -4,7 +4,7 @@ brand: "Biona"
 brandSlug: "biona"
 name: "Biona Organic Apple & Banana Puree"
 title: "Biona Biona Organic Apple & Banana Puree , note A"
-description: "Note BebeDecrypte A (91/100). Analyse NOVA, additifs, sucres et allergènes du Biona Organic Apple & Banana Puree de Biona."
+description: "Note BébéDécrypte A (91/100). Analyse NOVA, additifs, sucres et allergènes du Biona Organic Apple & Banana Puree de Biona."
 grade: "A"
 score: 91
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Biona Biona Organic Apple & Banana Puree
-
-**Note BebeDecrypte : A (91/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
+**Note BébéDécrypte : A (91/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -72,7 +70,7 @@ Pommes, Banane
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

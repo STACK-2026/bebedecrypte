@@ -4,7 +4,7 @@ brand: "Auchan Baby Bio"
 brandSlug: "auchan-baby-bio"
 name: "Purée de fruits - Pomme Poire"
 title: "Auchan Baby Bio Purée de fruits - Pomme Poire , note A"
-description: "Note BebeDecrypte A (90/100). Analyse NOVA, additifs, sucres et allergènes du Purée de fruits - Pomme Poire de Auchan Baby Bio."
+description: "Note BébéDécrypte A (90/100). Analyse NOVA, additifs, sucres et allergènes du Purée de fruits - Pomme Poire de Auchan Baby Bio."
 grade: "A"
 score: 90
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Auchan Baby Bio Purée de fruits - Pomme Poire
-
-**Note BebeDecrypte : A (90/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
+**Note BébéDécrypte : A (90/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -66,7 +64,7 @@ Purée de pomme* 65%, purée de poire* 34,9%, jus de citron concentré*, antioxy
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Boissons bébé](/fr/categories/boissons/).
 

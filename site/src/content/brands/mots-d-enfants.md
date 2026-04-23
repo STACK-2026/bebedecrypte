@@ -2,7 +2,7 @@
 slug: "mots-d-enfants"
 brand: "mots d'enfants"
 title: "Marque mots d'enfants , note moyenne B"
-description: "Analyse BebeDecrypte de la marque mots d'enfants : 1 produits notés, moyenne 82/100, grade B."
+description: "Analyse BébéDécrypte de la marque mots d'enfants : 1 produits notés, moyenne 82/100, grade B."
 averageGrade: "B"
 averageScore: 82
 productCount: 1
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# mots d'enfants
-
-**Note moyenne BebeDecrypte : B (82/100)** sur 1 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (82/100)** sur 1 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -30,5 +28,5 @@ draft: false
 
 - [Pomme Banane Mot d'enfant](/fr/produits/mots-d-enfants-pomme-banane-mot-d-enfant/) , note B (82/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

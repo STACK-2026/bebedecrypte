@@ -4,7 +4,7 @@ brand: "Marque Repère"
 brandSlug: "marque-repere"
 name: "Biscuits adaptés à bébé"
 title: "Marque Repère Biscuits adaptés à bébé , note D"
-description: "Note BebeDecrypte D (41/100). Analyse NOVA, additifs, sucres et allergènes du Biscuits adaptés à bébé de Marque Repère."
+description: "Note BébéDécrypte D (41/100). Analyse NOVA, additifs, sucres et allergènes du Biscuits adaptés à bébé de Marque Repère."
 grade: "D"
 score: 41
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Marque Repère Biscuits adaptés à bébé
-
-**Note BebeDecrypte : D (41/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (41/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ farine de _blé_ 58%, sucre, huile d'olive vierge extra, _lait_ en poudre écré
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

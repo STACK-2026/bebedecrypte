@@ -2,7 +2,7 @@
 slug: "good-gout"
 brand: "Good Goût"
 title: "Marque Good Goût , note moyenne B"
-description: "Analyse BebeDecrypte de la marque Good Goût : 20 produits notés, moyenne 83/100, grade B."
+description: "Analyse BébéDécrypte de la marque Good Goût : 20 produits notés, moyenne 83/100, grade B."
 averageGrade: "B"
 averageScore: 83
 productCount: 20
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Good Goût
-
-**Note moyenne BebeDecrypte : B (83/100)** sur 20 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (83/100)** sur 20 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -49,5 +47,5 @@ draft: false
 - [Biscuits tout ronds à la vanille](/fr/produits/good-gout-biscuits-tout-ronds-a-la-vanille/) , note B (70/100)
 - [Les biscuits des bois](/fr/produits/good-gout-les-biscuits-des-bois/) , note B (70/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

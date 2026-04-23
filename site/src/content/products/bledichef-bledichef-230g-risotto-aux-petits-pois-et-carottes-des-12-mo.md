@@ -4,7 +4,7 @@ brand: "Bledichef"
 brandSlug: "bledichef"
 name: "BLEDICHEF 230g Risotto aux Petits Pois et Carottes Dès 12 mois"
 title: "Bledichef BLEDICHEF 230g Risotto aux Petits Pois et Carottes Dès 12 mois , note B"
-description: "Note BebeDecrypte B (72/100). Analyse NOVA, additifs, sucres et allergènes du BLEDICHEF 230g Risotto aux Petits Pois et Carottes Dès 12 mois de Bledichef."
+description: "Note BébéDécrypte B (72/100). Analyse NOVA, additifs, sucres et allergènes du BLEDICHEF 230g Risotto aux Petits Pois et Carottes Dès 12 mois de Bledichef."
 grade: "B"
 score: 72
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Bledichef BLEDICHEF 230g Risotto aux Petits Pois et Carottes Dès 12 mois
-
-**Note BebeDecrypte : B (72/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (72/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -68,7 +66,7 @@ Lait écrémé reconstitué à base de lait en poudre 34,0 % (LAIT) - Riz cuit 1
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

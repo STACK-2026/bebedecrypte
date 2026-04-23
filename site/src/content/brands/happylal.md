@@ -2,7 +2,7 @@
 slug: "happylal"
 brand: "HAPPYLAL"
 title: "Marque HAPPYLAL , note moyenne A"
-description: "Analyse BebeDecrypte de la marque HAPPYLAL : 1 produits notés, moyenne 86/100, grade A."
+description: "Analyse BébéDécrypte de la marque HAPPYLAL : 1 produits notés, moyenne 86/100, grade A."
 averageGrade: "A"
 averageScore: 86
 productCount: 1
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# HAPPYLAL
-
-**Note moyenne BebeDecrypte : A (86/100)** sur 1 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : A (86/100)** sur 1 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -30,5 +28,5 @@ draft: false
 
 - [Mon risotto de céleri-rave et veau](/fr/produits/happylal-mon-risotto-de-celeri-rave-et-veau/) , note A (86/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

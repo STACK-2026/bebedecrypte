@@ -2,7 +2,7 @@
 slug: "nutriben"
 brand: "Nutriben"
 title: "Marque Nutriben , note moyenne C"
-description: "Analyse BebeDecrypte de la marque Nutriben : 4 produits notés, moyenne 67/100, grade C."
+description: "Analyse BébéDécrypte de la marque Nutriben : 4 produits notés, moyenne 67/100, grade C."
 averageGrade: "C"
 averageScore: 67
 productCount: 4
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Nutriben
-
-**Note moyenne BebeDecrypte : C (67/100)** sur 4 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : C (67/100)** sur 4 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -33,5 +31,5 @@ draft: false
 - [Nutriben Lait 1er Age](/fr/produits/nutriben-nutriben-lait-1er-age/) , note B (73/100)
 - [Nutriben 1eres Cereales Sans Gluten](/fr/produits/nutriben-nutriben-1eres-cereales-sans-gluten/) , note D (49/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

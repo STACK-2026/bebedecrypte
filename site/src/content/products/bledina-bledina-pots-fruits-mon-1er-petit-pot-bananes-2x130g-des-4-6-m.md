@@ -4,7 +4,7 @@ brand: "blédina"
 brandSlug: "bledina"
 name: "BLEDINA POTS FRUITS Mon 1er Petit Pot Bananes 2x130g Dès 4/6 Mois"
 title: "blédina BLEDINA POTS FRUITS Mon 1er Petit Pot Bananes 2x130g Dès 4/6 Mois , note B"
-description: "Note BebeDecrypte B (81/100). Analyse NOVA, additifs, sucres et allergènes du BLEDINA POTS FRUITS Mon 1er Petit Pot Bananes 2x130g Dès 4/6 Mois de blédina."
+description: "Note BébéDécrypte B (81/100). Analyse NOVA, additifs, sucres et allergènes du BLEDINA POTS FRUITS Mon 1er Petit Pot Bananes 2x130g Dès 4/6 Mois de blédina."
 grade: "B"
 score: 81
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# blédina BLEDINA POTS FRUITS Mon 1er Petit Pot Bananes 2x130g Dès 4/6 Mois
-
-**Note BebeDecrypte : B (81/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (81/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -72,7 +70,7 @@ Bananes 98,7%, Jus de citron concentré - Antioxydant : acide ascorbique.
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

@@ -4,7 +4,7 @@ brand: "U"
 brandSlug: "u"
 name: "Petits pots dessert pomme, banane et abricot"
 title: "U Petits pots dessert pomme, banane et abricot , note B"
-description: "Note BebeDecrypte B (81/100). Analyse NOVA, additifs, sucres et allergènes du Petits pots dessert pomme, banane et abricot de U."
+description: "Note BébéDécrypte B (81/100). Analyse NOVA, additifs, sucres et allergènes du Petits pots dessert pomme, banane et abricot de U."
 grade: "B"
 score: 81
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# U Petits pots dessert pomme, banane et abricot
-
-**Note BebeDecrypte : B (81/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (81/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -72,7 +70,7 @@ purée de pommes 50,9%, purée de bananes 24,5%, purée d'abricots 24,5%,, antio
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

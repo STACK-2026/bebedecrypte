@@ -4,7 +4,7 @@ brand: "Biocoop"
 brandSlug: "biocoop"
 name: "Petit biscuit bébé"
 title: "Biocoop Petit biscuit bébé , note C"
-description: "Note BebeDecrypte C (63/100). Analyse NOVA, additifs, sucres et allergènes du Petit biscuit bébé de Biocoop."
+description: "Note BébéDécrypte C (63/100). Analyse NOVA, additifs, sucres et allergènes du Petit biscuit bébé de Biocoop."
 grade: "C"
 score: 63
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Biocoop Petit biscuit bébé
-
-**Note BebeDecrypte : C (63/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (63/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Nombre d'ingrédients : 12
@@ -71,7 +69,7 @@ Biscuits adaptés à l'enfant à partir de 6 mois IngrédiÜlts : farine de bté
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

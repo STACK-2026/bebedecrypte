@@ -4,7 +4,7 @@ brand: "Aptamil"
 brandSlug: "aptamil"
 name: "Milupa Aptamil 1 Lait Pour Nourisssons 0-6mois"
 title: "Aptamil Milupa Aptamil 1 Lait Pour Nourisssons 0-6mois , note C"
-description: "Note BebeDecrypte C (69/100). Analyse NOVA, additifs, sucres et allergènes du Milupa Aptamil 1 Lait Pour Nourisssons 0-6mois de Aptamil."
+description: "Note BébéDécrypte C (69/100). Analyse NOVA, additifs, sucres et allergènes du Milupa Aptamil 1 Lait Pour Nourisssons 0-6mois de Aptamil."
 grade: "C"
 score: 69
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Aptamil Milupa Aptamil 1 Lait Pour Nourisssons 0-6mois
-
-**Note BebeDecrypte : C (69/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (69/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Nombre d'ingrédients : 0
@@ -67,7 +65,7 @@ draft: false
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

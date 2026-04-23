@@ -4,7 +4,7 @@ brand: "Bledina"
 brandSlug: "bledina"
 name: "Mini lactés framboise peche"
 title: "Bledina Mini lactés framboise peche , note D"
-description: "Note BebeDecrypte D (52/100). Analyse NOVA, additifs, sucres et allergènes du Mini lactés framboise peche de Bledina."
+description: "Note BébéDécrypte D (52/100). Analyse NOVA, additifs, sucres et allergènes du Mini lactés framboise peche de Bledina."
 grade: "D"
 score: 52
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Bledina Mini lactés framboise peche
-
-**Note BebeDecrypte : D (52/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (52/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -71,7 +69,7 @@ FRAMBOISE: LAIT écrémé et petit-lait fermentés réhydratés 68,0% (LNT) • 
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

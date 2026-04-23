@@ -135,7 +135,7 @@
   animation: glowPulse 3s ease-in-out infinite;
 }
 
-/* --- Heartbeat pulse (BebeDecrypte signature , battement nourrisson ~100bpm) --- */
+/* --- Heartbeat pulse (BébéDécrypte signature , battement nourrisson ~100bpm) --- */
 @keyframes heartbeat {
   0%, 100% { transform: scale(1); }
   8%  { transform: scale(1.12); }
@@ -165,7 +165,7 @@
   box-shadow: 0 20px 40px -16px rgb(8 145 178 / 0.25);
 }
 
-/* --- Bottle level lines (BebeDecrypte signature , biberon qui se decode) --- */
+/* --- Bottle level lines (BébéDécrypte signature , biberon qui se decode) --- */
 @keyframes bottleLevel {
   0%, 100% { opacity: 0.35; transform: scaleX(0.85); }
   50%      { opacity: 1;    transform: scaleX(1); }

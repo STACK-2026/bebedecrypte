@@ -4,7 +4,7 @@ brand: "U"
 brandSlug: "u"
 name: "Bols pomme de terre tomate boeuf"
 title: "U Bols pomme de terre tomate boeuf , note C"
-description: "Note BebeDecrypte C (62/100). Analyse NOVA, additifs, sucres et allergènes du Bols pomme de terre tomate boeuf de U."
+description: "Note BébéDécrypte C (62/100). Analyse NOVA, additifs, sucres et allergènes du Bols pomme de terre tomate boeuf de U."
 grade: "C"
 score: 62
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# U Bols pomme de terre tomate boeuf
-
-**Note BebeDecrypte : C (62/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (62/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -72,7 +70,7 @@ Pommes de terre 31%, carottes, tomates à base de concentré 18%, eau, v, iande 
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

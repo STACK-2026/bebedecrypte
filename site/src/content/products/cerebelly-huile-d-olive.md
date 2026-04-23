@@ -4,7 +4,7 @@ brand: "Cerebelly"
 brandSlug: "cerebelly"
 name: "Huile d olive"
 title: "Cerebelly Huile d olive , note A"
-description: "Note BebeDecrypte A (86/100). Analyse NOVA, additifs, sucres et allergènes du Huile d olive de Cerebelly."
+description: "Note BébéDécrypte A (86/100). Analyse NOVA, additifs, sucres et allergènes du Huile d olive de Cerebelly."
 grade: "A"
 score: 86
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Cerebelly Huile d olive
-
-**Note BebeDecrypte : A (86/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
+**Note BébéDécrypte : A (86/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -68,7 +66,7 @@ Organic Spinach, Organic Sweet Potatoes, Organic Apples, Organic Pears, Organic 
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

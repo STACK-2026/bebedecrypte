@@ -4,7 +4,7 @@ brand: "Laboratoires guigoz"
 brandSlug: "laboratoires-guigoz"
 name: "GUIGOZ EXPERT 2EME AGE AR"
 title: "Laboratoires guigoz GUIGOZ EXPERT 2EME AGE AR , note D"
-description: "Note BebeDecrypte D (53/100). Analyse NOVA, additifs, sucres et allergènes du GUIGOZ EXPERT 2EME AGE AR de Laboratoires guigoz."
+description: "Note BébéDécrypte D (53/100). Analyse NOVA, additifs, sucres et allergènes du GUIGOZ EXPERT 2EME AGE AR de Laboratoires guigoz."
 grade: "D"
 score: 53
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Laboratoires guigoz GUIGOZ EXPERT 2EME AGE AR
-
-**Note BebeDecrypte : D (53/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (53/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ Protéines solubles de lait partiellement hydrolysées, amidon, huiles végétal
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

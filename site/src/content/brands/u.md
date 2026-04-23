@@ -2,7 +2,7 @@
 slug: "u"
 brand: "U"
 title: "Marque U , note moyenne B"
-description: "Analyse BebeDecrypte de la marque U : 97 produits notés, moyenne 72/100, grade B."
+description: "Analyse BébéDécrypte de la marque U : 97 produits notés, moyenne 72/100, grade B."
 averageGrade: "B"
 averageScore: 72
 productCount: 97
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# U
-
-**Note moyenne BebeDecrypte : B (72/100)** sur 97 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (72/100)** sur 97 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -126,5 +124,5 @@ draft: false
 - [Lait et céréales goût vanille](/fr/produits/u-lait-et-cereales-gout-vanille/) , note D (45/100)
 - [Lait et céréales goût cacao](/fr/produits/u-lait-et-cereales-gout-cacao/) , note D (44/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

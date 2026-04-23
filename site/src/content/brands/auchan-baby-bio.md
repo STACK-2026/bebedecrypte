@@ -2,7 +2,7 @@
 slug: "auchan-baby-bio"
 brand: "Auchan Baby Bio"
 title: "Marque Auchan Baby Bio , note moyenne B"
-description: "Analyse BebeDecrypte de la marque Auchan Baby Bio : 8 produits notés, moyenne 73/100, grade B."
+description: "Analyse BébéDécrypte de la marque Auchan Baby Bio : 8 produits notés, moyenne 73/100, grade B."
 averageGrade: "B"
 averageScore: 73
 productCount: 8
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Auchan Baby Bio
-
-**Note moyenne BebeDecrypte : B (73/100)** sur 8 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (73/100)** sur 8 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -37,5 +35,5 @@ draft: false
 - [Biscuits Fondants](/fr/produits/auchan-baby-bio-biscuits-fondants/) , note D (53/100)
 - [Biscuits oursons](/fr/produits/auchan-baby-bio-biscuits-oursons/) , note D (51/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

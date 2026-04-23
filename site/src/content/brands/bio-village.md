@@ -2,7 +2,7 @@
 slug: "bio-village"
 brand: "Bio Village"
 title: "Marque Bio Village , note moyenne B"
-description: "Analyse BebeDecrypte de la marque Bio Village : 4 produits notés, moyenne 77/100, grade B."
+description: "Analyse BébéDécrypte de la marque Bio Village : 4 produits notés, moyenne 77/100, grade B."
 averageGrade: "B"
 averageScore: 77
 productCount: 4
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Bio Village
-
-**Note moyenne BebeDecrypte : B (77/100)** sur 4 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (77/100)** sur 4 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -33,5 +31,5 @@ draft: false
 - [Légumes verts riz saumon](/fr/produits/bio-village-legumes-verts-riz-saumon/) , note B (78/100)
 - [Brassé nature sucré](/fr/produits/bio-village-brasse-nature-sucre/) , note C (59/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

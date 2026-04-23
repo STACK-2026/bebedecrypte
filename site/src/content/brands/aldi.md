@@ -2,7 +2,7 @@
 slug: "aldi"
 brand: "Aldi"
 title: "Marque Aldi , note moyenne B"
-description: "Analyse BebeDecrypte de la marque Aldi : 1 produits notés, moyenne 78/100, grade B."
+description: "Analyse BébéDécrypte de la marque Aldi : 1 produits notés, moyenne 78/100, grade B."
 averageGrade: "B"
 averageScore: 78
 productCount: 1
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Aldi
-
-**Note moyenne BebeDecrypte : B (78/100)** sur 1 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (78/100)** sur 1 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -30,5 +28,5 @@ draft: false
 
 - [Bio Knusper Snack Karotte](/fr/produits/aldi-bio-knusper-snack-karotte/) , note B (78/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

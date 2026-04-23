@@ -4,7 +4,7 @@ brand: "Kiddylicious"
 brandSlug: "kiddylicious"
 name: "KIDDYLICIOUS Fruity Bakes - Pomme - 132g (6x1p)"
 title: "Kiddylicious KIDDYLICIOUS Fruity Bakes - Pomme - 132g (6x1p) , note C"
-description: "Note BebeDecrypte C (69/100). Analyse NOVA, additifs, sucres et allergènes du KIDDYLICIOUS Fruity Bakes - Pomme - 132g (6x1p) de Kiddylicious."
+description: "Note BébéDécrypte C (69/100). Analyse NOVA, additifs, sucres et allergènes du KIDDYLICIOUS Fruity Bakes - Pomme - 132g (6x1p) de Kiddylicious."
 grade: "C"
 score: 69
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Kiddylicious KIDDYLICIOUS Fruity Bakes - Pomme - 132g (6x1p)
-
-**Note BebeDecrypte : C (69/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (69/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Classification NOVA : 3 sur 4
@@ -72,7 +70,7 @@ Farine de BLÉ complet 39%, fourrage aux pommes 35% (purée de pommes 67%, conce
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

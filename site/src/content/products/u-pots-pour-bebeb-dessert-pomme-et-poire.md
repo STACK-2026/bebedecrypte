@@ -4,7 +4,7 @@ brand: "U"
 brandSlug: "u"
 name: "Pots pour bébéb dessert pomme et poire"
 title: "U Pots pour bébéb dessert pomme et poire , note C"
-description: "Note BebeDecrypte C (61/100). Analyse NOVA, additifs, sucres et allergènes du Pots pour bébéb dessert pomme et poire de U."
+description: "Note BébéDécrypte C (61/100). Analyse NOVA, additifs, sucres et allergènes du Pots pour bébéb dessert pomme et poire de U."
 grade: "C"
 score: 61
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# U Pots pour bébéb dessert pomme et poire
-
-**Note BebeDecrypte : C (61/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (61/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ purée de pommes 72,9%, purée de poires 27%, antioxydant : acide ascorb, ique. 
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

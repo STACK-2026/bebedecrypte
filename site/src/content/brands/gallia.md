@@ -2,7 +2,7 @@
 slug: "gallia"
 brand: "Gallia"
 title: "Marque Gallia , note moyenne D"
-description: "Analyse BebeDecrypte de la marque Gallia : 13 produits notés, moyenne 52/100, grade D."
+description: "Analyse BébéDécrypte de la marque Gallia : 13 produits notés, moyenne 52/100, grade D."
 averageGrade: "D"
 averageScore: 52
 productCount: 13
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Gallia
-
-**Note moyenne BebeDecrypte : D (52/100)** sur 13 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : D (52/100)** sur 13 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -42,5 +40,5 @@ draft: false
 - [Gallia Calisma Lait En Poudre - Croissance 700G](/fr/produits/gallia-gallia-calisma-lait-en-poudre-croissance-700g/) , note D (42/100)
 - [Gallia Calisma junior 4 - Dés 18 mois](/fr/produits/gallia-gallia-calisma-junior-4-des-18-mois/) , note D (42/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

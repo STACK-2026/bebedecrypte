@@ -2,7 +2,7 @@
 slug: "aptamil"
 brand: "Aptamil"
 title: "Marque Aptamil , note moyenne C"
-description: "Analyse BebeDecrypte de la marque Aptamil : 6 produits notés, moyenne 62/100, grade C."
+description: "Analyse BébéDécrypte de la marque Aptamil : 6 produits notés, moyenne 62/100, grade C."
 averageGrade: "C"
 averageScore: 62
 productCount: 6
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Aptamil
-
-**Note moyenne BebeDecrypte : C (62/100)** sur 6 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : C (62/100)** sur 6 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -35,5 +33,5 @@ draft: false
 - [Aptamil junior](/fr/produits/aptamil-aptamil-junior/) , note D (48/100)
 - [Ready to drink 3](/fr/produits/aptamil-ready-to-drink-3/) , note D (47/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

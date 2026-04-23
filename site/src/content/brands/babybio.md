@@ -2,7 +2,7 @@
 slug: "babybio"
 brand: "Babybio"
 title: "Marque Babybio , note moyenne B"
-description: "Analyse BebeDecrypte de la marque Babybio : 30 produits notés, moyenne 78/100, grade B."
+description: "Analyse BébéDécrypte de la marque Babybio : 30 produits notés, moyenne 78/100, grade B."
 averageGrade: "B"
 averageScore: 78
 productCount: 30
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Babybio
-
-**Note moyenne BebeDecrypte : B (78/100)** sur 30 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (78/100)** sur 30 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -59,5 +57,5 @@ draft: false
 - [Lait de suite en poudre, dès 6 mois - Primea](/fr/produits/babybio-lait-de-suite-en-poudre-des-6-mois-primea/) , note D (53/100)
 - [optima Lait](/fr/produits/babybio-optima-lait/) , note D (46/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

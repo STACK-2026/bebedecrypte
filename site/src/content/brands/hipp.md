@@ -2,7 +2,7 @@
 slug: "hipp"
 brand: "Hipp"
 title: "Marque Hipp , note moyenne B"
-description: "Analyse BebeDecrypte de la marque Hipp : 52 produits notés, moyenne 75/100, grade B."
+description: "Analyse BébéDécrypte de la marque Hipp : 52 produits notés, moyenne 75/100, grade B."
 averageGrade: "B"
 averageScore: 75
 productCount: 52
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Hipp
-
-**Note moyenne BebeDecrypte : B (75/100)** sur 52 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (75/100)** sur 52 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -81,5 +79,5 @@ draft: false
 - [Mon Premier Biscuit](/fr/produits/hipp-mon-premier-biscuit-2/) , note C (59/100)
 - [Mon premier biscuit](/fr/produits/hipp-mon-premier-biscuit/) , note D (50/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

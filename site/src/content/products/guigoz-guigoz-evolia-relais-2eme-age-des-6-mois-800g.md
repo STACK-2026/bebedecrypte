@@ -4,7 +4,7 @@ brand: "Guigoz"
 brandSlug: "guigoz"
 name: "GUIGOZ Evolia Relais 2ème âge dès 6 mois 800g"
 title: "Guigoz GUIGOZ Evolia Relais 2ème âge dès 6 mois 800g , note D"
-description: "Note BebeDecrypte D (53/100). Analyse NOVA, additifs, sucres et allergènes du GUIGOZ Evolia Relais 2ème âge dès 6 mois 800g de Guigoz."
+description: "Note BébéDécrypte D (53/100). Analyse NOVA, additifs, sucres et allergènes du GUIGOZ Evolia Relais 2ème âge dès 6 mois 800g de Guigoz."
 grade: "D"
 score: 53
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Guigoz GUIGOZ Evolia Relais 2ème âge dès 6 mois 800g
-
-**Note BebeDecrypte : D (53/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (53/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ LAIT écrémé, LACTOSE, huiles végétales (tournesol riche en acide oléique, 
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

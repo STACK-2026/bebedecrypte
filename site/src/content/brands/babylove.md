@@ -2,7 +2,7 @@
 slug: "babylove"
 brand: "Babylove"
 title: "Marque Babylove , note moyenne B"
-description: "Analyse BebeDecrypte de la marque Babylove : 1 produits notés, moyenne 74/100, grade B."
+description: "Analyse BébéDécrypte de la marque Babylove : 1 produits notés, moyenne 74/100, grade B."
 averageGrade: "B"
 averageScore: 74
 productCount: 1
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Babylove
-
-**Note moyenne BebeDecrypte : B (74/100)** sur 1 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (74/100)** sur 1 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -30,5 +28,5 @@ draft: false
 
 - [Petit pot 5 mois](/fr/produits/babylove-petit-pot-5-mois/) , note B (74/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

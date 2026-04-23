@@ -4,7 +4,7 @@ brand: "Bebe Mandorle"
 brandSlug: "bebe-mandorle"
 name: "Prep Pour Nourrissons 1 Age 0 a 6 Mois"
 title: "Bebe Mandorle Prep Pour Nourrissons 1 Age 0 a 6 Mois , note C"
-description: "Note BebeDecrypte C (64/100). Analyse NOVA, additifs, sucres et allergènes du Prep Pour Nourrissons 1 Age 0 a 6 Mois de Bebe Mandorle."
+description: "Note BébéDécrypte C (64/100). Analyse NOVA, additifs, sucres et allergènes du Prep Pour Nourrissons 1 Age 0 a 6 Mois de Bebe Mandorle."
 grade: "C"
 score: 64
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Bebe Mandorle Prep Pour Nourrissons 1 Age 0 a 6 Mois
-
-**Note BebeDecrypte : C (64/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (64/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -71,7 +69,7 @@ colza*), amande*, végétales (coco*, protéines de riz* hydrolysées 15%, amido
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

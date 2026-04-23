@@ -4,7 +4,7 @@ brand: "Bambix"
 brandSlug: "bambix"
 name: "Boisson croissance soja"
 title: "Bambix Boisson croissance soja , note E"
-description: "Note BebeDecrypte E (30/100). Analyse NOVA, additifs, sucres et allergènes du Boisson croissance soja de Bambix."
+description: "Note BébéDécrypte E (30/100). Analyse NOVA, additifs, sucres et allergènes du Boisson croissance soja de Bambix."
 grade: "E"
 score: 30
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Bambix Boisson croissance soja
-
-**Note BebeDecrypte : E (30/100).** Ce produit est classé E, à éviter. Composition trop problématique pour un enfant en bas âge.
+**Note BébéDécrypte : E (30/100).** Ce produit est classé E, à éviter. Composition trop problématique pour un enfant en bas âge.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -74,7 +72,7 @@ Eau, maltodextrine, huile végétale (huile de colza), dextrose, 2% protéine de
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

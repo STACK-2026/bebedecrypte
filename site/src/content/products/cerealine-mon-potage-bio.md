@@ -4,7 +4,7 @@ brand: "Cerealine"
 brandSlug: "cerealine"
 name: "Mon potage bio"
 title: "Cerealine Mon potage bio , note B"
-description: "Note BebeDecrypte B (80/100). Analyse NOVA, additifs, sucres et allergènes du Mon potage bio de Cerealine."
+description: "Note BébéDécrypte B (80/100). Analyse NOVA, additifs, sucres et allergènes du Mon potage bio de Cerealine."
 grade: "B"
 score: 80
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Cerealine Mon potage bio
-
-**Note BebeDecrypte : B (80/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (80/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -67,7 +65,7 @@ VELOUTÉ DE LÉGVMES, Ingrédlents : Légumes 55% (légumes verts 29% (petits po
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

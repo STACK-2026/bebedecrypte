@@ -4,7 +4,7 @@ brand: "Bio Village"
 brandSlug: "bio-village"
 name: "Bol petit pois bio 4 mois"
 title: "Bio Village Bol petit pois bio 4 mois , note A"
-description: "Note BebeDecrypte A (93/100). Analyse NOVA, additifs, sucres et allergènes du Bol petit pois bio 4 mois de Bio Village."
+description: "Note BébéDécrypte A (93/100). Analyse NOVA, additifs, sucres et allergènes du Bol petit pois bio 4 mois de Bio Village."
 grade: "A"
 score: 93
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Bio Village Bol petit pois bio 4 mois
-
-**Note BebeDecrypte : A (93/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
+**Note BébéDécrypte : A (93/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -69,7 +67,7 @@ Petit pois* 50 %, eau, pomme de terre*.
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

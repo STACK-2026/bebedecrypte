@@ -2,7 +2,7 @@
 slug: "nestle"
 brand: "Nestlé"
 title: "Marque Nestlé , note moyenne C"
-description: "Analyse BebeDecrypte de la marque Nestlé : 76 produits notés, moyenne 58/100, grade C."
+description: "Analyse BébéDécrypte de la marque Nestlé : 76 produits notés, moyenne 58/100, grade C."
 averageGrade: "C"
 averageScore: 58
 productCount: 76
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Nestlé
-
-**Note moyenne BebeDecrypte : C (58/100)** sur 76 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : C (58/100)** sur 76 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -105,5 +103,5 @@ draft: false
 - [CERELAC MIXED FRUIT &WHEAT 400G](/fr/produits/nestle-cerelac-mixed-fruit-wheat-400g/) , note D (41/100)
 - [Biscuits](/fr/produits/nestle-biscuits/) , note D (40/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

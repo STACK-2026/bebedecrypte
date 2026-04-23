@@ -4,7 +4,7 @@ brand: "Hero baby"
 brandSlug: "hero-baby"
 name: "Baby biscuit"
 title: "Hero baby Baby biscuit , note D"
-description: "Note BebeDecrypte D (41/100). Analyse NOVA, additifs, sucres et allergènes du Baby biscuit de Hero baby."
+description: "Note BébéDécrypte D (41/100). Analyse NOVA, additifs, sucres et allergènes du Baby biscuit de Hero baby."
 grade: "D"
 score: 41
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Hero baby Baby biscuit
-
-**Note BebeDecrypte : D (41/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (41/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Classification NOVA : 4 sur 4
@@ -74,7 +72,7 @@ Farine de blé (63%), sucre, huile de palme, lait écrémé en poudre (3%), malt
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

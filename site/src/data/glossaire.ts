@@ -1,5 +1,5 @@
 /**
- * Glossaire BebeDecrypte : vocabulaire nutrition bebe vulgarise pour parents.
+ * Glossaire BébéDécrypte : vocabulaire nutrition bebe vulgarise pour parents.
  * Chaque entree : definition FR + traduction EN + exemple concret + maillage interne
  * + source autorite verifiee (ANSES, EFSA, OMS, ESPGHAN, RappelConso...).
  *
@@ -122,7 +122,7 @@ export const glossaire: Record<string, GlossaireEntry> = {
   },
   "sirop de glucose": {
     definition: "Sucre liquide industriel obtenu a partir d'amidon (mais, ble). Moins sucrant que le saccharose mais avec un index glycemique eleve. Frequent dans biscuits bebe, cereales infantiles et compotes industrielles. A eviter avant 3 ans selon l'ANSES. EN: Glucose syrup is a liquid industrial sugar from starch. Less sweet than sucrose but with a high glycemic index. Common in baby biscuits, infant cereals, and industrial compotes. ANSES advises avoiding added sugars before age 3.",
-    example: "Un biscuit bebe qui liste 'sirop de glucose' ou 'sirop de glucose-fructose' dans les 3 premiers ingredients : verdict E chez BebeDecrypte.",
+    example: "Un biscuit bebe qui liste 'sirop de glucose' ou 'sirop de glucose-fructose' dans les 3 premiers ingredients : verdict E chez BébéDécrypte.",
     internalLink: { href: "/encyclopedia/sucres-caches", label: "Les sucres caches" },
     externalSource: { url: "https://www.anses.fr/fr/content/le-sucre-une-place-limitee-dans-lalimentation", label: "ANSES sucres" },
     category: "additifs",

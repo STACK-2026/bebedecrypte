@@ -4,7 +4,7 @@ brand: "Auchan Baby"
 brandSlug: "auchan-baby"
 name: "Brassé Végétal Riz Banane Pomme Framboise"
 title: "Auchan Baby Brassé Végétal Riz Banane Pomme Framboise , note A"
-description: "Note BebeDecrypte A (91/100). Analyse NOVA, additifs, sucres et allergènes du Brassé Végétal Riz Banane Pomme Framboise de Auchan Baby."
+description: "Note BébéDécrypte A (91/100). Analyse NOVA, additifs, sucres et allergènes du Brassé Végétal Riz Banane Pomme Framboise de Auchan Baby."
 grade: "A"
 score: 91
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Auchan Baby Brassé Végétal Riz Banane Pomme Framboise
-
-**Note BebeDecrypte : A (91/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
+**Note BébéDécrypte : A (91/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -61,7 +59,7 @@ Boisson à base de riz* (eau, farine de riz* 3.5%) 38,4%, purée de banane* 25%,
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Boissons bébé](/fr/categories/boissons/).
 

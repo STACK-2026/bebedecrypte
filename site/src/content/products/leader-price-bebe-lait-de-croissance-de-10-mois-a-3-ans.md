@@ -4,7 +4,7 @@ brand: "Leader Price Bebe"
 brandSlug: "leader-price-bebe"
 name: "Lait de croissance de 10 mois à 3 ans"
 title: "Leader Price Bebe Lait de croissance de 10 mois à 3 ans , note E"
-description: "Note BebeDecrypte E (39/100). Analyse NOVA, additifs, sucres et allergènes du Lait de croissance de 10 mois à 3 ans de Leader Price Bebe."
+description: "Note BébéDécrypte E (39/100). Analyse NOVA, additifs, sucres et allergènes du Lait de croissance de 10 mois à 3 ans de Leader Price Bebe."
 grade: "E"
 score: 39
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Leader Price Bebe Lait de croissance de 10 mois à 3 ans
-
-**Note BebeDecrypte : E (39/100).** Ce produit est classé E, à éviter. Composition trop problématique pour un enfant en bas âge.
+**Note BébéDécrypte : E (39/100).** Ce produit est classé E, à éviter. Composition trop problématique pour un enfant en bas âge.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ Lait partiellement écrémé - eau • lactose - huiles de colza et ae tournesol
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

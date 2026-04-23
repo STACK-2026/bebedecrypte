@@ -4,7 +4,7 @@ brand: "Bledina"
 brandSlug: "bledina"
 name: "Ratatouille riz poisson"
 title: "Bledina Ratatouille riz poisson , note B"
-description: "Note BebeDecrypte B (72/100). Analyse NOVA, additifs, sucres et allergènes du Ratatouille riz poisson de Bledina."
+description: "Note BébéDécrypte B (72/100). Analyse NOVA, additifs, sucres et allergènes du Ratatouille riz poisson de Bledina."
 grade: "B"
 score: 72
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Bledina Ratatouille riz poisson
-
-**Note BebeDecrypte : B (72/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (72/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -68,7 +66,7 @@ Légumes (purée de tomates à base de concentré, carottes, panais, courgettes,
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

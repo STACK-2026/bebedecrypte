@@ -4,7 +4,7 @@ brand: "Glóbusz"
 brandSlug: "globusz"
 name: "Glóbusz sertés májkrém"
 title: "Glóbusz Glóbusz sertés májkrém , note C"
-description: "Note BebeDecrypte C (62/100). Analyse NOVA, additifs, sucres et allergènes du Glóbusz sertés májkrém de Glóbusz."
+description: "Note BébéDécrypte C (62/100). Analyse NOVA, additifs, sucres et allergènes du Glóbusz sertés májkrém de Glóbusz."
 grade: "C"
 score: 62
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Glóbusz Glóbusz sertés májkrém
-
-**Note BebeDecrypte : C (62/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (62/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Nombre d'ingrédients : 18
@@ -72,7 +70,7 @@ ivóviz, sertésmáj (26%), sertésbórke, sertésszalonna, búzakeményitő, v�
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

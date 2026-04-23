@@ -4,7 +4,7 @@ brand: "Gallia"
 brandSlug: "gallia"
 name: "Gallia Bebe Expert Ha 2ème âge"
 title: "Gallia Gallia Bebe Expert Ha 2ème âge , note C"
-description: "Note BebeDecrypte C (56/100). Analyse NOVA, additifs, sucres et allergènes du Gallia Bebe Expert Ha 2ème âge de Gallia."
+description: "Note BébéDécrypte C (56/100). Analyse NOVA, additifs, sucres et allergènes du Gallia Bebe Expert Ha 2ème âge de Gallia."
 grade: "C"
 score: 56
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Gallia Gallia Bebe Expert Ha 2ème âge
-
-**Note BebeDecrypte : C (56/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (56/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -71,7 +69,7 @@ Protéines de lactosérum hydrolysées (LAIT) - lactose (LAIT) - matières grass
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

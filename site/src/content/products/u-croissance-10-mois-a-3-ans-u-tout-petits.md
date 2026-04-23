@@ -4,7 +4,7 @@ brand: "U"
 brandSlug: "u"
 name: "Croissance 10 mois à 3 ans u_tout_petits"
 title: "U Croissance 10 mois à 3 ans u_tout_petits , note D"
-description: "Note BebeDecrypte D (48/100). Analyse NOVA, additifs, sucres et allergènes du Croissance 10 mois à 3 ans u_tout_petits de U."
+description: "Note BébéDécrypte D (48/100). Analyse NOVA, additifs, sucres et allergènes du Croissance 10 mois à 3 ans u_tout_petits de U."
 grade: "D"
 score: 48
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# U Croissance 10 mois à 3 ans u_tout_petits
-
-**Note BebeDecrypte : D (48/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (48/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ Lait partiellement écrémé (france), eau, lactose, maltodextrines, huil, es v�
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

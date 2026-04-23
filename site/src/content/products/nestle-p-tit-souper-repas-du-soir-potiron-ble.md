@@ -4,7 +4,7 @@ brand: "Nestlé"
 brandSlug: "nestle"
 name: "P'tit Souper repas du soir potiron, blé"
 title: "Nestlé P'tit Souper repas du soir potiron, blé , note C"
-description: "Note BebeDecrypte C (63/100). Analyse NOVA, additifs, sucres et allergènes du P'tit Souper repas du soir potiron, blé de Nestlé."
+description: "Note BébéDécrypte C (63/100). Analyse NOVA, additifs, sucres et allergènes du P'tit Souper repas du soir potiron, blé de Nestlé."
 grade: "C"
 score: 63
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Nestlé P'tit Souper repas du soir potiron, blé
-
-**Note BebeDecrypte : C (63/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (63/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -72,7 +70,7 @@ _lait_ de suite 83.7% : eau, _lait_ écrémé, amidon, huiles végétales (oléi
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

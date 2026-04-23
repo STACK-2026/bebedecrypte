@@ -2,7 +2,7 @@
 slug: "auchan"
 brand: "Auchan"
 title: "Marque Auchan , note moyenne B"
-description: "Analyse BebeDecrypte de la marque Auchan : 6 produits notés, moyenne 71/100, grade B."
+description: "Analyse BébéDécrypte de la marque Auchan : 6 produits notés, moyenne 71/100, grade B."
 averageGrade: "B"
 averageScore: 71
 productCount: 6
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Auchan
-
-**Note moyenne BebeDecrypte : B (71/100)** sur 6 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (71/100)** sur 6 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -35,5 +33,5 @@ draft: false
 - [Crème dessert Cacao](/fr/produits/auchan-creme-dessert-cacao/) , note C (58/100)
 - [Lait et céréales saveur Vanille](/fr/produits/auchan-lait-et-cereales-saveur-vanille/) , note D (52/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

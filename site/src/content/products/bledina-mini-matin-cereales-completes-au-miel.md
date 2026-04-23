@@ -4,7 +4,7 @@ brand: "Blédina"
 brandSlug: "bledina"
 name: "Mini Matin Céréales complètes au miel"
 title: "Blédina Mini Matin Céréales complètes au miel , note C"
-description: "Note BebeDecrypte C (64/100). Analyse NOVA, additifs, sucres et allergènes du Mini Matin Céréales complètes au miel de Blédina."
+description: "Note BébéDécrypte C (64/100). Analyse NOVA, additifs, sucres et allergènes du Mini Matin Céréales complètes au miel de Blédina."
 grade: "C"
 score: 64
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Blédina Mini Matin Céréales complètes au miel
-
-**Note BebeDecrypte : C (64/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (64/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -71,7 +69,7 @@ Farines 95% (maïs, blé complet 31%, millet complet) - miel 5% - Vitamine b1.
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

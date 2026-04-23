@@ -4,7 +4,7 @@ brand: "Bledina"
 brandSlug: "bledina"
 name: "Crousti à dévorer"
 title: "Bledina Crousti à dévorer , note B"
-description: "Note BebeDecrypte B (74/100). Analyse NOVA, additifs, sucres et allergènes du Crousti à dévorer de Bledina."
+description: "Note BébéDécrypte B (74/100). Analyse NOVA, additifs, sucres et allergènes du Crousti à dévorer de Bledina."
 grade: "B"
 score: 74
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Bledina Crousti à dévorer
-
-**Note BebeDecrypte : B (74/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (74/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Nombre d'ingrédients : 0
@@ -61,7 +59,7 @@ draft: false
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

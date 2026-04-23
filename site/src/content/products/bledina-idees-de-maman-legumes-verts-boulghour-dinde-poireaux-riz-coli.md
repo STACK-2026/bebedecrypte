@@ -4,7 +4,7 @@ brand: "BLEDINA"
 brandSlug: "bledina"
 name: "IDEES DE MAMAN Légumes verts Boulghour Dinde / Poireaux Riz Colin (lieu) / Purée de Choux-fleurs Dès 12 mois"
 title: "BLEDINA IDEES DE MAMAN Légumes verts Boulghour Dinde / Poireaux Riz Colin (lieu) / Purée de Choux-fleurs Dès 12 mois , note B"
-description: "Note BebeDecrypte B (70/100). Analyse NOVA, additifs, sucres et allergènes du IDEES DE MAMAN Légumes verts Boulghour Dinde / Poireaux Riz Colin (lieu) / Pu"
+description: "Note BébéDécrypte B (70/100). Analyse NOVA, additifs, sucres et allergènes du IDEES DE MAMAN Légumes verts Boulghour Dinde / Poireaux Riz Colin (lieu) / Pu"
 grade: "B"
 score: 70
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# BLEDINA IDEES DE MAMAN Légumes verts Boulghour Dinde / Poireaux Riz Colin (lieu) / Purée de Choux-fleurs Dès 12 mois
-
-**Note BebeDecrypte : B (70/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (70/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -70,7 +68,7 @@ Idées de Maman Purée de Choux-fleurs : Choux-fleurs 36,0 % - Eau de cuisson - 
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

@@ -4,7 +4,7 @@ brand: "Casino"
 brandSlug: "casino"
 name: "Légumes Cabillaud Riz avec morceaux"
 title: "Casino Légumes Cabillaud Riz avec morceaux , note B"
-description: "Note BebeDecrypte B (73/100). Analyse NOVA, additifs, sucres et allergènes du Légumes Cabillaud Riz avec morceaux de Casino."
+description: "Note BébéDécrypte B (73/100). Analyse NOVA, additifs, sucres et allergènes du Légumes Cabillaud Riz avec morceaux de Casino."
 grade: "B"
 score: 73
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Casino Légumes Cabillaud Riz avec morceaux
-
-**Note BebeDecrypte : B (73/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (73/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -68,7 +66,7 @@ Légumes 49 % (carottes 38,8 %, pommes de terre, courgettes 12,2 %, oignons, pet
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

@@ -4,7 +4,7 @@ brand: "Holle"
 brandSlug: "holle"
 name: "Lait Infantile 1 Age"
 title: "Holle Lait Infantile 1 Age , note C"
-description: "Note BebeDecrypte C (65/100). Analyse NOVA, additifs, sucres et allergènes du Lait Infantile 1 Age de Holle."
+description: "Note BébéDécrypte C (65/100). Analyse NOVA, additifs, sucres et allergènes du Lait Infantile 1 Age de Holle."
 grade: "C"
 score: 65
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Holle Lait Infantile 1 Age
-
-**Note BebeDecrypte : C (65/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (65/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -72,7 +70,7 @@ Lait pour nourrissons en poudre Ingrédients Lait écrémé (origine Allemagne),
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

@@ -4,7 +4,7 @@ brand: "Hipp"
 brandSlug: "hipp"
 name: "Apfel Banane in Babykeks"
 title: "Hipp Apfel Banane in Babykeks , note C"
-description: "Note BebeDecrypte C (66/100). Analyse NOVA, additifs, sucres et allergènes du Apfel Banane in Babykeks de Hipp."
+description: "Note BébéDécrypte C (66/100). Analyse NOVA, additifs, sucres et allergènes du Apfel Banane in Babykeks de Hipp."
 grade: "C"
 score: 66
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Hipp Apfel Banane in Babykeks
-
-**Note BebeDecrypte : C (66/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (66/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ Früchte 75 % (Äpfel 50 %, Bananen 25 %), Wasser, Kekse 6 % (Weizenmehl, Molken
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

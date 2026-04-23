@@ -207,7 +207,7 @@ def product_markdown(p: dict, alternatives: list[dict]) -> str:
         f'brandSlug: "{clean_yaml_string(p.get("brand_slug", ""))}"',
         f'name: "{clean_yaml_string(name)}"',
         f'title: "{clean_yaml_string(f"{brand} {name} , note {grade}")}"',
-        f'description: "{clean_yaml_string(f"Note BebeDecrypte {grade} ({score}/100). Analyse NOVA, additifs, sucres et allergènes du {name} de {brand}.")[:155]}"',
+        f'description: "{clean_yaml_string(f"Note BébéDécrypte {grade} ({score}/100). Analyse NOVA, additifs, sucres et allergènes du {name} de {brand}.")[:155]}"',
         f'grade: "{grade}"',
         f"score: {int(score)}",
         f'nutriScore: "{clean_yaml_string(p.get("nutri_score") or "")}"',
@@ -237,12 +237,10 @@ def product_markdown(p: dict, alternatives: list[dict]) -> str:
         "---",
     ]
 
-    # Body
+    # Body (no H1 in markdown , the Astro page template provides the H1)
     body_lines: list[str] = []
-    body_lines.append(f"# {brand} {name}")
-    body_lines.append("")
     body_lines.append(
-        f"**Note BebeDecrypte : {grade} ({int(score)}/100).** "
+        f"**Note BébéDécrypte : {grade} ({int(score)}/100).** "
         f"Ce produit est classé {grade}, {grade_sentence(grade)}"
     )
     body_lines.append("")
@@ -299,7 +297,7 @@ def product_markdown(p: dict, alternatives: list[dict]) -> str:
     body_lines.append("## Méthodologie")
     body_lines.append("")
     body_lines.append(
-        "Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur "
+        "Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur "
         "8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, "
         "sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent "
         "d'Open Food Facts et sont relues par notre équipe éditoriale."
@@ -332,7 +330,7 @@ def brand_markdown(brand_slug: str, brand_name: str, products: list[dict]) -> st
         f'slug: "{clean_yaml_string(brand_slug)}"',
         f'brand: "{clean_yaml_string(brand_name)}"',
         f'title: "{clean_yaml_string(f"Marque {brand_name} , note moyenne {grade}")}"',
-        f'description: "{clean_yaml_string(f"Analyse BebeDecrypte de la marque {brand_name} : {len(products)} produits notés, moyenne {avg_score}/100, grade {grade}.")[:155]}"',
+        f'description: "{clean_yaml_string(f"Analyse BébéDécrypte de la marque {brand_name} : {len(products)} produits notés, moyenne {avg_score}/100, grade {grade}.")[:155]}"',
         f'averageGrade: "{grade}"',
         f"averageScore: {avg_score}",
         f"productCount: {len(products)}",
@@ -344,9 +342,7 @@ def brand_markdown(brand_slug: str, brand_name: str, products: list[dict]) -> st
     ]
 
     body = [
-        f"# {brand_name}",
-        "",
-        f"**Note moyenne BebeDecrypte : {grade} ({avg_score}/100)** sur {len(products)} produit(s) analysé(s).",
+        f"**Note moyenne BébéDécrypte : {grade} ({avg_score}/100)** sur {len(products)} produit(s) analysé(s).",
         "",
         "## Répartition des notes",
         "",
@@ -364,7 +360,7 @@ def brand_markdown(brand_slug: str, brand_name: str, products: list[dict]) -> st
         )
     body.append("")
     body.append(
-        "Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. "
+        "Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. "
         "Voir la [méthodologie](/fr/methodologie/)."
     )
     body.append("")

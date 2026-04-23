@@ -4,7 +4,7 @@ brand: "Bledina"
 brandSlug: "bledina"
 name: "Mes 1ers souffles Maïs & Carotte"
 title: "Bledina Mes 1ers souffles Maïs & Carotte , note B"
-description: "Note BebeDecrypte B (74/100). Analyse NOVA, additifs, sucres et allergènes du Mes 1ers souffles Maïs & Carotte de Bledina."
+description: "Note BébéDécrypte B (74/100). Analyse NOVA, additifs, sucres et allergènes du Mes 1ers souffles Maïs & Carotte de Bledina."
 grade: "B"
 score: 74
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Bledina Mes 1ers souffles Maïs & Carotte
-
-**Note BebeDecrypte : B (74/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (74/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Nombre d'ingrédients : 7
@@ -67,7 +65,7 @@ Farine de maïs 93,5 % Préparation à base de carottes 6,5 % (carotte en poudre
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

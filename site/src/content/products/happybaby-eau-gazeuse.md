@@ -4,7 +4,7 @@ brand: "HappyBABY"
 brandSlug: "happybaby"
 name: "Eau gazeuse"
 title: "HappyBABY Eau gazeuse , note A"
-description: "Note BebeDecrypte A (86/100). Analyse NOVA, additifs, sucres et allergènes du Eau gazeuse de HappyBABY."
+description: "Note BébéDécrypte A (86/100). Analyse NOVA, additifs, sucres et allergènes du Eau gazeuse de HappyBABY."
 grade: "A"
 score: 86
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# HappyBABY Eau gazeuse
-
-**Note BebeDecrypte : A (86/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
+**Note BébéDécrypte : A (86/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -67,7 +65,7 @@ ORGANIC APPLE PUREE, WATER, ORGANIC SWEET POTATO PUREE, MILLED ORGANIC WHOLE GRA
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

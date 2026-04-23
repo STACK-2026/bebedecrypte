@@ -4,7 +4,7 @@ brand: "Bledidej"
 brandSlug: "bledidej"
 name: "Bledidej Croissance Choco Saveur Banane , Dès 12 Mois,"
 title: "Bledidej Bledidej Croissance Choco Saveur Banane , Dès 12 Mois, , note D"
-description: "Note BebeDecrypte D (41/100). Analyse NOVA, additifs, sucres et allergènes du Bledidej Croissance Choco Saveur Banane , Dès 12 Mois, de Bledidej."
+description: "Note BébéDécrypte D (41/100). Analyse NOVA, additifs, sucres et allergènes du Bledidej Croissance Choco Saveur Banane , Dès 12 Mois, de Bledidej."
 grade: "D"
 score: 41
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Bledidej Bledidej Croissance Choco Saveur Banane , Dès 12 Mois,
-
-**Note BebeDecrypte : D (41/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (41/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ Lait écrémé 44,9 % (LAIT) - Eau - Maltodextrines - Farines [blé 2,8 % (GLUTE
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

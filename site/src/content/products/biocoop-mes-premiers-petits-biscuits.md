@@ -4,7 +4,7 @@ brand: "Biocoop"
 brandSlug: "biocoop"
 name: "Mes premiers petits biscuits"
 title: "Biocoop Mes premiers petits biscuits , note C"
-description: "Note BebeDecrypte C (62/100). Analyse NOVA, additifs, sucres et allergènes du Mes premiers petits biscuits de Biocoop."
+description: "Note BébéDécrypte C (62/100). Analyse NOVA, additifs, sucres et allergènes du Mes premiers petits biscuits de Biocoop."
 grade: "C"
 score: 62
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Biocoop Mes premiers petits biscuits
-
-**Note BebeDecrypte : C (62/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (62/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Classification NOVA : 3 sur 4
@@ -74,7 +72,7 @@ Ingrédients issus du commerce équitable
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

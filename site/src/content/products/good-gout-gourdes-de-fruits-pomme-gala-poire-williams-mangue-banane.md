@@ -4,7 +4,7 @@ brand: "Good Goût"
 brandSlug: "good-gout"
 name: "Gourdes de Fruits - Pomme Gala - Poire Williams - Mangue - Banane"
 title: "Good Goût Gourdes de Fruits - Pomme Gala - Poire Williams - Mangue - Banane , note A"
-description: "Note BebeDecrypte A (89/100). Analyse NOVA, additifs, sucres et allergènes du Gourdes de Fruits - Pomme Gala - Poire Williams - Mangue - Banane de Good Goû"
+description: "Note BébéDécrypte A (89/100). Analyse NOVA, additifs, sucres et allergènes du Gourdes de Fruits - Pomme Gala - Poire Williams - Mangue - Banane de Good Goû"
 grade: "A"
 score: 89
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Good Goût Gourdes de Fruits - Pomme Gala - Poire Williams - Mangue - Banane
-
-**Note BebeDecrypte : A (89/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
+**Note BébéDécrypte : A (89/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -75,7 +73,7 @@ Banane : 85 % banane bio, 14,9 % eau, jus de citron bio concentré.
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

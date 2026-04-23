@@ -2,7 +2,7 @@
 slug: "france-lait"
 brand: "France Lait"
 title: "Marque France Lait , note moyenne B"
-description: "Analyse BebeDecrypte de la marque France Lait : 1 produits notés, moyenne 72/100, grade B."
+description: "Analyse BébéDécrypte de la marque France Lait : 1 produits notés, moyenne 72/100, grade B."
 averageGrade: "B"
 averageScore: 72
 productCount: 1
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# France Lait
-
-**Note moyenne BebeDecrypte : B (72/100)** sur 1 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (72/100)** sur 1 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -30,5 +28,5 @@ draft: false
 
 - [France lait](/fr/produits/france-lait-france-lait/) , note B (72/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

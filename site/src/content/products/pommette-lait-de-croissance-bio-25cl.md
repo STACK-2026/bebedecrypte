@@ -4,7 +4,7 @@ brand: "Pommette"
 brandSlug: "pommette"
 name: "Lait de croissance BIO 25cl"
 title: "Pommette Lait de croissance BIO 25cl , note D"
-description: "Note BebeDecrypte D (54/100). Analyse NOVA, additifs, sucres et allergènes du Lait de croissance BIO 25cl de Pommette."
+description: "Note BébéDécrypte D (54/100). Analyse NOVA, additifs, sucres et allergènes du Lait de croissance BIO 25cl de Pommette."
 grade: "D"
 score: 54
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Pommette Lait de croissance BIO 25cl
-
-**Note BebeDecrypte : D (54/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (54/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ Eau, lait entier*, maltodextrine de maïs*, lactosérum déminéralisé*, huiles
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

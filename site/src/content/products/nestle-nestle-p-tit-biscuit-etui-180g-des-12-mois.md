@@ -4,7 +4,7 @@ brand: "Nestlé"
 brandSlug: "nestle"
 name: "NESTLE P'tit Biscuit- Etui 180g - Dès 12 mois"
 title: "Nestlé NESTLE P'tit Biscuit- Etui 180g - Dès 12 mois , note D"
-description: "Note BebeDecrypte D (44/100). Analyse NOVA, additifs, sucres et allergènes du NESTLE P'tit Biscuit- Etui 180g - Dès 12 mois de Nestlé."
+description: "Note BébéDécrypte D (44/100). Analyse NOVA, additifs, sucres et allergènes du NESTLE P'tit Biscuit- Etui 180g - Dès 12 mois de Nestlé."
 grade: "D"
 score: 44
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Nestlé NESTLE P'tit Biscuit- Etui 180g - Dès 12 mois
-
-**Note BebeDecrypte : D (44/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (44/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Classification NOVA : 4 sur 4
@@ -74,7 +72,7 @@ Farine de BLE 59,5%, sucre, huile de palme, LAIT écrémé en poudre, extrait de
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

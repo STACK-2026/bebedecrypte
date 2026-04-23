@@ -2,7 +2,7 @@
 slug: "plasmon"
 brand: "Plasmon"
 title: "Marque Plasmon , note moyenne B"
-description: "Analyse BebeDecrypte de la marque Plasmon : 25 produits notés, moyenne 73/100, grade B."
+description: "Analyse BébéDécrypte de la marque Plasmon : 25 produits notés, moyenne 73/100, grade B."
 averageGrade: "B"
 averageScore: 73
 productCount: 25
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Plasmon
-
-**Note moyenne BebeDecrypte : B (73/100)** sur 25 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (73/100)** sur 25 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -54,5 +52,5 @@ draft: false
 - [omogenizzati mela plasmon](/fr/produits/plasmon-omogenizzati-mela-plasmon/) , note B (70/100)
 - [Lait de croissance](/fr/produits/plasmon-lait-de-croissance/) , note C (69/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

@@ -4,7 +4,7 @@ brand: "Bebivita"
 brandSlug: "bebivita"
 name: "Légumes du jardin pâtes"
 title: "Bebivita Légumes du jardin pâtes , note A"
-description: "Note BebeDecrypte A (87/100). Analyse NOVA, additifs, sucres et allergènes du Légumes du jardin pâtes de Bebivita."
+description: "Note BébéDécrypte A (87/100). Analyse NOVA, additifs, sucres et allergènes du Légumes du jardin pâtes de Bebivita."
 grade: "A"
 score: 87
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Bebivita Légumes du jardin pâtes
-
-**Note BebeDecrypte : A (87/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
+**Note BébéDécrypte : A (87/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 2 sur 4
@@ -68,7 +66,7 @@ Carottes 40%, eau de cuisson, tomates 11%, nouilles moulues (blé dur) 6%, épin
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

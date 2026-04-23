@@ -2,7 +2,7 @@
 slug: "grandeur-nature"
 brand: "Grandeur Nature"
 title: "Marque Grandeur Nature , note moyenne A"
-description: "Analyse BebeDecrypte de la marque Grandeur Nature : 4 produits notés, moyenne 86/100, grade A."
+description: "Analyse BébéDécrypte de la marque Grandeur Nature : 4 produits notés, moyenne 86/100, grade A."
 averageGrade: "A"
 averageScore: 86
 productCount: 4
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Grandeur Nature
-
-**Note moyenne BebeDecrypte : A (86/100)** sur 4 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : A (86/100)** sur 4 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -33,5 +31,5 @@ draft: false
 - [Chou-fleur Pommes de terre Bœuf avec petits morceaux](/fr/produits/grandeur-nature-chou-fleur-pommes-de-terre-b-uf-avec-petits-morceaux/) , note B (80/100)
 - [Petit Pois Colin d'alaska](/fr/produits/grandeur-nature-petit-pois-colin-d-alaska/) , note B (80/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

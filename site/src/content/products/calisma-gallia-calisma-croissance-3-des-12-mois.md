@@ -4,7 +4,7 @@ brand: "Calisma"
 brandSlug: "calisma"
 name: "Gallia Calisma Croissance 3 - Dès 12 mois"
 title: "Calisma Gallia Calisma Croissance 3 - Dès 12 mois , note D"
-description: "Note BebeDecrypte D (42/100). Analyse NOVA, additifs, sucres et allergènes du Gallia Calisma Croissance 3 - Dès 12 mois de Calisma."
+description: "Note BébéDécrypte D (42/100). Analyse NOVA, additifs, sucres et allergènes du Gallia Calisma Croissance 3 - Dès 12 mois de Calisma."
 grade: "D"
 score: 42
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Calisma Gallia Calisma Croissance 3 - Dès 12 mois
-
-**Note BebeDecrypte : D (42/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (42/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -74,7 +72,7 @@ Lactose (lait) Lait écrémé (lait) - Maltodextrines - Galacto-oligosaccharides
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

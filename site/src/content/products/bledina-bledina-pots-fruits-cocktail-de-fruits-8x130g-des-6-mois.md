@@ -4,7 +4,7 @@ brand: "Blédina"
 brandSlug: "bledina"
 name: "BLEDINA POTS FRUITS Cocktail de Fruits 8x130g Dès 6 Mois"
 title: "Blédina BLEDINA POTS FRUITS Cocktail de Fruits 8x130g Dès 6 Mois , note A"
-description: "Note BebeDecrypte A (85/100). Analyse NOVA, additifs, sucres et allergènes du BLEDINA POTS FRUITS Cocktail de Fruits 8x130g Dès 6 Mois de Blédina."
+description: "Note BébéDécrypte A (85/100). Analyse NOVA, additifs, sucres et allergènes du BLEDINA POTS FRUITS Cocktail de Fruits 8x130g Dès 6 Mois de Blédina."
 grade: "A"
 score: 85
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Blédina BLEDINA POTS FRUITS Cocktail de Fruits 8x130g Dès 6 Mois
-
-**Note BebeDecrypte : A (85/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
+**Note BébéDécrypte : A (85/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -68,7 +66,7 @@ Purée de pommes 57,0 % - Purée de poires 30,0 % - Purée de bananes 8,00 % - P
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

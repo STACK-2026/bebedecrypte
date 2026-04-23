@@ -4,7 +4,7 @@ brand: "Blédina"
 brandSlug: "bledina"
 name: "Mon 1er Biscuit au Chocolat"
 title: "Blédina Mon 1er Biscuit au Chocolat , note E"
-description: "Note BebeDecrypte E (38/100). Analyse NOVA, additifs, sucres et allergènes du Mon 1er Biscuit au Chocolat de Blédina."
+description: "Note BébéDécrypte E (38/100). Analyse NOVA, additifs, sucres et allergènes du Mon 1er Biscuit au Chocolat de Blédina."
 grade: "E"
 score: 38
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Blédina Mon 1er Biscuit au Chocolat
-
-**Note BebeDecrypte : E (38/100).** Ce produit est classé E, à éviter. Composition trop problématique pour un enfant en bas âge.
+**Note BébéDécrypte : E (38/100).** Ce produit est classé E, à éviter. Composition trop problématique pour un enfant en bas âge.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ Farine de blé (GLUTEN) 60 % - chocolat en poudre 12 % (sucre, poudre de cacao 3
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

@@ -4,7 +4,7 @@ brand: "Babybio"
 brandSlug: "babybio"
 name: "Boudoirs à l'huile essentielle d'Orange douce"
 title: "Babybio Boudoirs à l'huile essentielle d'Orange douce , note C"
-description: "Note BebeDecrypte C (62/100). Analyse NOVA, additifs, sucres et allergènes du Boudoirs à l'huile essentielle d'Orange douce de Babybio."
+description: "Note BébéDécrypte C (62/100). Analyse NOVA, additifs, sucres et allergènes du Boudoirs à l'huile essentielle d'Orange douce de Babybio."
 grade: "C"
 score: 62
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Babybio Boudoirs à l'huile essentielle d'Orange douce
-
-**Note BebeDecrypte : C (62/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (62/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Classification NOVA : 3 sur 4
@@ -68,7 +66,7 @@ Farine de froment 30%, sucre de canne, amidon de blé, oeuf entier 19,8%, huile 
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

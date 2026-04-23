@@ -4,7 +4,7 @@ brand: "Kiddylicious"
 brandSlug: "kiddylicious"
 name: "Veggie Straws saveur fromage"
 title: "Kiddylicious Veggie Straws saveur fromage , note C"
-description: "Note BebeDecrypte C (63/100). Analyse NOVA, additifs, sucres et allergènes du Veggie Straws saveur fromage de Kiddylicious."
+description: "Note BébéDécrypte C (63/100). Analyse NOVA, additifs, sucres et allergènes du Veggie Straws saveur fromage de Kiddylicious."
 grade: "C"
 score: 63
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Kiddylicious Veggie Straws saveur fromage
-
-**Note BebeDecrypte : C (63/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (63/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Classification NOVA : 4 sur 4
@@ -72,7 +70,7 @@ Bâtonnets de légumes (fécule de pomme de terre, pomme de terre séchée (40%)
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

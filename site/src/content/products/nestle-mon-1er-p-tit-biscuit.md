@@ -4,7 +4,7 @@ brand: "Nestlé"
 brandSlug: "nestle"
 name: "Mon 1er P'tit Biscuit"
 title: "Nestlé Mon 1er P'tit Biscuit , note D"
-description: "Note BebeDecrypte D (42/100). Analyse NOVA, additifs, sucres et allergènes du Mon 1er P'tit Biscuit de Nestlé."
+description: "Note BébéDécrypte D (42/100). Analyse NOVA, additifs, sucres et allergènes du Mon 1er P'tit Biscuit de Nestlé."
 grade: "D"
 score: 42
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Nestlé Mon 1er P'tit Biscuit
-
-**Note BebeDecrypte : D (42/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (42/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ Farine de blé 73,6%, sucre, huile de tournesol, beurre, carbonate de calcium, p
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

@@ -4,7 +4,7 @@ brand: "LU"
 brandSlug: "lu"
 name: "Betterfood Start Biscuit pour les premières panades"
 title: "LU Betterfood Start Biscuit pour les premières panades , note D"
-description: "Note BebeDecrypte D (40/100). Analyse NOVA, additifs, sucres et allergènes du Betterfood Start Biscuit pour les premières panades de LU."
+description: "Note BébéDécrypte D (40/100). Analyse NOVA, additifs, sucres et allergènes du Betterfood Start Biscuit pour les premières panades de LU."
 grade: "D"
 score: 40
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# LU Betterfood Start Biscuit pour les premières panades
-
-**Note BebeDecrypte : D (40/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (40/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ Amidon de pois 38,1 %, fécule de pomme de terre 22,7 %, sirop de glucose, sucre
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

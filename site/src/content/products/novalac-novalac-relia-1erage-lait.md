@@ -4,7 +4,7 @@ brand: "Novalac"
 brandSlug: "novalac"
 name: "Novalac Relia 1ERAGE Lait"
 title: "Novalac Novalac Relia 1ERAGE Lait , note D"
-description: "Note BebeDecrypte D (46/100). Analyse NOVA, additifs, sucres et allergènes du Novalac Relia 1ERAGE Lait de Novalac."
+description: "Note BébéDécrypte D (46/100). Analyse NOVA, additifs, sucres et allergènes du Novalac Relia 1ERAGE Lait de Novalac."
 grade: "D"
 score: 46
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Novalac Novalac Relia 1ERAGE Lait
-
-**Note BebeDecrypte : D (46/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (46/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -72,7 +70,7 @@ Lait ecrémé, protéines de lait, huiles végétales (palme, colza, palmiste, t
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

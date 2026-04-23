@@ -4,7 +4,7 @@ brand: "U"
 brandSlug: "u"
 name: "Bols pomme de terre carottes"
 title: "U Bols pomme de terre carottes , note B"
-description: "Note BebeDecrypte B (72/100). Analyse NOVA, additifs, sucres et allergènes du Bols pomme de terre carottes de U."
+description: "Note BébéDécrypte B (72/100). Analyse NOVA, additifs, sucres et allergènes du Bols pomme de terre carottes de U."
 grade: "B"
 score: 72
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# U Bols pomme de terre carottes
-
-**Note BebeDecrypte : B (72/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (72/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -68,7 +66,7 @@ Carottes 50%, eau de cuisson, pommes de terre 10%, amidon de maïs, huile de col
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

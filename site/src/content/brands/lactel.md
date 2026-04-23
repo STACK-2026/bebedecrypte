@@ -2,7 +2,7 @@
 slug: "lactel"
 brand: "Lactel"
 title: "Marque Lactel , note moyenne D"
-description: "Analyse BebeDecrypte de la marque Lactel : 17 produits notés, moyenne 51/100, grade D."
+description: "Analyse BébéDécrypte de la marque Lactel : 17 produits notés, moyenne 51/100, grade D."
 averageGrade: "D"
 averageScore: 51
 productCount: 17
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Lactel
-
-**Note moyenne BebeDecrypte : D (51/100)** sur 17 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : D (51/100)** sur 17 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -46,5 +44,5 @@ draft: false
 - [Eveil, Mon Lait de Croissance](/fr/produits/lactel-eveil-mon-lait-de-croissance/) , note D (40/100)
 - [Milumel - Junior sans huile de palme](/fr/produits/lactel-milumel-junior-sans-huile-de-palme/) , note D (40/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

@@ -4,7 +4,7 @@ brand: "Hero"
 brandSlug: "hero"
 name: "solo bio"
 title: "Hero solo bio , note D"
-description: "Note BebeDecrypte D (50/100). Analyse NOVA, additifs, sucres et allergènes du solo bio de Hero."
+description: "Note BébéDécrypte D (50/100). Analyse NOVA, additifs, sucres et allergènes du solo bio de Hero."
 grade: "D"
 score: 50
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Hero solo bio
-
-**Note BebeDecrypte : D (50/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (50/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ Farine de blé (73,9%), sucre de canne* (12,6%), huile de tournesol* (9,4%), far
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

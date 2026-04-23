@@ -4,7 +4,7 @@ brand: "Candia"
 brandSlug: "candia"
 name: "Candia baby croissance 3"
 title: "Candia Candia baby croissance 3 , note C"
-description: "Note BebeDecrypte C (60/100). Analyse NOVA, additifs, sucres et allergènes du Candia baby croissance 3 de Candia."
+description: "Note BébéDécrypte C (60/100). Analyse NOVA, additifs, sucres et allergènes du Candia baby croissance 3 de Candia."
 grade: "C"
 score: 60
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Candia Candia baby croissance 3
-
-**Note BebeDecrypte : C (60/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (60/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Nombre d'ingrédients : 42
@@ -71,7 +69,7 @@ lait de suite 92,8% [Lait partiellement écrémé(2), eau, peméat de lactoséru
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

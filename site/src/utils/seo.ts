@@ -92,8 +92,24 @@ export function jsonLdArticle(article: {
   dateModified?: string;
   image?: string;
   author?: string;
+  authorRole?: string;
+  authorSpecialities?: string[];
+  reviewedBy?: string;
+  reviewedByRole?: string;
+  lastReviewed?: string;
+  wordCount?: number;
   keywords?: string[];
 }) {
+  const authorName = article.author || siteConfig.blog.defaultAuthor;
+  const authorSlug = authorName.toLowerCase().replace(/[^\w]+/g, "-").replace(/^-|-$/g, "");
+  const authorUrl = fullUrl(`/authors/${authorSlug}/`);
+
+  const reviewerName = article.reviewedBy;
+  const reviewerSlug = reviewerName
+    ? reviewerName.toLowerCase().replace(/[^\w]+/g, "-").replace(/^-|-$/g, "")
+    : undefined;
+  const reviewerUrl = reviewerSlug ? fullUrl(`/authors/${reviewerSlug}/`) : undefined;
+
   return {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -101,23 +117,43 @@ export function jsonLdArticle(article: {
     description: article.description,
     url: article.url,
     datePublished: article.datePublished,
-    dateModified: article.dateModified || article.datePublished,
+    dateModified: article.dateModified || article.lastReviewed || article.datePublished,
     image: article.image
       ? article.image.startsWith("http")
         ? article.image
         : fullUrl(article.image)
       : undefined,
     author: {
-      "@type": "Organization",
-      name: article.author || siteConfig.blog.defaultAuthor,
-      url: siteConfig.url,
+      "@type": "Person",
+      name: authorName,
+      url: authorUrl,
+      ...(article.authorRole ? { jobTitle: article.authorRole } : {}),
+      ...(article.authorSpecialities && article.authorSpecialities.length > 0
+        ? { knowsAbout: article.authorSpecialities }
+        : {}),
     },
+    ...(reviewerName
+      ? {
+          reviewedBy: {
+            "@type": "Person",
+            name: reviewerName,
+            url: reviewerUrl,
+            ...(article.reviewedByRole ? { jobTitle: article.reviewedByRole } : {}),
+          },
+        }
+      : {}),
+    ...(article.lastReviewed ? { lastReviewed: article.lastReviewed } : {}),
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,
       url: siteConfig.url,
+      logo: {
+        "@type": "ImageObject",
+        url: fullUrl("/favicon.svg"),
+      },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": article.url },
+    ...(article.wordCount ? { wordCount: article.wordCount } : {}),
     keywords: article.keywords?.join(", "),
     inLanguage: siteConfig.locale,
     speakable: {

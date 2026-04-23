@@ -2,7 +2,7 @@
 slug: "premibio"
 brand: "Premibio"
 title: "Marque Premibio , note moyenne C"
-description: "Analyse BebeDecrypte de la marque Premibio : 4 produits notés, moyenne 60/100, grade C."
+description: "Analyse BébéDécrypte de la marque Premibio : 4 produits notés, moyenne 60/100, grade C."
 averageGrade: "C"
 averageScore: 60
 productCount: 4
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Premibio
-
-**Note moyenne BebeDecrypte : C (60/100)** sur 4 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : C (60/100)** sur 4 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -33,5 +31,5 @@ draft: false
 - [Prémilait 3](/fr/produits/premibio-premilait-3/) , note C (59/100)
 - [Lait Infantile Chèvre 2ème âge](/fr/produits/premibio-lait-infantile-chevre-2eme-age/) , note C (57/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

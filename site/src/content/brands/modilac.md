@@ -2,7 +2,7 @@
 slug: "modilac"
 brand: "Modilac"
 title: "Marque Modilac , note moyenne D"
-description: "Analyse BebeDecrypte de la marque Modilac : 16 produits notés, moyenne 53/100, grade D."
+description: "Analyse BébéDécrypte de la marque Modilac : 16 produits notés, moyenne 53/100, grade D."
 averageGrade: "D"
 averageScore: 53
 productCount: 16
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Modilac
-
-**Note moyenne BebeDecrypte : D (53/100)** sur 16 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : D (53/100)** sur 16 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -45,5 +43,5 @@ draft: false
 - [Modilac Expert Riz Croissance 3](/fr/produits/modilac-modilac-expert-riz-croissance-3/) , note D (43/100)
 - [Mon 1er Dessert Sans Lait - Saveur Caramel - 12 Sachets - Modilac](/fr/produits/modilac-mon-1er-dessert-sans-lait-saveur-caramel-12-sachets-modilac/) , note D (40/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

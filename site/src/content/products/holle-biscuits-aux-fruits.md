@@ -4,7 +4,7 @@ brand: "Holle"
 brandSlug: "holle"
 name: "Biscuits aux fruits"
 title: "Holle Biscuits aux fruits , note B"
-description: "Note BebeDecrypte B (74/100). Analyse NOVA, additifs, sucres et allergènes du Biscuits aux fruits de Holle."
+description: "Note BébéDécrypte B (74/100). Analyse NOVA, additifs, sucres et allergènes du Biscuits aux fruits de Holle."
 grade: "B"
 score: 74
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Holle Biscuits aux fruits
-
-**Note BebeDecrypte : B (74/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (74/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Classification NOVA : 3 sur 4
@@ -70,7 +68,7 @@ Farine d'épeautre (34 %), flocons d'avoine (33 %), jus de poire concentré (16 
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

@@ -4,7 +4,7 @@ brand: "Modilac"
 brandSlug: "modilac"
 name: "Modilac Expert Riz"
 title: "Modilac Modilac Expert Riz , note D"
-description: "Note BebeDecrypte D (46/100). Analyse NOVA, additifs, sucres et allergènes du Modilac Expert Riz de Modilac."
+description: "Note BébéDécrypte D (46/100). Analyse NOVA, additifs, sucres et allergènes du Modilac Expert Riz de Modilac."
 grade: "D"
 score: 46
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Modilac Modilac Expert Riz
-
-**Note BebeDecrypte : D (46/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (46/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -72,7 +70,7 @@ Maltodextrine, huiles végétales (palme, palmiste, colza, tournesol* tournesol 
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

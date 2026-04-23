@@ -4,7 +4,7 @@ brand: "Nestlé"
 brandSlug: "nestle"
 name: "NESTLÉ P'TIT ONCTUEUX au Fromage Blanc Pêche - 4 x 100g - Dès 6 mois"
 title: "Nestlé NESTLÉ P'TIT ONCTUEUX au Fromage Blanc Pêche - 4 x 100g - Dès 6 mois , note D"
-description: "Note BebeDecrypte D (49/100). Analyse NOVA, additifs, sucres et allergènes du NESTLÉ P'TIT ONCTUEUX au Fromage Blanc Pêche - 4 x 100g - Dès 6 mois de Nestl"
+description: "Note BébéDécrypte D (49/100). Analyse NOVA, additifs, sucres et allergènes du NESTLÉ P'TIT ONCTUEUX au Fromage Blanc Pêche - 4 x 100g - Dès 6 mois de Nestl"
 grade: "D"
 score: 49
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Nestlé NESTLÉ P'TIT ONCTUEUX au Fromage Blanc Pêche - 4 x 100g - Dès 6 mois
-
-**Note BebeDecrypte : D (49/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (49/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -72,7 +70,7 @@ LAIT fermenté 35% (LAIT entier 31%, eau, épaississant: pectine, ferments LACTI
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

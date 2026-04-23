@@ -4,7 +4,7 @@ brand: "Georg Parlasca Keksfabrik"
 brandSlug: "georg-parlasca-keksfabrik"
 name: "Apple biscuits"
 title: "Georg Parlasca Keksfabrik Apple biscuits , note B"
-description: "Note BebeDecrypte B (73/100). Analyse NOVA, additifs, sucres et allergènes du Apple biscuits de Georg Parlasca Keksfabrik."
+description: "Note BébéDécrypte B (73/100). Analyse NOVA, additifs, sucres et allergènes du Apple biscuits de Georg Parlasca Keksfabrik."
 grade: "B"
 score: 73
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Georg Parlasca Keksfabrik Apple biscuits
-
-**Note BebeDecrypte : B (73/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (73/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Classification NOVA : 3 sur 4
@@ -72,7 +70,7 @@ Farine de blé complet, farine de blé, 26% concentré de jus de pomme, huile de
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

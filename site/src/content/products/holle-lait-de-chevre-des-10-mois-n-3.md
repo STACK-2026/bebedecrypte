@@ -4,7 +4,7 @@ brand: "Holle"
 brandSlug: "holle"
 name: "Lait De Chevre Des 10 Mois N 3"
 title: "Holle Lait De Chevre Des 10 Mois N 3 , note C"
-description: "Note BebeDecrypte C (68/100). Analyse NOVA, additifs, sucres et allergènes du Lait De Chevre Des 10 Mois N 3 de Holle."
+description: "Note BébéDécrypte C (68/100). Analyse NOVA, additifs, sucres et allergènes du Lait De Chevre Des 10 Mois N 3 de Holle."
 grade: "C"
 score: 68
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Holle Lait De Chevre Des 10 Mois N 3
-
-**Note BebeDecrypte : C (68/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (68/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -72,7 +70,7 @@ Lait de chèvre entier en poudre 41%, maltodex trine, lactose, huiles végétale
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

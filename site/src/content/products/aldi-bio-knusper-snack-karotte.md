@@ -4,7 +4,7 @@ brand: "Aldi"
 brandSlug: "aldi"
 name: "Bio Knusper Snack Karotte"
 title: "Aldi Bio Knusper Snack Karotte , note B"
-description: "Note BebeDecrypte B (78/100). Analyse NOVA, additifs, sucres et allergènes du Bio Knusper Snack Karotte de Aldi."
+description: "Note BébéDécrypte B (78/100). Analyse NOVA, additifs, sucres et allergènes du Bio Knusper Snack Karotte de Aldi."
 grade: "B"
 score: 78
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Aldi Bio Knusper Snack Karotte
-
-**Note BebeDecrypte : B (78/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (78/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Classification NOVA : 3 sur 4
@@ -65,7 +63,7 @@ Maismehl* 68 %, Karottenpulver* 7,7%, Sonnenblumenöl&quot;, Hirsemehl* 7,5%, Re
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

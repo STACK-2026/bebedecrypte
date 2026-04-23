@@ -4,7 +4,7 @@ brand: "Blédina"
 brandSlug: "bledina"
 name: "BLEDINA COUPELLES FRUITS Pommes Fruits Rouges 4x100g Dès 8 Mois"
 title: "Blédina BLEDINA COUPELLES FRUITS Pommes Fruits Rouges 4x100g Dès 8 Mois , note A"
-description: "Note BebeDecrypte A (86/100). Analyse NOVA, additifs, sucres et allergènes du BLEDINA COUPELLES FRUITS Pommes Fruits Rouges 4x100g Dès 8 Mois de Blédina."
+description: "Note BébéDécrypte A (86/100). Analyse NOVA, additifs, sucres et allergènes du BLEDINA COUPELLES FRUITS Pommes Fruits Rouges 4x100g Dès 8 Mois de Blédina."
 grade: "A"
 score: 86
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Blédina BLEDINA COUPELLES FRUITS Pommes Fruits Rouges 4x100g Dès 8 Mois
-
-**Note BebeDecrypte : A (86/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
+**Note BébéDécrypte : A (86/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -68,7 +66,7 @@ Purée de pommes 80,0 % - Purée de fraises 11,0 % - Purée de framboises 4,95 %
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

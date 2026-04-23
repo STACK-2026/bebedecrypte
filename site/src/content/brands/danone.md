@@ -2,7 +2,7 @@
 slug: "danone"
 brand: "Danone"
 title: "Marque Danone , note moyenne C"
-description: "Analyse BebeDecrypte de la marque Danone : 5 produits notés, moyenne 59/100, grade C."
+description: "Analyse BébéDécrypte de la marque Danone : 5 produits notés, moyenne 59/100, grade C."
 averageGrade: "C"
 averageScore: 59
 productCount: 5
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Danone
-
-**Note moyenne BebeDecrypte : C (59/100)** sur 5 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : C (59/100)** sur 5 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -34,5 +32,5 @@ draft: false
 - [Calisma](/fr/produits/danone-calisma/) , note C (55/100)
 - [Mon premier Danone](/fr/produits/danone-mon-premier-danone/) , note E (29/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

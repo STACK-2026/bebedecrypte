@@ -4,7 +4,7 @@ brand: "Les recoltes bio"
 brandSlug: "les-recoltes-bio"
 name: "BLEDINA LES RECOLTES BIO POTS Pommes Pruneaux 2x130g Dès 4/6 Mois"
 title: "Les recoltes bio BLEDINA LES RECOLTES BIO POTS Pommes Pruneaux 2x130g Dès 4/6 Mois , note A"
-description: "Note BebeDecrypte A (89/100). Analyse NOVA, additifs, sucres et allergènes du BLEDINA LES RECOLTES BIO POTS Pommes Pruneaux 2x130g Dès 4/6 Mois de Les reco"
+description: "Note BébéDécrypte A (89/100). Analyse NOVA, additifs, sucres et allergènes du BLEDINA LES RECOLTES BIO POTS Pommes Pruneaux 2x130g Dès 4/6 Mois de Les reco"
 grade: "A"
 score: 89
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Les recoltes bio BLEDINA LES RECOLTES BIO POTS Pommes Pruneaux 2x130g Dès 4/6 Mois
-
-**Note BebeDecrypte : A (89/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
+**Note BébéDécrypte : A (89/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -72,7 +70,7 @@ Pomme* 79%, Pruneaux* 21%, Antioxydant : acide ascorbique *Purées de fruits iss
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

@@ -4,7 +4,7 @@ brand: "Nestlé"
 brandSlug: "nestle"
 name: "NESTLE NIDAL 1 Bébés Gourmands Lait inf 1er âge 800g dès la Naissance"
 title: "Nestlé NESTLE NIDAL 1 Bébés Gourmands Lait inf 1er âge 800g dès la Naissance , note C"
-description: "Note BebeDecrypte C (57/100). Analyse NOVA, additifs, sucres et allergènes du NESTLE NIDAL 1 Bébés Gourmands Lait inf 1er âge 800g dès la Naissance de Nest"
+description: "Note BébéDécrypte C (57/100). Analyse NOVA, additifs, sucres et allergènes du NESTLE NIDAL 1 Bébés Gourmands Lait inf 1er âge 800g dès la Naissance de Nest"
 grade: "C"
 score: 57
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Nestlé NESTLE NIDAL 1 Bébés Gourmands Lait inf 1er âge 800g dès la Naissance
-
-**Note BebeDecrypte : C (57/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (57/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -72,7 +70,7 @@ LAIT écrémé, LACTOSE, mélange d'huile de tournesol riche en acide oléique, 
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

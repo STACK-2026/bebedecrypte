@@ -4,7 +4,7 @@ brand: "Hipp"
 brandSlug: "hipp"
 name: "Brassé Bananes Mangues Ananas Hipp 4X100G +"
 title: "Hipp Brassé Bananes Mangues Ananas Hipp 4X100G + , note C"
-description: "Note BebeDecrypte C (64/100). Analyse NOVA, additifs, sucres et allergènes du Brassé Bananes Mangues Ananas Hipp 4X100G + de Hipp."
+description: "Note BébéDécrypte C (64/100). Analyse NOVA, additifs, sucres et allergènes du Brassé Bananes Mangues Ananas Hipp 4X100G + de Hipp."
 grade: "C"
 score: 64
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Hipp Brassé Bananes Mangues Ananas Hipp 4X100G +
-
-**Note BebeDecrypte : C (64/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (64/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ _Lait_ entier* 62%, bananes* 15%, mangues* 9%, jus d'ananas concentré* 6%, amid
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

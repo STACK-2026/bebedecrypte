@@ -4,7 +4,7 @@ brand: "Kraft Heinz"
 brandSlug: "kraft-heinz"
 name: "Camomilla estratto solubile"
 title: "Kraft Heinz Camomilla estratto solubile , note C"
-description: "Note BebeDecrypte C (69/100). Analyse NOVA, additifs, sucres et allergènes du Camomilla estratto solubile de Kraft Heinz."
+description: "Note BébéDécrypte C (69/100). Analyse NOVA, additifs, sucres et allergènes du Camomilla estratto solubile de Kraft Heinz."
 grade: "C"
 score: 69
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Kraft Heinz Camomilla estratto solubile
-
-**Note BebeDecrypte : C (69/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (69/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Nombre d'ingrédients : 0
@@ -67,7 +65,7 @@ draft: false
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

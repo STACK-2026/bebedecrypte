@@ -4,7 +4,7 @@ brand: "Picot"
 brandSlug: "picot"
 name: "PICOT ACTION TRANSIT LAIT 1ER AGE"
 title: "Picot PICOT ACTION TRANSIT LAIT 1ER AGE , note C"
-description: "Note BebeDecrypte C (60/100). Analyse NOVA, additifs, sucres et allergènes du PICOT ACTION TRANSIT LAIT 1ER AGE de Picot."
+description: "Note BébéDécrypte C (60/100). Analyse NOVA, additifs, sucres et allergènes du PICOT ACTION TRANSIT LAIT 1ER AGE de Picot."
 grade: "C"
 score: 60
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Picot PICOT ACTION TRANSIT LAIT 1ER AGE
-
-**Note BebeDecrypte : C (60/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (60/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -71,7 +69,7 @@ INFORMATIONS NUTRITIONNELLES Ou NOURRISSON DE MOINS DE 6 MOIS, EN CAS DE RALENTI
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

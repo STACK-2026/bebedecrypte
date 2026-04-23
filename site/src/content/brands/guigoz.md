@@ -2,7 +2,7 @@
 slug: "guigoz"
 brand: "Guigoz"
 title: "Marque Guigoz , note moyenne D"
-description: "Analyse BebeDecrypte de la marque Guigoz : 16 produits notés, moyenne 54/100, grade D."
+description: "Analyse BébéDécrypte de la marque Guigoz : 16 produits notés, moyenne 54/100, grade D."
 averageGrade: "D"
 averageScore: 54
 productCount: 16
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Guigoz
-
-**Note moyenne BebeDecrypte : D (54/100)** sur 16 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : D (54/100)** sur 16 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -45,5 +43,5 @@ draft: false
 - [Croissance de 1 à 3 ans](/fr/produits/guigoz-croissance-de-1-a-3-ans/) , note D (43/100)
 - [Lait infantile Evolia relais 1](/fr/produits/guigoz-lait-infantile-evolia-relais-1/) , note D (41/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

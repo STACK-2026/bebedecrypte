@@ -4,7 +4,7 @@ brand: "Bledina"
 brandSlug: "bledina"
 name: "Blédina - Petit Pot Carottes -130GR"
 title: "Bledina Blédina - Petit Pot Carottes -130GR , note A"
-description: "Note BebeDecrypte A (87/100). Analyse NOVA, additifs, sucres et allergènes du Blédina - Petit Pot Carottes -130GR de Bledina."
+description: "Note BébéDécrypte A (87/100). Analyse NOVA, additifs, sucres et allergènes du Blédina - Petit Pot Carottes -130GR de Bledina."
 grade: "A"
 score: 87
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Bledina Blédina - Petit Pot Carottes -130GR
-
-**Note BebeDecrypte : A (87/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
+**Note BébéDécrypte : A (87/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -68,7 +66,7 @@ Carottes 78,0% - Eau de cuisson.
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

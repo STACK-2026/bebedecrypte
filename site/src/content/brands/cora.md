@@ -2,7 +2,7 @@
 slug: "cora"
 brand: "Cora"
 title: "Marque Cora , note moyenne C"
-description: "Analyse BebeDecrypte de la marque Cora : 12 produits notés, moyenne 68/100, grade C."
+description: "Analyse BébéDécrypte de la marque Cora : 12 produits notés, moyenne 68/100, grade C."
 averageGrade: "C"
 averageScore: 68
 productCount: 12
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Cora
-
-**Note moyenne BebeDecrypte : C (68/100)** sur 12 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : C (68/100)** sur 12 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -41,5 +39,5 @@ draft: false
 - [Petit Plat Spaghetti bolognaise dès 12 mois](/fr/produits/cora-petit-plat-spaghetti-bolognaise-des-12-mois/) , note D (54/100)
 - [Pomme biscuit](/fr/produits/cora-pomme-biscuit/) , note E (35/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

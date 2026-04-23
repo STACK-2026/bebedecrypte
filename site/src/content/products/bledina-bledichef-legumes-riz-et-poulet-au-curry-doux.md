@@ -4,7 +4,7 @@ brand: "Blédina"
 brandSlug: "bledina"
 name: "Blédichef Légumes, Riz et Poulet au Curry doux"
 title: "Blédina Blédichef Légumes, Riz et Poulet au Curry doux , note B"
-description: "Note BebeDecrypte B (71/100). Analyse NOVA, additifs, sucres et allergènes du Blédichef Légumes, Riz et Poulet au Curry doux de Blédina."
+description: "Note BébéDécrypte B (71/100). Analyse NOVA, additifs, sucres et allergènes du Blédichef Légumes, Riz et Poulet au Curry doux de Blédina."
 grade: "B"
 score: 71
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Blédina Blédichef Légumes, Riz et Poulet au Curry doux
-
-**Note BebeDecrypte : B (71/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (71/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -68,7 +66,7 @@ Légumes 37,5% (Carottes 20,0%, Courgettes 5,3%, Oignons, Petits pois 3,3%, _Cé
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

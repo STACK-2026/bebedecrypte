@@ -4,7 +4,7 @@ brand: "Franprix"
 brandSlug: "franprix"
 name: "dessert pomme ananas kiwi"
 title: "Franprix dessert pomme ananas kiwi , note D"
-description: "Note BebeDecrypte D (50/100). Analyse NOVA, additifs, sucres et allergènes du dessert pomme ananas kiwi de Franprix."
+description: "Note BébéDécrypte D (50/100). Analyse NOVA, additifs, sucres et allergènes du dessert pomme ananas kiwi de Franprix."
 grade: "D"
 score: 50
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Franprix dessert pomme ananas kiwi
-
-**Note BebeDecrypte : D (50/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (50/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -72,7 +70,7 @@ Pomme (origine : France) 37% - ananas (origine : Costa Rica) 28% - kiwi (origine
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

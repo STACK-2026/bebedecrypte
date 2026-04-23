@@ -2,7 +2,7 @@
 slug: "les-bebes-d-a-cote"
 brand: "Les bébés d'à côté"
 title: "Marque Les bébés d'à côté , note moyenne B"
-description: "Analyse BebeDecrypte de la marque Les bébés d'à côté : 1 produits notés, moyenne 80/100, grade B."
+description: "Analyse BébéDécrypte de la marque Les bébés d'à côté : 1 produits notés, moyenne 80/100, grade B."
 averageGrade: "B"
 averageScore: 80
 productCount: 1
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Les bébés d'à côté
-
-**Note moyenne BebeDecrypte : B (80/100)** sur 1 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (80/100)** sur 1 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -30,5 +28,5 @@ draft: false
 
 - [Purée de patate douce au thym](/fr/produits/les-bebes-d-a-cote-puree-de-patate-douce-au-thym/) , note B (80/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

@@ -4,7 +4,7 @@ brand: "U"
 brandSlug: "u"
 name: "Dessert bébé Pomme et pruneau, de 6 à 12 mois - 4x100g - Petits pots bébé"
 title: "U Dessert bébé Pomme et pruneau, de 6 à 12 mois - 4x100g - Petits pots bébé , note A"
-description: "Note BebeDecrypte A (88/100). Analyse NOVA, additifs, sucres et allergènes du Dessert bébé Pomme et pruneau, de 6 à 12 mois - 4x100g - Petits pots bébé de "
+description: "Note BébéDécrypte A (88/100). Analyse NOVA, additifs, sucres et allergènes du Dessert bébé Pomme et pruneau, de 6 à 12 mois - 4x100g - Petits pots bébé de "
 grade: "A"
 score: 88
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# U Dessert bébé Pomme et pruneau, de 6 à 12 mois - 4x100g - Petits pots bébé
-
-**Note BebeDecrypte : A (88/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
+**Note BébéDécrypte : A (88/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -72,7 +70,7 @@ Purée de pommes* 80,9%, purée de pruneaux* 19% (pruneaux* 9,5%, eau), antioxyd
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

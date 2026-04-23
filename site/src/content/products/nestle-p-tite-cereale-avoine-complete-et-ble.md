@@ -4,7 +4,7 @@ brand: "Nestlé"
 brandSlug: "nestle"
 name: "P'tite Céréale - Avoine Complète et Blé"
 title: "Nestlé P'tite Céréale - Avoine Complète et Blé , note C"
-description: "Note BebeDecrypte C (66/100). Analyse NOVA, additifs, sucres et allergènes du P'tite Céréale - Avoine Complète et Blé de Nestlé."
+description: "Note BébéDécrypte C (66/100). Analyse NOVA, additifs, sucres et allergènes du P'tite Céréale - Avoine Complète et Blé de Nestlé."
 grade: "C"
 score: 66
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Nestlé P'tite Céréale - Avoine Complète et Blé
-
-**Note BebeDecrypte : C (66/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (66/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -72,7 +70,7 @@ céréales 99,6% ( farines d'avoine complète, de blé diastasée, de blé), min
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

@@ -23,7 +23,7 @@
   /* Easings , STACK-2026 baseline adapte-toi */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
-  --ease-bounce: cubic-bezier(0.25, 1.5, 0.5, 1);   /* signature BebeDecrypte : grade stamp */
+  --ease-bounce: cubic-bezier(0.25, 1.5, 0.5, 1);   /* signature BébéDécrypte : grade stamp */
 
   /* Grade colours for A to E (decoder palette) */
   --grade-a: #0891b2;

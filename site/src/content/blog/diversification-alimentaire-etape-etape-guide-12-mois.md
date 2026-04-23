@@ -24,7 +24,7 @@ imageAlt: "toddler sitting in front of bowl on top of table"
 - **À 12 mois** : Ton bébé mange presque comme toi, mais évite sel, sucre, miel et aliments durs (noix, carottes crues).
 - **Allergènes** : Introduis-les un par un (œuf, arachide, poisson) en surveillant les réactions.
 - **Erreurs à éviter** : Forcer ton bébé, ajouter sel/sucre, négliger les allergènes ou choisir des produits ultra-transformés.
-- BebeDecrypte te guide avec des **exemples concrets**, des **tableaux d’introduction** et des **conseils pratiques** pour une diversification réussie.
+- BébéDécrypte te guide avec des **exemples concrets**, des **tableaux d’introduction** et des **conseils pratiques** pour une diversification réussie.
 [Découvre notre comparateur de petits pots et purées adaptés à chaque âge](/comparateur).
 [Consulte notre guide des textures par âge pour t’aider](/blog/textures-bebe).
 
@@ -187,7 +187,7 @@ Les textures jouent un rôle clé dans le développement de la **mastication** e
   - Proposer des **repas familiaux adaptés** (ex. : pâtes à la bolognaise sans sel, légumes vapeur).
 - **Piège à éviter** : Les aliments croquants (pommes crues, carottes crues) ou collants (bonbons, guimauves).
 
-*Conseil BebeDecrypte* : Pour t’aider à visualiser les textures, consulte notre [guide des textures par âge](/blog/textures-bebe) avec des photos et des vidéos explicatives.
+*Conseil BébéDécrypte* : Pour t’aider à visualiser les textures, consulte notre [guide des textures par âge](/blog/textures-bebe) avec des photos et des vidéos explicatives.
 
 ---
 
@@ -357,7 +357,7 @@ La diversification alimentaire est une **étape passionnante** qui permet à ton
 
 N’oublie pas que **chaque bébé est unique** : certains adoreront les légumes dès 4 mois, tandis que d’autres préféreront les fruits ou les protéines. **L’important est d’y aller progressivement, sans pression, et de garder le plaisir de manger au cœur de cette aventure.**
 
-*Disclaimer* : Ce guide a été relu et validé par des pédiatres et des nutritionnistes. Cependant, en cas de doute sur la santé de ton bébé (allergies, refus alimentaires, symptômes inquiétants), **consulte toujours ton pédiatre ou ton médecin traitant**. BebeDecrypte est un service éditorial indépendant et ne remplace pas un avis médical.
+*Disclaimer* : Ce guide a été relu et validé par des pédiatres et des nutritionnistes. Cependant, en cas de doute sur la santé de ton bébé (allergies, refus alimentaires, symptômes inquiétants), **consulte toujours ton pédiatre ou ton médecin traitant**. BébéDécrypte est un service éditorial indépendant et ne remplace pas un avis médical.
 
 ---
 
@@ -474,7 +474,7 @@ Après **2 semaines**, tu peux introduire des **fruits** (pomme, poire, banane o
    - **4-6 mois** : Purées de légumes ou fruits **lisses et sans morceaux**.
    - **7-8 mois** : Purées avec **petits grumeaux** ou morceaux fondants.
    - **9-12 mois** : Petits pots avec **morceaux** ou aliments à tenir.
-3. **Utilise notre comparateur** : Sur [BebeDecrypte](/comparateur), nous notons les petits pots de A à E selon leur **degré de transformation** et leur **qualité nutritionnelle**. Privilégie les **petits pots classés A ou B**.
+3. **Utilise notre comparateur** : Sur [BébéDécrypte](/comparateur), nous notons les petits pots de A à E selon leur **degré de transformation** et leur **qualité nutritionnelle**. Privilégie les **petits pots classés A ou B**.
 4. **Prépare des purées maison** : C’est plus économique et plus sain. Utilise des légumes frais ou surgelés (sans sel ajouté) et mixe-les toi-même.
 
 *Exemple de décryptage d’étiquette* :
@@ -567,11 +567,11 @@ Après **2 semaines**, tu peux introduire des **fruits** (pomme, poire, banane o
 6. Santé publique France, *Les 1000 premiers jours*, 2026. [https://www.santepubliquefrance.fr/](https://www.santepubliquefrance.fr/)
 7. *The Journal of Pediatrics*, *Timing of Complementary Feeding and Risk of Allergies*, 2023. [https://www.jpeds.com/](https://www.jpeds.com/)
 8. *JAMA Pediatrics*, *Baby-Led Weaning and Food Refusal at 18 Months*, 2024. [https://jamanetwork.com/journals/jamapediatrics](https://jamanetwork.com/journals/jamapediatrics)
-9. BebeDecrypte, *Comparateur de petits pots et purées*, 2026. [/comparateur](/comparateur)
-10. BebeDecrypte, *Guide des textures par âge*, 2026. [/blog/textures-bebe](/blog/textures-bebe)
-11. BebeDecrypte, *Diversification alimentaire : erreurs à éviter*, 2026. [/blog/diversification-erreurs](/blog/diversification-erreurs)
-12. BebeDecrypte, *Allergies alimentaires : guide complet*, 2026. [/blog/allergies-alimentaires](/blog/allergies-alimentaires)
-13. BebeDecrypte, *DME (Diversification Menée par l’Enfant) : tout savoir*, 2026. [/blog/dme-guide](/blog/dme-guide)
-14. BebeDecrypte, *Recettes pour bébé : purées et petits pots maison*, 2026. [/outils/recettes-bebe](/outils/recettes-bebe)
-15. BebeDecrypte, *Calendrier de diversification personnalisé*, 2026. [/outils/calendrier-diversification](/outils/calendrier-diversification)
+9. BébéDécrypte, *Comparateur de petits pots et purées*, 2026. [/comparateur](/comparateur)
+10. BébéDécrypte, *Guide des textures par âge*, 2026. [/blog/textures-bebe](/blog/textures-bebe)
+11. BébéDécrypte, *Diversification alimentaire : erreurs à éviter*, 2026. [/blog/diversification-erreurs](/blog/diversification-erreurs)
+12. BébéDécrypte, *Allergies alimentaires : guide complet*, 2026. [/blog/allergies-alimentaires](/blog/allergies-alimentaires)
+13. BébéDécrypte, *DME (Diversification Menée par l’Enfant) : tout savoir*, 2026. [/blog/dme-guide](/blog/dme-guide)
+14. BébéDécrypte, *Recettes pour bébé : purées et petits pots maison*, 2026. [/outils/recettes-bebe](/outils/recettes-bebe)
+15. BébéDécrypte, *Calendrier de diversification personnalisé*, 2026. [/outils/calendrier-diversification](/outils/calendrier-diversification)
 

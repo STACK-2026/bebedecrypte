@@ -2,7 +2,7 @@
 slug: "carrefour"
 brand: "Carrefour"
 title: "Marque Carrefour , note moyenne C"
-description: "Analyse BebeDecrypte de la marque Carrefour : 6 produits notés, moyenne 66/100, grade C."
+description: "Analyse BébéDécrypte de la marque Carrefour : 6 produits notés, moyenne 66/100, grade C."
 averageGrade: "C"
 averageScore: 66
 productCount: 6
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Carrefour
-
-**Note moyenne BebeDecrypte : C (66/100)** sur 6 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : C (66/100)** sur 6 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -35,5 +33,5 @@ draft: false
 - [Biscuits aux pépites de chocolat](/fr/produits/carrefour-biscuits-aux-pepites-de-chocolat/) , note D (51/100)
 - [Carrefour Classic' Lait de Croissance 1-3 Ans](/fr/produits/carrefour-carrefour-classic-lait-de-croissance-1-3-ans/) , note E (38/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

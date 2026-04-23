@@ -4,7 +4,7 @@ brand: "candia"
 brandSlug: "candia"
 name: "Baby croissance 4 de candia"
 title: "candia Baby croissance 4 de candia , note B"
-description: "Note BebeDecrypte B (71/100). Analyse NOVA, additifs, sucres et allergènes du Baby croissance 4 de candia de candia."
+description: "Note BébéDécrypte B (71/100). Analyse NOVA, additifs, sucres et allergènes du Baby croissance 4 de candia de candia."
 grade: "B"
 score: 71
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# candia Baby croissance 4 de candia
-
-**Note BebeDecrypte : B (71/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (71/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -68,7 +66,7 @@ ineralisé, huiles végétales (colza, tournesol), vitamine 9: PR mineraux: carb
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

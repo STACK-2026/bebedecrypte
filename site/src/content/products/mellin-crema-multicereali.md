@@ -4,7 +4,7 @@ brand: "Mellin"
 brandSlug: "mellin"
 name: "Crema multicereali"
 title: "Mellin Crema multicereali , note B"
-description: "Note BebeDecrypte B (74/100). Analyse NOVA, additifs, sucres et allergènes du Crema multicereali de Mellin."
+description: "Note BébéDécrypte B (74/100). Analyse NOVA, additifs, sucres et allergènes du Crema multicereali de Mellin."
 grade: "B"
 score: 74
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Mellin Crema multicereali
-
-**Note BebeDecrypte : B (74/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (74/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Nombre d'ingrédients : 6
@@ -67,7 +65,7 @@ are INGREDIENTI: Farina di cereali 99,99% (frumento, avena integrale, segale), v
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

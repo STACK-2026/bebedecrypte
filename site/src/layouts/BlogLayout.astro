@@ -5,6 +5,7 @@ import AutoGlossaire from "../components/AutoGlossaire.astro";
 import { siteConfig } from "../../site.config";
 import { fullUrl } from "../utils/config";
 import { jsonLdArticle, jsonLdBreadcrumbs } from "../utils/seo";
+import { AUTHORS } from "../data/authors";
 
 interface Props {
   title: string;
@@ -47,14 +48,22 @@ const breadcrumbs = [
   { name: title, url: articleUrl },
 ];
 
+const authorData = AUTHORS.find((a) => a.name === author);
+const reviewerData = reviewedBy ? AUTHORS.find((a) => a.name === reviewedBy) : undefined;
+
 const jsonLd = [
   jsonLdArticle({
     title,
     description,
     url: articleUrl,
     datePublished: dateStr,
+    lastReviewed: lastReviewed ? reviewedStr : undefined,
     image,
     author,
+    authorRole: authorData?.role.fr,
+    authorSpecialities: authorData?.specialities.fr,
+    reviewedBy,
+    reviewedByRole: reviewerData?.role.fr,
     keywords: keywords?.split(",").map((k) => k.trim()),
   }),
   jsonLdBreadcrumbs(breadcrumbs),

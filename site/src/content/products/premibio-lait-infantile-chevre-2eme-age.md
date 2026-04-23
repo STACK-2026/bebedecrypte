@@ -4,7 +4,7 @@ brand: "Premibio"
 brandSlug: "premibio"
 name: "Lait Infantile Chèvre 2ème âge"
 title: "Premibio Lait Infantile Chèvre 2ème âge , note C"
-description: "Note BebeDecrypte C (57/100). Analyse NOVA, additifs, sucres et allergènes du Lait Infantile Chèvre 2ème âge de Premibio."
+description: "Note BébéDécrypte C (57/100). Analyse NOVA, additifs, sucres et allergènes du Lait Infantile Chèvre 2ème âge de Premibio."
 grade: "C"
 score: 57
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Premibio Lait Infantile Chèvre 2ème âge
-
-**Note BebeDecrypte : C (57/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (57/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ Lait de chèvre en poudre* (43% origine France ou Pays Bas ) maltodextrines de m
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

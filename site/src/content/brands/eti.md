@@ -2,7 +2,7 @@
 slug: "eti"
 brand: "Eti"
 title: "Marque Eti , note moyenne D"
-description: "Analyse BebeDecrypte de la marque Eti : 1 produits notés, moyenne 46/100, grade D."
+description: "Analyse BébéDécrypte de la marque Eti : 1 produits notés, moyenne 46/100, grade D."
 averageGrade: "D"
 averageScore: 46
 productCount: 1
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Eti
-
-**Note moyenne BebeDecrypte : D (46/100)** sur 1 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : D (46/100)** sur 1 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -30,5 +28,5 @@ draft: false
 
 - [Cicibebe](/fr/produits/eti-cicibebe/) , note D (46/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

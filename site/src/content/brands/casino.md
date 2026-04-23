@@ -2,7 +2,7 @@
 slug: "casino"
 brand: "Casino"
 title: "Marque Casino , note moyenne B"
-description: "Analyse BebeDecrypte de la marque Casino : 11 produits notés, moyenne 71/100, grade B."
+description: "Analyse BébéDécrypte de la marque Casino : 11 produits notés, moyenne 71/100, grade B."
 averageGrade: "B"
 averageScore: 71
 productCount: 11
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Casino
-
-**Note moyenne BebeDecrypte : B (71/100)** sur 11 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (71/100)** sur 11 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -40,5 +38,5 @@ draft: false
 - [Jardinière de légumes Pâtes sans morceaux plat du soir](/fr/produits/casino-jardiniere-de-legumes-pates-sans-morceaux-plat-du-soir/) , note B (71/100)
 - [Pomme banane biscuit bio baby](/fr/produits/casino-pomme-banane-biscuit-bio-baby/) , note D (50/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

@@ -4,7 +4,7 @@ brand: "Babybio"
 brandSlug: "babybio"
 name: "130G Petit Pot Bebe Potimarron-carotte"
 title: "Babybio 130G Petit Pot Bebe Potimarron-carotte , note A"
-description: "Note BebeDecrypte A (93/100). Analyse NOVA, additifs, sucres et allergènes du 130G Petit Pot Bebe Potimarron-carotte de Babybio."
+description: "Note BébéDécrypte A (93/100). Analyse NOVA, additifs, sucres et allergènes du 130G Petit Pot Bebe Potimarron-carotte de Babybio."
 grade: "A"
 score: 93
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Babybio 130G Petit Pot Bebe Potimarron-carotte
-
-**Note BebeDecrypte : A (93/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
+**Note BébéDécrypte : A (93/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -68,7 +66,7 @@ Carottes 70 %, potimarrons 20 %, eau de cuisson, thym
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

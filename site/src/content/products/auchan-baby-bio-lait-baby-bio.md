@@ -4,7 +4,7 @@ brand: "Auchan Baby Bio"
 brandSlug: "auchan-baby-bio"
 name: "Lait baby bio"
 title: "Auchan Baby Bio Lait baby bio , note D"
-description: "Note BebeDecrypte D (54/100). Analyse NOVA, additifs, sucres et allergènes du Lait baby bio de Auchan Baby Bio."
+description: "Note BébéDécrypte D (54/100). Analyse NOVA, additifs, sucres et allergènes du Lait baby bio de Auchan Baby Bio."
 grade: "D"
 score: 54
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Auchan Baby Bio Lait baby bio
-
-**Note BebeDecrypte : D (54/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (54/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -77,7 +75,7 @@ Elaboré à partir de lait origine France et autres ingrédients laitiers origin
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Boissons bébé](/fr/categories/boissons/).
 

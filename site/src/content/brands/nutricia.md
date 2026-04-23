@@ -2,7 +2,7 @@
 slug: "nutricia"
 brand: "Nutricia"
 title: "Marque Nutricia , note moyenne C"
-description: "Analyse BebeDecrypte de la marque Nutricia : 5 produits notés, moyenne 66/100, grade C."
+description: "Analyse BébéDécrypte de la marque Nutricia : 5 produits notés, moyenne 66/100, grade C."
 averageGrade: "C"
 averageScore: 66
 productCount: 5
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Nutricia
-
-**Note moyenne BebeDecrypte : C (66/100)** sur 5 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : C (66/100)** sur 5 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -34,5 +32,5 @@ draft: false
 - [Lait Nutricia Crois 1L Des 10 Mois](/fr/produits/nutricia-lait-nutricia-crois-1l-des-10-mois/) , note C (60/100)
 - [Lait 1er Age Nutricia](/fr/produits/nutricia-lait-1er-age-nutricia/) , note D (52/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

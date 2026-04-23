@@ -2,7 +2,7 @@
 slug: "bledilait"
 brand: "Bledilait"
 title: "Marque Bledilait , note moyenne D"
-description: "Analyse BebeDecrypte de la marque Bledilait : 9 produits notés, moyenne 52/100, grade D."
+description: "Analyse BébéDécrypte de la marque Bledilait : 9 produits notés, moyenne 52/100, grade D."
 averageGrade: "D"
 averageScore: 52
 productCount: 9
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Bledilait
-
-**Note moyenne BebeDecrypte : D (52/100)** sur 9 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : D (52/100)** sur 9 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -38,5 +36,5 @@ draft: false
 - [BLEDILAIT Croissance Liquide Chocolat 4x500ml De 10 mois à 3 ans](/fr/produits/bledilait-bledilait-croissance-liquide-chocolat-4x500ml-de-10-mois-a-3/) , note D (47/100)
 - [BLEDILAIT Croissance + 900g De 1 à 3 ans](/fr/produits/bledilait-bledilait-croissance-900g-de-1-a-3-ans/) , note D (42/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

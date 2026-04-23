@@ -2,7 +2,7 @@
 slug: "naturbalance"
 brand: "Naturbalance"
 title: "Marque Naturbalance , note moyenne C"
-description: "Analyse BebeDecrypte de la marque Naturbalance : 1 produits notés, moyenne 58/100, grade C."
+description: "Analyse BébéDécrypte de la marque Naturbalance : 1 produits notés, moyenne 58/100, grade C."
 averageGrade: "C"
 averageScore: 58
 productCount: 1
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Naturbalance
-
-**Note moyenne BebeDecrypte : C (58/100)** sur 1 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : C (58/100)** sur 1 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -30,5 +28,5 @@ draft: false
 
 - [Multicereales](/fr/produits/naturbalance-multicereales/) , note C (58/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

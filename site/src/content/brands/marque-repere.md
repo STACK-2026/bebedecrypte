@@ -2,7 +2,7 @@
 slug: "marque-repere"
 brand: "Marque Repère"
 title: "Marque Marque Repère , note moyenne D"
-description: "Analyse BebeDecrypte de la marque Marque Repère : 3 produits notés, moyenne 52/100, grade D."
+description: "Analyse BébéDécrypte de la marque Marque Repère : 3 produits notés, moyenne 52/100, grade D."
 averageGrade: "D"
 averageScore: 52
 productCount: 3
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Marque Repère
-
-**Note moyenne BebeDecrypte : D (52/100)** sur 3 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : D (52/100)** sur 3 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -32,5 +30,5 @@ draft: false
 - [Lait et céréales goût cacao](/fr/produits/marque-repere-lait-et-cereales-gout-cacao/) , note D (44/100)
 - [Biscuits adaptés à bébé](/fr/produits/marque-repere-biscuits-adaptes-a-bebe/) , note D (41/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

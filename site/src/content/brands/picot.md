@@ -2,7 +2,7 @@
 slug: "picot"
 brand: "Picot"
 title: "Marque Picot , note moyenne C"
-description: "Analyse BebeDecrypte de la marque Picot : 11 produits notés, moyenne 60/100, grade C."
+description: "Analyse BébéDécrypte de la marque Picot : 11 produits notés, moyenne 60/100, grade C."
 averageGrade: "C"
 averageScore: 60
 productCount: 11
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Picot
-
-**Note moyenne BebeDecrypte : C (60/100)** sur 11 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : C (60/100)** sur 11 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -40,5 +38,5 @@ draft: false
 - [Nutrition quotidienne dès 6 mois](/fr/produits/picot-nutrition-quotidienne-des-6-mois/) , note D (42/100)
 - [Picot Lait Bébé Gourmand 2](/fr/produits/picot-picot-lait-bebe-gourmand-2/) , note D (41/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

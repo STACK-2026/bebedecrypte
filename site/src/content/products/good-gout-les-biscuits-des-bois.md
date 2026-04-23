@@ -4,7 +4,7 @@ brand: "good goût"
 brandSlug: "good-gout"
 name: "Les biscuits des bois"
 title: "good goût Les biscuits des bois , note B"
-description: "Note BebeDecrypte B (70/100). Analyse NOVA, additifs, sucres et allergènes du Les biscuits des bois de good goût."
+description: "Note BébéDécrypte B (70/100). Analyse NOVA, additifs, sucres et allergènes du Les biscuits des bois de good goût."
 grade: "B"
 score: 70
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# good goût Les biscuits des bois
-
-**Note BebeDecrypte : B (70/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (70/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Classification NOVA : 3 sur 4
@@ -72,7 +70,7 @@ draft: false
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

@@ -4,7 +4,7 @@ brand: "Bio Village"
 brandSlug: "bio-village"
 name: "Brassé nature sucré"
 title: "Bio Village Brassé nature sucré , note C"
-description: "Note BebeDecrypte C (59/100). Analyse NOVA, additifs, sucres et allergènes du Brassé nature sucré de Bio Village."
+description: "Note BébéDécrypte C (59/100). Analyse NOVA, additifs, sucres et allergènes du Brassé nature sucré de Bio Village."
 grade: "C"
 score: 59
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Bio Village Brassé nature sucré
-
-**Note BebeDecrypte : C (59/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (59/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -72,7 +70,7 @@ Lait fermenté 81%, eau, fécule de manioc, sucre de canne 3,7%, épaississant :
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

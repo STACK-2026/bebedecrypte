@@ -4,7 +4,7 @@ brand: "Nestlé"
 brandSlug: "nestle"
 name: "NESTLE NATURNES Les Sélections Pdt, Bœuf à la tomate-2x200g-Dès 6 mois"
 title: "Nestlé NESTLE NATURNES Les Sélections Pdt, Bœuf à la tomate-2x200g-Dès 6 mois , note A"
-description: "Note BebeDecrypte A (86/100). Analyse NOVA, additifs, sucres et allergènes du NESTLE NATURNES Les Sélections Pdt, Bœuf à la tomate-2x200g-Dès 6 mois de Nes"
+description: "Note BébéDécrypte A (86/100). Analyse NOVA, additifs, sucres et allergènes du NESTLE NATURNES Les Sélections Pdt, Bœuf à la tomate-2x200g-Dès 6 mois de Nes"
 grade: "A"
 score: 86
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Nestlé NESTLE NATURNES Les Sélections Pdt, Bœuf à la tomate-2x200g-Dès 6 mois
-
-**Note BebeDecrypte : A (86/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
+**Note BébéDécrypte : A (86/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -68,7 +66,7 @@ Carottes 28%, eau de cuisson, pommes de terre 22%, purée de tomate à base de c
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

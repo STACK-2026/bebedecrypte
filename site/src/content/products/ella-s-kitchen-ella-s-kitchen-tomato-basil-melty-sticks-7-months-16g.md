@@ -4,7 +4,7 @@ brand: "Ella's Kitchen"
 brandSlug: "ella-s-kitchen"
 name: "Ella's Kitchen Tomato   Basil Melty Sticks 7 Months  16G"
 title: "Ella's Kitchen Ella's Kitchen Tomato   Basil Melty Sticks 7 Months  16G , note C"
-description: "Note BebeDecrypte C (69/100). Analyse NOVA, additifs, sucres et allergènes du Ella's Kitchen Tomato   Basil Melty Sticks 7 Months  16G de Ella's Kitchen."
+description: "Note BébéDécrypte C (69/100). Analyse NOVA, additifs, sucres et allergènes du Ella's Kitchen Tomato   Basil Melty Sticks 7 Months  16G de Ella's Kitchen."
 grade: "C"
 score: 69
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Ella's Kitchen Ella's Kitchen Tomato   Basil Melty Sticks 7 Months  16G
-
-**Note BebeDecrypte : C (69/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (69/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -68,7 +66,7 @@ what's inside me organic maize flour 70%, organic sunflower oil 15%, organic tom
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

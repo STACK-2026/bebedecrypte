@@ -4,7 +4,7 @@ brand: "BabyBio"
 brandSlug: "babybio"
 name: "Lait de suite en poudre, dès 6 mois - Primea"
 title: "BabyBio Lait de suite en poudre, dès 6 mois - Primea , note D"
-description: "Note BebeDecrypte D (53/100). Analyse NOVA, additifs, sucres et allergènes du Lait de suite en poudre, dès 6 mois - Primea de BabyBio."
+description: "Note BébéDécrypte D (53/100). Analyse NOVA, additifs, sucres et allergènes du Lait de suite en poudre, dès 6 mois - Primea de BabyBio."
 grade: "D"
 score: 53
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# BabyBio Lait de suite en poudre, dès 6 mois - Primea
-
-**Note BebeDecrypte : D (53/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (53/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ Maltodextrines de maïs*, lait écrémé*, huiles végétales* (tournesol oléiq
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

@@ -4,7 +4,7 @@ brand: "Autres secs"
 brandSlug: "autres-secs"
 name: "Blédiner, légumes petites étoiles - Soupe du soir"
 title: "Autres secs Blédiner, légumes petites étoiles - Soupe du soir , note C"
-description: "Note BebeDecrypte C (62/100). Analyse NOVA, additifs, sucres et allergènes du Blédiner, légumes petites étoiles - Soupe du soir de Autres secs."
+description: "Note BébéDécrypte C (62/100). Analyse NOVA, additifs, sucres et allergènes du Blédiner, légumes petites étoiles - Soupe du soir de Autres secs."
 grade: "C"
 score: 62
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Autres secs Blédiner, légumes petites étoiles - Soupe du soir
-
-**Note BebeDecrypte : C (62/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (62/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -72,7 +70,7 @@ Légumes 41,7 % (Purée de tomates reconstituée 21,8 % - Carottes 13,5 % - Oign
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

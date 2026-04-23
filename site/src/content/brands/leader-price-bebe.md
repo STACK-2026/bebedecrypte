@@ -2,7 +2,7 @@
 slug: "leader-price-bebe"
 brand: "Leader Price Bebe"
 title: "Marque Leader Price Bebe , note moyenne E"
-description: "Analyse BebeDecrypte de la marque Leader Price Bebe : 1 produits notés, moyenne 39/100, grade E."
+description: "Analyse BébéDécrypte de la marque Leader Price Bebe : 1 produits notés, moyenne 39/100, grade E."
 averageGrade: "E"
 averageScore: 39
 productCount: 1
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Leader Price Bebe
-
-**Note moyenne BebeDecrypte : E (39/100)** sur 1 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : E (39/100)** sur 1 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -30,5 +28,5 @@ draft: false
 
 - [Lait de croissance de 10 mois à 3 ans](/fr/produits/leader-price-bebe-lait-de-croissance-de-10-mois-a-3-ans/) , note E (39/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

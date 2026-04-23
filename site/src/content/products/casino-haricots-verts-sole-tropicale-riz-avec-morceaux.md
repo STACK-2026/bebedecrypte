@@ -4,7 +4,7 @@ brand: "Casino"
 brandSlug: "casino"
 name: "Haricots verts Sole tropicale Riz avec morceaux"
 title: "Casino Haricots verts Sole tropicale Riz avec morceaux , note B"
-description: "Note BebeDecrypte B (75/100). Analyse NOVA, additifs, sucres et allergènes du Haricots verts Sole tropicale Riz avec morceaux de Casino."
+description: "Note BébéDécrypte B (75/100). Analyse NOVA, additifs, sucres et allergènes du Haricots verts Sole tropicale Riz avec morceaux de Casino."
 grade: "B"
 score: 75
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Casino Haricots verts Sole tropicale Riz avec morceaux
-
-**Note BebeDecrypte : B (75/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (75/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -68,7 +66,7 @@ Légumes 49% (haricots verts 53,1% - pommes de terre - oignons) - eau - pulpe de
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

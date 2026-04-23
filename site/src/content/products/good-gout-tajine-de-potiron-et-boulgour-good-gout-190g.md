@@ -4,7 +4,7 @@ brand: "Good Gout"
 brandSlug: "good-gout"
 name: "Tajine de potiron et boulgour-Good Gout-190g"
 title: "Good Gout Tajine de potiron et boulgour-Good Gout-190g , note B"
-description: "Note BebeDecrypte B (79/100). Analyse NOVA, additifs, sucres et allergènes du Tajine de potiron et boulgour-Good Gout-190g de Good Gout."
+description: "Note BébéDécrypte B (79/100). Analyse NOVA, additifs, sucres et allergènes du Tajine de potiron et boulgour-Good Gout-190g de Good Gout."
 grade: "B"
 score: 79
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Good Gout Tajine de potiron et boulgour-Good Gout-190g
-
-**Note BebeDecrypte : B (79/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (79/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -68,7 +66,7 @@ draft: false
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

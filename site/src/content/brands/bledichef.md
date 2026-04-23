@@ -2,7 +2,7 @@
 slug: "bledichef"
 brand: "Blédichef"
 title: "Marque Blédichef , note moyenne C"
-description: "Analyse BebeDecrypte de la marque Blédichef : 6 produits notés, moyenne 68/100, grade C."
+description: "Analyse BébéDécrypte de la marque Blédichef : 6 produits notés, moyenne 68/100, grade C."
 averageGrade: "C"
 averageScore: 68
 productCount: 6
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Blédichef
-
-**Note moyenne BebeDecrypte : C (68/100)** sur 6 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : C (68/100)** sur 6 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -35,5 +33,5 @@ draft: false
 - [Maxi lot x6 assiettes Blédichef](/fr/produits/bledichef-maxi-lot-x6-assiettes-bledichef/) , note C (60/100)
 - [Blédichef - Purée aux épinards et saumon du Pacifique](/fr/produits/bledichef-bledichef-puree-aux-epinards-et-saumon-du-pacifique/) , note D (53/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

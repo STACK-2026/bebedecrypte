@@ -2,7 +2,7 @@
 slug: "biobim"
 brand: "Biobim"
 title: "Marque Biobim , note moyenne A"
-description: "Analyse BebeDecrypte de la marque Biobim : 1 produits notés, moyenne 90/100, grade A."
+description: "Analyse BébéDécrypte de la marque Biobim : 1 produits notés, moyenne 90/100, grade A."
 averageGrade: "A"
 averageScore: 90
 productCount: 1
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Biobim
-
-**Note moyenne BebeDecrypte : A (90/100)** sur 1 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : A (90/100)** sur 1 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -30,5 +28,5 @@ draft: false
 
 - [Fruits mixte](/fr/produits/biobim-fruits-mixte/) , note A (90/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

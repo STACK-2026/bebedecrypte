@@ -2,7 +2,7 @@
 slug: "autres-secs"
 brand: "Autres secs"
 title: "Marque Autres secs , note moyenne D"
-description: "Analyse BebeDecrypte de la marque Autres secs : 3 produits notés, moyenne 52/100, grade D."
+description: "Analyse BébéDécrypte de la marque Autres secs : 3 produits notés, moyenne 52/100, grade D."
 averageGrade: "D"
 averageScore: 52
 productCount: 3
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Autres secs
-
-**Note moyenne BebeDecrypte : D (52/100)** sur 3 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : D (52/100)** sur 3 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -32,5 +30,5 @@ draft: false
 - [Bledina mon premier boudoir](/fr/produits/autres-secs-bledina-mon-premier-boudoir/) , note D (49/100)
 - [BLEDINA Mon Premier Petit Beurre 133g dès 12 mois](/fr/produits/autres-secs-bledina-mon-premier-petit-beurre-133g-des-12-mois/) , note D (45/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

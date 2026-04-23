@@ -4,7 +4,7 @@ brand: "Hero Baby"
 brandSlug: "hero-baby"
 name: "Baby chef Emince de pommes de terre, Jambon à la paysanne"
 title: "Hero Baby Baby chef Emince de pommes de terre, Jambon à la paysanne , note C"
-description: "Note BebeDecrypte C (60/100). Analyse NOVA, additifs, sucres et allergènes du Baby chef Emince de pommes de terre, Jambon à la paysanne de Hero Baby."
+description: "Note BébéDécrypte C (60/100). Analyse NOVA, additifs, sucres et allergènes du Baby chef Emince de pommes de terre, Jambon à la paysanne de Hero Baby."
 grade: "C"
 score: 60
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Hero Baby Baby chef Emince de pommes de terre, Jambon à la paysanne
-
-**Note BebeDecrypte : C (60/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (60/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -72,7 +70,7 @@ pomme de terre 42,5%, eau de cuisson, légumes 14% (oignon, carotte, purée de t
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

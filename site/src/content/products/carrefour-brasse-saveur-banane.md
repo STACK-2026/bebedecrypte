@@ -4,7 +4,7 @@ brand: "Carrefour"
 brandSlug: "carrefour"
 name: "BRASSÉ Saveur Banane"
 title: "Carrefour BRASSÉ Saveur Banane , note C"
-description: "Note BebeDecrypte C (59/100). Analyse NOVA, additifs, sucres et allergènes du BRASSÉ Saveur Banane de Carrefour."
+description: "Note BébéDécrypte C (59/100). Analyse NOVA, additifs, sucres et allergènes du BRASSÉ Saveur Banane de Carrefour."
 grade: "C"
 score: 59
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Carrefour BRASSÉ Saveur Banane
-
-**Note BebeDecrypte : C (59/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (59/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -72,7 +70,7 @@ _Lait_ entier* 70%, eau, sucre de canne* 5.5%, _lait_ écrémé reconstitué* 5,
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

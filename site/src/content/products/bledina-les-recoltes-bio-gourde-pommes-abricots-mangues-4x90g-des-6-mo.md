@@ -4,7 +4,7 @@ brand: "Blédina"
 brandSlug: "bledina"
 name: "LES RECOLTES BIO Gourde Pommes Abricots Mangues 4x90g Dès 6 mois"
 title: "Blédina LES RECOLTES BIO Gourde Pommes Abricots Mangues 4x90g Dès 6 mois , note A"
-description: "Note BebeDecrypte A (88/100). Analyse NOVA, additifs, sucres et allergènes du LES RECOLTES BIO Gourde Pommes Abricots Mangues 4x90g Dès 6 mois de Blédina."
+description: "Note BébéDécrypte A (88/100). Analyse NOVA, additifs, sucres et allergènes du LES RECOLTES BIO Gourde Pommes Abricots Mangues 4x90g Dès 6 mois de Blédina."
 grade: "A"
 score: 88
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Blédina LES RECOLTES BIO Gourde Pommes Abricots Mangues 4x90g Dès 6 mois
-
-**Note BebeDecrypte : A (88/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
+**Note BébéDécrypte : A (88/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -72,7 +70,7 @@ Pomme* 76,3 %, Abricot* 13,5 %, Mangue* 10,2 %, Antioxydant : acide ascorbique, 
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

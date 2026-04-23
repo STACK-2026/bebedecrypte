@@ -4,7 +4,7 @@ brand: "GOOD GOÛT BABY"
 brandSlug: "good-gout-baby"
 name: "Les biscuits formes & couleurs"
 title: "GOOD GOÛT BABY Les biscuits formes & couleurs , note B"
-description: "Note BebeDecrypte B (70/100). Analyse NOVA, additifs, sucres et allergènes du Les biscuits formes & couleurs de GOOD GOÛT BABY."
+description: "Note BébéDécrypte B (70/100). Analyse NOVA, additifs, sucres et allergènes du Les biscuits formes & couleurs de GOOD GOÛT BABY."
 grade: "B"
 score: 70
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# GOOD GOÛT BABY Les biscuits formes & couleurs
-
-**Note BebeDecrypte : B (70/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (70/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Classification NOVA : 3 sur 4
@@ -75,7 +73,7 @@ Biscuits jaunes : 64,4% farine de blé bio (gluten), 21,8% jus de raisin concent
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

@@ -4,7 +4,7 @@ brand: "Auchan Baby Bio"
 brandSlug: "auchan-baby-bio"
 name: "Légumes verts pâtes avec morceaux"
 title: "Auchan Baby Bio Légumes verts pâtes avec morceaux , note B"
-description: "Note BebeDecrypte B (77/100). Analyse NOVA, additifs, sucres et allergènes du Légumes verts pâtes avec morceaux de Auchan Baby Bio."
+description: "Note BébéDécrypte B (77/100). Analyse NOVA, additifs, sucres et allergènes du Légumes verts pâtes avec morceaux de Auchan Baby Bio."
 grade: "B"
 score: 77
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Auchan Baby Bio Légumes verts pâtes avec morceaux
-
-**Note BebeDecrypte : B (77/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (77/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -68,7 +66,7 @@ LAIT entier en poudre reconstitué* (origine : France) 21,6%, carotte* 19%, peti
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

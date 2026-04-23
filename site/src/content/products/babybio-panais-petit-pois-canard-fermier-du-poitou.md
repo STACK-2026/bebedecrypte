@@ -4,7 +4,7 @@ brand: "babybio"
 brandSlug: "babybio"
 name: "panais petit pois canard fermier du poitou"
 title: "babybio panais petit pois canard fermier du poitou , note B"
-description: "Note BebeDecrypte B (80/100). Analyse NOVA, additifs, sucres et allergènes du panais petit pois canard fermier du poitou de babybio."
+description: "Note BébéDécrypte B (80/100). Analyse NOVA, additifs, sucres et allergènes du panais petit pois canard fermier du poitou de babybio."
 grade: "B"
 score: 80
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# babybio panais petit pois canard fermier du poitou
-
-**Note BebeDecrypte : B (80/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (80/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -68,7 +66,7 @@ Panais de Bretagne* 26%, petits pois d'Espagne* 17%, eau de cuisson, pommes de t
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

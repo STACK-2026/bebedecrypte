@@ -2,7 +2,7 @@
 slug: "happybaby"
 brand: "HappyBABY"
 title: "Marque HappyBABY , note moyenne B"
-description: "Analyse BebeDecrypte de la marque HappyBABY : 3 produits notés, moyenne 77/100, grade B."
+description: "Analyse BébéDécrypte de la marque HappyBABY : 3 produits notés, moyenne 77/100, grade B."
 averageGrade: "B"
 averageScore: 77
 productCount: 3
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# HappyBABY
-
-**Note moyenne BebeDecrypte : B (77/100)** sur 3 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (77/100)** sur 3 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -32,5 +30,5 @@ draft: false
 - [Eau gazeuse](/fr/produits/happybaby-eau-gazeuse/) , note A (86/100)
 - [muffin](/fr/produits/happybaby-muffin/) , note C (55/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

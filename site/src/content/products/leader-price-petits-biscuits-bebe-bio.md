@@ -4,7 +4,7 @@ brand: "Leader Price"
 brandSlug: "leader-price"
 name: "Petits biscuits bébé bio"
 title: "Leader Price Petits biscuits bébé bio , note D"
-description: "Note BebeDecrypte D (52/100). Analyse NOVA, additifs, sucres et allergènes du Petits biscuits bébé bio de Leader Price."
+description: "Note BébéDécrypte D (52/100). Analyse NOVA, additifs, sucres et allergènes du Petits biscuits bébé bio de Leader Price."
 grade: "D"
 score: 52
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Leader Price Petits biscuits bébé bio
-
-**Note BebeDecrypte : D (52/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : D (52/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
 
 - Tranche d'âge visée : 6 à 12 mois
 - Classification NOVA : 4 sur 4
@@ -73,7 +71,7 @@ Sucre roux de canne*, farine de blé* 31%, amidon de blé*, oeufs entiers*, huil
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
 

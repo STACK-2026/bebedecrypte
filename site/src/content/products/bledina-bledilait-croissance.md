@@ -4,7 +4,7 @@ brand: "blédina"
 brandSlug: "bledina"
 name: "Blédilait Croissance"
 title: "blédina Blédilait Croissance , note C"
-description: "Note BebeDecrypte C (58/100). Analyse NOVA, additifs, sucres et allergènes du Blédilait Croissance de blédina."
+description: "Note BébéDécrypte C (58/100). Analyse NOVA, additifs, sucres et allergènes du Blédilait Croissance de blédina."
 grade: "C"
 score: 58
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# blédina Blédilait Croissance
-
-**Note BebeDecrypte : C (58/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (58/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
@@ -72,7 +70,7 @@ Eau, LAIT partiellement écrémé - perméat de lactosérum (LAIT) - huiles vég
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 

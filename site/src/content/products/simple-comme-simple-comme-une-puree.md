@@ -4,7 +4,7 @@ brand: "Simple comme..."
 brandSlug: "simple-comme"
 name: "Simple comme une.... Purée"
 title: "Simple comme... Simple comme une.... Purée , note A"
-description: "Note BebeDecrypte A (95/100). Analyse NOVA, additifs, sucres et allergènes du Simple comme une.... Purée de Simple comme...."
+description: "Note BébéDécrypte A (95/100). Analyse NOVA, additifs, sucres et allergènes du Simple comme une.... Purée de Simple comme...."
 grade: "A"
 score: 95
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Simple comme... Simple comme une.... Purée
-
-**Note BebeDecrypte : A (95/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
+**Note BébéDécrypte : A (95/100).** Ce produit est classé A, excellent choix pour ton bébé, tu peux y aller les yeux fermés.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 1 sur 4
@@ -62,7 +60,7 @@ De l'eau de cuisson, des pommes de terre du panais* 25%, des haricots verts 12%,
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

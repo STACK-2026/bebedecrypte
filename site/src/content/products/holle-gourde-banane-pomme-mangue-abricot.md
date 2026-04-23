@@ -4,7 +4,7 @@ brand: "Holle"
 brandSlug: "holle"
 name: "Gourde Banane Pomme Mangue Abricot"
 title: "Holle Gourde Banane Pomme Mangue Abricot , note B"
-description: "Note BebeDecrypte B (76/100). Analyse NOVA, additifs, sucres et allergènes du Gourde Banane Pomme Mangue Abricot de Holle."
+description: "Note BébéDécrypte B (76/100). Analyse NOVA, additifs, sucres et allergènes du Gourde Banane Pomme Mangue Abricot de Holle."
 grade: "B"
 score: 76
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Holle Gourde Banane Pomme Mangue Abricot
-
-**Note BebeDecrypte : B (76/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (76/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Nombre d'ingrédients : 0
@@ -66,7 +64,7 @@ draft: false
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

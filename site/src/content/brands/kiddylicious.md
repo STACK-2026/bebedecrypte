@@ -2,7 +2,7 @@
 slug: "kiddylicious"
 brand: "Kiddylicious"
 title: "Marque Kiddylicious , note moyenne C"
-description: "Analyse BebeDecrypte de la marque Kiddylicious : 9 produits notés, moyenne 63/100, grade C."
+description: "Analyse BébéDécrypte de la marque Kiddylicious : 9 produits notés, moyenne 63/100, grade C."
 averageGrade: "C"
 averageScore: 63
 productCount: 9
@@ -12,9 +12,7 @@ lang: "fr"
 draft: false
 ---
 
-# Kiddylicious
-
-**Note moyenne BebeDecrypte : C (63/100)** sur 9 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : C (63/100)** sur 9 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -38,5 +36,5 @@ draft: false
 - [KIDDYLICIOUS Fruity Bakes - Fraise - 132g (6x1p)](/fr/produits/kiddylicious-kiddylicious-fruity-bakes-fraise-132g-6x1p/) , note C (59/100)
 - [Banana Soft Biscotti 6 x (120g)](/fr/produits/kiddylicious-banana-soft-biscotti-6-x-120g/) , note D (46/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BebeDecrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
 

@@ -4,7 +4,7 @@ brand: "Blédina"
 brandSlug: "bledina"
 name: "LES RECOLTES BIO Gourde Pommes Bananes 4x90g Dès 6 mois"
 title: "Blédina LES RECOLTES BIO Gourde Pommes Bananes 4x90g Dès 6 mois , note B"
-description: "Note BebeDecrypte B (78/100). Analyse NOVA, additifs, sucres et allergènes du LES RECOLTES BIO Gourde Pommes Bananes 4x90g Dès 6 mois de Blédina."
+description: "Note BébéDécrypte B (78/100). Analyse NOVA, additifs, sucres et allergènes du LES RECOLTES BIO Gourde Pommes Bananes 4x90g Dès 6 mois de Blédina."
 grade: "B"
 score: 78
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Blédina LES RECOLTES BIO Gourde Pommes Bananes 4x90g Dès 6 mois
-
-**Note BebeDecrypte : B (78/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (78/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Nombre d'ingrédients : 3
@@ -71,7 +69,7 @@ draft: false
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

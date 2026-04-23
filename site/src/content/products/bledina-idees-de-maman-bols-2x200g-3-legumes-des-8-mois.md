@@ -4,7 +4,7 @@ brand: "Bledina"
 brandSlug: "bledina"
 name: "IDEES DE MAMAN BOLS 2x200g 3 Légumes Dès 8 mois"
 title: "Bledina IDEES DE MAMAN BOLS 2x200g 3 Légumes Dès 8 mois , note B"
-description: "Note BebeDecrypte B (72/100). Analyse NOVA, additifs, sucres et allergènes du IDEES DE MAMAN BOLS 2x200g 3 Légumes Dès 8 mois de Bledina."
+description: "Note BébéDécrypte B (72/100). Analyse NOVA, additifs, sucres et allergènes du IDEES DE MAMAN BOLS 2x200g 3 Légumes Dès 8 mois de Bledina."
 grade: "B"
 score: 72
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Bledina IDEES DE MAMAN BOLS 2x200g 3 Légumes Dès 8 mois
-
-**Note BebeDecrypte : B (72/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
+**Note BébéDécrypte : B (72/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 3 sur 4
@@ -68,7 +66,7 @@ De l'eau de cuisson - de délicieux haricots verts 20,0 % - des carottes 16,7 % 
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
 

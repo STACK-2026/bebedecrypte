@@ -4,7 +4,7 @@ brand: "Milumel"
 brandSlug: "milumel"
 name: "Lémiel 3 Croissance"
 title: "Milumel Lémiel 3 Croissance , note C"
-description: "Note BebeDecrypte C (69/100). Analyse NOVA, additifs, sucres et allergènes du Lémiel 3 Croissance de Milumel."
+description: "Note BébéDécrypte C (69/100). Analyse NOVA, additifs, sucres et allergènes du Lémiel 3 Croissance de Milumel."
 grade: "C"
 score: 69
 nutriScore: ""
@@ -33,9 +33,7 @@ lang: "fr"
 draft: false
 ---
 
-# Milumel Lémiel 3 Croissance
-
-**Note BebeDecrypte : C (69/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : C (69/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
 
 - Tranche d'âge visée : 4 à 6 mois
 - Nombre d'ingrédients : 0
@@ -67,7 +65,7 @@ draft: false
 
 ## Méthodologie
 
-Cette note est générée automatiquement par notre algorithme BebeDecrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
 Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
 
