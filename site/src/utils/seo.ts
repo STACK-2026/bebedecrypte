@@ -117,7 +117,12 @@ export function jsonLdArticle(article: {
     description: article.description,
     url: article.url,
     datePublished: article.datePublished,
-    dateModified: article.dateModified || article.lastReviewed || article.datePublished,
+    // dateModified must be >= datePublished. Earlier lastReviewed dates are
+    // ignored to avoid the date inversion flagged by the schema audit.
+    dateModified: (function () {
+      const candidate = article.dateModified || article.lastReviewed || article.datePublished;
+      return candidate < article.datePublished ? article.datePublished : candidate;
+    })(),
     image: article.image
       ? article.image.startsWith("http")
         ? article.image

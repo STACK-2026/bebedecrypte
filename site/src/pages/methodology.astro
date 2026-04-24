@@ -19,6 +19,25 @@ const webPage = {
   headline: "Comment BébéDécrypte note chaque produit bébé , méthodologie 8 axes",
   url: `${siteConfig.url}/methodology/`,
   inLanguage: "fr-FR",
+  // Article-family rich results require headline + datePublished + author +
+  // image + publisher.logo. Schema audit (24/04) flagged these as missing.
+  datePublished: "2026-04-22",
+  dateModified: "2026-04-25",
+  image: `${siteConfig.url}/og-default.png`,
+  author: {
+    "@type": "Person",
+    "@id": `${siteConfig.url}/authors/marion-leclerc/#person`,
+    name: "Marion Leclerc",
+    url: `${siteConfig.url}/authors/marion-leclerc/`,
+    jobTitle: "Diététicienne pédiatrique, responsable scoring",
+  },
+  reviewedBy: {
+    "@type": "Person",
+    "@id": `${siteConfig.url}/authors/claire-vasseur/#person`,
+    name: "Dr. Claire Vasseur",
+    url: `${siteConfig.url}/authors/claire-vasseur/`,
+    jobTitle: "Pédiatre nutritionniste",
+  },
   publisher: { "@id": `${siteConfig.url}/#organization` },
   about: [
     { "@type": "Thing", name: "Classification NOVA" },

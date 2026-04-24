@@ -11,7 +11,18 @@ export function organizationSchema() {
     "@id": `${SITE}/#organization`,
     name: siteConfig.name,
     url: SITE,
-    logo: `${SITE}/favicon.svg`,
+    // logo as ImageObject lets Google render it in the Knowledge Panel and
+    // satisfies the publisher.logo constraint of Article-family schemas.
+    logo: {
+      "@type": "ImageObject",
+      "@id": `${SITE}/#logo`,
+      url: `${SITE}/favicon.svg`,
+      contentUrl: `${SITE}/favicon.svg`,
+      width: 512,
+      height: 512,
+      caption: siteConfig.name,
+    },
+    image: { "@id": `${SITE}/#logo` },
     description:
       "Décodeur indépendant d'alimentation bébé. Note chaque petit pot, lait infantile, céréale et gourde de A à E sur 8 axes (NOVA, additifs, sucres cachés, Nutri-Score, bio, allergènes, origine, simplicité), pondération renforcée avant 12 mois. Sources : Open Food Facts, EFSA, ANSES, RappelConso.",
     inLanguage: ["fr-FR", "en-US"],
@@ -36,6 +47,13 @@ export function websiteSchema(locale: "en" | "fr") {
         : "The independent food label decoder. A to E grading based on Open Food Facts, Nutri-Score, NOVA, and the EFSA additives registry.",
     inLanguage: locale === "fr" ? "fr-FR" : "en-US",
     publisher: { "@id": `${SITE}/#organization` },
+    // Sitelinks Searchbox : the catalogue search lives on /products/#q=<query>
+    // (the hub reads the hash on load and pre-fills the search input).
+    potentialAction: {
+      "@type": "SearchAction",
+      target: { "@type": "EntryPoint", urlTemplate: `${SITE}/products/#q={search_term_string}` },
+      "query-input": "required name=search_term_string",
+    },
   };
 }
 

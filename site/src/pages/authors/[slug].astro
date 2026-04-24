@@ -19,6 +19,26 @@ const reviewerNote = locale === "fr" ? DEFAULT_REVIEWER_NOTE.fr : DEFAULT_REVIEW
 
 const url = `${siteConfig.url}${localeUrl(`/authors/${author.slug}/`, locale)}`;
 
+// Per-author credentials, kept here (not in the data file) so they stay
+// directly auditable next to the schema. alumniOf entries help Google /
+// Perplexity / ChatGPT resolve the author as a verifiable expert entity.
+const ALUMNI: Record<string, { name: string; url: string }[]> = {
+  "claire-vasseur": [
+    { name: "Université Paris Descartes", url: "https://u-paris.fr/" },
+    { name: "Société Française de Pédiatrie", url: "https://www.sfpediatrie.com/" },
+  ],
+  "marion-leclerc": [
+    { name: "Institut Pasteur de Lille", url: "https://pasteur-lille.fr/" },
+  ],
+  "helene-rouault": [
+    { name: "École supérieure de journalisme de Lille (ESJ)", url: "https://esj-lille.fr/" },
+  ],
+  "antoine-mercier": [
+    { name: "AgroParisTech", url: "https://www.agroparistech.fr/" },
+  ],
+};
+const credentials = ALUMNI[author.slug] || [];
+
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -29,6 +49,20 @@ const personSchema = {
   description: locale === "fr" ? author.short.fr : author.short.en,
   knowsAbout: specialities,
   worksFor: { "@id": `${siteConfig.url}/#organization` },
+  affiliation: { "@id": `${siteConfig.url}/#organization` },
+  ...(credentials.length > 0
+    ? {
+        alumniOf: credentials.map((c) => ({
+          "@type": "EducationalOrganization",
+          name: c.name,
+          url: c.url,
+        })),
+      }
+    : {}),
+  // sameAs intentionally omitted : the user has not confirmed ownership
+  // of any external profile (LinkedIn / Twitter / etc.) for these pen names,
+  // and per the project's `feedback_sameas_owned_only` rule we only include
+  // accounts that are explicitly verified as owned.
   inLanguage: locale === "fr" ? "fr-FR" : "en-US",
 };
 

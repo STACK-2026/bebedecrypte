@@ -279,6 +279,18 @@ const productLd = {
   ...(data.nutriScore
     ? { additionalProperty: { "@type": "PropertyValue", name: "Nutri-Score", value: String(data.nutriScore).toUpperCase() } }
     : {}),
+  // aggregateRating mirrors our single editorial review : Google requires
+  // either offers OR aggregateRating to surface a Product rich result.
+  // BébéDécrypte is a rating service, not an e-commerce site, so we expose
+  // the editorial score (0-100) as both a single Review and the aggregate.
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: data.score,
+    bestRating: 100,
+    worstRating: 0,
+    ratingCount: 1,
+    reviewCount: 1,
+  },
   // reviewedBy at Product level (in addition to review.author below) increases
   // expert-author signal for Google Search and AI engines.
   reviewedBy: reviewerPerson,
