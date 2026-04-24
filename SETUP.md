@@ -100,37 +100,74 @@ Pour enregistrer le site dans Bing Webmaster :
 1. bing.com/webmasters → Add site → `https://bebedecrypte.com`
 2. Méthode : DNS TXT record `_bing` avec la valeur fournie (5 min de propagation)
 
-## 8. Premier ingest data OFF + premier blog article
+## 8. Premier ingest data OFF + RappelConso + premier blog article
 
 Quand Supabase + GH secrets sont en place :
 
 ```bash
 cd ~/stack-2026/bebedecrypte
-# Ingest ~2300 produits OFF (1 fois, ~15 min)
+# A. Ingest catalogue OFF (~10 min, 31 catégories baby-food)
 python3 scripts/fetch_off_baby.py
 python3 scripts/score_products.py
 python3 scripts/build_astro_pages.py
-git add site/src/content/products site/src/content/brands site/src/content/categories
-git commit -m "feat: initial OFF baby-food catalog ingest"
+
+# B. Ingest rappels DGCCRF (~3 min, 60 rappels bébé depuis 2020)
+python3 scripts/fetch_rappelconso.py --since 2020-01-01
+python3 scripts/build_recall_pages.py
+
+# C. Vérification sécurité avant push
+python3 scripts/check_cross_project_leaks.py
+
+# D. Commit + push (déclenche le deploy CF Pages)
+git add site/src/content site/src/data
+git commit -m "feat: catalog ingest + RappelConso refresh"
 git push
 
-# Premier article blog (manuel pour valider le pipeline)
+# E. Premier article blog (manuel pour valider le pipeline)
 cd blog-auto
 python3 publish.py --dry-run   # teste sans publier
 python3 publish.py             # publie le premier article planifié
 ```
 
-## 9. Vérification post-lancement
+## 9. Vérification post-lancement (après deploy CF Pages, ~2 min)
 
-- [ ] `https://bebedecrypte.com` répond en 200 (pas 404 CF)
-- [ ] `https://bebedecrypte.com/sitemap.xml` liste les pages
-- [ ] `https://bebedecrypte.com/fr/methodology/` affiche 8 axes
+URLs canoniques :
+
+- [ ] `https://bebedecrypte.com/` répond 200 et `<html lang="fr-FR">`
+- [ ] `https://bebedecrypte.com/products/` , hub catalogue avec filtres (search + 124 checkboxes)
+- [ ] `https://bebedecrypte.com/scan/` , scanner code-barres (`BarcodeDetector` API)
+- [ ] `https://bebedecrypte.com/rappels/` , timeline DGCCRF (60 rappels filtrables)
+- [ ] `https://bebedecrypte.com/rappels/rss.xml` , flux RSS valide
+- [ ] `https://bebedecrypte.com/methodology/` , TechArticle 8 axes
+- [ ] `https://bebedecrypte.com/sitemap-index.xml` + `sitemap-0.xml` , 1 100+ URLs
+- [ ] `https://bebedecrypte.com/manifest.webmanifest` , PWA install metadata
+- [ ] `https://bebedecrypte.com/llms.txt` + `/llms-full.txt` , surface AI
+- [ ] `https://bebedecrypte.com/en/` , version EN
+- [ ] `https://bebedecrypte.com/fr/methodology` , 301 vers `/methodology/`
+- [ ] `https://bebedecrypte.com/rankings` , 301 vers `/products/`
+
+Schemas (Google Rich Results test sur quelques URLs) :
+
+- [ ] Homepage , Organization (logo en `ImageObject`) + WebSite (`SearchAction`) + FAQPage
+- [ ] Fiche produit , Product (avec `aggregateRating`) + Review + reviewedBy Person + FAQPage + BreadcrumbList
+- [ ] Fiche rappel , `SpecialAnnouncement` + GovernmentService DGCCRF + BreadcrumbList
+- [ ] Fiche marque , Brand (`AggregateRating`) + ItemList + FAQPage
+- [ ] Fiche author , Person (jobTitle + knowsAbout + alumniOf)
+
+UI / UX :
+
 - [ ] Cookie banner apparaît au premier chargement
 - [ ] Favicon biberon visible dans l'onglet
 - [ ] Easter egg : taper `bebe` au clavier → pluie de biberons
-- [ ] `https://bebedecrypte.com/llms.txt` accessible
+- [ ] Hub `/products/` , taper "babybio" dans la search → filtre instant
+- [ ] Fiche produit Bledina , bandeau orange "Ce produit a fait l'objet d'un rappel"
+
+Backend :
+
 - [ ] GHA workflow `deploy-site` a passé au vert
+- [ ] GHA workflow `cross-project-leaks` au vert sur le dernier push
 - [ ] Runner VPS a pris un job blog-auto (pas queued)
+- [ ] IndexNow key file `https://bebedecrypte.com/<la-cle>.txt` , HTTP 200
 
 ## Liens utiles
 
