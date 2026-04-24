@@ -1,72 +1,68 @@
 ---
 slug: "bledina-bledichef-hachis-parmentier"
-brand: "Blédina"
+brand: "blédina"
 brandSlug: "bledina"
-name: "Blédichef - Hachis parmentier"
-title: "Blédina Blédichef - Hachis parmentier , note C"
-description: "Note BébéDécrypte C (61/100). Analyse NOVA, additifs, sucres et allergènes du Blédichef - Hachis parmentier de Blédina."
-grade: "C"
-score: 61
+name: "Bledichef Hachis Parmentier"
+title: "blédina Bledichef Hachis Parmentier , note B"
+description: "Note BébéDécrypte B (72/100). Analyse NOVA, additifs, sucres et allergènes du Bledichef Hachis Parmentier de blédina."
+grade: "B"
+score: 72
 nutriScore: ""
-nova: 4
-barcode: "3041090779862"
-additives: ["en:e14xx", "en:e300"]
-ingredients: "Pommes de terre 56,8% - Lait écrémé 15,0% - Eau de cuisson - Viande de bœuf (VBF) 9,0% - Oignons - Amidon transformé de maïs - Beurre (lait) - Huile de colza, huile végétales [(colza, tournesol), vitamine E) - Sel - Arômes - Antioxydant : Acide ascorbique."
-ingredientCount: 13
-image: "https://images.openfoodfacts.org/images/products/304/109/077/9862/front_fr.6.400.jpg"
-imageAlt: "Blédina Blédichef - Hachis parmentier"
-categories: ["Aliments pour bébé", "Dès 12 mois", "Plats principaux pour bébé", "Assiettes pour bébé"]
+nova: 3
+barcode: "3041091422071"
+additives: []
+ingredients: "Pommes de terre 56,3 % - Lait écrémé reconstitué à base de lait en poudre 15,0 % (LAIT) - Viande de boeuf 10,7 % - Eau de cuisson - Oignons - Amidon de maïs - Beurre (LAIT) - Huiles végétales (colza, tournesol) - Sel - Acérola en poudre - Poivre noir - Muscade."
+ingredientCount: 11
+image: "https://images.openfoodfacts.org/images/products/304/109/142/2071/front_fr.10.400.jpg"
+imageAlt: "blédina Bledichef Hachis Parmentier"
+categories: ["Aliments pour bébé", "Dès 12 mois"]
 catalogCategory: "petits-pots"
 ageRange: "4 à 6 mois"
 targetAgeMonths: 6
-warnings: ["Produit ultra-transformé (NOVA 4)"]
+warnings: []
 sources:
   - "Open Food Facts (ODbL)"
   - "Classification NOVA (Université de São Paulo)"
   - "Nutri-Score (Santé publique France)"
   - "Base additifs EFSA / ANSES"
-sourceUrl: "https://world.openfoodfacts.org/product/3041090779862"
-lastReviewed: "2026-04-22"
+sourceUrl: "https://world.openfoodfacts.org/product/3041091422071"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
-publishedDate: "2026-04-22"
+publishedDate: "2026-04-25"
 lang: "fr"
 draft: false
 ---
 
-**Note BébéDécrypte : C (61/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+**Note BébéDécrypte : B (72/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
-- Classification NOVA : 4 sur 4
-- Nombre d'ingrédients : 13
+- Classification NOVA : 3 sur 4
+- Nombre d'ingrédients : 11
 - Conditionnement : 230 g
 
 ## Composition
 
-Pommes de terre 56,8% - Lait écrémé 15,0% - Eau de cuisson - Viande de bœuf (VBF) 9,0% - Oignons - Amidon transformé de maïs - Beurre (lait) - Huile de colza, huile végétales [(colza, tournesol), vitamine E) - Sel - Arômes - Antioxydant : Acide ascorbique.
+Pommes de terre 56,3 % - Lait écrémé reconstitué à base de lait en poudre 15,0 % (LAIT) - Viande de boeuf 10,7 % - Eau de cuisson - Oignons - Amidon de maïs - Beurre (LAIT) - Huiles végétales (colza, tournesol) - Sel - Acérola en poudre - Poivre noir - Muscade.
 
 ## Détail de la note
 
 | Critère | Score sur 100 | Poids |
 |---|---|---|
-| Transformation (NOVA) | 10 | 25% |
-| Additifs | 90 | 25% |
+| Transformation (NOVA) | 45 | 25% |
+| Additifs | 100 | 25% |
 | Sucres ajoutés | 100 | 20% |
 | Nutri-Score | 55 | 10% |
 | Bio | 40 | 10% |
 | Transparence allergènes | 90 | 5% |
 | Origine France | 40 | 3% |
-| Simplicité de la recette | 25 | 2% |
-
-## Points de vigilance
-
-- Produit ultra-transformé (NOVA 4)
+| Simplicité de la recette | 45 | 2% |
 
 ## Alternatives mieux notées dans Petits pots
 
-- [Simple comme... Simple comme une.... Purée](/products/simple-comme-simple-comme-une-puree/) , note A (95/100)
-- [Babybio Tendresse de petits légumes riz](/products/babybio-tendresse-de-petits-legumes-riz/) , note A (94/100)
-- [BABYBIO BOLS LEGUMES SAUMON MACARONI 2X200G](/products/babybio-bols-legumes-saumon-macaroni-2x200g/) , note A (94/100)
-- [Babybio Douceur de pomme d'aquitaine et myrtille](/products/babybio-douceur-de-pomme-d-aquitaine-et-myrtille-2/) , note A (94/100)
+- [Babybio Brocoli et Pomme de terre](/products/babybio-brocoli-et-pomme-de-terre/) , note A (95/100)
+- [Babybio Petits Pots Petits Pois](/products/babybio-petits-pots-petits-pois/) , note A (95/100)
+- [Babybio Petits Pots Maïs Doux](/products/babybio-petits-pots-mais-doux/) , note A (95/100)
+- [Babybio Petits pois, panais, courgette, veau fermier d'Aquitaine et du Limousin](/products/babybio-petits-pois-panais-courgette-veau-fermier-d-aquitaine-et-du-li/) , note A (94/100)
 
 ## Méthodologie
 

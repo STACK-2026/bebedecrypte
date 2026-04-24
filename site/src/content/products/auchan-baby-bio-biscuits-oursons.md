@@ -26,9 +26,9 @@ sources:
   - "Nutri-Score (Santé publique France)"
   - "Base additifs EFSA / ANSES"
 sourceUrl: "https://world.openfoodfacts.org/product/3596710477401"
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
-publishedDate: "2026-04-22"
+publishedDate: "2026-04-25"
 lang: "fr"
 draft: false
 ---
@@ -66,8 +66,8 @@ Farine de BLÉ* 60%, sucre de canne roux* 22%, amidon de BLÉ* 11%, beurre* (LAI
 
 - [Nestlé Naturnes bio](/products/nestle-naturnes-bio/) , note B (80/100)
 - [Aldi Bio Knusper Snack Karotte](/products/aldi-bio-knusper-snack-karotte/) , note B (78/100)
-- [Holle Biscuits aux fruits](/products/holle-biscuits-aux-fruits/) , note B (74/100)
 - [Bledina Crousti à dévorer](/products/bledina-crousti-a-devorer/) , note B (74/100)
+- [Holle Biscuits aux fruits](/products/holle-biscuits-aux-fruits/) , note B (74/100)
 
 ## Méthodologie
 

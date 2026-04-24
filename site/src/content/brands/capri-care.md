@@ -6,7 +6,7 @@ description: "Analyse BébéDécrypte de la marque capri care : 1 produits noté
 averageGrade: "C"
 averageScore: 55
 productCount: 1
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
@@ -26,7 +26,7 @@ draft: false
 
 ## Tous les produits capri care
 
-- [Capricare Lait De Chèvre 1ère âge 800G](/fr/produits/capri-care-capricare-lait-de-chevre-1ere-age-800g/) , note C (55/100)
+- [Capricare Lait De Chèvre 1ère âge 800G](/products/capri-care-capricare-lait-de-chevre-1ere-age-800g/) , note C (55/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

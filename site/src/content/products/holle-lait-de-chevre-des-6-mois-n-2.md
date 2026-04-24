@@ -26,9 +26,9 @@ sources:
   - "Nutri-Score (Santé publique France)"
   - "Base additifs EFSA / ANSES"
 sourceUrl: "https://world.openfoodfacts.org/product/7640161870857"
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
-publishedDate: "2026-04-22"
+publishedDate: "2026-04-25"
 lang: "fr"
 draft: false
 ---

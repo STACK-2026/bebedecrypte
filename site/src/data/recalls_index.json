@@ -1,0 +1,730 @@
+{
+  "13012025": {
+    "motif": "Taux de nitrates non-conforme à la réglementation",
+    "numeroFiche": "2025-04-0039",
+    "publishedDate": "2025-04-18",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Good Goût Risotto Courgettes Chèvre 190 G"
+  },
+  "14012025": {
+    "motif": "Taux de nitrates non-conforme à la réglementation",
+    "numeroFiche": "2025-04-0039",
+    "publishedDate": "2025-04-18",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Good Goût Risotto Courgettes Chèvre 190 G"
+  },
+  "14112024": {
+    "motif": "Taux d'aflatoxine b1 non-conforme à la réglementation",
+    "numeroFiche": "2025-05-0223",
+    "publishedDate": "2025-05-26",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Good Goût Velouté De Courges Butternut, Lentilles Corail Et Noisette"
+  },
+  "18022025": {
+    "motif": "Taux de nitrates non-conforme à la réglementation",
+    "numeroFiche": "2025-04-0039",
+    "publishedDate": "2025-04-18",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Good Goût Risotto Courgettes Chèvre 190 G"
+  },
+  "3041091339928": {
+    "motif": "Bledina a décidé de retirer du marché 6 lots de bledine céréales saveur biscuit (400 g - dès 6 mois) portant les ddm suivantes : 03.09.2026 - 04.09.2026 - 05.09",
+    "numeroFiche": "2025-09-0110",
+    "publishedDate": "2025-09-15",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Bledina Bledine Céréales Saveur Biscuit"
+  },
+  "3041091339973": {
+    "motif": "Bledina a décidé de retirer du marché 2 lots de bledine céréales saveur vanille gourmande (dès 12 mois) , 2 lots de bledine saveur biscuitée et lait,1 lot de bl",
+    "numeroFiche": "2025-09-0157",
+    "publishedDate": "2025-09-15",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Bledina Bledine Céréales Saveur Vanille Gourmande (Dès 12 Mois) - Bledine Saveur Biscuitée Et Lait (6 À 36 M"
+  },
+  "3041091427670": {
+    "motif": "Par mesure de précaution, rappel d'un lot douceurs au fromage blanc « nature au sucre de canne », lot 299867 - ddm 13/02/2024, ces produits présentant des défau",
+    "numeroFiche": "2023-07-0040",
+    "publishedDate": "2023-07-05",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Bledina Douceurs Au Fromage Blanc « Nature Au Sucre De Canne »"
+  },
+  "3041091439987": {
+    "motif": "Par application du principe de précaution, nous procédons au rappel de lots de laits infantiles dont la teneur en céréulide pourrait amener à un dépassement du ",
+    "numeroFiche": "2026-02-0078",
+    "publishedDate": "2026-02-05",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Bledina Bledilait 1Er Age 0-6 Mois 900G"
+  },
+  "3041091439994": {
+    "motif": "Par application du principe de précaution, nous procédons au rappel de lots de laits infantiles dont la teneur en céréulide pourrait amener à un dépassement du ",
+    "numeroFiche": "2026-02-0093",
+    "publishedDate": "2026-02-05",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Bledina Bledilait 1Er Age 0-6 Mois 800G"
+  },
+  "3041091461254": {
+    "motif": "Par application du principe de précaution, nous procédons au rappel de lots de laits infantiles dont la teneur en céréulide pourrait amener à un dépassement du ",
+    "numeroFiche": "2026-02-0079",
+    "publishedDate": "2026-02-05",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Laboratoire Gallia Gallia Calisma Relais 1Er Age 0-6Mois 800G"
+  },
+  "3041091461261": {
+    "motif": "Par application du principe de précaution, nous procédons au rappel de lots de laits infantiles dont la teneur en céréulide pourrait amener à un dépassement du ",
+    "numeroFiche": "2026-02-0091",
+    "publishedDate": "2026-02-05",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Laboratoire Gallia Gallia Calisma Relais 2Eme Age 6-12Mois 800G"
+  },
+  "3041091461292": {
+    "motif": "Par application du principe de précaution, nous procédons au rappel de lots de laits infantiles dont la teneur en céréulide pourrait amener à un dépassement du ",
+    "numeroFiche": "2026-02-0092",
+    "publishedDate": "2026-02-05",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Laboratoire Gallia Gallia Calisma 1Er Age 0-6Mois 800G"
+  },
+  "3041091470966": {
+    "motif": "Par application du principe de précaution, nous procédons au rappel de lots de laits infantiles dont la teneur en céréulide pourrait amener à un dépassement du ",
+    "numeroFiche": "2026-01-0142",
+    "publishedDate": "2026-02-05",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Bledina Bledilait 1Er Âge 0-6 Mois 400G"
+  },
+  "3041091476883": {
+    "motif": "Par application du principe de précaution, nous procédons au rappel de lots de laits infantiles dont la teneur en céréulide pourrait amener à un dépassement du ",
+    "numeroFiche": "2026-02-0090",
+    "publishedDate": "2026-02-05",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Laboratoire Gallia Gallia Calisma 1Er Age 0-6 Mois 700G"
+  },
+  "3041091477163": {
+    "motif": "Par application du principe de précaution, nous procédons au rappel de lots de laits infantiles dont la teneur en céréulide pourrait amener à un dépassement du ",
+    "numeroFiche": "2026-02-0083",
+    "publishedDate": "2026-02-05",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Laboratoire Gallia Gallia Calisma 1Er Age 0-6 Mois 1,2 Kg"
+  },
+  "3041091477170": {
+    "motif": "Par application du principe de précaution, nous procédons au rappel de lots de laits infantiles dont la teneur en céréulide pourrait amener à un dépassement du ",
+    "numeroFiche": "2026-02-0082",
+    "publishedDate": "2026-02-05",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Bledina Bledilait 1Er Age 0-6Mois 1,2 Kg"
+  },
+  "3041091477651": {
+    "motif": "Par application du principe de précaution, nous procédons au rappel de lots de laits infantiles dont la teneur en céréulide pourrait amener à un dépassement du ",
+    "numeroFiche": "2026-02-0081",
+    "publishedDate": "2026-02-05",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Laboratoire Gallia Gallia Calisma Relais 1Er Age 0-6 Mois 400G"
+  },
+  "3041091477668": {
+    "motif": "Par application du principe de précaution, nous procédons au rappel de lots de laits infantiles dont la teneur en céréulide pourrait amener à un dépassement du ",
+    "numeroFiche": "2026-02-0076",
+    "publishedDate": "2026-02-05",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Laboratoire Gallia Gallia Calisma Relais 2Eme Age 6-12 Mois 400G"
+  },
+  "3041091482020": {
+    "motif": "Par application du principe de précaution, nous procédons au rappel de lots de laits infantiles dont la teneur en céréulide pourrait amener à un dépassement du ",
+    "numeroFiche": "2026-02-0075",
+    "publishedDate": "2026-02-05",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Laboratoire Gallia Gallia Bebe Expert Ar Caroube 2Eme Age 6-12Mois 800G"
+  },
+  "3041091511805": {
+    "motif": "Par application du principe de précaution, nous procédons au rappel de lots de laits infantiles dont la teneur en céréulide pourrait amener à un dépassement du ",
+    "numeroFiche": "2026-02-0084",
+    "publishedDate": "2026-02-05",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Bledina Bledilait Ar 0-12Mois 800G"
+  },
+  "3041091606235": {
+    "motif": "Bledina a décidé de retirer du marché 2 lots de bledine céréales saveur vanille gourmande (dès 12 mois) , 2 lots de bledine saveur biscuitée et lait,1 lot de bl",
+    "numeroFiche": "2025-09-0157",
+    "publishedDate": "2025-09-15",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Bledina Bledine Céréales Saveur Vanille Gourmande (Dès 12 Mois) - Bledine Saveur Biscuitée Et Lait (6 À 36 M"
+  },
+  "3041091606242": {
+    "motif": "Bledina a décidé de retirer du marché 2 lots de bledine céréales saveur vanille gourmande (dès 12 mois) , 2 lots de bledine saveur biscuitée et lait,1 lot de bl",
+    "numeroFiche": "2025-09-0157",
+    "publishedDate": "2025-09-15",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Bledina Bledine Céréales Saveur Vanille Gourmande (Dès 12 Mois) - Bledine Saveur Biscuitée Et Lait (6 À 36 M"
+  },
+  "3041091606280": {
+    "motif": "Bledina a décidé de retirer du marché 2 lots de bledine céréales saveur vanille gourmande (dès 12 mois) , 2 lots de bledine saveur biscuitée et lait,1 lot de bl",
+    "numeroFiche": "2025-09-0157",
+    "publishedDate": "2025-09-15",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Bledina Bledine Céréales Saveur Vanille Gourmande (Dès 12 Mois) - Bledine Saveur Biscuitée Et Lait (6 À 36 M"
+  },
+  "3041091701268": {
+    "motif": "Blédina vous informe de sa décision de retirer du marché par mesure de précaution 90 unités de blédîner brocolis petits pois riz touche de lait ayant pour date ",
+    "numeroFiche": "2023-10-0170",
+    "publishedDate": "2023-10-20",
+    "severity": "low",
+    "status": "ended",
+    "title": "Bledina Blédîner Brocolis Petits Pois Riz Touche De Lait"
+  },
+  "3041091725929": {
+    "motif": "Par application du principe de précaution, nous procédons au rappel de lots de laits infantiles dont la teneur en céréulide pourrait amener à un dépassement du ",
+    "numeroFiche": "2026-02-0080",
+    "publishedDate": "2026-02-05",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Laboratoire Gallia Gallia Calisma 1Er Age 0-6Mois 830G"
+  },
+  "3041091725943": {
+    "motif": "Par application du principe de précaution, nous procédons au rappel de lots de laits infantiles dont la teneur en céréulide pourrait amener à un dépassement du ",
+    "numeroFiche": "2026-01-0141",
+    "publishedDate": "2026-02-05",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Laboratoire Gallia Gallia Calisma Relais 1Er Âge 0-6 Mois 830G"
+  },
+  "3041091725950": {
+    "motif": "Par application du principe de précaution, nous procédons au rappel de lots de laits infantiles dont la teneur en céréulide pourrait amener à un dépassement du ",
+    "numeroFiche": "2026-02-0077",
+    "publishedDate": "2026-02-05",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Laboratoire Gallia Gallia Calisma Relais 2Eme Age 6-12Mois 830G"
+  },
+  "3041091863935": {
+    "motif": "Par application du principe de précaution, nous procédons au rappel de lots de laits infantiles dont la teneur en céréulide pourrait amener à un dépassement du ",
+    "numeroFiche": "2026-02-0087",
+    "publishedDate": "2026-02-05",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Laboratoire Gallia Gallia Bebe Expert Ar Amidon 0-12Mois 800G"
+  },
+  "3041091897497": {
+    "motif": "Par application du principe de précaution, nous procédons au rappel de lots de laits infantiles dont la teneur en céréulide pourrait amener à un dépassement du ",
+    "numeroFiche": "2026-02-0086",
+    "publishedDate": "2026-02-05",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Laboratoire Gallia Gallia Calisma Doses 2Eme Age 6-12Mois"
+  },
+  "3041091897503": {
+    "motif": "Par application du principe de précaution, nous procédons au rappel de lots de laits infantiles dont la teneur en céréulide pourrait amener à un dépassement du ",
+    "numeroFiche": "2026-02-0085",
+    "publishedDate": "2026-02-05",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Laboratoire Gallia Gallia Calisma Doses 1Er Age 0-6Mois"
+  },
+  "3041091925817": {
+    "motif": "Par application du principe de précaution, nous procédons au rappel de lots de laits infantiles dont la teneur en céréulide pourrait amener à un dépassement du ",
+    "numeroFiche": "2026-02-0086",
+    "publishedDate": "2026-02-05",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Laboratoire Gallia Gallia Calisma Doses 2Eme Age 6-12Mois"
+  },
+  "3041091992079": {
+    "motif": "Par mesure de précaution suite à un dépassement ponctuel de limite réglementaire, bledina a décidé de retirer du marché le lot lg 2f 178 ayant une ddm au 26/06/",
+    "numeroFiche": "2024-11-0334",
+    "publishedDate": "2024-11-29",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Bledina Blediner Brocolis Petits Pois Et Riz Eu Curry Doux"
+  },
+  "3041092054097": {
+    "motif": "Par application du principe de précaution, nous procédons au rappel de lots de laits infantiles dont la teneur en céréulide pourrait amener à un dépassement du ",
+    "numeroFiche": "2026-02-0086",
+    "publishedDate": "2026-02-05",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Laboratoire Gallia Gallia Calisma Doses 2Eme Age 6-12Mois"
+  },
+  "3222477756472": {
+    "motif": "Teneur en nitrate supérieur à 200ppm",
+    "numeroFiche": "2022-11-0206",
+    "publishedDate": "2022-11-29",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Les Tilapins De Casino Bio Bol Haricot Vert Pomme De Terre Bio 2X120G Les Tilapins De Casino"
+  },
+  "3250392589998": {
+    "motif": "Dépassement de la teneur en nitrates",
+    "numeroFiche": "2022-12-0004",
+    "publishedDate": "2022-12-02",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Pommette Pot Haricots Verts 2X120G - Pommette Bio"
+  },
+  "3250392605483": {
+    "motif": "Défaut d'operculage pouvant engendrer un risque d'altération du produit",
+    "numeroFiche": "2024-09-0030",
+    "publishedDate": "2024-09-06",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Pommette Pomme Poire Bio, Aliment Pour Bébé"
+  },
+  "3250392745509": {
+    "motif": "Défaut d'operculage pouvant provoquer une altération du produit",
+    "numeroFiche": "2024-09-0046",
+    "publishedDate": "2024-09-06",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Pommette Pomme Coing Bio"
+  },
+  "3257987232901": {
+    "motif": "Dépassement réglementaire du taux de nitrates",
+    "numeroFiche": "2022-11-0218",
+    "publishedDate": "2022-12-01",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Nature Bio Purée Haricot Vert Pomme De Terre Bio Dès 4/6 Mois 2X120G"
+  },
+  "3288131580319": {
+    "motif": "En raison de l'abaissement par les autorités du seuil autorisé de céréulide, nous procédons, au rappel limité de 3 lots d'optima 1er âge.",
+    "numeroFiche": "2026-02-0004",
+    "publishedDate": "2026-02-02",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Babybio Optima 1"
+  },
+  "3288131580517": {
+    "motif": "En raison de l'abaissement par les autorités du seuil de céréulide, nous procédons au rappel volontaire de 2 lots de caprea 1er âge 800 g.",
+    "numeroFiche": "2026-02-0005",
+    "publishedDate": "2026-02-02",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Babybio Caprea 1"
+  },
+  "3288131590318": {
+    "motif": "En raison de nouvelles recommandations des autorités concernant la présence potentielle de céréulide, nous procédons au rappel volontaire d'un lot d'optima 1 40",
+    "numeroFiche": "2026-01-0153",
+    "publishedDate": "2026-01-26",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Babybio Optima 1 400G"
+  },
+  "3533630900459": {
+    "motif": "Remontées de nos consommateurs et consommatrices portant sur un défaut de thermoscellage de l’opercule de certaines bouteilles de candia junior 4",
+    "numeroFiche": "2022-09-0199",
+    "publishedDate": "2022-09-20",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Candia Baby Junior 4"
+  },
+  "3533631193003": {
+    "motif": "Remontées de nos consommateurs et consommatrices portant sur un défaut de thermoscellage de l’opercule de certaines bouteilles de candia junior 4",
+    "numeroFiche": "2022-09-0199",
+    "publishedDate": "2022-09-20",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Candia Baby Junior 4"
+  },
+  "3551101545343": {
+    "motif": "Rappel volontaire : présence potentielle de céréulide dans un ingrédient (l’oméga 6 ara) provenant d’un fournisseur international et rentrant dans la compositio",
+    "numeroFiche": "2026-01-0118",
+    "publishedDate": "2026-01-21",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Picot Laits Infantiles En Poudre"
+  },
+  "3551101545350": {
+    "motif": "Rappel volontaire : présence potentielle de céréulide dans un ingrédient (l’oméga 6 ara) provenant d’un fournisseur international et rentrant dans la compositio",
+    "numeroFiche": "2026-01-0118",
+    "publishedDate": "2026-01-21",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Picot Laits Infantiles En Poudre"
+  },
+  "3551101547705": {
+    "motif": "Rappel volontaire : présence potentielle de céréulide dans un ingrédient (l’oméga 6 ara) provenant d’un fournisseur international et rentrant dans la compositio",
+    "numeroFiche": "2026-01-0118",
+    "publishedDate": "2026-01-21",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Picot Laits Infantiles En Poudre"
+  },
+  "3551101547897": {
+    "motif": "Rappel volontaire : présence potentielle de céréulide dans un ingrédient (l’oméga 6 ara) provenant d’un fournisseur international et rentrant dans la compositio",
+    "numeroFiche": "2026-01-0118",
+    "publishedDate": "2026-01-21",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Picot Laits Infantiles En Poudre"
+  },
+  "3551102095564": {
+    "motif": "Rappel volontaire : présence potentielle de céréulide dans un ingrédient (l’oméga 6 ara) provenant d’un fournisseur international et rentrant dans la compositio",
+    "numeroFiche": "2026-01-0117",
+    "publishedDate": "2026-01-21",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Picot Laits Infantiles En Poudre"
+  },
+  "3551102095571": {
+    "motif": "Rappel volontaire : présence potentielle de céréulide dans un ingrédient (l’oméga 6 ara) provenant d’un fournisseur international et rentrant dans la compositio",
+    "numeroFiche": "2026-01-0117",
+    "publishedDate": "2026-01-21",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Picot Laits Infantiles En Poudre"
+  },
+  "3560071206307": {
+    "motif": "Dépassement du seuil réglementaire en nitrates",
+    "numeroFiche": "2022-11-0216",
+    "publishedDate": "2022-11-30",
+    "severity": "medium",
+    "status": "ended",
+    "title": "My Carrefour Baby Bio Haricot Vert Et Pomme De Terre Bol 2 X 120G"
+  },
+  "3560071281335": {
+    "motif": "Présence d'aflatoxines b1 à une teneur supérieure à la réglementation",
+    "numeroFiche": "2025-10-0063",
+    "publishedDate": "2025-10-09",
+    "severity": "medium",
+    "status": "ended",
+    "title": "My Carrefour Baby Bio Biscuits Fondants"
+  },
+  "3564707149785": {
+    "motif": "Risque de présence de nitrates",
+    "numeroFiche": "2022-11-0213",
+    "publishedDate": "2022-11-30",
+    "severity": "high",
+    "status": "ended",
+    "title": "Bio Village Bebe Bol Haricot Vert Et Pomme De Terre 2X120G"
+  },
+  "3596710474967": {
+    "motif": "Dépassement de la teneur en nitrate",
+    "numeroFiche": "2022-11-0212",
+    "publishedDate": "2022-11-30",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Auchan Pot Haricots Verts 4 Mois 2X120G – Auchan Baby Bio"
+  },
+  "3596710481620": {
+    "motif": "Lait caillé",
+    "numeroFiche": "2023-08-0069",
+    "publishedDate": "2023-08-23",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Auchan Baby Croissance Pack De 12X25Cl & Bouteilles Individuelles 12/36 Mois"
+  },
+  "3596710481637": {
+    "motif": "Lait caillé",
+    "numeroFiche": "2023-08-0030",
+    "publishedDate": "2023-08-04",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Auchan Baby Croissance 12X25Cl12/36 Mois"
+  },
+  "3700763511818": {
+    "motif": "Taux d'aflatoxine b1 non-conforme à la réglementation",
+    "numeroFiche": "2025-05-0223",
+    "publishedDate": "2025-05-26",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Good Goût Velouté De Courges Butternut, Lentilles Corail Et Noisette"
+  },
+  "3701335101666": {
+    "motif": "Principe de précaution suite aux nouvelles recommandations des autorités concernant la présence potentielle de céréulide.",
+    "numeroFiche": "2026-01-0160",
+    "publishedDate": "2026-01-27",
+    "severity": "critical",
+    "status": "ended",
+    "title": "La Marque En Moins Bio Age 1 0-6 Mois 800G"
+  },
+  "3701335101673": {
+    "motif": "Principe de précaution suite aux nouvelles recommandations des autorités concernant la présence potentielle de céréulide.",
+    "numeroFiche": "2026-01-0161",
+    "publishedDate": "2026-01-27",
+    "severity": "critical",
+    "status": "ended",
+    "title": "La Marque En Moins Bio Age 2 6-12 Mois 800G"
+  },
+  "3701335101680": {
+    "motif": "Principe de précaution suite aux nouvelles recommandations des autorités concernant la présence potentielle de céréulide.",
+    "numeroFiche": "2026-01-0162",
+    "publishedDate": "2026-01-27",
+    "severity": "critical",
+    "status": "ended",
+    "title": "La Marque En Moins Bio Age 3 10-36 Mois 800G"
+  },
+  "3760258980543": {
+    "motif": "Teneur en nitrate dépassant la lmr fixée à 200mg/kg pour l'alimentation infantile",
+    "numeroFiche": "2022-07-0136",
+    "publishedDate": "2022-07-25",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Potpotam Purée Courgette Pomme De Terre Bio"
+  },
+  "3760262841298": {
+    "motif": "Par application du principe de précaution, et en anticipation des nouveaux seuils définis par l'efsa, nous procédons au rappel de lots de laits infantiles dont ",
+    "numeroFiche": "2026-02-0002",
+    "publishedDate": "2026-02-02",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Popote Lait 1Er Age"
+  },
+  "3760262842042": {
+    "motif": "Par application du principe de précaution, et en anticipation des nouveaux seuils définis par l'efsa, nous procédons au rappel de lots de laits infantiles dont ",
+    "numeroFiche": "2026-02-0002",
+    "publishedDate": "2026-02-02",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Popote Lait 1Er Age"
+  },
+  "3770002327081": {
+    "motif": "Taux de nitrates non-conforme à la réglementation",
+    "numeroFiche": "2025-04-0039",
+    "publishedDate": "2025-04-18",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Good Goût Risotto Courgettes Chèvre 190 G"
+  },
+  "3770003809142": {
+    "motif": "Retrait rappel",
+    "numeroFiche": "2023-07-0074",
+    "publishedDate": "2023-07-10",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Quart De Lait Yaourt Bio Arome Vanille Quart De Lait 125 G"
+  },
+  "4062300081758": {
+    "motif": "Très faible probabilité de présence de morelle noire en extrêmement petite quantité, issue de la récolte de petits pois",
+    "numeroFiche": "2024-07-0247",
+    "publishedDate": "2024-07-25",
+    "severity": "high",
+    "status": "ended",
+    "title": "Hipp Biologique Assiette Petits Gourmets - Risotto Légumes Petits Pois Poulet (18 Mois)"
+  },
+  "7613032405687": {
+    "motif": "Rappel volontaire: un ingrédient provenant d'un fournisseur est à l'origine de la présence potentielle de céréulide provenant d'une huile riche en acide arachid",
+    "numeroFiche": "2026-01-0042",
+    "publishedDate": "2026-01-07",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Nidal Lait Infantile En Poudre"
+  },
+  "7613033112867": {
+    "motif": "Rappel volontaire: un ingrédient provenant d'un fournisseur est à l'origine de la présence potentielle de céréulide provenant d'une huile riche en acide arachid",
+    "numeroFiche": "2026-01-0042",
+    "publishedDate": "2026-01-07",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Nidal Lait Infantile En Poudre"
+  },
+  "7613035837027": {
+    "motif": "Par mesure de précaution suite à un dépassement de limite réglementaire ponctuel sur de l'ochratoxine a, sitpa décide de retirer du marché certains lots de plat",
+    "numeroFiche": "2025-04-0140",
+    "publishedDate": "2025-04-18",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Nestlé® P’Tite Recette, Nestlé® Naturnes® Et Nestlé® P’Tit Souper Plats Complets Pour Bébé"
+  },
+  "7613035837058": {
+    "motif": "Par mesure de précaution suite à un dépassement de limite réglementaire ponctuel sur de l'ochratoxine a, sitpa décide de retirer du marché certains lots de plat",
+    "numeroFiche": "2025-04-0140",
+    "publishedDate": "2025-04-18",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Nestlé® P’Tite Recette, Nestlé® Naturnes® Et Nestlé® P’Tit Souper Plats Complets Pour Bébé"
+  },
+  "7613035837119": {
+    "motif": "Par mesure de précaution suite à un dépassement de limite réglementaire ponctuel sur de l'ochratoxine a, sitpa décide de retirer du marché certains lots de plat",
+    "numeroFiche": "2025-04-0140",
+    "publishedDate": "2025-04-18",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Nestlé® P’Tite Recette, Nestlé® Naturnes® Et Nestlé® P’Tit Souper Plats Complets Pour Bébé"
+  },
+  "7613035848085": {
+    "motif": "Par mesure de précaution suite à un dépassement de limite réglementaire ponctuel sur de l'ochratoxine a, sitpa décide de retirer du marché certains lots de plat",
+    "numeroFiche": "2025-04-0140",
+    "publishedDate": "2025-04-18",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Nestlé® P’Tite Recette, Nestlé® Naturnes® Et Nestlé® P’Tit Souper Plats Complets Pour Bébé"
+  },
+  "7613036217316": {
+    "motif": "Rappel volontaire: un ingrédient provenant d'un fournisseur est à l'origine de la présence potentielle de céréulide provenant d'une huile riche en acide arachid",
+    "numeroFiche": "2026-01-0040",
+    "publishedDate": "2026-01-07",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Guigoz Lait Infantile En Poudre"
+  },
+  "7613038151137": {
+    "motif": "Par mesure de précaution suite à un dépassement de limite réglementaire ponctuel sur de l'ochratoxine a, sitpa décide de retirer du marché certains lots de plat",
+    "numeroFiche": "2025-04-0140",
+    "publishedDate": "2025-04-18",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Nestlé® P’Tite Recette, Nestlé® Naturnes® Et Nestlé® P’Tit Souper Plats Complets Pour Bébé"
+  },
+  "7613038317922": {
+    "motif": "Rappel de précaution pour risque de présence de microorganismes “bacillus cereus”",
+    "numeroFiche": "2025-12-0088",
+    "publishedDate": "2025-12-11",
+    "severity": "high",
+    "status": "ended",
+    "title": "Guigoz Optipro Relais 1 (0-6 Mois)"
+  },
+  "7613287369543": {
+    "motif": "Rappel volontaire: un ingrédient provenant d'un fournisseur est à l'origine de la présence potentielle de céréulide provenant d'une huile riche en acide arachid",
+    "numeroFiche": "2026-01-0040",
+    "publishedDate": "2026-01-07",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Guigoz Lait Infantile En Poudre"
+  },
+  "7613287923189": {
+    "motif": "Par mesure de précaution suite à un dépassement de limite réglementaire ponctuel sur de l'ochratoxine a, sitpa décide de retirer du marché certains lots de plat",
+    "numeroFiche": "2025-04-0140",
+    "publishedDate": "2025-04-18",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Nestlé® P’Tite Recette, Nestlé® Naturnes® Et Nestlé® P’Tit Souper Plats Complets Pour Bébé"
+  },
+  "8445290000811": {
+    "motif": "Rappel volontaire: un ingrédient provenant d'un fournisseur est à l'origine de la présence potentielle de céréulide provenant d'une huile riche en acide arachid",
+    "numeroFiche": "2026-01-0040",
+    "publishedDate": "2026-01-07",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Guigoz Lait Infantile En Poudre"
+  },
+  "8445290000842": {
+    "motif": "Rappel volontaire: un ingrédient provenant d'un fournisseur est à l'origine de la présence potentielle de céréulide provenant d'une huile riche en acide arachid",
+    "numeroFiche": "2026-01-0040",
+    "publishedDate": "2026-01-07",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Guigoz Lait Infantile En Poudre"
+  },
+  "8445290098580": {
+    "motif": "Rappel volontaire: un ingrédient provenant d'un fournisseur est à l'origine de la présence potentielle de céréulide provenant d'une huile riche en acide arachid",
+    "numeroFiche": "2026-01-0040",
+    "publishedDate": "2026-01-07",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Guigoz Lait Infantile En Poudre"
+  },
+  "8445290108593": {
+    "motif": "Rappel volontaire: un ingrédient provenant d'un fournisseur est à l'origine de la présence potentielle de céréulide provenant d'une huile riche en acide arachid",
+    "numeroFiche": "2026-01-0040",
+    "publishedDate": "2026-01-07",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Guigoz Lait Infantile En Poudre"
+  },
+  "8445290116543": {
+    "motif": "Rappel volontaire: un ingrédient provenant d'un fournisseur est à l'origine de la présence potentielle de céréulide provenant d'une huile riche en acide arachid",
+    "numeroFiche": "2026-01-0040",
+    "publishedDate": "2026-01-07",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Guigoz Lait Infantile En Poudre"
+  },
+  "8445290565297": {
+    "motif": "Par mesure de précaution suite à un dépassement de limite réglementaire ponctuel sur de l'ochratoxine a, sitpa décide de retirer du marché certains lots de plat",
+    "numeroFiche": "2025-04-0140",
+    "publishedDate": "2025-04-18",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Nestlé® P’Tite Recette, Nestlé® Naturnes® Et Nestlé® P’Tit Souper Plats Complets Pour Bébé"
+  },
+  "8445290629685": {
+    "motif": "Rappel volontaire: un ingrédient provenant d'un fournisseur est à l'origine de la présence potentielle de céréulide provenant d'une huile riche en acide arachid",
+    "numeroFiche": "2026-01-0042",
+    "publishedDate": "2026-01-07",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Nidal Lait Infantile En Poudre"
+  },
+  "8445290695048": {
+    "motif": "Rappel volontaire: un ingrédient provenant d'un fournisseur est à l'origine de la présence potentielle de céréulide provenant d'une huile riche en acide arachid",
+    "numeroFiche": "2026-01-0040",
+    "publishedDate": "2026-01-07",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Guigoz Lait Infantile En Poudre"
+  },
+  "8445290736710": {
+    "motif": "Rappel volontaire: un ingrédient provenant d'un fournisseur est à l'origine de la présence potentielle de céréulide provenant d'une huile riche en acide arachid",
+    "numeroFiche": "2026-01-0040",
+    "publishedDate": "2026-01-07",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Guigoz Lait Infantile En Poudre"
+  },
+  "8445291179585": {
+    "motif": "Rappel volontaire: un ingrédient provenant d'un fournisseur est à l'origine de la présence potentielle de céréulide provenant d'une huile riche en acide arachid",
+    "numeroFiche": "2026-01-0041",
+    "publishedDate": "2026-01-06",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Guigoz Lait Infantile Liquide"
+  },
+  "8445291421127": {
+    "motif": "Rappel volontaire: un ingrédient provenant d'un fournisseur est à l'origine de la présence potentielle de céréulide provenant d'une huile riche en acide arachid",
+    "numeroFiche": "2026-01-0040",
+    "publishedDate": "2026-01-07",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Guigoz Lait Infantile En Poudre"
+  },
+  "8445291421356": {
+    "motif": "Rappel volontaire: un ingrédient provenant d'un fournisseur est à l'origine de la présence potentielle de céréulide provenant d'une huile riche en acide arachid",
+    "numeroFiche": "2026-01-0040",
+    "publishedDate": "2026-01-07",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Guigoz Lait Infantile En Poudre"
+  },
+  "8445291590960": {
+    "motif": "Par mesure de précaution suite à un dépassement de limite réglementaire ponctuel sur de l'ochratoxine a, sitpa décide de retirer du marché certains lots de plat",
+    "numeroFiche": "2025-04-0140",
+    "publishedDate": "2025-04-18",
+    "severity": "medium",
+    "status": "ended",
+    "title": "Nestlé® P’Tite Recette, Nestlé® Naturnes® Et Nestlé® P’Tit Souper Plats Complets Pour Bébé"
+  },
+  "8445291809857": {
+    "motif": "Rappel volontaire: un ingrédient provenant d'un fournisseur est à l'origine de la présence potentielle de céréulide provenant d'une huile riche en acide arachid",
+    "numeroFiche": "2026-01-0040",
+    "publishedDate": "2026-01-07",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Guigoz Lait Infantile En Poudre"
+  },
+  "8445291843035": {
+    "motif": "Rappel volontaire: un ingrédient provenant d'un fournisseur est à l'origine de la présence potentielle de céréulide provenant d'une huile riche en acide arachid",
+    "numeroFiche": "2026-01-0040",
+    "publishedDate": "2026-01-07",
+    "severity": "critical",
+    "status": "ended",
+    "title": "Guigoz Lait Infantile En Poudre"
+  }
+}

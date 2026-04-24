@@ -2,72 +2,65 @@
 slug: "nestle-babivanille"
 brand: "Nestlé"
 brandSlug: "nestle"
-name: "BABIVANILLE"
-title: "Nestlé BABIVANILLE , note D"
-description: "Note BébéDécrypte D (49/100). Analyse NOVA, additifs, sucres et allergènes du BABIVANILLE de Nestlé."
-grade: "D"
-score: 49
+name: "Babivanille"
+title: "Nestlé Babivanille , note B"
+description: "Note BébéDécrypte B (75/100). Analyse NOVA, additifs, sucres et allergènes du Babivanille de Nestlé."
+grade: "B"
+score: 75
 nutriScore: ""
-nova: 4
-barcode: "3033710020065"
+nova: null
+barcode: "8445290549785"
 additives: []
-ingredients: "Céréales 89% (farine de BLE hydrolysé, farines de BLE, d'ORGE, de SEIGLE, de maïs, d'EPEAUTRE, de riz, de TRITICALE, d'AVOINE complète), sucre, vitamines : C, E, niacine, B1, A, B6, acide folique, D3 ; minéraux : fumarate ferreux, sulfate de zinc, iodure de potassium ; arôme naturel de vanille. Peut contenir : lait."
-ingredientCount: 23
-image: "https://images.openfoodfacts.org/images/products/303/371/002/0065/front_fr.59.400.jpg"
-imageAlt: "Nestlé BABIVANILLE"
-categories: ["Aliments pour bébé", "Produits déshydratés", "Produits lyophilisés à reconstituer", "Céréales pour bébé"]
+ingredients: "NOUVEL EMBALLAGE 10 REFERMABLE & RECYCLABLE Nestlē BABIVANILLE mois b Vers une agriculture plus durable NOUVELLE RECETTE 94% DE CÉRÉALES SOURCE DE FER ET DE VITAMINE C"
+ingredientCount: 1
+image: "https://images.openfoodfacts.org/images/products/844/529/054/9785/front_fr.12.400.jpg"
+imageAlt: "Nestlé Babivanille"
+categories: ["Aliments pour bébé"]
 catalogCategory: "petits-pots"
 ageRange: "4 à 6 mois"
 targetAgeMonths: 6
-warnings: ["Produit ultra-transformé (NOVA 4)", "Taux de sucres élevé : 29.8g pour 100g."]
+warnings: []
 sources:
   - "Open Food Facts (ODbL)"
   - "Classification NOVA (Université de São Paulo)"
   - "Nutri-Score (Santé publique France)"
   - "Base additifs EFSA / ANSES"
-sourceUrl: "https://world.openfoodfacts.org/product/3033710020065"
-lastReviewed: "2026-04-22"
+sourceUrl: "https://world.openfoodfacts.org/product/8445290549785"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
-publishedDate: "2026-04-22"
+publishedDate: "2026-04-25"
 lang: "fr"
 draft: false
 ---
 
-**Note BébéDécrypte : D (49/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+**Note BébéDécrypte : B (75/100).** Ce produit est classé B, bon produit dans l'ensemble, quelques points de vigilance à connaître.
 
 - Tranche d'âge visée : 4 à 6 mois
-- Classification NOVA : 4 sur 4
-- Nombre d'ingrédients : 23
-- Conditionnement : 400 g
+- Nombre d'ingrédients : 1
 
 ## Composition
 
-Céréales 89% (farine de BLE hydrolysé, farines de BLE, d'ORGE, de SEIGLE, de maïs, d'EPEAUTRE, de riz, de TRITICALE, d'AVOINE complète), sucre, vitamines : C, E, niacine, B1, A, B6, acide folique, D3 ; minéraux : fumarate ferreux, sulfate de zinc, iodure de potassium ; arôme naturel de vanille. Peut contenir : lait.
+NOUVEL EMBALLAGE 10 REFERMABLE & RECYCLABLE Nestlē BABIVANILLE mois b Vers une agriculture plus durable NOUVELLE RECETTE 94% DE CÉRÉALES SOURCE DE FER ET DE VITAMINE C
 
 ## Détail de la note
 
 | Critère | Score sur 100 | Poids |
 |---|---|---|
-| Transformation (NOVA) | 10 | 25% |
+| Transformation (NOVA) | 50 | 25% |
 | Additifs | 100 | 25% |
-| Sucres ajoutés | 30 | 20% |
+| Sucres ajoutés | 100 | 20% |
 | Nutri-Score | 55 | 10% |
 | Bio | 40 | 10% |
-| Transparence allergènes | 82 | 5% |
+| Transparence allergènes | 90 | 5% |
 | Origine France | 40 | 3% |
-| Simplicité de la recette | 10 | 2% |
-
-## Points de vigilance
-
-- Produit ultra-transformé (NOVA 4)
-- Taux de sucres élevé : 29.8g pour 100g.
+| Simplicité de la recette | 100 | 2% |
 
 ## Alternatives mieux notées dans Petits pots
 
-- [Simple comme... Simple comme une.... Purée](/products/simple-comme-simple-comme-une-puree/) , note A (95/100)
-- [Babybio Tendresse de petits légumes riz](/products/babybio-tendresse-de-petits-legumes-riz/) , note A (94/100)
-- [BABYBIO BOLS LEGUMES SAUMON MACARONI 2X200G](/products/babybio-bols-legumes-saumon-macaroni-2x200g/) , note A (94/100)
-- [Babybio Douceur de pomme d'aquitaine et myrtille](/products/babybio-douceur-de-pomme-d-aquitaine-et-myrtille-2/) , note A (94/100)
+- [Babybio Brocoli et Pomme de terre](/products/babybio-brocoli-et-pomme-de-terre/) , note A (95/100)
+- [Babybio Petits Pots Petits Pois](/products/babybio-petits-pots-petits-pois/) , note A (95/100)
+- [Babybio Petits Pots Maïs Doux](/products/babybio-petits-pots-mais-doux/) , note A (95/100)
+- [Babybio Petits pois, panais, courgette, veau fermier d'Aquitaine et du Limousin](/products/babybio-petits-pois-panais-courgette-veau-fermier-d-aquitaine-et-du-li/) , note A (94/100)
 
 ## Méthodologie
 

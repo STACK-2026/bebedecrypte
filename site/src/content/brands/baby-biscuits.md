@@ -6,7 +6,7 @@ description: "Analyse BébéDécrypte de la marque Baby biscuits : 1 produits no
 averageGrade: "D"
 averageScore: 45
 productCount: 1
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
@@ -26,7 +26,7 @@ draft: false
 
 ## Tous les produits Baby biscuits
 
-- [Baby biscuits](/fr/produits/baby-biscuits-baby-biscuits/) , note D (45/100)
+- [Baby biscuits](/products/baby-biscuits-baby-biscuits/) , note D (45/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

@@ -6,7 +6,7 @@ description: "Analyse BébéDécrypte de la marque Bambix : 2 produits notés, m
 averageGrade: "E"
 averageScore: 36
 productCount: 2
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
@@ -26,8 +26,8 @@ draft: false
 
 ## Tous les produits Bambix
 
-- [Biscuits nounours au miel](/fr/produits/bambix-biscuits-nounours-au-miel/) , note D (42/100)
-- [Boisson croissance soja](/fr/produits/bambix-boisson-croissance-soja/) , note E (30/100)
+- [Biscuits nounours au miel](/products/bambix-biscuits-nounours-au-miel/) , note D (42/100)
+- [Boisson croissance soja](/products/bambix-boisson-croissance-soja/) , note E (30/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

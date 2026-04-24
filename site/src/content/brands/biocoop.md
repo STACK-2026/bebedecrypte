@@ -6,7 +6,7 @@ description: "Analyse BébéDécrypte de la marque Biocoop : 2 produits notés, 
 averageGrade: "C"
 averageScore: 62
 productCount: 2
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
@@ -26,8 +26,8 @@ draft: false
 
 ## Tous les produits Biocoop
 
-- [Petit biscuit bébé](/fr/produits/biocoop-petit-biscuit-bebe/) , note C (63/100)
-- [Mes premiers petits biscuits](/fr/produits/biocoop-mes-premiers-petits-biscuits/) , note C (62/100)
+- [Petit biscuit bébé](/products/biocoop-petit-biscuit-bebe/) , note C (63/100)
+- [Mes premiers petits biscuits](/products/biocoop-mes-premiers-petits-biscuits/) , note C (62/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

@@ -1,24 +1,24 @@
 ---
 slug: "happybaby"
 brand: "HappyBABY"
-title: "Marque HappyBABY , note moyenne B"
-description: "Analyse BébéDécrypte de la marque HappyBABY : 3 produits notés, moyenne 77/100, grade B."
-averageGrade: "B"
-averageScore: 77
-productCount: 3
-lastReviewed: "2026-04-22"
+title: "Marque HappyBABY , note moyenne C"
+description: "Analyse BébéDécrypte de la marque HappyBABY : 1 produits notés, moyenne 56/100, grade C."
+averageGrade: "C"
+averageScore: 56
+productCount: 1
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
 ---
 
-**Note moyenne BébéDécrypte : B (77/100)** sur 3 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : C (56/100)** sur 1 produit(s) analysé(s).
 
 ## Répartition des notes
 
 | Note | Produits |
 |---|---|
-| A | 2 |
+| A | 0 |
 | B | 0 |
 | C | 1 |
 | D | 0 |
@@ -26,9 +26,7 @@ draft: false
 
 ## Tous les produits HappyBABY
 
-- [Happy baby organics pears](/fr/produits/happybaby-happy-baby-organics-pears/) , note A (91/100)
-- [Eau gazeuse](/fr/produits/happybaby-eau-gazeuse/) , note A (86/100)
-- [muffin](/fr/produits/happybaby-muffin/) , note C (55/100)
+- [Pain au graines de tournesol](/products/happybaby-pain-au-graines-de-tournesol/) , note C (56/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

@@ -6,7 +6,7 @@ description: "Analyse BébéDécrypte de la marque Georg Parlasca Keksfabrik : 1
 averageGrade: "B"
 averageScore: 73
 productCount: 1
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
@@ -26,7 +26,7 @@ draft: false
 
 ## Tous les produits Georg Parlasca Keksfabrik
 
-- [Apple biscuits](/fr/produits/georg-parlasca-keksfabrik-apple-biscuits/) , note B (73/100)
+- [Apple biscuits](/products/georg-parlasca-keksfabrik-apple-biscuits/) , note B (73/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

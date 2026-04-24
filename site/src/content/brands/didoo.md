@@ -6,7 +6,7 @@ description: "Analyse BébéDécrypte de la marque Didoo : 1 produits notés, mo
 averageGrade: "D"
 averageScore: 52
 productCount: 1
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
@@ -26,7 +26,7 @@ draft: false
 
 ## Tous les produits Didoo
 
-- [BioBébé 3 ans Goût Nature](/fr/produits/didoo-biobebe-3-ans-gout-nature/) , note D (52/100)
+- [BioBébé 3 ans Goût Nature](/products/didoo-biobebe-3-ans-gout-nature/) , note D (52/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

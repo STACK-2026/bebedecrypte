@@ -26,9 +26,9 @@ sources:
   - "Nutri-Score (Santé publique France)"
   - "Base additifs EFSA / ANSES"
 sourceUrl: "https://world.openfoodfacts.org/product/7613033557569"
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
-publishedDate: "2026-04-22"
+publishedDate: "2026-04-25"
 lang: "fr"
 draft: false
 ---
@@ -65,10 +65,10 @@ _lait_ entier 82%, sucre, maltodextrine, purée de poire 3.5%, amidon transform�
 
 ## Alternatives mieux notées dans Petits pots
 
-- [Simple comme... Simple comme une.... Purée](/products/simple-comme-simple-comme-une-puree/) , note A (95/100)
-- [Babybio Tendresse de petits légumes riz](/products/babybio-tendresse-de-petits-legumes-riz/) , note A (94/100)
-- [BABYBIO BOLS LEGUMES SAUMON MACARONI 2X200G](/products/babybio-bols-legumes-saumon-macaroni-2x200g/) , note A (94/100)
-- [Babybio Douceur de pomme d'aquitaine et myrtille](/products/babybio-douceur-de-pomme-d-aquitaine-et-myrtille-2/) , note A (94/100)
+- [Babybio Brocoli et Pomme de terre](/products/babybio-brocoli-et-pomme-de-terre/) , note A (95/100)
+- [Babybio Petits Pots Petits Pois](/products/babybio-petits-pots-petits-pois/) , note A (95/100)
+- [Babybio Petits Pots Maïs Doux](/products/babybio-petits-pots-mais-doux/) , note A (95/100)
+- [Babybio Petits pois, panais, courgette, veau fermier d'Aquitaine et du Limousin](/products/babybio-petits-pois-panais-courgette-veau-fermier-d-aquitaine-et-du-li/) , note A (94/100)
 
 ## Méthodologie
 

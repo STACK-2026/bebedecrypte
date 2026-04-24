@@ -6,7 +6,7 @@ description: "Analyse BébéDécrypte de la marque POMETTE : 1 produits notés, 
 averageGrade: "D"
 averageScore: 52
 productCount: 1
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
@@ -26,7 +26,7 @@ draft: false
 
 ## Tous les produits POMETTE
 
-- [Laits & Céréales vanille BIO 2*250ml - 6 mois](/fr/produits/pomette-laits-cereales-vanille-bio-2-250ml-6-mois/) , note D (52/100)
+- [Laits & Céréales vanille BIO 2*250ml - 6 mois](/products/pomette-laits-cereales-vanille-bio-2-250ml-6-mois/) , note D (52/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

@@ -1,0 +1,178 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection, render } from "astro:content";
+import { siteConfig } from "../../../site.config";
+
+export async function getStaticPaths() {
+  const recalls = await getCollection("recalls");
+  return recalls.map((r) => ({ params: { id: r.data.numeroFiche }, props: { recall: r } }));
+}
+
+const { recall } = Astro.props;
+const { data } = recall;
+const { Content } = await render(recall);
+
+const recallUrl = `${siteConfig.url}/rappels/${data.numeroFiche}/`;
+const publishedISO = data.publishedDate.toISOString();
+const endISO = data.procedureEndDate ? data.procedureEndDate.toISOString() : undefined;
+
+// Schema.org : SpecialAnnouncement is the closest fit for product recalls.
+// It is what Google recommends for safety/health alerts and triggers a
+// dedicated rich-result panel. We supplement it with WebPage + BreadcrumbList.
+const announcement = {
+  "@context": "https://schema.org",
+  "@type": "SpecialAnnouncement",
+  "@id": recallUrl + "#announcement",
+  name: data.title,
+  headline: data.title,
+  text: data.motif,
+  datePosted: publishedISO,
+  ...(endISO ? { expires: endISO } : {}),
+  category: "https://www.wikidata.org/wiki/Q1153628", // product recall
+  url: recallUrl,
+  inLanguage: "fr-FR",
+  spatialCoverage: { "@type": "Country", name: "France" },
+  publisher: { "@id": `${siteConfig.url}/#organization` },
+  governmentBenefitsInfo: {
+    "@type": "GovernmentService",
+    name: "RappelConso (DGCCRF)",
+    serviceType: "Rappel produit officiel",
+    provider: { "@type": "GovernmentOrganization", name: "Direction générale de la concurrence, de la consommation et de la répression des fraudes" },
+    url: data.sourceUrl,
+  },
+};
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Accueil", item: siteConfig.url + "/" },
+    { "@type": "ListItem", position: 2, name: "Rappels produits", item: siteConfig.url + "/rappels/" },
+    { "@type": "ListItem", position: 3, name: data.title },
+  ],
+};
+
+const sevColor: Record<string, string> = {
+  critical: "#b91c1c",
+  high: "#dc2626",
+  medium: "#f97316",
+  low: "#eab308",
+};
+const sevLabel: Record<string, string> = {
+  critical: "Risque critique",
+  high: "Risque élevé",
+  medium: "Risque modéré",
+  low: "Conformité",
+};
+
+const title = `${data.title} , Rappel RappelConso ${data.publishedDate.toLocaleDateString("fr-FR")} | BébéDécrypte`;
+const description = data.description;
+---
+
+<BaseLayout title={title} description={description} jsonLd={[announcement, breadcrumb]} localized={false}>
+  <article class="recall-page">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a> <span aria-hidden="true">·</span>
+      <a href="/rappels/">Rappels</a> <span aria-hidden="true">·</span>
+      <span>{data.numeroFiche}</span>
+    </nav>
+
+    <header class={`recall-hero severity-${data.severity}`}>
+      <div class="hero-tags">
+        <span class="sev-tag" style={`background:${sevColor[data.severity]};`}>{sevLabel[data.severity]}</span>
+        {data.status === "active" && <span class="status-tag status-active">Rappel en cours</span>}
+        {data.status === "ended" && <span class="status-tag status-ended">Rappel clos</span>}
+        <span class="ref-tag">Réf. {data.numeroFiche}</span>
+      </div>
+      <h1 data-speakable>{data.title}</h1>
+      <p class="hero-meta" data-speakable>
+        <strong>Publié le <time datetime={publishedISO}>{data.publishedDate.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })}</time></strong>
+        {data.procedureEndDate && (
+          <>
+            {" · Procédure jusqu'au "}
+            <time datetime={endISO}>{data.procedureEndDate.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })}</time>
+          </>
+        )}
+      </p>
+    </header>
+
+    <div class="recall-grid">
+      <main class="recall-body">
+        {data.image && (
+          <figure class="recall-image">
+            <img src={data.image} alt={`Affichette officielle , ${data.title}`} loading="lazy" />
+            <figcaption>Affichette officielle DGCCRF</figcaption>
+          </figure>
+        )}
+        <Content />
+      </main>
+
+      <aside class="recall-aside">
+        <div class="aside-block">
+          <h2>Synthèse</h2>
+          <dl>
+            <dt>Marque</dt><dd>{data.brand || "Non précisée"}</dd>
+            <dt>Catégorie</dt><dd>{data.subCategory}</dd>
+            {data.distributors && (<><dt>Vendu chez</dt><dd>{data.distributors}</dd></>)}
+            {data.contact && (<><dt>Contact entreprise</dt><dd><a href={`tel:${data.contact}`}>{data.contact}</a></dd></>)}
+          </dl>
+        </div>
+        <a class="aside-cta" href={data.sourceUrl} rel="noopener external" target="_blank">
+          Fiche officielle DGCCRF
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 3h7m0 0v7m0-7L10 14M5 5h5M5 5v14h14v-5"/></svg>
+        </a>
+        {data.posterPdf && (
+          <a class="aside-cta secondary" href={data.posterPdf} rel="noopener external" target="_blank">
+            Affichette PDF
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+          </a>
+        )}
+      </aside>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .recall-page { max-width: 64rem; margin: 2rem auto 4rem; padding: 0 1.25rem; }
+  .breadcrumb { display: flex; gap: 0.4rem; flex-wrap: wrap; font-size: 0.82rem; color: var(--color-ink-soft); margin-bottom: 1.5rem; }
+  .breadcrumb a { color: var(--color-primary-dark); text-decoration: underline; text-underline-offset: 3px; }
+
+  .recall-hero { padding: 1.5rem 1.75rem; border-radius: 1rem; margin-bottom: 2rem; border-left: 6px solid var(--color-alert); background: #fff7f5; }
+  .recall-hero.severity-critical { background: #fef2f2; border-left-color: #b91c1c; }
+  .recall-hero.severity-high { background: #fff5f5; border-left-color: #dc2626; }
+  .recall-hero.severity-medium { background: #fff7ed; border-left-color: #f97316; }
+  .recall-hero.severity-low { background: #fefce8; border-left-color: #eab308; }
+  .hero-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.6rem; font-size: 0.78rem; }
+  .sev-tag { color: #fff; padding: 0.18rem 0.6rem; border-radius: 0.4rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+  .status-tag { padding: 0.18rem 0.55rem; border-radius: 999px; font-weight: 700; }
+  .status-active { background: #fee2e2; color: #b91c1c; }
+  .status-ended { background: #ecfeff; color: #0e7490; }
+  .ref-tag { background: #fff; border: 1px solid var(--color-border); padding: 0.18rem 0.55rem; border-radius: 999px; color: var(--color-ink-soft); font-variant-numeric: tabular-nums; }
+  .recall-hero h1 { font-size: clamp(1.5rem, 4vw, 2rem); margin: 0 0 0.5rem; line-height: 1.2; color: var(--color-ink); }
+  .hero-meta { color: var(--color-ink-soft); margin: 0; font-size: 0.92rem; }
+  .hero-meta strong { color: var(--color-ink); }
+
+  .recall-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media (min-width: 880px) { .recall-grid { grid-template-columns: 2fr 1fr; } }
+
+  .recall-body { line-height: 1.75; color: var(--color-ink-soft); }
+  .recall-body :global(h2) { font-size: 1.2rem; color: var(--color-primary-dark); margin: 1.5rem 0 0.75rem; }
+  .recall-body :global(ul), .recall-body :global(ol) { padding-left: 1.4rem; }
+  .recall-body :global(code) { background: var(--color-bg-soft); padding: 0.1rem 0.4rem; border-radius: 0.25rem; font-size: 0.92em; }
+  .recall-body :global(a) { color: var(--color-primary-dark); }
+  .recall-image { margin: 0 0 1.5rem; }
+  .recall-image img { max-width: 100%; height: auto; border-radius: 0.75rem; border: 1px solid var(--color-border); display: block; }
+  .recall-image figcaption { font-size: 0.78rem; color: var(--color-ink-soft); font-style: italic; margin-top: 0.4rem; }
+
+  .recall-aside { display: flex; flex-direction: column; gap: 0.75rem; }
+  .aside-block { background: #fff; border: 1px solid var(--color-border); border-radius: 0.875rem; padding: 1.1rem 1.25rem; }
+  .aside-block h2 { font-size: 0.95rem; color: var(--color-primary-dark); margin: 0 0 0.6rem; text-transform: uppercase; letter-spacing: 0.06em; }
+  .aside-block dl { display: grid; grid-template-columns: auto 1fr; gap: 0.4rem 0.85rem; font-size: 0.85rem; margin: 0; }
+  .aside-block dt { font-weight: 700; color: var(--color-ink); }
+  .aside-block dd { margin: 0; color: var(--color-ink-soft); }
+  .aside-block a { color: var(--color-primary-dark); }
+
+  .aside-cta { display: inline-flex; align-items: center; justify-content: space-between; gap: 0.5rem; padding: 0.7rem 1rem; background: var(--color-alert); color: #fff; border-radius: 0.625rem; text-decoration: none; font-weight: 700; font-size: 0.9rem; }
+  .aside-cta:hover { filter: brightness(0.95); }
+  .aside-cta.secondary { background: #fff; color: var(--color-ink); border: 1px solid var(--color-border); }
+</style>

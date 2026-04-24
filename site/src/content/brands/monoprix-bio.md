@@ -1,0 +1,32 @@
+---
+slug: "monoprix-bio"
+brand: "Monoprix Bio"
+title: "Marque Monoprix Bio , note moyenne B"
+description: "Analyse BébéDécrypte de la marque Monoprix Bio : 1 produits notés, moyenne 80/100, grade B."
+averageGrade: "B"
+averageScore: 80
+productCount: 1
+lastReviewed: "2026-04-25"
+reviewedBy: "Dr. Claire Vasseur"
+lang: "fr"
+draft: false
+---
+
+**Note moyenne BébéDécrypte : B (80/100)** sur 1 produit(s) analysé(s).
+
+## Répartition des notes
+
+| Note | Produits |
+|---|---|
+| A | 0 |
+| B | 1 |
+| C | 0 |
+| D | 0 |
+| E | 0 |
+
+## Tous les produits Monoprix Bio
+
+- [Lait croissance monoprix bio](/products/monoprix-bio-lait-croissance-monoprix-bio/) , note B (80/100)
+
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
+

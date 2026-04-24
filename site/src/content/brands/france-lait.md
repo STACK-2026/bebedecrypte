@@ -6,7 +6,7 @@ description: "Analyse BébéDécrypte de la marque France Lait : 1 produits not�
 averageGrade: "B"
 averageScore: 72
 productCount: 1
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
@@ -26,7 +26,7 @@ draft: false
 
 ## Tous les produits France Lait
 
-- [France lait](/fr/produits/france-lait-france-lait/) , note B (72/100)
+- [France lait](/products/france-lait-france-lait/) , note B (72/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

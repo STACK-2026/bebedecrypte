@@ -1,18 +1,18 @@
 ---
 slug: "bledine"
 brand: "Bledine"
-title: "Marque Bledine , note moyenne D"
-description: "Analyse BébéDécrypte de la marque Bledine : 2 produits notés, moyenne 48/100, grade D."
-averageGrade: "D"
-averageScore: 48
-productCount: 2
-lastReviewed: "2026-04-22"
+title: "Marque Bledine , note moyenne C"
+description: "Analyse BébéDécrypte de la marque Bledine : 1 produits notés, moyenne 56/100, grade C."
+averageGrade: "C"
+averageScore: 56
+productCount: 1
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
 ---
 
-**Note moyenne BébéDécrypte : D (48/100)** sur 2 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : C (56/100)** sur 1 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -20,14 +20,13 @@ draft: false
 |---|---|
 | A | 0 |
 | B | 0 |
-| C | 0 |
-| D | 2 |
+| C | 1 |
+| D | 0 |
 | E | 0 |
 
 ## Tous les produits Bledine
 
-- [BLEDINE DOSETTES 12x20g Saveur Biscuitée / Cacao Dès 6 mois](/fr/produits/bledine-bledine-dosettes-12x20g-saveur-biscuitee-cacao-des-6-mois/) , note D (49/100)
-- [BLEDINE DOSETTES 12x20g Vanille / Cacao Dès 6 mois](/fr/produits/bledine-bledine-dosettes-12x20g-vanille-cacao-des-6-mois/) , note D (48/100)
+- [BLEDINE CROISSANCE 400g Caramel Dès 12 mois](/products/bledine-bledine-croissance-400g-caramel-des-12-mois/) , note C (56/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

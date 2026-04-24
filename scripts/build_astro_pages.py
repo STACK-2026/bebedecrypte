@@ -474,6 +474,21 @@ def main() -> int:
         PRODUCTS_DIR.mkdir(parents=True, exist_ok=True)
         BRANDS_DIR.mkdir(parents=True, exist_ok=True)
         CATEGORIES_DIR.mkdir(parents=True, exist_ok=True)
+        # Wipe stale files so a product/brand removed from the source jsonl
+        # disappears from the site instead of producing a 404 in the sitemap.
+        # Keep .gitkeep / hidden files.
+        current_product_slugs = {p["slug"] for p in products}
+        current_brand_slugs = set(by_brand.keys())
+        current_cat_slugs = set(by_category.keys())
+        for f in PRODUCTS_DIR.glob("*.md"):
+            if f.stem not in current_product_slugs:
+                f.unlink()
+        for f in BRANDS_DIR.glob("*.md"):
+            if f.stem not in current_brand_slugs:
+                f.unlink()
+        for f in CATEGORIES_DIR.glob("*.md"):
+            if f.stem not in current_cat_slugs:
+                f.unlink()
 
     # Products , each product knows up to N alternatives in the same category with a better or equal grade.
     written_products = 0

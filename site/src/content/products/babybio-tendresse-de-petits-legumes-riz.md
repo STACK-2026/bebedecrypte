@@ -26,9 +26,9 @@ sources:
   - "Nutri-Score (Santé publique France)"
   - "Base additifs EFSA / ANSES"
 sourceUrl: "https://world.openfoodfacts.org/product/3288131520919"
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
-publishedDate: "2026-04-22"
+publishedDate: "2026-04-25"
 lang: "fr"
 draft: false
 ---
@@ -59,7 +59,9 @@ Légumes 64 % (carottes des Landes, poivrons d'Espagne, potimarrons de la Drôme
 
 ## Alternatives mieux notées dans Petits pots
 
-- [Simple comme... Simple comme une.... Purée](/products/simple-comme-simple-comme-une-puree/) , note A (95/100)
+- [Babybio Brocoli et Pomme de terre](/products/babybio-brocoli-et-pomme-de-terre/) , note A (95/100)
+- [Babybio Petits Pots Petits Pois](/products/babybio-petits-pots-petits-pois/) , note A (95/100)
+- [Babybio Petits Pots Maïs Doux](/products/babybio-petits-pots-mais-doux/) , note A (95/100)
 
 ## Méthodologie
 

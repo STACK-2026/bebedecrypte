@@ -36,6 +36,7 @@ const localeSwitchHref = isFrOnly
     <nav class="nav-links" aria-label="Main navigation">
       <a href={localeUrl("/products", locale)}>{t(tr.nav.catalogue, locale)}</a>
       <a href={localeUrl("/scan", locale)}>{t(tr.nav.scan, locale)}</a>
+      <a href="/rappels/" class="nav-recalls">{t(tr.nav.recalls, locale)}<span class="dot" aria-hidden="true"></span></a>
       <a href={localeUrl("/encyclopedia", locale)}>{t(tr.nav.additives, locale)}</a>
       <a href={localeUrl("/methodology", locale)}>{t(tr.nav.methodology, locale)}</a>
       <a href={localeUrl("/blog", locale)}>{t(tr.nav.blog, locale)}</a>
@@ -211,6 +212,13 @@ const localeSwitchHref = isFrOnly
   }
   .nav-links a:hover::after { width: 100%; }
   .nav-links a:hover { color: var(--color-primary-dark); }
+  .nav-recalls { display: inline-flex; align-items: center; gap: 0.3rem; }
+  .nav-recalls .dot { display: inline-block; width: 0.4rem; height: 0.4rem; border-radius: 999px; background: #dc2626; box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); animation: recall-pulse 2s ease-out infinite; }
+  @keyframes recall-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+    70% { box-shadow: 0 0 0 8px rgba(220, 38, 38, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+  }
 
   .nav-right {
     display: flex;

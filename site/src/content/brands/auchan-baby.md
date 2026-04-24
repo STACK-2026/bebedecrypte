@@ -2,34 +2,33 @@
 slug: "auchan-baby"
 brand: "Auchan Baby"
 title: "Marque Auchan Baby , note moyenne B"
-description: "Analyse BébéDécrypte de la marque Auchan Baby : 4 produits notés, moyenne 72/100, grade B."
+description: "Analyse BébéDécrypte de la marque Auchan Baby : 3 produits notés, moyenne 71/100, grade B."
 averageGrade: "B"
-averageScore: 72
-productCount: 4
-lastReviewed: "2026-04-22"
+averageScore: 71
+productCount: 3
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
 ---
 
-**Note moyenne BébéDécrypte : B (72/100)** sur 4 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : B (71/100)** sur 3 produit(s) analysé(s).
 
 ## Répartition des notes
 
 | Note | Produits |
 |---|---|
-| A | 1 |
-| B | 1 |
-| C | 2 |
+| A | 0 |
+| B | 2 |
+| C | 1 |
 | D | 0 |
 | E | 0 |
 
 ## Tous les produits Auchan Baby
 
-- [Brassé Végétal Riz Banane Pomme Framboise](/fr/produits/auchan-baby-brasse-vegetal-riz-banane-pomme-framboise/) , note A (91/100)
-- [Epinard et saumon](/fr/produits/auchan-baby-epinard-et-saumon/) , note B (78/100)
-- [Baby croissance 3](/fr/produits/auchan-baby-baby-croissance-3/) , note C (60/100)
-- [Croissance Nature - 3 - de 10 mois à 3 ans](/fr/produits/auchan-baby-croissance-nature-3-de-10-mois-a-3-ans/) , note C (60/100)
+- [Epinard et saumon](/products/auchan-baby-epinard-et-saumon/) , note B (78/100)
+- [Couscous au poulet](/products/auchan-baby-couscous-au-poulet/) , note B (77/100)
+- [Lait croissance](/products/auchan-baby-lait-croissance/) , note C (58/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

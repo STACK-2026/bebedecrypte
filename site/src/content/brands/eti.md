@@ -6,7 +6,7 @@ description: "Analyse BébéDécrypte de la marque Eti : 1 produits notés, moye
 averageGrade: "D"
 averageScore: 46
 productCount: 1
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
@@ -26,7 +26,7 @@ draft: false
 
 ## Tous les produits Eti
 
-- [Cicibebe](/fr/produits/eti-cicibebe/) , note D (46/100)
+- [Cicibebe](/products/eti-cicibebe/) , note D (46/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

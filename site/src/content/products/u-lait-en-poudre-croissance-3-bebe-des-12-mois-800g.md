@@ -1,0 +1,78 @@
+---
+slug: "u-lait-en-poudre-croissance-3-bebe-des-12-mois-800g"
+brand: "U"
+brandSlug: "u"
+name: "Lait en poudre croissance 3 bébé, dès 12 mois - 800g"
+title: "U Lait en poudre croissance 3 bébé, dès 12 mois - 800g , note D"
+description: "Note BébéDécrypte D (42/100). Analyse NOVA, additifs, sucres et allergènes du Lait en poudre croissance 3 bébé, dès 12 mois - 800g de U."
+grade: "D"
+score: 42
+nutriScore: ""
+nova: 4
+barcode: "325622275927200"
+additives: ["en:e306", "en:e322", "en:e322i"]
+ingredients: "LAIT ÉCRÉMÉ* 29,6%, maltodextrines*, huiles végétales* (huile de tournesol oléique*, huile de colza*, huile de tournesol*), LACTOSE* 18,2% (dont LAIT), minéraux (citrate de calcium, chlorure de sodium, sulfate de magnésium, phosphate de potassium, pyrophosphate de fer, sulfate de zinc, chlorure de potassium, sélénite de sodium, sulfate de cuivre, iodure de potassium, sulfate de manganèse), huile de POISSON (LAIT), émulsifiant : lécithine de tournesol*, vitamines (C, E, A, B5, D, B3, B8, K, B1, B"
+ingredientCount: 41
+image: ""
+imageAlt: "U Lait en poudre croissance 3 bébé, dès 12 mois - 800g"
+categories: ["Aliments pour bébé", "Laits pour bébé", "Laits de croissance"]
+catalogCategory: "laits-infantiles"
+ageRange: "4 à 6 mois"
+targetAgeMonths: 6
+warnings: ["Présence de maltodextrine (sucre caché)", "Produit ultra-transformé (NOVA 4)", "Taux de sucres élevé : 36.0g pour 100g."]
+sources:
+  - "Open Food Facts (ODbL)"
+  - "Classification NOVA (Université de São Paulo)"
+  - "Nutri-Score (Santé publique France)"
+  - "Base additifs EFSA / ANSES"
+sourceUrl: "https://world.openfoodfacts.org/product/325622275927200"
+lastReviewed: "2026-04-25"
+reviewedBy: "Dr. Claire Vasseur"
+publishedDate: "2026-04-25"
+lang: "fr"
+draft: false
+---
+
+**Note BébéDécrypte : D (42/100).** Ce produit est classé D, qualité insuffisante pour un bébé, on te conseille de passer ton chemin.
+
+- Tranche d'âge visée : 4 à 6 mois
+- Classification NOVA : 4 sur 4
+- Nombre d'ingrédients : 41
+- Conditionnement : 800 g
+
+## Composition
+
+LAIT ÉCRÉMÉ* 29,6%, maltodextrines*, huiles végétales* (huile de tournesol oléique*, huile de colza*, huile de tournesol*), LACTOSE* 18,2% (dont LAIT), minéraux (citrate de calcium, chlorure de sodium, sulfate de magnésium, phosphate de potassium, pyrophosphate de fer, sulfate de zinc, chlorure de potassium, sélénite de sodium, sulfate de cuivre, iodure de potassium, sulfate de manganèse), huile de POISSON (LAIT), émulsifiant : lécithine de tournesol*, vitamines (C, E, A, B5, D, B3, B8, K, B1, B12, B6, B2, B9), l-tryptophane, antioxydant : extrait riche en tocophérols. * ingrédients issus de l'agriculture biologique. peut contenir du soja
+
+## Détail de la note
+
+| Critère | Score sur 100 | Poids |
+|---|---|---|
+| Transformation (NOVA) | 10 | 25% |
+| Additifs | 85 | 25% |
+| Sucres ajoutés | 15 | 20% |
+| Nutri-Score | 55 | 10% |
+| Bio | 40 | 10% |
+| Transparence allergènes | 82 | 5% |
+| Origine France | 40 | 3% |
+| Simplicité de la recette | 10 | 2% |
+
+## Points de vigilance
+
+- Présence de maltodextrine (sucre caché)
+- Produit ultra-transformé (NOVA 4)
+- Taux de sucres élevé : 36.0g pour 100g.
+
+## Alternatives mieux notées dans Laits infantiles
+
+- [Gilbert Physiolac Bio 2 De 6 à 12 Mois](/products/gilbert-physiolac-bio-2-de-6-a-12-mois/) , note B (80/100)
+- [Picot Lait infantile Bio 1er âge](/products/picot-lait-infantile-bio-1er-age/) , note B (80/100)
+- [Gilbert Lait maternel infantile](/products/gilbert-lait-maternel-infantile/) , note B (80/100)
+- [Holle Lait pour nourrisson  1](/products/holle-lait-pour-nourrisson-1/) , note B (80/100)
+
+## Méthodologie
+
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+
+Voir la [méthodologie complète](/methodology/) et la [page catégorie Laits infantiles](/categories/laits-infantiles/).
+

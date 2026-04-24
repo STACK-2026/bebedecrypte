@@ -26,9 +26,9 @@ sources:
   - "Nutri-Score (Santé publique France)"
   - "Base additifs EFSA / ANSES"
 sourceUrl: "https://world.openfoodfacts.org/product/5060040253724"
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
-publishedDate: "2026-04-22"
+publishedDate: "2026-04-25"
 lang: "fr"
 draft: false
 ---
@@ -61,8 +61,8 @@ Fécule de pomme de terre (32%), huile de colza, farine de riz (20%), farine de 
 
 - [Nestlé Naturnes bio](/products/nestle-naturnes-bio/) , note B (80/100)
 - [Aldi Bio Knusper Snack Karotte](/products/aldi-bio-knusper-snack-karotte/) , note B (78/100)
-- [Holle Biscuits aux fruits](/products/holle-biscuits-aux-fruits/) , note B (74/100)
 - [Bledina Crousti à dévorer](/products/bledina-crousti-a-devorer/) , note B (74/100)
+- [Holle Biscuits aux fruits](/products/holle-biscuits-aux-fruits/) , note B (74/100)
 
 ## Méthodologie
 

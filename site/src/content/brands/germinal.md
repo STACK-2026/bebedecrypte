@@ -6,7 +6,7 @@ description: "Analyse BébéDécrypte de la marque Germinal : 1 produits notés,
 averageGrade: "D"
 averageScore: 50
 productCount: 1
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
@@ -26,7 +26,7 @@ draft: false
 
 ## Tous les produits Germinal
 
-- [Biscuits pour bébés](/fr/produits/germinal-biscuits-pour-bebes/) , note D (50/100)
+- [Biscuits pour bébés](/products/germinal-biscuits-pour-bebes/) , note D (50/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

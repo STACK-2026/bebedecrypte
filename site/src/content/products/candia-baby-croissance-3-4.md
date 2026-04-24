@@ -2,20 +2,20 @@
 slug: "candia-baby-croissance-3-4"
 brand: "Candia"
 brandSlug: "candia"
-name: "Baby croissance 3"
-title: "Candia Baby croissance 3 , note D"
-description: "Note BébéDécrypte D (48/100). Analyse NOVA, additifs, sucres et allergènes du Baby croissance 3 de Candia."
+name: "Baby Croissance 3"
+title: "Candia Baby Croissance 3 , note D"
+description: "Note BébéDécrypte D (48/100). Analyse NOVA, additifs, sucres et allergènes du Baby Croissance 3 de Candia."
 grade: "D"
 score: 48
 nutriScore: ""
 nova: 4
-barcode: "3533631253004"
+barcode: "3533631252007"
 additives: ["en:e322", "en:e322i"]
-ingredients: "Lait partiellement écrémé(2), eau, lactose, maltodextrines, huies végétales  (colza, tournesol), vitamines : A, B1, B2, B5, B6, B8, B9, В12, C, D3, E, K1 et PP,minéraux : citrate de calcium, sulfates de fer, de magnésium, de zinc, de cuivre et de manganèse, citrate de sodium, iodure et thydroxyde de potassium, sélénite de sodium, émulsifiant : lécithine de colza, éthylvanilline."
-ingredientCount: 30
-image: "https://images.openfoodfacts.org/images/products/353/363/125/3004/front_fr.3.400.jpg"
-imageAlt: "Candia Baby croissance 3"
-categories: ["Aliments pour bébé", "Laits pour bébé"]
+ingredients: "Lait partiellement écrémé, eau, lactose, maltodextrines, huiles végétales (colza, tournesol), vitamines : A, B1, B2, B5, B6, B8, B9, B12, C, D3, E, K1 et PP, minéraux : citrate de calcium, sulfates de fer, de magnésium, de zinc, de cuivre et 9 de manganèse, citrate de sodium, iodure et hydroxyde de potassium, sélénite de sodium, émulsifiant : lécithine de colza, éthylvanilline. Lait origine France."
+ingredientCount: 29
+image: "https://images.openfoodfacts.org/images/products/353/363/125/2007/front_fr.3.400.jpg"
+imageAlt: "Candia Baby Croissance 3"
+categories: ["Aliments pour bébé", "Laits pour bébé", "Laits de croissance"]
 catalogCategory: "laits-infantiles"
 ageRange: "4 à 6 mois"
 targetAgeMonths: 6
@@ -25,10 +25,10 @@ sources:
   - "Classification NOVA (Université de São Paulo)"
   - "Nutri-Score (Santé publique France)"
   - "Base additifs EFSA / ANSES"
-sourceUrl: "https://world.openfoodfacts.org/product/3533631253004"
-lastReviewed: "2026-04-22"
+sourceUrl: "https://world.openfoodfacts.org/product/3533631252007"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
-publishedDate: "2026-04-22"
+publishedDate: "2026-04-25"
 lang: "fr"
 draft: false
 ---
@@ -37,12 +37,12 @@ draft: false
 
 - Tranche d'âge visée : 4 à 6 mois
 - Classification NOVA : 4 sur 4
-- Nombre d'ingrédients : 30
-- Conditionnement : 6 * 25 cl
+- Nombre d'ingrédients : 29
+- Conditionnement : 250ml
 
 ## Composition
 
-Lait partiellement écrémé(2), eau, lactose, maltodextrines, huies végétales  (colza, tournesol), vitamines : A, B1, B2, B5, B6, B8, B9, В12, C, D3, E, K1 et PP,minéraux : citrate de calcium, sulfates de fer, de magnésium, de zinc, de cuivre et de manganèse, citrate de sodium, iodure et thydroxyde de potassium, sélénite de sodium, émulsifiant : lécithine de colza, éthylvanilline.
+Lait partiellement écrémé, eau, lactose, maltodextrines, huiles végétales (colza, tournesol), vitamines : A, B1, B2, B5, B6, B8, B9, B12, C, D3, E, K1 et PP, minéraux : citrate de calcium, sulfates de fer, de magnésium, de zinc, de cuivre et 9 de manganèse, citrate de sodium, iodure et hydroxyde de potassium, sélénite de sodium, émulsifiant : lécithine de colza, éthylvanilline. Lait origine France.
 
 ## Détail de la note
 
@@ -64,9 +64,9 @@ Lait partiellement écrémé(2), eau, lactose, maltodextrines, huies végétales
 
 ## Alternatives mieux notées dans Laits infantiles
 
-- [Etikébio Alimentation Bébé Bio / Préparation Lait De Brebis Bébé / Préparation Brebis 2è Et 3è âge](/products/etikebio-alimentation-bebe-bio-preparation-lait-de-brebis-bebe-prepara/) , note B (80/100)
-- [Holle Lait pour nourrisson en poudre](/products/holle-lait-pour-nourrisson-en-poudre/) , note B (80/100)
-- [Babybio Babybio caprea 3](/products/babybio-babybio-caprea-3/) , note B (80/100)
+- [Gilbert Physiolac Bio 2 De 6 à 12 Mois](/products/gilbert-physiolac-bio-2-de-6-a-12-mois/) , note B (80/100)
+- [Picot Lait infantile Bio 1er âge](/products/picot-lait-infantile-bio-1er-age/) , note B (80/100)
+- [Gilbert Lait maternel infantile](/products/gilbert-lait-maternel-infantile/) , note B (80/100)
 - [Holle Lait pour nourrisson  1](/products/holle-lait-pour-nourrisson-1/) , note B (80/100)
 
 ## Méthodologie

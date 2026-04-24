@@ -6,7 +6,7 @@ description: "Analyse BébéDécrypte de la marque Laboratoire Picot : 1 produit
 averageGrade: "B"
 averageScore: 74
 productCount: 1
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
@@ -26,7 +26,7 @@ draft: false
 
 ## Tous les produits Laboratoire Picot
 
-- [Épailis formule épaissie 1](/fr/produits/laboratoire-picot-epailis-formule-epaissie-1/) , note B (74/100)
+- [Épailis formule épaissie 1](/products/laboratoire-picot-epailis-formule-epaissie-1/) , note B (74/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

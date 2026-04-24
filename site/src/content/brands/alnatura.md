@@ -6,7 +6,7 @@ description: "Analyse BébéDécrypte de la marque Alnatura : 1 produits notés,
 averageGrade: "C"
 averageScore: 67
 productCount: 1
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
@@ -26,7 +26,7 @@ draft: false
 
 ## Tous les produits Alnatura
 
-- [Biscuits à l'épeautre](/fr/produits/alnatura-biscuits-a-l-epeautre/) , note C (67/100)
+- [Biscuits à l'épeautre](/products/alnatura-biscuits-a-l-epeautre/) , note C (67/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

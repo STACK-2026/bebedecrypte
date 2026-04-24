@@ -6,7 +6,7 @@ description: "Analyse BébéDécrypte de la marque Bebe Mandorle : 1 produits no
 averageGrade: "C"
 averageScore: 64
 productCount: 1
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
@@ -26,7 +26,7 @@ draft: false
 
 ## Tous les produits Bebe Mandorle
 
-- [Prep Pour Nourrissons 1 Age 0 a 6 Mois](/fr/produits/bebe-mandorle-prep-pour-nourrissons-1-age-0-a-6-mois/) , note C (64/100)
+- [Prep Pour Nourrissons 1 Age 0 a 6 Mois](/products/bebe-mandorle-prep-pour-nourrissons-1-age-0-a-6-mois/) , note C (64/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

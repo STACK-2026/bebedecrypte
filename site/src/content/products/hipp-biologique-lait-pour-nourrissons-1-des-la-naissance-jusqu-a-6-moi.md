@@ -1,0 +1,80 @@
+---
+slug: "hipp-biologique-lait-pour-nourrissons-1-des-la-naissance-jusqu-a-6-moi"
+brand: "HIPP BIOLOGIQUE"
+brandSlug: "hipp-biologique"
+name: "Lait pour nourrissons - 1 - Dès la naissance jusqu’à 6 mois"
+title: "HIPP BIOLOGIQUE Lait pour nourrissons - 1 - Dès la naissance jusqu’à 6 mois , note C"
+description: "Note BébéDécrypte C (67/100). Analyse NOVA, additifs, sucres et allergènes du Lait pour nourrissons - 1 - Dès la naissance jusqu’à 6 mois de HIPP BIOLOGIQU"
+grade: "C"
+score: 67
+nutriScore: ""
+nova: 4
+barcode: "4062300034105"
+additives: ["en:e270"]
+ingredients: "_Lait_ écrémé*, petit _lait_* en poudre (partiellement déminéralisé), huiles végétales* (palme1, colza*, tournesol*), _lactose_*, fibres alimentaires (galacto-oligosaccharides issus du _lactose_), protéine de _petit-lait_, minéraux (citrate de potassium, chlorure de calcium, citrate de sodium, carbonate de calcium, sulfate de magnésium, ortho-phosphates de calcium, sulfate de fer, sulfate de zinc, sulfate de cuivre, iodate de potassium, sulfate de manganèse, sélénate de sodium), mélange d'huiles"
+ingredientCount: 47
+image: "https://images.openfoodfacts.org/images/products/406/230/003/4105/front_fr.24.400.jpg"
+imageAlt: "HIPP BIOLOGIQUE Lait pour nourrissons - 1 - Dès la naissance jusqu’à 6 mois"
+categories: ["Aliments pour bébé", "Produits déshydratés", "Laits pour bébé", "Laits 1er âge", "Laits 2ème âge", "Laits infantiles en poudre"]
+catalogCategory: "laits-infantiles"
+ageRange: "4 à 6 mois"
+targetAgeMonths: 6
+warnings: ["Présence d'huile de palme", "Produit ultra-transformé (NOVA 4)"]
+sources:
+  - "Open Food Facts (ODbL)"
+  - "Classification NOVA (Université de São Paulo)"
+  - "Nutri-Score (Santé publique France)"
+  - "Base additifs EFSA / ANSES"
+sourceUrl: "https://world.openfoodfacts.org/product/4062300034105"
+lastReviewed: "2026-04-25"
+reviewedBy: "Dr. Claire Vasseur"
+publishedDate: "2026-04-25"
+lang: "fr"
+draft: false
+---
+
+**Note BébéDécrypte : C (67/100).** Ce produit est classé C, correct mais perfectible, regarde les alternatives mieux notées.
+
+- Tranche d'âge visée : 4 à 6 mois
+- Classification NOVA : 4 sur 4
+- Nombre d'ingrédients : 47
+- Conditionnement : 900 g
+
+## Composition
+
+_Lait_ écrémé*, petit _lait_* en poudre (partiellement déminéralisé), huiles végétales* (palme1, colza*, tournesol*), _lactose_*, fibres alimentaires (galacto-oligosaccharides issus du _lactose_), protéine de _petit-lait_, minéraux (citrate de potassium, chlorure de calcium, citrate de sodium, carbonate de calcium, sulfate de magnésium, ortho-phosphates de calcium, sulfate de fer, sulfate de zinc, sulfate de cuivre, iodate de potassium, sulfate de manganèse, sélénate de sodium), mélange d'huiles LCP² (huile végétale de Mortierella alpina, huile de _poisson_), L-phénylamine, vitamines (vitamine C, vitamine A, vitamine B1, vitamine B6, acide pantothénique, niacine, vitamine E, acide folique, vitamine K, vitamine D, vitamine B2, biotine, vitamine B12), L-tryptophane, ferments lactiques naturels (Lactobacillus fermentum hereditum® CECT5716), stabilisateur acide lactique, inositol.
+*Produits issus de l'Agriculture Biologique.
+1 Huile de palme bio issue de l'agriculture durable et non hydrogénée.
+²LCP = acides gras polyinsaturés à longue chaîne.
+
+## Détail de la note
+
+| Critère | Score sur 100 | Poids |
+|---|---|---|
+| Transformation (NOVA) | 10 | 25% |
+| Additifs | 95 | 25% |
+| Sucres ajoutés | 95 | 20% |
+| Nutri-Score | 55 | 10% |
+| Bio | 100 | 10% |
+| Transparence allergènes | 90 | 5% |
+| Origine France | 40 | 3% |
+| Simplicité de la recette | 10 | 2% |
+
+## Points de vigilance
+
+- Présence d'huile de palme
+- Produit ultra-transformé (NOVA 4)
+
+## Alternatives mieux notées dans Laits infantiles
+
+- [Gilbert Physiolac Bio 2 De 6 à 12 Mois](/products/gilbert-physiolac-bio-2-de-6-a-12-mois/) , note B (80/100)
+- [Picot Lait infantile Bio 1er âge](/products/picot-lait-infantile-bio-1er-age/) , note B (80/100)
+- [Gilbert Lait maternel infantile](/products/gilbert-lait-maternel-infantile/) , note B (80/100)
+- [Holle Lait pour nourrisson  1](/products/holle-lait-pour-nourrisson-1/) , note B (80/100)
+
+## Méthodologie
+
+Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
+
+Voir la [méthodologie complète](/methodology/) et la [page catégorie Laits infantiles](/categories/laits-infantiles/).
+

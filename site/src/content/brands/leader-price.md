@@ -1,18 +1,18 @@
 ---
 slug: "leader-price"
 brand: "Leader Price"
-title: "Marque Leader Price , note moyenne C"
-description: "Analyse BébéDécrypte de la marque Leader Price : 3 produits notés, moyenne 56/100, grade C."
-averageGrade: "C"
-averageScore: 56
-productCount: 3
-lastReviewed: "2026-04-22"
+title: "Marque Leader Price , note moyenne D"
+description: "Analyse BébéDécrypte de la marque Leader Price : 1 produits notés, moyenne 52/100, grade D."
+averageGrade: "D"
+averageScore: 52
+productCount: 1
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
 ---
 
-**Note moyenne BébéDécrypte : C (56/100)** sur 3 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : D (52/100)** sur 1 produit(s) analysé(s).
 
 ## Répartition des notes
 
@@ -20,15 +20,13 @@ draft: false
 |---|---|
 | A | 0 |
 | B | 0 |
-| C | 1 |
-| D | 2 |
+| C | 0 |
+| D | 1 |
 | E | 0 |
 
 ## Tous les produits Leader Price
 
-- [Purée avec morceaux à base de haricots verts riz et sole tropicale.](/fr/produits/leader-price-puree-avec-morceaux-a-base-de-haricots-verts-riz-et-sole/) , note C (62/100)
-- [Bébé Spaghetti Bolognaise avec morceaux](/fr/produits/leader-price-bebe-spaghetti-bolognaise-avec-morceaux/) , note D (53/100)
-- [Petits biscuits bébé bio](/fr/produits/leader-price-petits-biscuits-bebe-bio/) , note D (52/100)
+- [Petits biscuits bébé bio](/products/leader-price-petits-biscuits-bebe-bio/) , note D (52/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

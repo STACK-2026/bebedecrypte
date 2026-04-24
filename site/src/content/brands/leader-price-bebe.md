@@ -6,7 +6,7 @@ description: "Analyse BébéDécrypte de la marque Leader Price Bebe : 1 produit
 averageGrade: "E"
 averageScore: 39
 productCount: 1
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
@@ -26,7 +26,7 @@ draft: false
 
 ## Tous les produits Leader Price Bebe
 
-- [Lait de croissance de 10 mois à 3 ans](/fr/produits/leader-price-bebe-lait-de-croissance-de-10-mois-a-3-ans/) , note E (39/100)
+- [Lait de croissance de 10 mois à 3 ans](/products/leader-price-bebe-lait-de-croissance-de-10-mois-a-3-ans/) , note E (39/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

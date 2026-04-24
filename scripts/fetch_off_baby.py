@@ -36,19 +36,44 @@ USER_AGENT = "bebedecrypte/1.0 (+https://bebedecrypte.com ; contact@bebedecrypte
 # OFF English category tags (ordered most-generic first so dedup catches
 # children categories naturally, then specialised categories fill niches).
 DEFAULT_CATEGORIES = [
+    # Generic
     "en:baby-foods",
+    "en:foods-for-young-children",
+    "en:baby-meals",
+    # Milks (1st / 2nd / 3rd age + generic + formulas)
     "en:baby-milks",
     "en:infant-milks",
     "en:first-age-milks",
     "en:follow-on-milks",
     "en:growing-up-milks",
+    "en:infant-formulas",
+    "en:hypoallergenic-formulas",
+    # Cereals / porridges
     "en:baby-cereals",
+    "en:porridges-for-babies",
+    "en:infant-cereals",
+    # Snacks / biscuits / teething
     "en:baby-snacks",
     "en:baby-biscuits",
+    "en:teething-biscuits",
+    # Drinks
     "en:baby-juices",
     "en:baby-drinks",
+    "en:baby-waters",
+    # Purees / jars (most populated category on FR market)
+    "en:purees-for-babies",
+    "en:fruit-purees-for-babies",
+    "en:vegetable-purees-for-babies",
     "en:fruits-for-babies",
     "en:vegetables-for-babies",
+    "en:meat-for-babies",
+    "en:fish-for-babies",
+    "en:meals-for-babies",
+    "en:dishes-for-babies",
+    "en:dinners-for-babies",
+    # Pouches
+    "en:baby-fruit-pouches",
+    "en:fruit-pouches-for-babies",
 ]
 
 # Fields we persist per product. Keep in sync with score_products.py expectations.

@@ -6,7 +6,7 @@ description: "Analyse BébéDécrypte de la marque Babysoif : 1 produits notés,
 averageGrade: "C"
 averageScore: 57
 productCount: 1
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
@@ -26,7 +26,7 @@ draft: false
 
 ## Tous les produits Babysoif
 
-- [Babysoif Mes 1ères boissons Fleur d'Oranger](/fr/produits/babysoif-babysoif-mes-1eres-boissons-fleur-d-oranger/) , note C (57/100)
+- [Babysoif Mes 1ères boissons Fleur d'Oranger](/products/babysoif-babysoif-mes-1eres-boissons-fleur-d-oranger/) , note C (57/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

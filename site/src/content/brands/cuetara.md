@@ -6,7 +6,7 @@ description: "Analyse BébéDécrypte de la marque Cuétara : 2 produits notés,
 averageGrade: "D"
 averageScore: 53
 productCount: 2
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
@@ -26,8 +26,8 @@ draft: false
 
 ## Tous les produits Cuétara
 
-- [Oceanix mini biscuits](/fr/produits/cuetara-oceanix-mini-biscuits/) , note C (69/100)
-- [Tosta Rica](/fr/produits/cuetara-tosta-rica/) , note E (37/100)
+- [Oceanix mini biscuits](/products/cuetara-oceanix-mini-biscuits/) , note C (69/100)
+- [Tosta Rica](/products/cuetara-tosta-rica/) , note E (37/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

@@ -26,9 +26,9 @@ sources:
   - "Nutri-Score (Santé publique France)"
   - "Base additifs EFSA / ANSES"
 sourceUrl: "https://world.openfoodfacts.org/product/5051594002975"
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
-publishedDate: "2026-04-22"
+publishedDate: "2026-04-25"
 lang: "fr"
 draft: false
 ---
@@ -63,9 +63,9 @@ draft: false
 
 ## Alternatives mieux notées dans Laits infantiles
 
-- [Etikébio Alimentation Bébé Bio / Préparation Lait De Brebis Bébé / Préparation Brebis 2è Et 3è âge](/products/etikebio-alimentation-bebe-bio-preparation-lait-de-brebis-bebe-prepara/) , note B (80/100)
-- [Holle Lait pour nourrisson en poudre](/products/holle-lait-pour-nourrisson-en-poudre/) , note B (80/100)
-- [Babybio Babybio caprea 3](/products/babybio-babybio-caprea-3/) , note B (80/100)
+- [Gilbert Physiolac Bio 2 De 6 à 12 Mois](/products/gilbert-physiolac-bio-2-de-6-a-12-mois/) , note B (80/100)
+- [Picot Lait infantile Bio 1er âge](/products/picot-lait-infantile-bio-1er-age/) , note B (80/100)
+- [Gilbert Lait maternel infantile](/products/gilbert-lait-maternel-infantile/) , note B (80/100)
 - [Holle Lait pour nourrisson  1](/products/holle-lait-pour-nourrisson-1/) , note B (80/100)
 
 ## Méthodologie

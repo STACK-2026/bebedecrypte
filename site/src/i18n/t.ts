@@ -42,6 +42,7 @@ export const tr = {
     home: { en: "Home", fr: "Accueil" },
     catalogue: { en: "Catalog", fr: "Catalogue" },
     scan: { en: "Scan", fr: "Scanner" },
+    recalls: { en: "Recalls", fr: "Rappels" },
     byAge: { en: "By age", fr: "Par âge" },
     compare: { en: "Compare", fr: "Comparer" },
     additives: { en: "Additives", fr: "Additifs" },

@@ -15,7 +15,7 @@ ingredients: ""
 ingredientCount: 0
 image: "https://images.openfoodfacts.org/images/products/304/109/184/3470/front_fr.3.400.jpg"
 imageAlt: "Blédina Nursie Croissance"
-categories: ["Aliments pour bébé", "Laits pour bébé"]
+categories: ["Aliments pour bébé", "Laits pour bébé", "Dès 12 mois"]
 catalogCategory: "laits-infantiles"
 ageRange: "4 à 6 mois"
 targetAgeMonths: 6
@@ -26,9 +26,9 @@ sources:
   - "Nutri-Score (Santé publique France)"
   - "Base additifs EFSA / ANSES"
 sourceUrl: "https://world.openfoodfacts.org/product/3041091843470"
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
-publishedDate: "2026-04-22"
+publishedDate: "2026-04-25"
 lang: "fr"
 draft: false
 ---
@@ -37,6 +37,7 @@ draft: false
 
 - Tranche d'âge visée : 4 à 6 mois
 - Nombre d'ingrédients : 0
+- Conditionnement : 900 g
 
 ## Détail de la note
 
@@ -53,9 +54,9 @@ draft: false
 
 ## Alternatives mieux notées dans Laits infantiles
 
-- [Etikébio Alimentation Bébé Bio / Préparation Lait De Brebis Bébé / Préparation Brebis 2è Et 3è âge](/products/etikebio-alimentation-bebe-bio-preparation-lait-de-brebis-bebe-prepara/) , note B (80/100)
-- [Holle Lait pour nourrisson en poudre](/products/holle-lait-pour-nourrisson-en-poudre/) , note B (80/100)
-- [Babybio Babybio caprea 3](/products/babybio-babybio-caprea-3/) , note B (80/100)
+- [Gilbert Physiolac Bio 2 De 6 à 12 Mois](/products/gilbert-physiolac-bio-2-de-6-a-12-mois/) , note B (80/100)
+- [Picot Lait infantile Bio 1er âge](/products/picot-lait-infantile-bio-1er-age/) , note B (80/100)
+- [Gilbert Lait maternel infantile](/products/gilbert-lait-maternel-infantile/) , note B (80/100)
 - [Holle Lait pour nourrisson  1](/products/holle-lait-pour-nourrisson-1/) , note B (80/100)
 
 ## Méthodologie

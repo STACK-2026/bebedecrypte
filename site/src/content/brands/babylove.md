@@ -6,7 +6,7 @@ description: "Analyse BébéDécrypte de la marque Babylove : 1 produits notés,
 averageGrade: "B"
 averageScore: 74
 productCount: 1
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
@@ -26,7 +26,7 @@ draft: false
 
 ## Tous les produits Babylove
 
-- [Petit pot 5 mois](/fr/produits/babylove-petit-pot-5-mois/) , note B (74/100)
+- [Lait bebe](/products/babylove-lait-bebe/) , note B (74/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

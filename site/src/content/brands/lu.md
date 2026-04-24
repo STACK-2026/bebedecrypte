@@ -6,7 +6,7 @@ description: "Analyse BébéDécrypte de la marque Lu : 4 produits notés, moyen
 averageGrade: "E"
 averageScore: 38
 productCount: 4
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
@@ -26,10 +26,10 @@ draft: false
 
 ## Tous les produits Lu
 
-- [Betterfood Start Biscuit pour les premières panades](/fr/produits/lu-betterfood-start-biscuit-pour-les-premieres-panades/) , note D (40/100)
-- [Betterfood - Biscuit pour panades](/fr/produits/lu-betterfood-biscuit-pour-panades/) , note E (38/100)
-- [Petit Lu Vitabis 16X175G](/fr/produits/lu-petit-lu-vitabis-16x175g/) , note E (38/100)
-- [Vitabis](/fr/produits/lu-vitabis/) , note E (38/100)
+- [Betterfood Start Biscuit pour les premières panades](/products/lu-betterfood-start-biscuit-pour-les-premieres-panades/) , note D (40/100)
+- [Betterfood - Biscuit pour panades](/products/lu-betterfood-biscuit-pour-panades/) , note E (38/100)
+- [Petit Lu Vitabis 16X175G](/products/lu-petit-lu-vitabis-16x175g/) , note E (38/100)
+- [Vitabis](/products/lu-vitabis/) , note E (38/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

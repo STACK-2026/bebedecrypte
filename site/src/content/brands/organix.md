@@ -6,7 +6,7 @@ description: "Analyse BébéDécrypte de la marque Organix : 1 produits notés, 
 averageGrade: "B"
 averageScore: 74
 productCount: 1
-lastReviewed: "2026-04-22"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
@@ -26,7 +26,7 @@ draft: false
 
 ## Tous les produits Organix
 
-- [Organix: Goodies Biscuits Gingerbread Men - 135G](/fr/produits/organix-organix-goodies-biscuits-gingerbread-men-135g/) , note B (74/100)
+- [Organix: Goodies Biscuits Gingerbread Men - 135G](/products/organix-organix-goodies-biscuits-gingerbread-men-135g/) , note B (74/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 

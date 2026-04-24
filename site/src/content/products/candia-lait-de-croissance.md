@@ -9,11 +9,11 @@ grade: "B"
 score: 74
 nutriScore: ""
 nova: null
-barcode: "3533631278007"
+barcode: "3533631269005"
 additives: []
 ingredients: ""
 ingredientCount: 0
-image: ""
+image: "https://images.openfoodfacts.org/images/products/353/363/126/9005/front_fr.6.400.jpg"
 imageAlt: "Candia Lait de croissance"
 categories: ["Aliments pour bébé", "Laits pour bébé"]
 catalogCategory: "laits-infantiles"
@@ -25,10 +25,10 @@ sources:
   - "Classification NOVA (Université de São Paulo)"
   - "Nutri-Score (Santé publique France)"
   - "Base additifs EFSA / ANSES"
-sourceUrl: "https://world.openfoodfacts.org/product/3533631278007"
-lastReviewed: "2026-04-22"
+sourceUrl: "https://world.openfoodfacts.org/product/3533631269005"
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
-publishedDate: "2026-04-22"
+publishedDate: "2026-04-25"
 lang: "fr"
 draft: false
 ---
@@ -37,6 +37,7 @@ draft: false
 
 - Tranche d'âge visée : 4 à 6 mois
 - Nombre d'ingrédients : 0
+- Conditionnement : 6 x 1 l
 
 ## Détail de la note
 
@@ -44,7 +45,7 @@ draft: false
 |---|---|---|
 | Transformation (NOVA) | 50 | 25% |
 | Additifs | 100 | 25% |
-| Sucres ajoutés | 100 | 20% |
+| Sucres ajoutés | 98 | 20% |
 | Nutri-Score | 55 | 10% |
 | Bio | 40 | 10% |
 | Transparence allergènes | 90 | 5% |
@@ -53,9 +54,9 @@ draft: false
 
 ## Alternatives mieux notées dans Laits infantiles
 
-- [Etikébio Alimentation Bébé Bio / Préparation Lait De Brebis Bébé / Préparation Brebis 2è Et 3è âge](/products/etikebio-alimentation-bebe-bio-preparation-lait-de-brebis-bebe-prepara/) , note B (80/100)
-- [Holle Lait pour nourrisson en poudre](/products/holle-lait-pour-nourrisson-en-poudre/) , note B (80/100)
-- [Babybio Babybio caprea 3](/products/babybio-babybio-caprea-3/) , note B (80/100)
+- [Gilbert Physiolac Bio 2 De 6 à 12 Mois](/products/gilbert-physiolac-bio-2-de-6-a-12-mois/) , note B (80/100)
+- [Picot Lait infantile Bio 1er âge](/products/picot-lait-infantile-bio-1er-age/) , note B (80/100)
+- [Gilbert Lait maternel infantile](/products/gilbert-lait-maternel-infantile/) , note B (80/100)
 - [Holle Lait pour nourrisson  1](/products/holle-lait-pour-nourrisson-1/) , note B (80/100)
 
 ## Méthodologie

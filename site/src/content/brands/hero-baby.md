@@ -1,37 +1,39 @@
 ---
 slug: "hero-baby"
-brand: "Hero Baby"
-title: "Marque Hero Baby , note moyenne C"
-description: "Analyse BébéDécrypte de la marque Hero Baby : 6 produits notés, moyenne 61/100, grade C."
+brand: "Hero baby"
+title: "Marque Hero baby , note moyenne C"
+description: "Analyse BébéDécrypte de la marque Hero baby : 8 produits notés, moyenne 62/100, grade C."
 averageGrade: "C"
-averageScore: 61
-productCount: 6
-lastReviewed: "2026-04-22"
+averageScore: 62
+productCount: 8
+lastReviewed: "2026-04-25"
 reviewedBy: "Dr. Claire Vasseur"
 lang: "fr"
 draft: false
 ---
 
-**Note moyenne BébéDécrypte : C (61/100)** sur 6 produit(s) analysé(s).
+**Note moyenne BébéDécrypte : C (62/100)** sur 8 produit(s) analysé(s).
 
 ## Répartition des notes
 
 | Note | Produits |
 |---|---|
 | A | 0 |
-| B | 3 |
+| B | 4 |
 | C | 1 |
-| D | 2 |
+| D | 3 |
 | E | 0 |
 
-## Tous les produits Hero Baby
+## Tous les produits Hero baby
 
-- [Crema de bechamel con lenguado](/fr/produits/hero-baby-crema-de-bechamel-con-lenguado/) , note B (72/100)
-- [Verduritas con merluza](/fr/produits/hero-baby-verduritas-con-merluza/) , note B (72/100)
-- [Yogurines sabor fresa](/fr/produits/hero-baby-yogurines-sabor-fresa/) , note B (72/100)
-- [Baby chef Emince de pommes de terre, Jambon à la paysanne](/fr/produits/hero-baby-baby-chef-emince-de-pommes-de-terre-jambon-a-la-paysanne/) , note C (60/100)
-- [Leche Crecimiento 3](/fr/produits/hero-baby-leche-crecimiento-3/) , note D (50/100)
-- [Baby biscuit](/fr/produits/hero-baby-baby-biscuit/) , note D (41/100)
+- [Arroz con pollo](/products/hero-baby-arroz-con-pollo/) , note B (72/100)
+- [Natillas con galleta](/products/hero-baby-natillas-con-galleta/) , note B (72/100)
+- [Natur melocotón de la huerta y plátano](/products/hero-baby-natur-melocoton-de-la-huerta-y-platano/) , note B (72/100)
+- [Zanahorias con arroz en caldo de pollo](/products/hero-baby-zanahorias-con-arroz-en-caldo-de-pollo/) , note B (72/100)
+- [8 cereales con fruta](/products/hero-baby-8-cereales-con-fruta/) , note C (69/100)
+- [Hero Baby Babychef Spaghettini Bolognese](/products/hero-baby-hero-baby-babychef-spaghettini-bolognese/) , note D (51/100)
+- [Leche Crecimiento 3](/products/hero-baby-leche-crecimiento-3/) , note D (50/100)
+- [Baby biscuit](/products/hero-baby-baby-biscuit/) , note D (41/100)
 
-Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/fr/methodologie/).
+Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. Voir la [méthodologie](/methodology/).
 
