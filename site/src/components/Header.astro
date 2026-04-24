@@ -4,6 +4,16 @@ import { tr, t, getLocale, localeUrl } from "../i18n/t";
 
 const locale = getLocale(Astro.url);
 const otherLocale = locale === "en" ? "fr" : "en";
+
+// Pages FR-only (products/brands/categories detail) have no /en/ counterpart.
+// On these pages, the locale switcher must point to /en/ root, not the
+// would-be 404 translation. Hub pages (/products/, /brands/, /categories/)
+// also fall under this rule for consistency.
+const fpath = Astro.url.pathname;
+const isFrOnly = locale === "fr" && /^\/(products|brands|categories)(\/|$)/.test(fpath);
+const localeSwitchHref = isFrOnly
+  ? "/en/"
+  : localeUrl(fpath.replace(/^\/en/, ""), otherLocale);
 ---
 
 <header id="site-header" class="site-header">
@@ -24,20 +34,20 @@ const otherLocale = locale === "en" ? "fr" : "en";
     </a>
 
     <nav class="nav-links" aria-label="Main navigation">
-      <a href={localeUrl("/rankings", locale)}>{t(tr.nav.catalogue, locale)}</a>
-      <a href={localeUrl("/compare", locale)}>{t(tr.nav.compare, locale)}</a>
+      <a href={localeUrl("/products", locale)}>{t(tr.nav.catalogue, locale)}</a>
+      <a href={localeUrl("/scan", locale)}>{t(tr.nav.scan, locale)}</a>
       <a href={localeUrl("/encyclopedia", locale)}>{t(tr.nav.additives, locale)}</a>
       <a href={localeUrl("/methodology", locale)}>{t(tr.nav.methodology, locale)}</a>
       <a href={localeUrl("/blog", locale)}>{t(tr.nav.blog, locale)}</a>
     </nav>
 
     <div class="nav-right">
-      <a class="locale-switch" href={localeUrl(Astro.url.pathname.replace(/^\/en/, ""), otherLocale)} aria-label={`Switch to ${otherLocale.toUpperCase()}`}>
+      <a class="locale-switch" href={localeSwitchHref} aria-label={`Switch to ${otherLocale.toUpperCase()}`}>
         <span class={locale === "en" ? "active" : ""}>EN</span>
         <span class="divider" aria-hidden="true">/</span>
         <span class={locale === "fr" ? "active" : ""}>FR</span>
       </a>
-      <a href={localeUrl("/rankings", locale)} class="cta-header">
+      <a href={localeUrl("/products", locale)} class="cta-header">
         {t(tr.nav.score, locale)}
         <svg class="cta-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7 7 7-7 7"/></svg>
       </a>
@@ -73,13 +83,13 @@ const otherLocale = locale === "en" ? "fr" : "en";
   </div>
 
   <div class="drawer-nav">
-    <a href={localeUrl("/rankings", locale)}>
+    <a href={localeUrl("/products", locale)}>
       <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21l3.75-3.75"/></svg>
       {t(tr.nav.catalogue, locale)}
     </a>
-    <a href={localeUrl("/compare", locale)}>
-      <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/></svg>
-      {t(tr.nav.compare, locale)}
+    <a href={localeUrl("/scan", locale)}>
+      <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9V5a2 2 0 012-2h4M3 15v4a2 2 0 002 2h4m6-18h4a2 2 0 012 2v4m-6 12h4a2 2 0 002-2v-4M7 8v8m4-8v8m4-8v8"/></svg>
+      {t(tr.nav.scan, locale)}
     </a>
     <a href={localeUrl("/encyclopedia", locale)}>
       <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19 14.5M14.25 3.104c.251.023.501.05.75.082M19 14.5l-1.902-1.902a2.25 2.25 0 00-1.591-.659H8.493a2.25 2.25 0 00-1.591.659L5 14.5m14 0v2.25a2.25 2.25 0 01-2.25 2.25h-9.5A2.25 2.25 0 015 16.75V14.5"/></svg>
@@ -100,11 +110,11 @@ const otherLocale = locale === "en" ? "fr" : "en";
   </div>
 
   <div class="drawer-footer">
-    <a href={localeUrl("/rankings", locale)} class="drawer-cta">
+    <a href={localeUrl("/products", locale)} class="drawer-cta">
       {t(tr.nav.score, locale)}
       <svg class="cta-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7 7 7-7 7"/></svg>
     </a>
-    <a class="drawer-locale" href={localeUrl(Astro.url.pathname.replace(/^\/en/, ""), otherLocale)}>
+    <a class="drawer-locale" href={localeSwitchHref}>
       {otherLocale === "fr" ? "Passer en Français" : "Switch to English"}
     </a>
   </div>
@@ -211,7 +221,7 @@ const otherLocale = locale === "en" ? "fr" : "en";
     display: none;
     align-items: center;
     gap: 0.25rem;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 700;
     color: var(--color-ink-soft);
     text-decoration: none;
@@ -250,8 +260,8 @@ const otherLocale = locale === "en" ? "fr" : "en";
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     padding: 0;
     color: var(--color-ink);
     background: transparent;
@@ -261,7 +271,7 @@ const otherLocale = locale === "en" ? "fr" : "en";
     transition: background 200ms ease;
   }
   .hamburger:hover { background: rgba(0, 0, 0, 0.05); }
-  .hamburger svg { width: 1.5rem; height: 1.5rem; }
+  .hamburger svg { width: 1.625rem; height: 1.625rem; }
   @media (min-width: 960px) { .hamburger { display: none; } }
 
   .mobile-overlay {

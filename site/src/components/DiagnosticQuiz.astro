@@ -114,26 +114,26 @@ import { siteConfig } from "../../site.config";
       case "additifs":
         return { label: "Encyclopédie des additifs : E471, E407, E150d", href: "/encyclopedia", icon: "🧪" };
       case "pesticides":
-        return { label: "Classement bio et pesticides bébé", href: "/rankings", icon: "🌾" };
+        return { label: "Classement bio et pesticides bébé", href: "/products", icon: "🌾" };
       case "nutrition":
         return { label: "Méthodologie : comment on note la nutrition réelle", href: "/methodology", icon: "📊" };
       case "allergenes":
         return { label: "Introduire les allergènes : les bonnes fenêtres", href: "/encyclopedia", icon: "🥜" };
       case "rappels":
-        return { label: "Suivi des rappels RappelConso sur produits bébé", href: "/rankings", icon: "🚨" };
+        return { label: "Suivi des rappels RappelConso sur produits bébé", href: "/products", icon: "🚨" };
       default:
-        return { label: "Explorer le classement complet BébéDécrypte", href: "/rankings", icon: "⭐" };
+        return { label: "Explorer le classement complet BébéDécrypte", href: "/products", icon: "⭐" };
     }
   }
 
   function ageGuide(ageTag: string | undefined): { label: string; href: string; icon: string } {
-    if (ageTag === "age-0-3") return { label: "Comparer les laits 1er âge notés A ou B", href: "/rankings", icon: "🍼" };
+    if (ageTag === "age-0-3") return { label: "Comparer les laits 1er âge notés A ou B", href: "/products", icon: "🍼" };
     if (ageTag === "age-4-5") return { label: "Démarrer la diversification : le guide complet", href: "/blog", icon: "🥄" };
-    if (ageTag === "age-6-8") return { label: "Purées et petits pots : notre top 2026", href: "/rankings", icon: "🥕" };
-    if (ageTag === "age-9-12") return { label: "Premiers morceaux : produits validés par les pédiatres", href: "/rankings", icon: "🍠" };
-    if (ageTag === "age-12-24") return { label: "Repas famille et produits adaptés", href: "/rankings", icon: "🍝" };
+    if (ageTag === "age-6-8") return { label: "Purées et petits pots : notre top 2026", href: "/products", icon: "🥕" };
+    if (ageTag === "age-9-12") return { label: "Premiers morceaux : produits validés par les pédiatres", href: "/products", icon: "🍠" };
+    if (ageTag === "age-12-24") return { label: "Repas famille et produits adaptés", href: "/products", icon: "🍝" };
     if (ageTag === "age-24") return { label: "Éviter les pièges du rayon enfant", href: "/blog", icon: "🧒" };
-    return { label: "Catalogue de tous les produits notés", href: "/rankings", icon: "📖" };
+    return { label: "Catalogue de tous les produits notés", href: "/products", icon: "📖" };
   }
 
   function computeResult(answers: (Option | null)[]): Result {
@@ -156,7 +156,7 @@ import { siteConfig } from "../../site.config";
           ageGuide(ageTag),
           concernLink(concernTag),
         ],
-        primaryCta: { label: "Voir le classement complet", href: "/rankings" },
+        primaryCta: { label: "Voir le classement complet", href: "/products" },
         color: colors.ok,
       };
     } else if (literacy >= 1 && vigilance >= 3) {
@@ -170,7 +170,7 @@ import { siteConfig } from "../../site.config";
           ageGuide(ageTag),
           concernLink(concernTag),
         ],
-        primaryCta: { label: "Découvrir le classement 2026", href: "/rankings" },
+        primaryCta: { label: "Découvrir le classement 2026", href: "/products" },
         color: colors.primary,
       };
     } else if (industriel >= 3 || (literacy === 0 && vigilance <= 2)) {
@@ -180,11 +180,11 @@ import { siteConfig } from "../../site.config";
         title: "Parent perdu dans les rayons",
         text: "Tu n'es pas seul : 60% des parents français renoncent à lire les étiquettes bébé tellement elles sont complexes. Aucun jugement. On a construit BébéDécrypte exactement pour toi : une note claire de A à E, zéro jargon, les verdicts prêts à utiliser au supermarché.",
         recommendations: [
-          { label: "Top 20 produits bébé notés A ou B", href: "/rankings", icon: "🏆" },
+          { label: "Top 20 produits bébé notés A ou B", href: "/products", icon: "🏆" },
           ageGuide(ageTag),
           { label: "5 pièges à éviter au rayon bébé", href: "/blog", icon: "⚠️" },
         ],
-        primaryCta: { label: "Voir les produits notés A", href: "/rankings" },
+        primaryCta: { label: "Voir les produits notés A", href: "/products" },
         color: colors.accent,
       };
     } else {
@@ -194,11 +194,11 @@ import { siteConfig } from "../../site.config";
         title: "Parent pressé",
         text: "Tu sais que la qualité compte mais tu manques de temps pour décoder chaque étiquette. Notre classement te donne le verdict en 2 secondes par produit. Scan rapide, décision immédiate, zéro culpabilité au retour à la maison.",
         recommendations: [
-          { label: "Top picks express par catégorie", href: "/rankings", icon: "⚡" },
+          { label: "Top picks express par catégorie", href: "/products", icon: "⚡" },
           ageGuide(ageTag),
           concernLink(concernTag),
         ],
-        primaryCta: { label: "Consulter le classement", href: "/rankings" },
+        primaryCta: { label: "Consulter le classement", href: "/products" },
         color: colors.primaryDark,
       };
     }

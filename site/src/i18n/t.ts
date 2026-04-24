@@ -41,6 +41,7 @@ export const tr = {
   nav: {
     home: { en: "Home", fr: "Accueil" },
     catalogue: { en: "Catalog", fr: "Catalogue" },
+    scan: { en: "Scan", fr: "Scanner" },
     byAge: { en: "By age", fr: "Par âge" },
     compare: { en: "Compare", fr: "Comparer" },
     additives: { en: "Additives", fr: "Additifs" },

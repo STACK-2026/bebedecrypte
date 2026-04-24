@@ -48,7 +48,7 @@ const locale = getLocale(Astro.url);
       <div class="notfound-links">
         <p class="links-title">{t(tr.notFound.popular, locale)}</p>
         <ul>
-          <li><a href={localeUrl("/rankings", locale)}><span class="grade grade-sm grade-a">A</span> {t(tr.nav.catalogue, locale)}</a></li>
+          <li><a href={localeUrl("/products", locale)}><span class="grade grade-sm grade-a">A</span> {t(tr.nav.catalogue, locale)}</a></li>
           <li><a href={localeUrl("/compare", locale)}><span class="grade grade-sm grade-b">B</span> {t(tr.nav.compare, locale)}</a></li>
           <li><a href={localeUrl("/encyclopedia", locale)}><span class="grade grade-sm grade-c">C</span> {t(tr.nav.additives, locale)}</a></li>
           <li><a href={localeUrl("/methodology", locale)}><span class="grade grade-sm grade-d">D</span> {t(tr.nav.methodology, locale)}</a></li>

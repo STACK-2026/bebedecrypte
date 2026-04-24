@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection, render } from "astro:content";
 import { siteConfig } from "../../../site.config";
+import { AUTHORS, DEFAULT_REVIEWER_NOTE } from "../../data/authors";
 
 export async function getStaticPaths() {
   const products = await getCollection("products");
@@ -12,24 +13,235 @@ const { product } = Astro.props;
 const { data } = product;
 const { Content } = await render(product);
 
+// Reviewer Person (resolved from authors registry, not just a free-text string)
+function findReviewerSlug(name: string | undefined): string | undefined {
+  if (!name) return undefined;
+  const head = name.split(",")[0].trim().toLowerCase();
+  const match = AUTHORS.find((a) => head.includes(a.name.toLowerCase().replace(/^dr\.\s*/, "")));
+  return match?.slug;
+}
+const reviewerName = data.reviewedBy ? data.reviewedBy.split(",")[0].trim() : "BébéDécrypte Editorial";
+const reviewerSlug = findReviewerSlug(data.reviewedBy);
+const reviewer = reviewerSlug ? AUTHORS.find((a) => a.slug === reviewerSlug) : undefined;
+const reviewerUrl = reviewer ? `${siteConfig.url}/authors/${reviewer.slug}/` : `${siteConfig.url}/authors/`;
+const reviewerPerson = {
+  "@type": "Person",
+  "@id": reviewerUrl + "#person",
+  name: reviewerName,
+  url: reviewerUrl,
+  ...(reviewer
+    ? {
+        jobTitle: reviewer.role.fr,
+        knowsAbout: reviewer.specialities.fr,
+      }
+    : {}),
+};
+
 const breadcrumb = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Accueil", item: siteConfig.url + "/" },
-    { "@type": "ListItem", position: 2, name: "Catalogue", item: siteConfig.url + "/rankings/" },
+    { "@type": "ListItem", position: 2, name: "Catalogue", item: siteConfig.url + "/products/" },
+    // (Breadcrumb item 3 = brand, item 4 = product)
     { "@type": "ListItem", position: 3, name: data.brand, item: `${siteConfig.url}/brands/${data.brandSlug}/` },
     { "@type": "ListItem", position: 4, name: data.name },
   ],
 };
 
 const productUrl = `${siteConfig.url}/products/${data.slug}/`;
-const reviewDate = (data.lastReviewed || data.publishedDate || new Date()).toISOString
-  ? (data.lastReviewed || data.publishedDate || new Date()).toISOString().split("T")[0]
+const reviewDateObj = (data.lastReviewed || data.publishedDate || new Date()) as Date;
+const reviewDate = reviewDateObj instanceof Date && !Number.isNaN(reviewDateObj.valueOf())
+  ? reviewDateObj.toISOString().split("T")[0]
   : "2026-04-22";
 
 // Best-effort age mapping (months to PeopleAudience suggestedMinAge)
 const audienceMinAge = data.targetAgeMonths && data.targetAgeMonths > 0 ? data.targetAgeMonths / 12 : undefined;
+
+// Additive intel : surface ANSES/EFSA reasoning for the most-cited problem
+// ingredients. These strings are kept short and quotable, the source is stable
+// (regulator) and the data-claim attribute makes them addressable by LLMs.
+const ADDITIVE_INTEL: Record<string, { label: string; risk: string; source: string; sourceUrl: string }> = {
+  E150d: {
+    label: "Caramel au sulfite d'ammonium",
+    risk: "Colorant à éviter chez le nourrisson : la JECFA / EFSA a fixé une DJA stricte de 200 mg/kg et l'additif n'a aucun intérêt nutritionnel.",
+    source: "EFSA",
+    sourceUrl: "https://www.efsa.europa.eu/en/topics/topic/food-additives",
+  },
+  E306: {
+    label: "Tocophérols (vitamine E naturelle)",
+    risk: "Antioxydant naturel toléré dans l'alimentation infantile. N'est pas un signal négatif fort, mais marque une recette transformée.",
+    source: "EFSA",
+    sourceUrl: "https://www.efsa.europa.eu/en/topics/topic/food-additives",
+  },
+  E322: {
+    label: "Lécithines (souvent de tournesol ou soja)",
+    risk: "Émulsifiant autorisé en bio (E322i = soja, vérifier l'allergène). À éviter chez l'enfant allergique au soja sans précision sur l'origine.",
+    source: "EFSA",
+    sourceUrl: "https://www.efsa.europa.eu/en/topics/topic/food-additives",
+  },
+  E330: {
+    label: "Acide citrique",
+    risk: "Toléré par l'EFSA mais marqueur d'ultra-transformation : n'a rien à faire dans une recette d'aliment infantile peu transformée.",
+    source: "EFSA",
+    sourceUrl: "https://www.efsa.europa.eu/en/topics/topic/food-additives",
+  },
+  E331: {
+    label: "Citrates de sodium",
+    risk: "Régulateur d'acidité autorisé dans les aliments infantiles. Marqueur de produit transformé, pas de risque toxicologique au DJA fixée par l'EFSA.",
+    source: "EFSA",
+    sourceUrl: "https://www.efsa.europa.eu/en/topics/topic/food-additives",
+  },
+  E336: {
+    label: "Tartrates de potassium",
+    risk: "Régulateur d'acidité toléré, mais l'ANSES recommande de limiter tous les additifs avant 3 ans même autorisés.",
+    source: "ANSES",
+    sourceUrl: "https://www.anses.fr/fr/content/alimentation-des-enfants-de-moins-de-3-ans",
+  },
+  E343: {
+    label: "Phosphates de magnésium",
+    risk: "Source de phosphates ajoutés. Une consommation excessive de phosphates est associée à des effets osseux et rénaux chez l'enfant (avis EFSA 2019).",
+    source: "EFSA",
+    sourceUrl: "https://www.efsa.europa.eu/en/news/phosphates-update-safety-following-evaluation-food-additives",
+  },
+  E471: {
+    label: "Mono- et diglycérides d'acides gras",
+    risk: "Émulsifiant ultra-transformé, à limiter dans l'alimentation des moins de 3 ans selon l'avis ANSES sur l'alimentation infantile.",
+    source: "ANSES",
+    sourceUrl: "https://www.anses.fr/fr/content/alimentation-des-enfants-de-moins-de-3-ans",
+  },
+  E500: {
+    label: "Carbonates de sodium",
+    risk: "Poudre levante très utilisée en biscuiterie. Toléré par l'EFSA, mais signe d'un produit ultra-transformé NOVA 4.",
+    source: "EFSA",
+    sourceUrl: "https://www.efsa.europa.eu/en/topics/topic/food-additives",
+  },
+  E503: {
+    label: "Carbonates d'ammonium",
+    risk: "Poudre à lever toléré par l'EFSA. Marqueur d'ultra-transformation, sans risque toxicologique aux DJA prévues.",
+    source: "EFSA",
+    sourceUrl: "https://www.efsa.europa.eu/en/topics/topic/food-additives",
+  },
+  E585: {
+    label: "Lactate ferreux",
+    risk: "Apport de fer, autorisé en alimentation infantile. Pas un signal négatif sauf dans les recettes non enrichies en fer.",
+    source: "EFSA",
+    sourceUrl: "https://www.efsa.europa.eu/en/topics/topic/food-additives",
+  },
+  Maltodextrine: {
+    label: "Maltodextrine",
+    risk: "Sucre caché à index glycémique très élevé (jusqu'à 105). L'OMS recommande zéro sucre ajouté avant 12 mois et la maltodextrine compte comme tel.",
+    source: "OMS",
+    sourceUrl: "https://www.who.int/publications/i/item/9789240081864",
+  },
+  "Sirop de glucose": {
+    label: "Sirop de glucose",
+    risk: "Sucre rapide à éviter avant 3 ans (recommandation ANSES sur les sucres ajoutés en alimentation infantile).",
+    source: "ANSES",
+    sourceUrl: "https://www.anses.fr/fr/content/le-sucre-une-place-limitee-dans-lalimentation",
+  },
+  Miel: {
+    label: "Miel",
+    risk: "L'ANSES rappelle que le miel est strictement contre-indiqué avant 12 mois (risque de botulisme infantile, rare mais grave).",
+    source: "ANSES",
+    sourceUrl: "https://www.anses.fr/fr/content/botulisme-infantile",
+  },
+  "Jus de fruit concentré": {
+    label: "Jus de fruit concentré",
+    risk: "Sucre concentré (équivalent en glycémie au sucre raffiné). Comptabilisé comme sucre ajouté dans la pondération bébé.",
+    source: "OMS",
+    sourceUrl: "https://www.who.int/publications/i/item/9789240081864",
+  },
+};
+
+// Normalize an additive code coming from Open Food Facts ("en:e471", "en:e336i")
+// down to the canonical key in ADDITIVE_INTEL ("E471", "E336").
+function normalizeAdditive(raw: string): string {
+  let code = raw.replace(/^en:/i, "").trim();
+  const m = code.match(/^e(\d{3,4})([a-z]*)$/i);
+  if (m) {
+    // Keep variant only if it's a known distinct entry (e.g. E150d).
+    const full = "E" + m[1] + (m[2] || "");
+    if (ADDITIVE_INTEL[full]) return full;
+    return "E" + m[1];
+  }
+  return code;
+}
+
+function intelFor(code: string) {
+  const norm = normalizeAdditive(code);
+  if (ADDITIVE_INTEL[norm]) return ADDITIVE_INTEL[norm];
+  if (/maltodextrine/i.test(code)) return ADDITIVE_INTEL["Maltodextrine"];
+  if (/sirop.*glucose/i.test(code)) return ADDITIVE_INTEL["Sirop de glucose"];
+  if (/\bmiel\b/i.test(code)) return ADDITIVE_INTEL["Miel"];
+  if (/jus.*concentr/i.test(code)) return ADDITIVE_INTEL["Jus de fruit concentré"];
+  return undefined;
+}
+
+// Detect hidden sugars in the raw ingredient list (OFF stores them as text,
+// not as additives), so the citable section catches them too.
+const ingredientTokens: string[] = [];
+const ing = (data.ingredients || "").toLowerCase();
+if (/maltodextrine/.test(ing)) ingredientTokens.push("Maltodextrine");
+if (/sirop\s+de\s+glucose/.test(ing)) ingredientTokens.push("Sirop de glucose");
+if (/\bmiel\b/.test(ing) && (data.targetAgeMonths || 999) < 12) ingredientTokens.push("Miel");
+if (/jus.*concentr/.test(ing)) ingredientTokens.push("Jus de fruit concentré");
+
+const flaggedAdditives = [
+  ...(data.additives || []).map((code: string) => ({
+    code: normalizeAdditive(code),
+    intel: intelFor(code),
+  })),
+  ...ingredientTokens.map((token) => ({ code: token, intel: intelFor(token) })),
+]
+  .filter((x: any) => x.intel)
+  // Dedupe by code (some products have e336 + e336i which both fold to E336).
+  .filter((x: any, i: number, arr: any[]) => arr.findIndex((y: any) => y.code === x.code) === i);
+
+// FAQ : 3 Q standardisées par fiche, basées sur les data du produit.
+// Hébergées en JSON-LD FAQPage + rendues visiblement.
+const ageAnswer = data.ageRange
+  ? `Le fabricant indique une consommation à partir de ${data.ageRange}. BébéDécrypte rappelle que pour tout produit destiné aux moins de 12 mois, la pondération est renforcée sur les additifs et les sucres cachés (l'OMS recommande zéro sucre ajouté avant 1 an).`
+  : `L'étiquette ne précise pas un âge unique. BébéDécrypte applique systématiquement une pondération renforcée sur les additifs et les sucres cachés pour les produits potentiellement consommés avant 3 ans.`;
+const isOrganic = (data.categories || []).some((c: string) => /bio|biologique|organic/i.test(c)) ||
+  /\bbio\b|biologique|organic/i.test(data.brand + " " + data.name);
+const bioAnswer = isOrganic
+  ? `Oui, ${data.brand} ${data.name} porte une mention bio (UE / AB / Demeter selon la marque). Le bio pèse 10 % dans la note finale BébéDécrypte ; il limite mais n'élimine pas les additifs autorisés en bio (E322, E330, E331).`
+  : `Non, ${data.brand} ${data.name} n'est pas certifié bio dans nos données Open Food Facts. Tu peux filtrer le catalogue sur la catégorie « bio » via /categories/.`;
+const alternativesUrl = `/categories/${data.catalogCategory}/`;
+const altAnswer = `Pour des alternatives mieux notées dans la même catégorie, regarde la page /categories/${data.catalogCategory}/ : les produits sont triés par score décroissant, on y voit immédiatement quelles marques font A ou B sur le même type de recette.`;
+const additiveSummary = flaggedAdditives.length > 0
+  ? `${flaggedAdditives.length} additif${flaggedAdditives.length > 1 ? "s" : ""} ou sucre${flaggedAdditives.length > 1 ? "s" : ""} caché${flaggedAdditives.length > 1 ? "s" : ""} a été détecté : ${flaggedAdditives.map((x: any) => x.code).join(", ")}. Voir la section « Selon nos sources » plus bas pour le détail EFSA / ANSES.`
+  : `Aucun additif ni sucre caché problématique n'a été détecté dans la liste d'ingrédients référencée par Open Food Facts pour ce produit.`;
+
+const productFaq = [
+  {
+    question: `À partir de quel âge ${data.brand} ${data.name} convient-il ?`,
+    answer: ageAnswer,
+  },
+  {
+    question: `${data.brand} ${data.name} est-il bio ?`,
+    answer: bioAnswer,
+  },
+  {
+    question: `Quels additifs ou sucres cachés contient ${data.name} ?`,
+    answer: additiveSummary,
+  },
+  {
+    question: `Quelles alternatives mieux notées dans la catégorie ${data.catalogCategory} ?`,
+    answer: altAnswer,
+  },
+];
+
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: productFaq.map((q) => ({
+    "@type": "Question",
+    name: q.question,
+    acceptedAnswer: { "@type": "Answer", text: q.answer },
+  })),
+};
 
 const productLd = {
   "@context": "https://schema.org",
@@ -67,14 +279,13 @@ const productLd = {
   ...(data.nutriScore
     ? { additionalProperty: { "@type": "PropertyValue", name: "Nutri-Score", value: String(data.nutriScore).toUpperCase() } }
     : {}),
+  // reviewedBy at Product level (in addition to review.author below) increases
+  // expert-author signal for Google Search and AI engines.
+  reviewedBy: reviewerPerson,
   review: {
     "@type": "Review",
     name: `Analyse BébéDécrypte ${data.brand} ${data.name}`,
-    author: {
-      "@type": "Person",
-      name: data.reviewedBy ? data.reviewedBy.split(",")[0].trim() : "BébéDécrypte Editorial",
-      url: siteConfig.url + "/authors/",
-    },
+    author: reviewerPerson,
     publisher: {
       "@type": "Organization",
       name: "BébéDécrypte",
@@ -95,11 +306,14 @@ const productLd = {
 const gradeColors: Record<string, string> = { A: "var(--grade-a)", B: "var(--grade-b)", C: "var(--grade-c)", D: "var(--grade-d)", E: "var(--grade-e)" };
 ---
 
-<BaseLayout title={data.title} description={data.description} jsonLd={[productLd, breadcrumb]} localized={false}>
+<BaseLayout title={data.title} description={data.description} jsonLd={[productLd, breadcrumb, faqLd]} localized={false}>
+  <Fragment slot="head">
+    <link rel="preconnect" href="https://images.openfoodfacts.org" crossorigin />
+  </Fragment>
   <article class="product-page">
     <nav class="breadcrumb" aria-label="Fil d'Ariane">
       <a href="/">Accueil</a> <span aria-hidden="true">·</span>
-      <a href="/rankings/">Catalogue</a> <span aria-hidden="true">·</span>
+      <a href="/products/">Catalogue</a> <span aria-hidden="true">·</span>
       <a href={`/brands/${data.brandSlug}/`}>{data.brand}</a> <span aria-hidden="true">·</span>
       <span>{data.name}</span>
     </nav>
@@ -115,10 +329,14 @@ const gradeColors: Record<string, string> = { A: "var(--grade-a)", B: "var(--gra
         <p class="p-brand"><a href={`/brands/${data.brandSlug}/`}>{data.brand}</a></p>
         <h1 data-speakable>{data.name}</h1>
         <p class="p-meta" data-speakable>Note BébéDécrypte : {data.grade} ({data.score}/100). {data.ageRange ? `Tranche d'âge : ${data.ageRange}.` : ""}</p>
+        <p class="p-reviewer-badge">
+          <span aria-hidden="true">✍</span>
+          Relu par <a href={reviewerUrl}>{reviewerName}</a>{reviewer ? ` · ${reviewer.role.fr}` : ""}
+        </p>
       </div>
       {data.image && (
         <figure class="p-image">
-          <img src={data.image} alt={data.imageAlt || `${data.brand} ${data.name}`} loading="lazy" />
+          <img src={data.image} alt={data.imageAlt || `${data.brand} ${data.name}`} loading="lazy" width="260" height="260" />
         </figure>
       )}
     </header>
@@ -134,6 +352,24 @@ const gradeColors: Record<string, string> = { A: "var(--grade-a)", B: "var(--gra
       <Content />
     </section>
 
+    {flaggedAdditives.length > 0 && (
+      <section class="p-citable fade-up" aria-labelledby="selon-nos-sources">
+        <h2 id="selon-nos-sources">Selon nos sources réglementaires</h2>
+        <p class="p-citable-lede">Pour chaque additif ou sucre caché signalé, voici la position des autorités sanitaires citées dans notre méthodologie.</p>
+        <ul class="p-citable-list">
+          {flaggedAdditives.map((x: any) => (
+            <li class="citable-item" data-claim-source={x.intel.source}>
+              <p class="citable-code"><strong>{x.code}</strong> · {x.intel.label}</p>
+              <p class="citable-quote">
+                <cite>Selon {x.intel.source} :</cite> {x.intel.risk}
+              </p>
+              <p class="citable-link"><a href={x.intel.sourceUrl} rel="noopener external" target="_blank">Voir la source {x.intel.source} ↗</a></p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
     <section class="p-meta-block fade-up">
       <h2>Détails techniques</h2>
       <dl>
@@ -145,18 +381,36 @@ const gradeColors: Record<string, string> = { A: "var(--grade-a)", B: "var(--gra
       </dl>
     </section>
 
+    <section class="p-faq fade-up" aria-labelledby="questions-frequentes">
+      <h2 id="questions-frequentes">Questions fréquentes</h2>
+      <dl class="faq-list">
+        {productFaq.map((q) => (
+          <>
+            <dt class="faq-q" data-speakable>{q.question}</dt>
+            <dd class="faq-a" data-speakable>{q.answer}</dd>
+          </>
+        ))}
+      </dl>
+      <p class="faq-link"><a href={alternativesUrl}>Voir les meilleures alternatives dans cette catégorie &rarr;</a></p>
+    </section>
+
     <section class="p-sources fade-up">
       <h2>Sources</h2>
       <ul>
         {(data.sources || []).map((s: string) => <li>{s}</li>)}
         {data.sourceUrl && (<li><a href={data.sourceUrl} rel="noopener external" target="_blank">Voir la fiche Open Food Facts ↗</a></li>)}
       </ul>
-      {data.reviewedBy && (<p class="p-reviewed">Relu le {data.lastReviewed} par {data.reviewedBy}.</p>)}
+      {data.reviewedBy && (
+        <p class="p-reviewed">
+          Relu le {reviewDate} par <a href={reviewerUrl}>{reviewerName}</a>{reviewer ? `, ${reviewer.role.fr}` : ""}.
+          <br /><span class="reviewer-note">{DEFAULT_REVIEWER_NOTE.fr}</span>
+        </p>
+      )}
     </section>
 
     <section class="p-cta fade-up">
       <a href={`/brands/${data.brandSlug}/`} class="btn-secondary">Autres produits {data.brand}</a>
-      <a href="/rankings/" class="btn-primary hover-shine">Voir le classement complet</a>
+      <a href="/products/" class="btn-primary hover-shine">Voir tout le catalogue</a>
     </section>
   </article>
 </BaseLayout>
@@ -174,7 +428,10 @@ const gradeColors: Record<string, string> = { A: "var(--grade-a)", B: "var(--gra
   .p-brand a { color: inherit; text-decoration: none; }
   .p-brand a:hover { text-decoration: underline; }
   .p-title h1 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); margin: 0 0 0.5rem; line-height: 1.2; }
-  .p-meta { color: var(--color-ink-soft); font-size: 0.92rem; margin: 0; }
+  .p-meta { color: var(--color-ink-soft); font-size: 0.92rem; margin: 0 0 0.5rem; }
+  .p-reviewer-badge { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; color: var(--color-ink-soft); background: var(--color-bg-soft); padding: 0.3rem 0.65rem; border-radius: 999px; margin: 0.4rem 0 0; }
+  .p-reviewer-badge a { color: var(--color-primary-dark); text-decoration: none; font-weight: 600; }
+  .p-reviewer-badge a:hover { text-decoration: underline; }
   .p-image { grid-column: 1 / -1; margin: 1.5rem 0 0; }
   .p-image img { max-width: 260px; max-height: 260px; border-radius: 0.75rem; background: var(--color-bg-soft); padding: 0.5rem; }
   .p-warnings { background: #fef2f2; border-left: 4px solid var(--color-alert); border-radius: 0 0.75rem 0.75rem 0; padding: 1rem 1.25rem; margin-bottom: 2rem; }
@@ -183,13 +440,30 @@ const gradeColors: Record<string, string> = { A: "var(--grade-a)", B: "var(--gra
   .p-body { margin-bottom: 2rem; line-height: 1.75; color: var(--color-ink-soft); }
   .p-body :global(h2) { font-size: 1.25rem; color: var(--color-primary-dark); margin: 1.5rem 0 0.75rem; }
   .p-body :global(ul), .p-body :global(ol) { padding-left: 1.35rem; }
-  .p-meta-block, .p-sources { background: #fff; border: 1px solid var(--color-border); border-radius: 0.875rem; padding: 1.25rem 1.4rem; margin-bottom: 1.5rem; }
-  .p-meta-block h2, .p-sources h2 { font-size: 1.1rem; color: var(--color-primary-dark); margin: 0 0 0.85rem; }
+  .p-citable { background: #fff; border: 1px solid var(--color-border); border-radius: 0.875rem; padding: 1.25rem 1.4rem; margin-bottom: 1.5rem; }
+  .p-citable h2 { font-size: 1.1rem; color: var(--color-primary-dark); margin: 0 0 0.4rem; }
+  .p-citable-lede { color: var(--color-ink-soft); font-size: 0.88rem; margin: 0 0 1rem; }
+  .p-citable-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.85rem; }
+  .citable-item { padding: 0.85rem 1rem; background: var(--color-bg-soft); border-left: 3px solid var(--color-primary); border-radius: 0 0.6rem 0.6rem 0; }
+  .citable-code { font-size: 0.92rem; color: var(--color-ink); margin: 0 0 0.35rem; }
+  .citable-quote { font-size: 0.88rem; color: var(--color-ink-soft); line-height: 1.55; margin: 0 0 0.4rem; }
+  .citable-quote cite { font-style: normal; font-weight: 700; color: var(--color-primary-dark); }
+  .citable-link { font-size: 0.78rem; margin: 0; }
+  .citable-link a { color: var(--color-primary-dark); }
+  .p-meta-block, .p-sources, .p-faq { background: #fff; border: 1px solid var(--color-border); border-radius: 0.875rem; padding: 1.25rem 1.4rem; margin-bottom: 1.5rem; }
+  .p-meta-block h2, .p-sources h2, .p-faq h2 { font-size: 1.1rem; color: var(--color-primary-dark); margin: 0 0 0.85rem; }
   .p-meta-block dl { display: grid; grid-template-columns: auto 1fr; gap: 0.4rem 1rem; font-size: 0.9rem; }
   .p-meta-block dt { font-weight: 700; color: var(--color-ink); }
   .p-meta-block dd { margin: 0; color: var(--color-ink-soft); }
   .p-sources ul { padding-left: 1.2rem; font-size: 0.88rem; color: var(--color-ink-soft); }
   .p-sources a { color: var(--color-primary-dark); }
   .p-reviewed { font-size: 0.82rem; color: var(--color-ink-soft); font-style: italic; margin: 0.75rem 0 0; }
+  .p-reviewed a { color: var(--color-primary-dark); }
+  .reviewer-note { display: block; margin-top: 0.4rem; font-style: normal; font-size: 0.78rem; opacity: 0.85; }
+  .faq-list { display: flex; flex-direction: column; gap: 0.85rem; margin: 0; }
+  .faq-q { font-weight: 700; color: var(--color-ink); font-size: 0.95rem; margin: 0; }
+  .faq-a { font-size: 0.9rem; color: var(--color-ink-soft); line-height: 1.6; margin: 0.25rem 0 0; }
+  .faq-link { margin: 1rem 0 0; font-size: 0.88rem; }
+  .faq-link a { color: var(--color-primary-dark); font-weight: 600; }
   .p-cta { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 2rem; }
 </style>

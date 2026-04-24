@@ -1,10 +1,33 @@
 # Cloudflare Pages redirects
 
 # Legacy rankings URL , unified with the product catalogue on 2026-04-23.
-# Kept as an Astro page with meta-refresh + canonical for JS-disabled crawlers ;
-# CF Pages serves the 301 first when the path is visited directly.
+# After the i18n inversion (2026-04-25) the FR catalogue lives at /products/,
+# the EN one at /en/products/.
 /rankings /products/ 301
-/fr/rankings /fr/products/ 301
+/en/rankings /en/products/ 301
+
+# Pre-i18n FR-prefixed URLs (the site moved from defaultLocale="en" to "fr"
+# on 2026-04-25). We catch the legacy /fr/ paths so external links and any
+# pre-flip Google indexation land on the canonical FR URL at the root.
+/fr/products/* /products/:splat 301
+/fr/brands/* /brands/:splat 301
+/fr/categories/* /categories/:splat 301
+/fr/blog/* /blog/:splat 301
+/fr/authors/* /authors/:splat 301
+/fr/methodology /methodology/ 301
+/fr/methodologie /methodology/ 301
+/fr/produits/* /products/:splat 301
+/fr/about /about/ 301
+/fr/glossaire /glossaire/ 301
+/fr/encyclopedia /encyclopedia/ 301
+/fr/by-age /by-age/ 301
+/fr/compare /compare/ 301
+/fr/rankings /products/ 301
+/fr/divulgation-affiliation /affiliate-disclosure/ 301
+/fr/cookie-policy /cookie-policy/ 301
+/fr/privacy-policy /privacy-policy/ 301
+/fr/terms /terms/ 301
+/fr/ / 301
 
 # Legacy sitemap.xml (pre-audit leak fixed on 2026-04-23)
 /sitemap.xml /sitemap-index.xml 301

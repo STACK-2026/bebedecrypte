@@ -63,7 +63,7 @@ export const glossaire: Record<string, GlossaireEntry> = {
   "rappelconso": {
     definition: "Site officiel du gouvernement francais (DGCCRF) qui centralise les rappels de produits : contamination microbiologique, allergene non declare, corps etranger, depassement de pesticides. Surveille en permanence pour les produits bebe. EN: RappelConso is the French government's official consumer-product recall database, flagging contaminated batches, undeclared allergens, and foreign bodies. We monitor baby-food recalls daily.",
     example: "En 2022, plusieurs lots de laits infantiles Lactalis ont ete rappeles sur RappelConso pour contamination Salmonella.",
-    internalLink: { href: "/rankings", label: "Produits actuellement notes" },
+    internalLink: { href: "/products", label: "Produits actuellement notes" },
     externalSource: { url: "https://rappel.conso.gouv.fr/", label: "RappelConso" },
     category: "securite",
     aliases: ["rappel conso", "rappel de produit"],
@@ -87,7 +87,7 @@ export const glossaire: Record<string, GlossaireEntry> = {
   "lait 1er age": {
     definition: "Lait infantile destine aux bebes de 0 a 6 mois, seule alternative au lait maternel. Composition strictement encadree par le reglement europeen (EU) 2016/127 : proteines, lipides, glucides, fer, vitamines dans des fourchettes precises. EN: Stage 1 formula is designed for 0-6 month infants as the only safe alternative to breastmilk. Composition is tightly regulated by EU Regulation 2016/127 specifying protein, lipid, carbohydrate, iron, and vitamin ranges.",
     example: "Un lait 1er age en poudre se reconstitue avec de l'eau a 40 degres (1 mesure pour 30 ml). Jamais de lait de vache avant 12 mois : trop de proteines pour les reins.",
-    internalLink: { href: "/rankings/laits-infantiles", label: "Classement laits infantiles" },
+    internalLink: { href: "/products/laits-infantiles", label: "Classement laits infantiles" },
     externalSource: { url: "https://eur-lex.europa.eu/eli/reg_del/2016/127", label: "Reglement UE 2016/127" },
     category: "laits",
     aliases: ["lait infantile 1", "lait premier age", "formula 1"],
@@ -95,7 +95,7 @@ export const glossaire: Record<string, GlossaireEntry> = {
   "lait 2e age": {
     definition: "Lait de suite pour bebes de 6 a 12 mois, parfois jusqu'a 3 ans sous appellation lait de croissance. Enrichi en fer et acides gras essentiels car la diversification couvre partiellement les besoins. EN: Stage 2 follow-on formula for 6-12 month infants (sometimes continued to 3 years as growth milk). Enriched in iron and essential fatty acids because complementary feeding only partially covers needs.",
     example: "Un bebe de 8 mois qui mange varie recoit 500 ml de lait 2e age par jour + ses repas solides.",
-    internalLink: { href: "/rankings/laits-infantiles", label: "Classement laits 2e age" },
+    internalLink: { href: "/products/laits-infantiles", label: "Classement laits 2e age" },
     externalSource: { url: "https://www.anses.fr/fr/content/alimentation-des-enfants-de-moins-de-3-ans", label: "ANSES laits infantiles" },
     category: "laits",
     aliases: ["lait de suite", "lait deuxieme age"],
@@ -103,7 +103,7 @@ export const glossaire: Record<string, GlossaireEntry> = {
   "lait 3e age": {
     definition: "Lait de croissance destine aux enfants de 1 a 3 ans. Pas obligatoire : un enfant qui mange varie peut passer au lait de vache demi-ecreme apres 12 mois. Mais le lait de croissance apporte plus de fer et moins de proteines. EN: Stage 3 growth milk is aimed at 1-3 year-olds. Not mandatory : a varied diet combined with whole cow's milk after 12 months is acceptable. Growth milk does provide more iron and less excess protein.",
     example: "Un enfant de 18 mois peut boire du lait de croissance ou du lait de vache entier : la difference pese surtout sur l'apport en fer.",
-    internalLink: { href: "/rankings", label: "Classement laits bebe" },
+    internalLink: { href: "/products", label: "Classement laits bebe" },
     externalSource: { url: "https://www.mangerbouger.fr/", label: "Manger Bouger" },
     category: "laits",
     aliases: ["lait de croissance", "lait troisieme age"],
@@ -183,7 +183,7 @@ export const glossaire: Record<string, GlossaireEntry> = {
   "demeter": {
     definition: "Label biodynamique international, le plus exigeant en agriculture bio. Va au-dela du cahier des charges AB : rotation des cultures, preparations biodynamiques, respect des cycles lunaires. Sur un produit bebe, Demeter = top de la sincerite bio + qualite nutritionnelle plus elevee (etudes INRA 2014). EN: Demeter is the strictest international biodynamic certification, beyond organic AB : crop rotation, biodynamic preparations, lunar cycles respect. On baby food, Demeter signals top-tier organic sincerity and higher nutritional quality.",
     example: "Un petit pot Holle ou Lemke portant Demeter : bio pousse au maximum, traces de pesticides quasi indetectables.",
-    internalLink: { href: "/rankings/bio", label: "Top produits bio bebe" },
+    internalLink: { href: "/products/bio", label: "Top produits bio bebe" },
     externalSource: { url: "https://www.demeter.fr/", label: "Demeter France" },
     category: "labels",
     aliases: ["label demeter", "biodynamie"],
@@ -191,7 +191,7 @@ export const glossaire: Record<string, GlossaireEntry> = {
   "ab bio": {
     definition: "Label Agriculture Biologique francais (AB), aligne sur le reglement europeen bio. Interdit les pesticides et engrais de synthese, limite 47 additifs autorises sur plus de 300 conventionnels. Minimum 95% d'ingredients bio. Sur un produit bebe : un bon point, mais ne dit rien sur le sucre ajoute ou la qualite de transformation. EN: The French AB label aligns with EU organic regulation : bans synthetic pesticides, limits additives (47 allowed vs 300 conventional), requires 95 percent organic ingredients. Good on baby food, but doesn't address added sugar or processing level.",
     example: "Une gourde bio AB peut quand meme contenir du sucre de canne bio ajoute : bio ne signifie pas sain par defaut.",
-    internalLink: { href: "/rankings/bio", label: "Classement bio bebe" },
+    internalLink: { href: "/products/bio", label: "Classement bio bebe" },
     externalSource: { url: "https://www.agencebio.org/", label: "Agence Bio" },
     category: "labels",
     aliases: ["agriculture biologique", "label ab", "bio france"],
@@ -199,7 +199,7 @@ export const glossaire: Record<string, GlossaireEntry> = {
   "eu bio": {
     definition: "Euro-feuille verte, logo obligatoire sur tous les produits bio vendus dans l'UE depuis 2010. Regles identiques pour tous les pays membres (reglement 2018/848). Sur un produit bebe : meme niveau que l'AB francais (ils sont equivalents). EN: The EU green leaf is the mandatory EU organic logo since 2010. Rules are harmonized across member states (Regulation 2018/848). On baby food, equivalent to the French AB label.",
     example: "Un lait infantile allemand vendu en France portera l'Eurofeuille et souvent AB en co-label : les deux signifient la meme chose.",
-    internalLink: { href: "/rankings/bio", label: "Bio europeen et bebe" },
+    internalLink: { href: "/products/bio", label: "Bio europeen et bebe" },
     externalSource: { url: "https://eur-lex.europa.eu/eli/reg/2018/848/oj", label: "Reglement UE 2018/848" },
     category: "labels",
     aliases: ["eurofeuille", "euro feuille", "bio europeen", "ecolabel bio"],

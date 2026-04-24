@@ -1,0 +1,33 @@
+{
+  "name": "BébéDécrypte",
+  "short_name": "BébéDécrypte",
+  "description": "Comparateur indépendant d'alimentation bébé. Note A à E sur 8 axes (NOVA, additifs EFSA, sucres cachés, bio).",
+  "start_url": "/?utm_source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fefce8",
+  "theme_color": "#0891b2",
+  "lang": "fr-FR",
+  "dir": "ltr",
+  "categories": ["food", "shopping", "health", "lifestyle", "parenting"],
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "Scanner un code-barres",
+      "short_name": "Scanner",
+      "description": "Scanne le code-barres d'un produit bébé pour voir sa note A à E",
+      "url": "/scan/?utm_source=pwa-shortcut",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Catalogue 784 produits",
+      "short_name": "Catalogue",
+      "description": "Filtrer le catalogue BébéDécrypte par marque, catégorie, âge ou note",
+      "url": "/products/?utm_source=pwa-shortcut",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    }
+  ]
+}

@@ -1,0 +1,326 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { siteConfig } from "../../site.config";
+import { getCollection } from "astro:content";
+
+// Build a barcode → product slug index for instant client-side resolution.
+// At ~784 entries this stays under 60 KB after gzip and avoids any API call.
+const productsCol = await getCollection("products");
+const barcodeIndex: Record<string, { slug: string; brand: string; name: string; grade: string; score: number }> = {};
+for (const p of productsCol) {
+  if (p.data.barcode && /^\d{8,14}$/.test(p.data.barcode)) {
+    barcodeIndex[p.data.barcode] = {
+      slug: p.data.slug,
+      brand: p.data.brand,
+      name: p.data.name,
+      grade: p.data.grade,
+      score: p.data.score,
+    };
+  }
+}
+const barcodeCount = Object.keys(barcodeIndex).length;
+
+const title = `Scanner un code-barres bébé : note A à E en 1 seconde | BébéDécrypte`;
+const description = `Pointe la caméra sur le code-barres de n'importe quel produit bébé en magasin. ${barcodeCount} produits indexés. La note BébéDécrypte (A à E) s'affiche immédiatement, gratuit, sans téléchargement d'app.`;
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Accueil", item: siteConfig.url + "/" },
+    { "@type": "ListItem", position: 2, name: "Scanner", item: siteConfig.url + "/scan/" },
+  ],
+};
+
+const howTo = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "Scanner un produit alimentaire bébé en magasin",
+  description: "Comment vérifier la note BébéDécrypte d'un petit pot, d'un lait infantile ou d'une céréale bébé en pointant la caméra sur son code-barres.",
+  totalTime: "PT15S",
+  step: [
+    { "@type": "HowToStep", name: "Autoriser la caméra", text: "Clique sur « Activer la caméra ». Le navigateur demande l'autorisation, accepte." },
+    { "@type": "HowToStep", name: "Cadrer le code-barres", text: "Pointe la caméra arrière sur le code-barres EAN-13 imprimé à l'arrière du paquet." },
+    { "@type": "HowToStep", name: "Lire la note", text: "Le scan est instantané. Si le produit est indexé, sa note A à E + score sur 100 + alternatives s'affichent. Sinon, BébéDécrypte propose de le suggérer pour la prochaine mise à jour." },
+  ],
+};
+
+const faq = [
+  {
+    question: "Le scan fonctionne-t-il sans télécharger d'application ?",
+    answer: "Oui, 100 % web. Le scan utilise l'API BarcodeDetector du navigateur (Chrome, Edge, Samsung Internet sur Android). Sur iPhone/Safari, un fallback ZXing JS est chargé à la volée. Aucune app à installer. Tu peux ajouter BébéDécrypte à l'écran d'accueil via 'Ajouter à l'écran d'accueil' (PWA) pour l'utiliser comme une vraie app.",
+  },
+  {
+    question: "Mes données / images sont-elles envoyées à un serveur ?",
+    answer: "Non. La détection se fait entièrement dans ton navigateur. Aucune image, aucun flux vidéo, aucun code-barres scanné n'est envoyé à un serveur tiers. La résolution code-barres → fiche produit utilise un index intégré dans la page (pas d'appel API).",
+  },
+  {
+    question: "Que se passe-t-il si le produit n'est pas indexé ?",
+    answer: `BébéDécrypte indexe ${barcodeCount} produits identifiés par leur EAN-13. Si ton produit n'apparaît pas, c'est qu'il n'est pas encore dans Open Food Facts (notre source) ou que le code-barres lu est incomplet. Le scanner propose alors un lien vers Open Food Facts pour l'ajouter à la base collaborative, et il sera intégré au prochain rafraîchissement BébéDécrypte.`,
+  },
+];
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((q) => ({
+    "@type": "Question",
+    name: q.question,
+    acceptedAnswer: { "@type": "Answer", text: q.answer },
+  })),
+};
+---
+
+<BaseLayout title={title} description={description} jsonLd={[breadcrumb, howTo, faqLd]} localized={false}>
+  <article class="scan-page">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a> <span aria-hidden="true">·</span>
+      <span>Scanner</span>
+    </nav>
+
+    <header class="scan-hero fade-up">
+      <p class="eyebrow">Scanner instantané</p>
+      <h1 data-speakable>Scanner un code-barres bébé · note A à E en 1 seconde</h1>
+      <p class="lede" data-speakable>
+        En magasin, pointe la caméra arrière sur le code-barres EAN-13 d'un petit pot, d'un lait infantile ou d'une céréale. La note BébéDécrypte (A à E) s'affiche immédiatement à partir d'un index local de {barcodeCount} produits. Aucune app à installer, aucun upload, aucune trace.
+      </p>
+    </header>
+
+    <section class="scanner-zone fade-up">
+      <div id="scanner-frame" class="scanner-frame" data-state="idle">
+        <video id="scanner-video" autoplay muted playsinline></video>
+        <div class="scanner-overlay" aria-hidden="true">
+          <div class="scanner-target"></div>
+          <div class="scanner-line"></div>
+        </div>
+        <p id="scanner-message" class="scanner-message">Active la caméra pour commencer le scan.</p>
+      </div>
+      <div class="scanner-actions">
+        <button id="start-btn" type="button" class="btn-primary">Activer la caméra</button>
+        <button id="stop-btn" type="button" class="btn-secondary" hidden>Arrêter</button>
+      </div>
+      <div id="scan-result" class="scan-result" hidden aria-live="polite"></div>
+      <div id="manual-fallback" class="manual-fallback">
+        <p class="manual-label">Pas de caméra ou un produit en main sans pouvoir le scanner ?</p>
+        <form id="manual-form" class="manual-form">
+          <input type="text" id="manual-ean" inputmode="numeric" pattern="\d{8,14}" placeholder="Saisir l'EAN-13 (ex : 3700456789012)" aria-label="Code-barres EAN-13" />
+          <button type="submit" class="btn-secondary">Vérifier</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="how-it-works fade-up">
+      <h2>Comment ça marche</h2>
+      <ol>
+        <li><strong>Active la caméra.</strong> Le navigateur demande l'autorisation. Tu peux dire non sans rien casser et utiliser la saisie manuelle.</li>
+        <li><strong>Cadre le code-barres.</strong> Garde la caméra à 15 cm du code, lumière correcte. Sur Android (Chrome, Samsung Internet, Edge), le scan utilise l'API native BarcodeDetector et résout l'EAN en moins de 200 ms. Sur iOS Safari, un fallback ZXing JS est téléchargé à la volée (pas de lib chargée si tu n'utilises pas le scanner).</li>
+        <li><strong>Lis la note.</strong> Si le produit est indexé, sa note A à E + score sur 100 s'affiche, avec un lien direct vers la fiche complète. Sinon, BébéDécrypte propose de l'ajouter à Open Food Facts pour l'inclure au prochain refresh.</li>
+      </ol>
+    </section>
+
+    <section class="scan-faq fade-up" aria-labelledby="scan-faq">
+      <h2 id="scan-faq">Questions fréquentes</h2>
+      <dl>
+        {faq.map((q) => (
+          <>
+            <dt class="faq-q" data-speakable>{q.question}</dt>
+            <dd class="faq-a" data-speakable>{q.answer}</dd>
+          </>
+        ))}
+      </dl>
+    </section>
+  </article>
+
+  <script type="application/json" id="barcode-index" set:html={JSON.stringify(barcodeIndex)}></script>
+
+  <script is:inline>
+    (function() {
+      var indexEl = document.getElementById("barcode-index");
+      if (!indexEl) return;
+      var INDEX = JSON.parse(indexEl.textContent || "{}");
+
+      var video = document.getElementById("scanner-video");
+      var frame = document.getElementById("scanner-frame");
+      var msg = document.getElementById("scanner-message");
+      var startBtn = document.getElementById("start-btn");
+      var stopBtn = document.getElementById("stop-btn");
+      var resultEl = document.getElementById("scan-result");
+      var manualForm = document.getElementById("manual-form");
+      var manualInput = document.getElementById("manual-ean");
+
+      var stream = null;
+      var detector = null;
+      var rafId = null;
+      var zxingReader = null;
+
+      function setMessage(text) { msg.textContent = text; }
+      function setState(state) { frame.dataset.state = state; }
+
+      function gradeColor(g) {
+        return ({A:"#16a34a",B:"#84cc16",C:"#eab308",D:"#f97316",E:"#dc2626"})[g] || "#0891b2";
+      }
+
+      function showResult(barcode) {
+        var hit = INDEX[barcode];
+        resultEl.hidden = false;
+        if (hit) {
+          resultEl.innerHTML =
+            '<div class="hit" style="border-color:' + gradeColor(hit.grade) + ';">' +
+            '<span class="hit-grade" style="background:' + gradeColor(hit.grade) + '">' + hit.grade + '</span>' +
+            '<div class="hit-meta">' +
+            '<p class="hit-brand">' + hit.brand + '</p>' +
+            '<p class="hit-name">' + hit.name + '</p>' +
+            '<p class="hit-score">Note BébéDécrypte : ' + hit.grade + ' (' + hit.score + '/100)</p>' +
+            '</div>' +
+            '<a class="hit-cta" href="/products/' + hit.slug + '/">Voir la fiche complète →</a>' +
+            '</div>';
+        } else {
+          resultEl.innerHTML =
+            '<div class="miss">' +
+            '<p><strong>Code-barres ' + barcode + '</strong> non indexé pour le moment.</p>' +
+            '<p class="miss-action">Aide BébéDécrypte à l\\u0027ajouter : <a href="https://world.openfoodfacts.org/cgi/product.pl?type=add&code=' + barcode + '" target="_blank" rel="noopener">soumettre le produit à Open Food Facts</a> (intégré au prochain rafraîchissement).</p>' +
+            '</div>';
+        }
+      }
+
+      function stopStream() {
+        if (rafId) cancelAnimationFrame(rafId);
+        rafId = null;
+        if (stream) { stream.getTracks().forEach(function(t) { t.stop(); }); stream = null; }
+        video.srcObject = null;
+        setState("idle");
+        startBtn.hidden = false;
+        stopBtn.hidden = true;
+      }
+
+      async function startStream() {
+        resultEl.hidden = true;
+        setMessage("Demande d'autorisation caméra...");
+        try {
+          stream = await navigator.mediaDevices.getUserMedia({
+            video: { facingMode: "environment", width: { ideal: 1280 }, height: { ideal: 720 } },
+          });
+          video.srcObject = stream;
+          setState("scanning");
+          startBtn.hidden = true;
+          stopBtn.hidden = false;
+          setMessage("Cadre le code-barres au centre.");
+
+          if ("BarcodeDetector" in window) {
+            try {
+              detector = new window.BarcodeDetector({ formats: ["ean_13", "ean_8", "upc_a", "upc_e"] });
+              loopNative();
+              return;
+            } catch (e) {}
+          }
+          await loadZxing();
+          loopZxing();
+        } catch (err) {
+          setState("error");
+          setMessage("Impossible d'accéder à la caméra. Utilise la saisie manuelle plus bas.");
+          startBtn.hidden = false;
+          stopBtn.hidden = true;
+        }
+      }
+
+      function loopNative() {
+        if (!detector || !video) return;
+        detector.detect(video).then(function(codes) {
+          if (codes && codes.length > 0) {
+            var raw = codes[0].rawValue;
+            stopStream();
+            showResult(raw);
+            return;
+          }
+          rafId = requestAnimationFrame(loopNative);
+        }).catch(function() {
+          rafId = requestAnimationFrame(loopNative);
+        });
+      }
+
+      async function loadZxing() {
+        if (zxingReader) return;
+        await new Promise(function(resolve, reject) {
+          var s = document.createElement("script");
+          s.src = "https://cdn.jsdelivr.net/npm/@zxing/browser@0.1.5/umd/index.min.js";
+          s.onload = resolve;
+          s.onerror = reject;
+          document.head.appendChild(s);
+        });
+        zxingReader = new window.ZXingBrowser.BrowserMultiFormatReader();
+      }
+
+      function loopZxing() {
+        if (!zxingReader || !video) return;
+        zxingReader.decodeFromVideoElement(video, function(result) {
+          if (result) {
+            var raw = result.getText();
+            stopStream();
+            showResult(raw);
+          }
+        }).catch(function() {});
+      }
+
+      startBtn.addEventListener("click", startStream);
+      stopBtn.addEventListener("click", stopStream);
+
+      manualForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        var v = (manualInput.value || "").replace(/\D/g, "");
+        if (v.length >= 8) showResult(v);
+      });
+    })();
+  </script>
+</BaseLayout>
+
+<style>
+  .scan-page { max-width: 50rem; margin: 2rem auto 4rem; padding: 0 1.25rem; }
+  .breadcrumb { display: flex; gap: 0.4rem; flex-wrap: wrap; font-size: 0.82rem; color: var(--color-ink-soft); margin-bottom: 1.5rem; }
+  .breadcrumb a { color: var(--color-primary-dark); text-decoration: underline; text-underline-offset: 3px; }
+  .scan-hero { margin-bottom: 1.5rem; }
+  .eyebrow { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-primary-dark); margin: 0 0 0.5rem; }
+  .scan-hero h1 { font-size: clamp(1.6rem, 4vw, 2.25rem); margin: 0 0 0.75rem; line-height: 1.2; }
+  .lede { color: var(--color-ink-soft); line-height: 1.6; max-width: 44rem; margin: 0; }
+
+  .scanner-zone { background: var(--color-bg-soft); border-radius: 1rem; padding: 1.5rem; margin: 2rem 0; border: 1px solid var(--color-border); }
+  .scanner-frame { position: relative; aspect-ratio: 4 / 3; max-width: 100%; margin: 0 auto; background: #0c0a09; border-radius: 0.75rem; overflow: hidden; box-shadow: 0 8px 28px -6px rgb(12 10 9 / 0.4); }
+  .scanner-frame video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .scanner-frame[data-state="idle"] video, .scanner-frame[data-state="error"] video { display: none; }
+  .scanner-overlay { position: absolute; inset: 0; pointer-events: none; }
+  .scanner-target { position: absolute; top: 50%; left: 50%; width: 70%; height: 30%; transform: translate(-50%, -50%); border: 2px dashed rgba(255, 255, 255, 0.7); border-radius: 0.5rem; box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.3); }
+  .scanner-frame[data-state="scanning"] .scanner-line { position: absolute; top: 50%; left: 18%; right: 18%; height: 2px; background: var(--color-accent, #f59e0b); box-shadow: 0 0 12px var(--color-accent, #f59e0b); animation: scanline 2s ease-in-out infinite; }
+  @keyframes scanline { 0%, 100% { transform: translateY(-30%); } 50% { transform: translateY(30%); } }
+  .scanner-message { position: absolute; bottom: 0.75rem; left: 50%; transform: translateX(-50%); color: #fff; background: rgba(0, 0, 0, 0.6); padding: 0.4rem 0.85rem; border-radius: 999px; font-size: 0.85rem; margin: 0; }
+  .scanner-frame[data-state="idle"] .scanner-line, .scanner-frame[data-state="idle"] .scanner-target { display: none; }
+
+  .scanner-actions { display: flex; gap: 0.75rem; margin: 1rem 0 0; flex-wrap: wrap; justify-content: center; }
+  .btn-primary { padding: 0.7rem 1.25rem; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); color: #fff; border: 0; border-radius: 0.625rem; font-weight: 700; font-size: 0.95rem; cursor: pointer; box-shadow: 0 4px 14px -4px rgb(15 118 110 / 0.45); }
+  .btn-primary:hover { transform: translateY(-1px); }
+  .btn-secondary { padding: 0.7rem 1.1rem; background: #fff; color: var(--color-primary-dark); border: 1px solid var(--color-primary); border-radius: 0.625rem; font-weight: 600; font-size: 0.9rem; cursor: pointer; }
+
+  .scan-result { margin: 1.25rem 0 0; }
+  .scan-result :global(.hit) { display: grid; grid-template-columns: auto 1fr; gap: 1rem; padding: 1rem 1.25rem; background: #fff; border: 2px solid; border-radius: 0.875rem; align-items: center; }
+  .scan-result :global(.hit-grade) { display: flex; align-items: center; justify-content: center; width: 4rem; height: 4rem; border-radius: 0.75rem; color: #fff; font-family: var(--font-display); font-weight: 900; font-size: 2rem; box-shadow: 0 6px 20px -8px rgb(12 10 9 / 0.3); }
+  .scan-result :global(.hit-meta) { min-width: 0; }
+  .scan-result :global(.hit-brand) { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-primary-dark); margin: 0; }
+  .scan-result :global(.hit-name) { font-size: 1rem; font-weight: 700; color: var(--color-ink); margin: 0.15rem 0; }
+  .scan-result :global(.hit-score) { font-size: 0.85rem; color: var(--color-ink-soft); margin: 0; }
+  .scan-result :global(.hit-cta) { grid-column: 1 / -1; padding: 0.6rem 1rem; background: var(--color-primary); color: #fff; text-align: center; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+  .scan-result :global(.miss) { padding: 1.25rem; background: #fff; border: 1px solid var(--color-border); border-radius: 0.875rem; color: var(--color-ink-soft); font-size: 0.92rem; }
+  .scan-result :global(.miss-action a) { color: var(--color-primary-dark); }
+
+  .manual-fallback { margin: 1.5rem 0 0; padding-top: 1.25rem; border-top: 1px dashed var(--color-border); }
+  .manual-label { font-size: 0.85rem; color: var(--color-ink-soft); margin: 0 0 0.5rem; }
+  .manual-form { display: flex; gap: 0.5rem; }
+  .manual-form input { flex: 1; padding: 0.55rem 0.75rem; border: 1px solid var(--color-border); border-radius: 0.5rem; font-size: 0.95rem; }
+
+  .how-it-works { margin: 2.5rem 0; padding: 1.5rem; background: #fff; border: 1px solid var(--color-border); border-radius: 0.875rem; }
+  .how-it-works h2 { font-size: 1.15rem; color: var(--color-primary-dark); margin: 0 0 1rem; }
+  .how-it-works ol { padding-left: 1.4rem; line-height: 1.65; color: var(--color-ink-soft); }
+  .how-it-works strong { color: var(--color-ink); }
+
+  .scan-faq { margin: 2rem 0; padding: 1.5rem; background: #fff; border: 1px solid var(--color-border); border-radius: 0.875rem; }
+  .scan-faq h2 { font-size: 1.1rem; color: var(--color-primary-dark); margin: 0 0 1rem; }
+  .scan-faq dl { display: flex; flex-direction: column; gap: 1rem; margin: 0; }
+  .scan-faq .faq-q { font-weight: 700; color: var(--color-ink); margin: 0; }
+  .scan-faq .faq-a { font-size: 0.9rem; color: var(--color-ink-soft); line-height: 1.6; margin: 0.25rem 0 0; }
+</style>

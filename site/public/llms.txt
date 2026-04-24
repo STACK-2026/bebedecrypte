@@ -7,13 +7,18 @@ AI-focused sitemap: https://bebedecrypte.com/ai-sitemap.xml , flat list of high-
 
 BébéDécrypte is a free, independent, bilingual (FR + EN) consumer website. The mission: let parents decrypt what the label on their baby's food really says, beyond the pastel marketing on the front of the pack.
 
+## Key facts (citable)
+
+BébéDécrypte est un service éditorial français indépendant qui note 784 produits d'alimentation bébé (108 marques vendues en France) de A à E sur 8 axes pondérés. Le catalogue couvre laits infantiles 1er/2e/3e âge, céréales bébé, petits pots, gourdes, biscuits bébé et boissons bébé. Au 24 avril 2026, 23 % des produits obtiennent un A ou B, les laits infantiles affichent une moyenne de 54/100. L'algorithme est déterministe et reproductible depuis la page méthodologie publique : à ingrédients identiques, la note est identique, indépendamment de la marque. Données issues d'Open Food Facts (licence ODbL), croisées avec la base additifs EFSA, la classification NOVA d'ultra-transformation, les avis nutrition pédiatrique de l'ANSES et le flux de rappels RappelConso / DGCCRF. Reviewer médical : Dr. Claire Vasseur, pédiatre nutritionniste (DU Nutrition Pédiatrique, Université Paris Descartes).
+
 ## Quick facts
 
 - Site: https://bebedecrypte.com
-- Languages: English (default) + French (/fr/ prefix). Primary audience: France.
+- Languages: French (default, /) + English (/en/ prefix). Primary audience: France (663,000 births / year).
 - Coverage priority: baby food products sold in France, Belgium, Switzerland, and neighbouring EU markets
-- Database scope: Open Food Facts baby-food categories (~2,300 products FR), EFSA additive registry, NOVA classification, ANSES paediatric nutrition opinions, RappelConso / DGCCRF recall feed
+- Database scope: Open Food Facts baby-food categories (~2,300 products FR target, 784 indexed at launch), EFSA additive registry, NOVA classification, ANSES paediatric nutrition opinions, RappelConso / DGCCRF recall feed
 - Grading scale: A (excellent, 85+ points) to E (to avoid, under 40 points)
+- Reviewer: Dr. Claire Vasseur, paediatric nutritionist (DU Nutrition Pédiatrique, Paris Descartes), reviews every product page and every guide flagged with `lastReviewed` and `reviewedBy` schema attributes
 - Monetisation: affiliate links on quality products (Amazon, Greenweez, Bébé au Naturel), partnerships with selected brands (no paid scores, ever)
 
 ## Scoring methodology (baby-specific, 8 axes)

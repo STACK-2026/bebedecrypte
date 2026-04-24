@@ -19,9 +19,9 @@ export default defineConfig({
         // Status pages should never appear in the sitemap.
         if (/^\/(en\/)?(404|500)\/?$/.test(path)) return false;
         // Astro i18n fallback emits ghost /en/* hub URLs for FR-only sections
-        // (products, brands, categories, authors, blog) without writing the file.
-        // Exclude them so Google does not see 5+ 404s in the sitemap.
-        if (/^\/en\/(products|brands|categories)\/?$/.test(path)) return false;
+        // (products, brands, categories, authors, blog, scan) without writing
+        // the file. Exclude them so Google does not see 404s in the sitemap.
+        if (/^\/en\/(products|brands|categories|scan)\/?$/.test(path)) return false;
         return true;
       },
     }),

@@ -19,12 +19,49 @@ const { category, products } = Astro.props;
 const { data } = category;
 const { Content: CatBody } = await render(category);
 
+// Distribution des grades pour appuyer le titre/description
+const gradeCount: Record<string, number> = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+for (const p of products) gradeCount[p.data.grade] = (gradeCount[p.data.grade] || 0) + 1;
+const distinctBrands = new Set(products.map((p: any) => p.data.brandSlug)).size;
+
+// CTR-optimised title: catégorie + volume + grade range + brand BébéDécrypte
+const optimisedTitle = `${data.title} bébé : ${products.length} produits notés A à E (${distinctBrands} marques) | BébéDécrypte`;
+const optimisedDescription = `Comparateur ${data.title.toLowerCase()} pour bébé : ${products.length} produits analysés sur 8 axes (NOVA, additifs EFSA, sucres cachés, bio, allergènes). ${gradeCount.A} note A, ${gradeCount.B} note B, ${distinctBrands} marques. Sources ANSES, EFSA, Open Food Facts.`.slice(0, 200);
+
+// FAQ : 3 standardised questions per category for FAQPage rich result
+const topProducts = products.slice(0, 3);
+const catFaq = [
+  {
+    question: `Quels sont les meilleurs ${data.title.toLowerCase()} pour bébé ?`,
+    answer: topProducts.length > 0
+      ? `Les ${topProducts.length} mieux notés sur ${products.length} analysés : ${topProducts.map((p: any) => `${p.data.brand} ${p.data.name} (${p.data.grade}, ${p.data.score}/100)`).join(" ; ")}.`
+      : `Aucun produit n'est encore référencé dans cette catégorie.`,
+  },
+  {
+    question: `Pourquoi seulement ${gradeCount.A} produit${gradeCount.A > 1 ? "s" : ""} note A dans ${data.title.toLowerCase()} ?`,
+    answer: `Pour décrocher un A, un produit doit cumuler une recette peu transformée (NOVA 1-2), zéro additif controversé, zéro sucre caché (maltodextrine, sirop de glucose, miel), et idéalement la certification bio. Sur l'industrie ${data.title.toLowerCase()} en France, peu de recettes cochent toutes les cases simultanément.`,
+  },
+  {
+    question: `Comment BébéDécrypte note les ${data.title.toLowerCase()} ?`,
+    answer: `Méthodologie 8 axes pondérés : NOVA ultra-transformation (25 %), additifs EFSA (25 %), sucres ajoutés et cachés (20 %), Nutri-Score (10 %), bio (10 %), transparence allergènes (5 %), origine France (3 %), simplicité de recette (2 %). La pondération est doublée sur les additifs pour les produits visant les moins de 12 mois.`,
+  },
+];
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: catFaq.map((q) => ({
+    "@type": "Question",
+    name: q.question,
+    acceptedAnswer: { "@type": "Answer", text: q.answer },
+  })),
+};
+
 const breadcrumb = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Accueil", item: siteConfig.url + "/" },
-    { "@type": "ListItem", position: 2, name: "Catalogue", item: siteConfig.url + "/rankings/" },
+    { "@type": "ListItem", position: 2, name: "Catalogue", item: siteConfig.url + "/products/" },
     { "@type": "ListItem", position: 3, name: data.title },
   ],
 };
@@ -34,7 +71,7 @@ const itemList = {
   "@type": "ItemList",
   name: data.title,
   numberOfItems: products.length,
-  itemListElement: products.slice(0, 20).map((p, i) => ({
+  itemListElement: products.slice(0, 20).map((p: any, i: number) => ({
     "@type": "ListItem",
     position: i + 1,
     url: `${siteConfig.url}/products/${p.data.slug}/`,
@@ -43,11 +80,11 @@ const itemList = {
 };
 ---
 
-<BaseLayout title={data.title} description={data.description} jsonLd={[itemList, breadcrumb]} localized={false}>
+<BaseLayout title={optimisedTitle} description={optimisedDescription} jsonLd={[itemList, breadcrumb, faqLd]} localized={false}>
   <article class="category-page">
     <nav class="breadcrumb">
       <a href="/">Accueil</a> <span aria-hidden="true">·</span>
-      <a href="/rankings/">Catalogue</a> <span aria-hidden="true">·</span>
+      <a href="/products/">Catalogue</a> <span aria-hidden="true">·</span>
       <span>{data.title}</span>
     </nav>
 
@@ -63,7 +100,7 @@ const itemList = {
     <section class="c-products fade-up">
       <h2>Top produits (triés par note)</h2>
       <ul class="c-products-list">
-        {products.slice(0, 50).map((p) => (
+        {products.slice(0, 50).map((p: any) => (
           <li>
             <a href={`/products/${p.data.slug}/`} class="c-product-card">
               <span class={`grade grade-sm grade-${p.data.grade.toLowerCase()}`}>{p.data.grade}</span>
@@ -75,6 +112,18 @@ const itemList = {
           </li>
         ))}
       </ul>
+    </section>
+
+    <section class="c-faq fade-up" aria-labelledby="cat-faq">
+      <h2 id="cat-faq">Questions fréquentes sur les {data.title.toLowerCase()}</h2>
+      <dl class="faq-list">
+        {catFaq.map((q) => (
+          <>
+            <dt class="faq-q" data-speakable>{q.question}</dt>
+            <dd class="faq-a" data-speakable>{q.answer}</dd>
+          </>
+        ))}
+      </dl>
     </section>
   </article>
 </BaseLayout>
@@ -96,4 +145,9 @@ const itemList = {
   .c-product-info { flex: 1; color: var(--color-ink); }
   .c-product-info strong { color: var(--color-primary-dark); }
   .c-product-score { font-size: 0.82rem; color: var(--color-ink-soft); font-variant-numeric: tabular-nums; }
+  .c-faq { background: #fff; border: 1px solid var(--color-border); border-radius: 0.875rem; padding: 1.25rem 1.4rem; margin-top: 2rem; }
+  .c-faq h2 { font-size: 1.1rem; color: var(--color-primary-dark); margin: 0 0 0.85rem; }
+  .c-faq .faq-list { display: flex; flex-direction: column; gap: 0.85rem; margin: 0; }
+  .c-faq .faq-q { font-weight: 700; color: var(--color-ink); font-size: 0.95rem; margin: 0; }
+  .c-faq .faq-a { font-size: 0.9rem; color: var(--color-ink-soft); line-height: 1.6; margin: 0.25rem 0 0; }
 </style>

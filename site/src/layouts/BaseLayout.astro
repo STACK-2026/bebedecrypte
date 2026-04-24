@@ -94,12 +94,19 @@ const enHref = siteConfig.url + "/en" + (cleanPath === "/" ? "/" : cleanPath);
     <!-- Favicon + PWA -->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="theme-color" content="#0891b2" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="BébéDécrypte" />
 
     <!-- JSON-LD -->
     {jsonLdArray.map((ld) => (
       <script type="application/ld+json" set:html={JSON.stringify(ld)} />
     ))}
+
+    <!-- Per-page head extras (preconnect, preload, page-specific meta) -->
+    <slot name="head" />
   </head>
   <body class="min-h-screen flex flex-col">
     <a href="#main-content" class="skip-link">Skip to main content</a>

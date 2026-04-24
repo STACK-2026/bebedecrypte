@@ -19,12 +19,51 @@ const { brand, products } = Astro.props;
 const { data } = brand;
 const { Content: BrandBody } = await render(brand);
 
+// CTR-optimised title and description : brand + volume + grade + brand BébéDécrypte
+const optimisedTitle = `${data.brand} : ${products.length} produit${products.length > 1 ? "s" : ""} bébé noté${products.length > 1 ? "s" : ""} (moyenne ${data.averageGrade}) | BébéDécrypte`;
+const gradeLabel: Record<string, string> = {
+  A: "majoritairement A et B",
+  B: "globalement bien noté",
+  C: "qualité moyenne, à comparer recette par recette",
+  D: "qualité insuffisante, à éviter sur la plupart des recettes",
+  E: "fortement déconseillé sur la quasi-totalité des produits",
+};
+const optimisedDescription = `Note moyenne ${data.averageGrade} (${data.averageScore}/100) sur ${products.length} produit${products.length > 1 ? "s" : ""} ${data.brand} analysé${products.length > 1 ? "s" : ""} par BébéDécrypte. Marque ${gradeLabel[data.averageGrade] || "analysée sur 8 axes bébé"}. Sources ANSES, EFSA, Open Food Facts.`.slice(0, 200);
+
+// FAQ : 3 standardised questions per brand for FAQPage rich result
+const topProducts = products.slice(0, 3);
+const brandFaq = [
+  {
+    question: `Quelle est la note moyenne de la marque ${data.brand} ?`,
+    answer: `${data.brand} obtient une note moyenne ${data.averageGrade} (${data.averageScore}/100) sur ${products.length} produit${products.length > 1 ? "s" : ""} analysé${products.length > 1 ? "s" : ""} par BébéDécrypte. La pondération suit notre méthodologie 8 axes (NOVA, additifs EFSA, sucres cachés, Nutri-Score, bio, allergènes, origine, simplicité de recette).`,
+  },
+  {
+    question: `Quels sont les meilleurs produits ${data.brand} pour bébé ?`,
+    answer: topProducts.length > 0
+      ? `Les ${topProducts.length} mieux notés : ${topProducts.map((p: any) => `${p.data.name} (${p.data.grade}, ${p.data.score}/100)`).join(" ; ")}. Voir la liste complète plus bas.`
+      : `Aucun produit ${data.brand} n'est encore référencé dans notre catalogue.`,
+  },
+  {
+    question: `${data.brand} est-elle une marque indépendante ou industrielle ?`,
+    answer: `BébéDécrypte ne juge pas l'appartenance industrielle. Le scoring est purement basé sur la composition des produits, leurs additifs et leurs sucres cachés. La même marque peut avoir simultanément des produits A et des produits E selon la recette.`,
+  },
+];
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: brandFaq.map((q) => ({
+    "@type": "Question",
+    name: q.question,
+    acceptedAnswer: { "@type": "Answer", text: q.answer },
+  })),
+};
+
 const breadcrumb = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Accueil", item: siteConfig.url + "/" },
-    { "@type": "ListItem", position: 2, name: "Catalogue", item: siteConfig.url + "/rankings/" },
+    { "@type": "ListItem", position: 2, name: "Catalogue", item: siteConfig.url + "/products/" },
     { "@type": "ListItem", position: 3, name: data.brand },
   ],
 };
@@ -66,11 +105,11 @@ const brandLd = {
 const gradeColors: Record<string, string> = { A: "var(--grade-a)", B: "var(--grade-b)", C: "var(--grade-c)", D: "var(--grade-d)", E: "var(--grade-e)" };
 ---
 
-<BaseLayout title={data.title} description={data.description} jsonLd={[brandLd, itemList, breadcrumb]} localized={false}>
+<BaseLayout title={optimisedTitle} description={optimisedDescription} jsonLd={[brandLd, itemList, breadcrumb, faqLd]} localized={false}>
   <article class="brand-page">
     <nav class="breadcrumb">
       <a href="/">Accueil</a> <span aria-hidden="true">·</span>
-      <a href="/rankings/">Catalogue</a> <span aria-hidden="true">·</span>
+      <a href="/products/">Catalogue</a> <span aria-hidden="true">·</span>
       <span>{data.brand}</span>
     </nav>
 
@@ -94,7 +133,7 @@ const gradeColors: Record<string, string> = { A: "var(--grade-a)", B: "var(--gra
     <section class="b-products fade-up">
       <h2>Tous les produits {data.brand} notés</h2>
       <ul class="b-products-list">
-        {products.map((p) => (
+        {products.map((p: any) => (
           <li>
             <a href={`/products/${p.data.slug}/`} class="b-product-card">
               <span class={`grade grade-sm grade-${p.data.grade.toLowerCase()}`}>{p.data.grade}</span>
@@ -104,6 +143,18 @@ const gradeColors: Record<string, string> = { A: "var(--grade-a)", B: "var(--gra
           </li>
         ))}
       </ul>
+    </section>
+
+    <section class="b-faq fade-up" aria-labelledby="brand-faq">
+      <h2 id="brand-faq">Questions fréquentes sur {data.brand}</h2>
+      <dl class="faq-list">
+        {brandFaq.map((q) => (
+          <>
+            <dt class="faq-q" data-speakable>{q.question}</dt>
+            <dd class="faq-a" data-speakable>{q.answer}</dd>
+          </>
+        ))}
+      </dl>
     </section>
   </article>
 </BaseLayout>
@@ -129,4 +180,9 @@ const gradeColors: Record<string, string> = { A: "var(--grade-a)", B: "var(--gra
   .b-product-card:hover { border-color: var(--color-primary); transform: translateY(-1px); }
   .b-product-name { flex: 1; color: var(--color-ink); }
   .b-product-score { font-size: 0.82rem; color: var(--color-ink-soft); font-variant-numeric: tabular-nums; }
+  .b-faq { background: #fff; border: 1px solid var(--color-border); border-radius: 0.875rem; padding: 1.25rem 1.4rem; margin-top: 2rem; }
+  .b-faq h2 { font-size: 1.1rem; color: var(--color-primary-dark); margin: 0 0 0.85rem; }
+  .b-faq .faq-list { display: flex; flex-direction: column; gap: 0.85rem; margin: 0; }
+  .b-faq .faq-q { font-weight: 700; color: var(--color-ink); font-size: 0.95rem; margin: 0; }
+  .b-faq .faq-a { font-size: 0.9rem; color: var(--color-ink-soft); line-height: 1.6; margin: 0.25rem 0 0; }
 </style>
