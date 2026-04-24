@@ -61,14 +61,14 @@ Idées de Maman Purée de Choux-fleurs : Choux-fleurs 36,0 % - Eau de cuisson - 
 
 ## Alternatives mieux notées dans Petits pots
 
-- [Simple comme... Simple comme une.... Purée](/fr/produits/simple-comme-simple-comme-une-puree/) , note A (95/100)
-- [Babybio Tendresse de petits légumes riz](/fr/produits/babybio-tendresse-de-petits-legumes-riz/) , note A (94/100)
-- [BABYBIO BOLS LEGUMES SAUMON MACARONI 2X200G](/fr/produits/babybio-bols-legumes-saumon-macaroni-2x200g/) , note A (94/100)
-- [Babybio Douceur de pomme d'aquitaine et myrtille](/fr/produits/babybio-douceur-de-pomme-d-aquitaine-et-myrtille-2/) , note A (94/100)
+- [Simple comme... Simple comme une.... Purée](/products/simple-comme-simple-comme-une-puree/) , note A (95/100)
+- [Babybio Tendresse de petits légumes riz](/products/babybio-tendresse-de-petits-legumes-riz/) , note A (94/100)
+- [BABYBIO BOLS LEGUMES SAUMON MACARONI 2X200G](/products/babybio-bols-legumes-saumon-macaroni-2x200g/) , note A (94/100)
+- [Babybio Douceur de pomme d'aquitaine et myrtille](/products/babybio-douceur-de-pomme-d-aquitaine-et-myrtille-2/) , note A (94/100)
 
 ## Méthodologie
 
 Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
-Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
+Voir la [méthodologie complète](/methodology/) et la [page catégorie Petits pots](/categories/petits-pots/).
 

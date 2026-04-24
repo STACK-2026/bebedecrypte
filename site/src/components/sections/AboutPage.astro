@@ -136,7 +136,7 @@ const locale: Locale = getLocale(Astro.url);
       <li>
         <strong>{locale === "fr" ? "Méthodologie ouverte." : "Open methodology."}</strong>
         {locale === "fr" ? " Chaque note est reproductible depuis notre " : " Every grade is reproducible from our "}
-        <a href={locale === "fr" ? "/fr/methodology" : "/methodology"}>
+        <a href={locale === "en" ? "/en/methodology" : "/methodology"}>
           {locale === "fr" ? "page méthodologie" : "methodology page"}
         </a>.
       </li>
@@ -149,7 +149,7 @@ const locale: Locale = getLocale(Astro.url);
       <li>
         <strong>{locale === "fr" ? "Respect des données." : "Data respect."}</strong>
         {locale === "fr" ? " Aucune revente. Voir notre " : " Never sold. See our "}
-        <a href={locale === "fr" ? "/fr/privacy-policy" : "/privacy-policy"}>
+        <a href={locale === "en" ? "/en/privacy-policy" : "/privacy-policy"}>
           {locale === "fr" ? "politique de confidentialité" : "privacy policy"}
         </a>.
       </li>

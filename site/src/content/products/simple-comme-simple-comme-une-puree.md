@@ -62,5 +62,5 @@ De l'eau de cuisson, des pommes de terre du panais* 25%, des haricots verts 12%,
 
 Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
-Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Petits pots](/fr/categories/petits-pots/).
+Voir la [méthodologie complète](/methodology/) et la [page catégorie Petits pots](/categories/petits-pots/).
 

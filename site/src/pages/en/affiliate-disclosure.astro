@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "Affiliate disclosure · BébéDécrypte";
+const description = "How BébéDécrypte is funded: affiliate links, full transparency, zero brand sponsorship on ratings. Independent A to E grades on baby food.";
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="legal-page">
+    <header class="legal-header">
+      <p class="eyebrow">Transparency</p>
+      <h1>Affiliate disclosure</h1>
+      <p class="lede">
+        BébéDécrypte is an independent baby-food rating service. A to E grades are awarded without any financial counterpart from brands. To stay free, we occasionally use affiliate links. Here is exactly how it works.
+      </p>
+    </header>
+
+    <section class="legal-section">
+      <h2>What is an affiliate link?</h2>
+      <p>
+        When you click a "Buy on Amazon" or "View on Greenweez" button from BébéDécrypte, you reach the partner store through a tracked link. If you buy in the following days, the store pays BébéDécrypte a small commission (typically 3 to 8 % of the basket). You pay the exact same price as visiting directly. No surcharge.
+      </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>Who are our partners?</h2>
+      <p>As of 23 April 2026:</p>
+      <ul>
+        <li><strong>Amazon</strong> · Amazon Associates FR, for baby food, formula and accessories stocked on Amazon.fr.</li>
+        <li><strong>Greenweez</strong> · French organic store, validated via the Awin network. Curated range of bio baby food (Babybio, Good Goût, Popote, Yooji).</li>
+        <li><strong>Bébé au Naturel</strong> · speciality store for reusable pouches, organic weaning kits, allergen-free ranges.</li>
+        <li>Pending partners: a handful of direct brand programmes (bio baby food) under review.</li>
+      </ul>
+      <p>Only products actually stocked by our partners show a "Buy on" button. Other pages remain purely informational.</p>
+    </section>
+
+    <section class="legal-section">
+      <h2>Does affiliation influence ratings?</h2>
+      <p>
+        No. A to E grades are computed by our <a href="/methodology/">public methodology</a> on 8 weighted axes (NOVA ultra-processing, EFSA additives, added and hidden sugars, Nutri-Score, organic, allergen transparency, origin, recipe simplicity). No brand can "buy" a better grade. No affiliate partner has access to our scoring table before publication. Grades are never modified after a partnership is accepted. A partner product can, and often does, get a D or E.
+      </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>How to spot an affiliate link?</h2>
+      <p>
+        Every sponsored CTA is flagged: "Affiliate partner" badge, distinct amber button, explicit affiliation mention. Links carry <code>rel="sponsored nofollow"</code> per Google guidelines and open in a new tab.
+      </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>Your rights as a user</h2>
+      <ul>
+        <li>You can use BébéDécrypte without ever clicking an affiliate link. All grades, product pages and analyses stay accessible.</li>
+        <li>You can withdraw your consent for analytics cookies via the cookie banner (footer link "Manage cookies").</li>
+        <li>Affiliate click data contains no personally identifiable information. We store: product id, partner, referrer, country, date.</li>
+      </ul>
+    </section>
+
+    <section class="legal-section">
+      <h2>Questions?</h2>
+      <p>
+        Write to <a href="mailto:contact@bebedecrypte.com">contact@bebedecrypte.com</a>. We reply within 48 hours on weekdays.
+      </p>
+    </section>
+  </article>
+
+  <style>
+    .legal-page {
+      max-width: 44rem;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 5rem;
+    }
+    .legal-header {
+      margin-bottom: 2.5rem;
+    }
+    .eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin: 0 0 0.5rem;
+    }
+    .legal-page h1 {
+      font-size: 2.25rem;
+      line-height: 1.15;
+      margin: 0 0 1rem;
+    }
+    .lede {
+      font-size: 1.1rem;
+      line-height: 1.55;
+      color: var(--color-ink-soft);
+      margin: 0;
+    }
+    .legal-section { margin-top: 2.25rem; }
+    .legal-section h2 { font-size: 1.35rem; margin: 0 0 0.6rem; color: var(--color-primary-dark); }
+    .legal-section p { line-height: 1.65; margin: 0 0 0.75rem; color: var(--color-ink-soft); }
+    .legal-section ul { margin: 0.5rem 0 1rem 1.25rem; line-height: 1.65; color: var(--color-ink-soft); }
+    .legal-section a { color: var(--color-primary-dark); }
+    .legal-section code {
+      background: rgba(8, 145, 178, 0.08);
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.92em;
+    }
+  </style>
+</BaseLayout>

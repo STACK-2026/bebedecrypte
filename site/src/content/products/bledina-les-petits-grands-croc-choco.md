@@ -64,14 +64,14 @@ Bâtonnets de céréales 58% (farine de blé 85%, sucre, lait écrémé en poudr
 
 ## Alternatives mieux notées dans Biscuits et snacks
 
-- [Nestlé Naturnes bio](/fr/produits/nestle-naturnes-bio/) , note B (80/100)
-- [Aldi Bio Knusper Snack Karotte](/fr/produits/aldi-bio-knusper-snack-karotte/) , note B (78/100)
-- [Holle Biscuits aux fruits](/fr/produits/holle-biscuits-aux-fruits/) , note B (74/100)
-- [Bledina Crousti à dévorer](/fr/produits/bledina-crousti-a-devorer/) , note B (74/100)
+- [Nestlé Naturnes bio](/products/nestle-naturnes-bio/) , note B (80/100)
+- [Aldi Bio Knusper Snack Karotte](/products/aldi-bio-knusper-snack-karotte/) , note B (78/100)
+- [Holle Biscuits aux fruits](/products/holle-biscuits-aux-fruits/) , note B (74/100)
+- [Bledina Crousti à dévorer](/products/bledina-crousti-a-devorer/) , note B (74/100)
 
 ## Méthodologie
 
 Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
-Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Biscuits et snacks](/fr/categories/biscuits-snacks/).
+Voir la [méthodologie complète](/methodology/) et la [page catégorie Biscuits et snacks](/categories/biscuits-snacks/).
 

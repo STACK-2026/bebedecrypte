@@ -55,5 +55,5 @@ draft: false
 
 Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
-Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Laits infantiles](/fr/categories/laits-infantiles/).
+Voir la [méthodologie complète](/methodology/) et la [page catégorie Laits infantiles](/categories/laits-infantiles/).
 

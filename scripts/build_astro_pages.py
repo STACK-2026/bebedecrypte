@@ -290,7 +290,7 @@ def product_markdown(p: dict, alternatives: list[dict]) -> str:
         body_lines.append("")
         for alt in alternatives:
             body_lines.append(
-                f"- [{alt['brand']} {alt['name']}](/fr/produits/{alt['slug']}/) , note {alt['grade']} ({int(alt['score'])}/100)"
+                f"- [{alt['brand']} {alt['name']}](/products/{alt['slug']}/) , note {alt['grade']} ({int(alt['score'])}/100)"
             )
         body_lines.append("")
 
@@ -304,8 +304,8 @@ def product_markdown(p: dict, alternatives: list[dict]) -> str:
     )
     body_lines.append("")
     body_lines.append(
-        f"Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie "
-        f"{CATALOG_CATEGORIES.get(category, {}).get('label_fr', 'produits')}](/fr/categories/{category}/)."
+        f"Voir la [méthodologie complète](/methodology/) et la [page catégorie "
+        f"{CATALOG_CATEGORIES.get(category, {}).get('label_fr', 'produits')}](/categories/{category}/)."
     )
     body_lines.append("")
 
@@ -356,12 +356,12 @@ def brand_markdown(brand_slug: str, brand_name: str, products: list[dict]) -> st
     body.append("")
     for p in products_sorted:
         body.append(
-            f"- [{p['name']}](/fr/produits/{p['slug']}/) , note {p['grade']} ({int(p['score'])}/100)"
+            f"- [{p['name']}](/products/{p['slug']}/) , note {p['grade']} ({int(p['score'])}/100)"
         )
     body.append("")
     body.append(
         "Notes générées à partir d'Open Food Facts et de notre algorithme BébéDécrypte. "
-        "Voir la [méthodologie](/fr/methodologie/)."
+        "Voir la [méthodologie](/methodology/)."
     )
     body.append("")
 
@@ -416,12 +416,12 @@ def category_markdown(slug: str, meta: dict, products: list[dict]) -> str:
     body.append("")
     for p in top:
         body.append(
-            f"- [{p['brand']} {p['name']}](/fr/produits/{p['slug']}/) , note {p['grade']} ({int(p['score'])}/100)"
+            f"- [{p['brand']} {p['name']}](/products/{p['slug']}/) , note {p['grade']} ({int(p['score'])}/100)"
         )
     body.append("")
     body.append(
-        "Méthodologie complète : voir [/fr/methodologie/](/fr/methodologie/). "
-        "Tu peux aussi consulter [toutes les catégories](/fr/categories/)."
+        "Méthodologie complète : voir [/methodology/](/methodology/). "
+        "Tu peux aussi consulter [toutes les catégories](/categories/)."
     )
     body.append("")
 

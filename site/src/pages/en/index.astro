@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HomePage from "../../components/sections/HomePage.astro";
+import { siteConfig } from "../../../site.config";
+import { jsonLdFaq } from "../../utils/seo";
+
+// Homepage EN : BaseLayout already injects Organization + WebSite schemas.
+// We only add the FAQ schema here to avoid duplicate JSON-LD blocks.
+const title = "BébéDécrypte , Independent baby food decoder (A to E grade)";
+const description =
+  "BébéDécrypte grades every baby pot, infant formula, baby cereal and pouch sold in France from A to E on 8 axes. Additives, hidden sugars, ultra-processing, organic, allergens. Independent, free, sources ANSES, EFSA, Open Food Facts.";
+
+// English FAQ (mirrors siteConfig.faq which is FR, we localise here)
+const faq = [
+  {
+    question: "How does BébéDécrypte grade baby food products?",
+    answer:
+      "Every product is graded A to E on 8 weighted axes: NOVA ultra-processing (25%), EFSA additive risk (25%), added + hidden sugars (20%), official Nutri-Score (10%), organic certification (10%), allergen transparency (5%), French origin (3%) and recipe simplicity (2%). Ingredients come from Open Food Facts, the grade is deterministic, no brand can pay to move up.",
+  },
+  {
+    question: "Why are additives more penalised for a baby?",
+    answer:
+      "Infants have an immature gut barrier, a developing liver and kidneys, and a far worse body-weight-to-additive ratio than adults. ANSES recommends strict limitation of additives before 3 years, even those authorised. Our scoring applies a baby-specific weight: E-numbers tolerated for adults trigger a red alert on products for under-3s.",
+  },
+  {
+    question: "Where does your data come from?",
+    answer:
+      "Our catalog is built from Open Food Facts (a collaborative database, ODbL licence), enriched with the EFSA additives registry, the NOVA classification, the RappelConso/DGCCRF recall feed, and ANSES opinions. About 2,300 baby food products sold in France are covered.",
+  },
+  {
+    question: "How do you handle product recalls (Lactalis and others)?",
+    answer:
+      "Every product affected by an official recall (DGCCRF, RappelConso) is immediately flagged with a red banner on its page, with the date and reason. The recall history by brand is also searchable in our encyclopedia. The 2017 Lactalis scandal remains the reference: we don't let any parent buy blind any more.",
+  },
+  {
+    question: "Is it really free?",
+    answer:
+      "Yes, 100% free for parents. BébéDécrypte is funded through affiliate partnerships (Amazon, Greenweez) and partnerships with brands selected for quality (never by buying a grade).",
+  },
+];
+
+const jsonLd = [jsonLdFaq(faq)];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  jsonLd={jsonLd}
+>
+  <HomePage />
+</BaseLayout>

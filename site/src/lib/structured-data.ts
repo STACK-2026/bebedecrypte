@@ -13,7 +13,8 @@ export function organizationSchema() {
     url: SITE,
     logo: `${SITE}/favicon.svg`,
     description:
-      "Independent baby-food rating service. Grades every baby pot, infant formula, cereal and pouch from A to E on 8 axes (NOVA, additives, added sugars, Nutri-Score, organic, allergens, origin, simplicity), baby-specific weighting stricter before 12 months. Sources: Open Food Facts, EFSA, ANSES, RappelConso.",
+      "Décodeur indépendant d'alimentation bébé. Note chaque petit pot, lait infantile, céréale et gourde de A à E sur 8 axes (NOVA, additifs, sucres cachés, Nutri-Score, bio, allergènes, origine, simplicité), pondération renforcée avant 12 mois. Sources : Open Food Facts, EFSA, ANSES, RappelConso.",
+    inLanguage: ["fr-FR", "en-US"],
     sameAs: [],
     foundingDate: "2026",
     email: siteConfig.legal.email,

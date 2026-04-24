@@ -18,6 +18,9 @@ interface Props {
   publishedTime?: string;
   jsonLd?: object | object[];
   noIndex?: boolean;
+  // Set false on FR-only pages (products, brands, categories) to suppress
+  // the hreflang en alternate, since /en/* counterparts do not exist.
+  localized?: boolean;
 }
 
 const {
@@ -29,6 +32,7 @@ const {
   publishedTime,
   jsonLd,
   noIndex = false,
+  localized = true,
 } = Astro.props;
 
 const locale = getLocale(Astro.url);
@@ -41,10 +45,10 @@ const baseJsonLd = [organizationSchema(), websiteSchema(locale)];
 const pageJsonLd = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 const jsonLdArray = [...baseJsonLd, ...pageJsonLd];
 
-// Build hreflang pairs
-const cleanPath = Astro.url.pathname.replace(/^\/fr/, "") || "/";
-const enHref = siteConfig.url + cleanPath;
-const frHref = siteConfig.url + "/fr" + (cleanPath === "/" ? "/" : cleanPath);
+// Build hreflang pairs (FR is default at root, EN under /en/)
+const cleanPath = Astro.url.pathname.replace(/^\/en/, "") || "/";
+const frHref = siteConfig.url + cleanPath;
+const enHref = siteConfig.url + "/en" + (cleanPath === "/" ? "/" : cleanPath);
 ---
 
 <!doctype html>
@@ -60,12 +64,12 @@ const frHref = siteConfig.url + "/fr" + (cleanPath === "/" ? "/" : cleanPath);
     <meta name="author" content={siteConfig.author} />
     {noIndex && <meta name="robots" content="noindex, nofollow" />}
 
-    <!-- Hreflang (bilingual EN + FR) -->
-    <link rel="alternate" hreflang="en" href={enHref} />
+    <!-- Hreflang (bilingual FR default + EN). Suppressed for FR-only pages. -->
     <link rel="alternate" hreflang="fr" href={frHref} />
-    <link rel="alternate" hreflang="x-default" href={enHref} />
-    <link rel="alternate" type="application/rss+xml" title="BébéDécrypte Blog (EN)" href="/rss.xml" />
-    <link rel="alternate" type="application/rss+xml" title="BébéDécrypte Blog (FR)" href="/fr/rss.xml" />
+    {localized && <link rel="alternate" hreflang="en" href={enHref} />}
+    <link rel="alternate" hreflang="x-default" href={frHref} />
+    <link rel="alternate" type="application/rss+xml" title="BébéDécrypte Blog (FR)" href="/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="BébéDécrypte Blog (EN)" href="/en/rss.xml" />
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />

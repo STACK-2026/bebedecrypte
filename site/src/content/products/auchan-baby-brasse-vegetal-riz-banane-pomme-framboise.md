@@ -61,5 +61,5 @@ Boisson à base de riz* (eau, farine de riz* 3.5%) 38,4%, purée de banane* 25%,
 
 Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
-Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Boissons bébé](/fr/categories/boissons/).
+Voir la [méthodologie complète](/methodology/) et la [page catégorie Boissons bébé](/categories/boissons/).
 

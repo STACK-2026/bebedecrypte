@@ -7,8 +7,8 @@ const breadcrumb = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url + "/" },
-    { "@type": "ListItem", position: 2, name: "Methodology" },
+    { "@type": "ListItem", position: 1, name: "Accueil", item: siteConfig.url + "/" },
+    { "@type": "ListItem", position: 2, name: "Méthodologie" },
   ],
 };
 
@@ -16,23 +16,24 @@ const webPage = {
   "@context": "https://schema.org",
   "@type": "TechArticle",
   "@id": `${siteConfig.url}/methodology/#article`,
-  headline: "How BébéDécrypte scores every baby food product , 8-axis methodology",
+  headline: "Comment BébéDécrypte note chaque produit bébé , méthodologie 8 axes",
   url: `${siteConfig.url}/methodology/`,
-  inLanguage: "en-US",
+  inLanguage: "fr-FR",
   publisher: { "@id": `${siteConfig.url}/#organization` },
   about: [
-    { "@type": "Thing", name: "NOVA classification" },
-    { "@type": "Thing", name: "EFSA additives registry" },
-    { "@type": "Thing", name: "ANSES paediatric nutrition opinions" },
+    { "@type": "Thing", name: "Classification NOVA" },
+    { "@type": "Thing", name: "Base additifs EFSA" },
+    { "@type": "Thing", name: "Avis nutrition infantile ANSES" },
     { "@type": "Thing", name: "Nutri-Score" },
+    { "@type": "Thing", name: "Recommandations ESPGHAN" },
   ],
   speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "h2", "[data-speakable]"] },
 };
 ---
 
 <BaseLayout
-  title="Methodology , How BébéDécrypte scores every product | BébéDécrypte"
-  description="BébéDécrypte uses a deterministic 8-axis scoring system (NOVA, EFSA additives, added sugars, Nutri-Score, organic, allergens, origin, simplicity) tuned for infant nutrition to grade every baby food product from A to E. Baby-specific weighting stricter under 12 months."
+  title="Méthodologie , Comment BébéDécrypte note chaque produit | BébéDécrypte"
+  description="BébéDécrypte utilise un système déterministe en 8 axes (NOVA, additifs EFSA, sucres ajoutés, Nutri-Score, bio, allergènes, origine, simplicité) pondéré pour la nutrition infantile. Note A à E, pondération plus stricte avant 12 mois. Sources ANSES, EFSA, ESPGHAN, RappelConso."
   jsonLd={[webPage, breadcrumb]}
 >
   <MethodologyPage />

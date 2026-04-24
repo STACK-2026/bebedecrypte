@@ -1,0 +1,47 @@
+---
+// /rankings/ used to be a ComingSoon stub. Now that the 784 product pages
+// and the /products/ hub are live, /rankings/ is a soft redirect + canonical
+// to /products/ for people arriving from old backlinks.
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { siteConfig } from "../../../site.config";
+import { getLocale, localeUrl } from "../../i18n/t";
+
+const locale = getLocale(Astro.url);
+const target = localeUrl("/products/", locale);
+const canonicalUrl = siteConfig.url + target;
+---
+
+<BaseLayout
+  title={locale === "fr" ? "Catalogue complet BébéDécrypte , 784 produits bébé notés A à E" : "Full catalogue , 784 baby products graded A to E | BébéDécrypte"}
+  description={locale === "fr" ? "Le catalogue complet BébéDécrypte a déménagé sur /products/. 784 produits bébé notés de A à E sur 8 axes." : "The full BébéDécrypte catalogue moved to /products/. 784 baby food items graded A to E on 8 axes."}
+  canonicalUrl={canonicalUrl}
+>
+  <meta http-equiv="refresh" content={`0;url=${target}`} slot="head" />
+  <section class="redirect-page">
+    <h1>{locale === "fr" ? "Le catalogue est ici , /products/" : "The catalogue is here , /products/"}</h1>
+    <p>
+      {locale === "fr"
+        ? "On a unifié le classement et le catalogue dans un seul hub."
+        : "Rankings and the catalogue are now unified in one hub."}
+    </p>
+    <p>
+      <a href={target} class="btn-primary">
+        {locale === "fr" ? "Voir les 784 produits notés →" : "Browse the 784 graded products →"}
+      </a>
+    </p>
+  </section>
+</BaseLayout>
+
+<script>
+  // Belt-and-braces : JS-side redirect if meta refresh is disabled.
+  const target = document.querySelector("a")?.getAttribute("href");
+  if (target) setTimeout(() => (window.location.href = target), 100);
+</script>
+
+<style>
+  .redirect-page { max-width: 36rem; margin: 6rem auto; padding: 2rem; text-align: center; }
+  .redirect-page h1 { font-family: var(--font-display); font-size: 1.75rem; color: var(--color-primary-dark); margin: 0 0 1rem; }
+  .redirect-page p { color: var(--color-ink-soft); margin: 0 0 1rem; }
+  .btn-primary { display: inline-block; padding: 0.8rem 1.4rem; background: var(--color-primary); color: #fff; border-radius: 0.625rem; text-decoration: none; font-weight: 700; }
+  .btn-primary:hover { background: var(--color-primary-dark); }
+</style>

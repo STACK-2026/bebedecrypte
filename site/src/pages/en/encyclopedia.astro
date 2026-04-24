@@ -1,0 +1,115 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { siteConfig } from "../../../site.config";
+import { FEATURED_ADDITIVES, SEVERITY_LABELS } from "../../data/additives_featured";
+
+const title = "Encyclopédie des additifs alimentaires bébé , E-numbers à connaître | BébéDécrypte";
+const description = "Les E-numbers qui comptent quand on achète pour un bébé : dioxyde de titane, nitrites, BHA, aspartame, glutamate, amidons modifiés. Sources EFSA, ANSES, CIRC.";
+
+const definedTermSet = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  name: "Encyclopédie BébéDécrypte des additifs alimentaires",
+  description,
+  hasDefinedTerm: FEATURED_ADDITIVES.map((a) => ({
+    "@type": "DefinedTerm",
+    name: `${a.eNumber} , ${a.name}`,
+    termCode: a.eNumber,
+    description: a.babyWarning,
+    inDefinedTermSet: `${siteConfig.url}/encyclopedia/`,
+  })),
+};
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Accueil", item: siteConfig.url + "/" },
+    { "@type": "ListItem", position: 2, name: "Encyclopédie additifs", item: siteConfig.url + "/encyclopedia/" },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} jsonLd={[definedTermSet, breadcrumb]}>
+  <article class="hub-page">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="/">Accueil</a> <span aria-hidden="true">·</span>
+      <span>Encyclopédie additifs</span>
+    </nav>
+
+    <header class="hub-header fade-up">
+      <p class="eyebrow">Référence E-numbers</p>
+      <h1 data-speakable>Additifs alimentaires : ce qui compte vraiment quand on achète pour un bébé</h1>
+      <p class="lede" data-speakable>
+        Tous les additifs ne se valent pas, et ceux tolérés chez l'adulte ne sont pas toujours adaptés à un nourrisson dont la barrière intestinale, le foie et les reins sont immatures. Voici les {FEATURED_ADDITIVES.length} E-numbers qu'on traque en priorité dans le scoring BébéDécrypte, classés par sévérité. Sources : EFSA, ANSES, CIRC, règlements UE.
+      </p>
+    </header>
+
+    <section class="legend fade-up">
+      {(Object.entries(SEVERITY_LABELS) as Array<[keyof typeof SEVERITY_LABELS, typeof SEVERITY_LABELS[keyof typeof SEVERITY_LABELS]]>).map(([k, v]) => (
+        <span class="legend-pill">
+          <span class="dot" style={`background: ${v.color};`}></span>{v.label}
+        </span>
+      ))}
+    </section>
+
+    <section class="additives-grid fade-up">
+      {FEATURED_ADDITIVES.map((a) => (
+        <article class="additive-card" id={`e-${a.eNumber}`}>
+          <header class="a-head">
+            <span class="a-code">{a.eNumber}</span>
+            <span class="a-severity" style={`background: ${SEVERITY_LABELS[a.severity].color};`}>
+              {SEVERITY_LABELS[a.severity].label}
+            </span>
+          </header>
+          <h2>{a.name}</h2>
+          <p class="a-role">{a.role}</p>
+          <p class="a-warning">{a.babyWarning}</p>
+          <p class="a-source">Source : {a.source}</p>
+        </article>
+      ))}
+    </section>
+
+    <section class="foot-cta fade-up">
+      <h2>Comment tu peux utiliser cette encyclopédie ?</h2>
+      <ul>
+        <li><strong>En rayon :</strong> si tu lis une étiquette avec un E-numéro inconnu, cherche-le ici avant d'acheter.</li>
+        <li><strong>Sur une fiche produit BébéDécrypte :</strong> chaque additif détecté est surligné avec sa sévérité, et la pondération bébé (25 % du score total) est doublée pour les produits ciblés avant 12 mois.</li>
+        <li><strong>Pour comparer :</strong> si ta marque habituelle utilise du E320 ou du E171, notre <a href="/products/">catalogue</a> te propose les alternatives notées A ou B sans additif critique.</li>
+      </ul>
+      <p>
+        <a href="/methodology/" class="btn-secondary">Voir la méthodologie complète →</a>
+      </p>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .hub-page { max-width: 64rem; margin: 2rem auto 4rem; padding: 0 1.25rem; }
+  .breadcrumb { display: flex; gap: 0.4rem; flex-wrap: wrap; font-size: 0.82rem; color: var(--color-ink-soft); margin-bottom: 1.5rem; }
+  .breadcrumb a { color: var(--color-primary-dark); text-decoration: underline; text-underline-offset: 3px; }
+  .hub-header { margin-bottom: 2rem; }
+  .eyebrow { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-primary-dark); margin: 0 0 0.5rem; }
+  .hub-header h1 { font-size: clamp(1.75rem, 4vw, 2.4rem); margin: 0 0 0.75rem; line-height: 1.2; }
+  .lede { color: var(--color-ink-soft); max-width: 48rem; line-height: 1.6; margin: 0; }
+  .legend { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+  .legend-pill { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.35rem 0.7rem; background: #fff; border: 1px solid var(--color-border); border-radius: 999px; font-size: 0.78rem; font-weight: 600; color: var(--color-ink); }
+  .dot { width: 0.7rem; height: 0.7rem; border-radius: 999px; display: inline-block; }
+  .additives-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr)); gap: 1rem; }
+  .additive-card { background: #fff; border: 1px solid var(--color-border); border-radius: 0.75rem; padding: 1rem 1.15rem; transition: transform 200ms var(--ease-out-expo), border-color 200ms ease; scroll-margin-top: 6rem; }
+  .additive-card:hover { transform: translateY(-2px); border-color: var(--color-primary); }
+  .a-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.55rem; }
+  .a-code { font-family: var(--font-display); font-weight: 800; font-size: 1rem; color: var(--color-primary-dark); }
+  .a-severity { font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: #fff; padding: 0.2rem 0.55rem; border-radius: 999px; }
+  .additive-card h2 { font-family: var(--font-display); font-size: 1rem; margin: 0 0 0.35rem; color: var(--color-ink); line-height: 1.3; }
+  .a-role { font-size: 0.78rem; color: var(--color-ink-soft); margin: 0 0 0.6rem; font-style: italic; }
+  .a-warning { font-size: 0.88rem; color: var(--color-ink); line-height: 1.5; margin: 0 0 0.55rem; }
+  .a-source { font-size: 0.72rem; color: var(--color-ink-soft); margin: 0; }
+  .foot-cta { margin-top: 3rem; padding: 1.75rem; background: var(--color-bg-soft); border-radius: 0.875rem; border: 1px solid var(--color-border); }
+  .foot-cta h2 { font-family: var(--font-display); font-size: 1.15rem; color: var(--color-primary-dark); margin: 0 0 0.75rem; }
+  .foot-cta ul { margin: 0 0 1rem; padding-left: 1.25rem; color: var(--color-ink-soft); line-height: 1.55; font-size: 0.92rem; }
+  .foot-cta li { margin-bottom: 0.45rem; }
+  .foot-cta a { color: var(--color-primary-dark); font-weight: 600; }
+  .btn-secondary { display: inline-block; padding: 0.7rem 1.15rem; background: var(--color-primary); color: #fff !important; border-radius: 0.5rem; text-decoration: none; font-weight: 600; }
+  .btn-secondary:hover { background: var(--color-primary-dark); }
+</style>

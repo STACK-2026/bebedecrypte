@@ -63,14 +63,14 @@ Dextrose, extrait naturel de camomille (3,8 %), arôme naturel de camomille.
 
 ## Alternatives mieux notées dans Boissons bébé
 
-- [Auchan Baby Brassé Végétal Riz Banane Pomme Framboise](/fr/produits/auchan-baby-brasse-vegetal-riz-banane-pomme-framboise/) , note A (91/100)
-- [Auchan Baby Bio Purée de fruits - Pomme.](/fr/produits/auchan-baby-bio-puree-de-fruits-pomme/) , note A (91/100)
-- [Auchan Purée de fruits POMME ANANAS](/fr/produits/auchan-puree-de-fruits-pomme-ananas/) , note A (90/100)
-- [Auchan Purée de fruits POMME POIRE](/fr/produits/auchan-puree-de-fruits-pomme-poire/) , note A (90/100)
+- [Auchan Baby Brassé Végétal Riz Banane Pomme Framboise](/products/auchan-baby-brasse-vegetal-riz-banane-pomme-framboise/) , note A (91/100)
+- [Auchan Baby Bio Purée de fruits - Pomme.](/products/auchan-baby-bio-puree-de-fruits-pomme/) , note A (91/100)
+- [Auchan Purée de fruits POMME ANANAS](/products/auchan-puree-de-fruits-pomme-ananas/) , note A (90/100)
+- [Auchan Purée de fruits POMME POIRE](/products/auchan-puree-de-fruits-pomme-poire/) , note A (90/100)
 
 ## Méthodologie
 
 Cette note est générée automatiquement par notre algorithme BébéDécrypte, basé sur 8 critères pondérés spécifiques à l'alimentation infantile (transformation, additifs, sucres, Nutri-Score, bio, allergènes, origine, simplicité). Les données sources proviennent d'Open Food Facts et sont relues par notre équipe éditoriale.
 
-Voir la [méthodologie complète](/fr/methodologie/) et la [page catégorie Boissons bébé](/fr/categories/boissons/).
+Voir la [méthodologie complète](/methodology/) et la [page catégorie Boissons bébé](/categories/boissons/).
 

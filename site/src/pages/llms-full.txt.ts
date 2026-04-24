@@ -38,7 +38,7 @@ export const GET: APIRoute = async () => {
 > ${siteConfig.description}
 
 Site: ${siteConfig.url}
-Languages: French (primary, /fr/), English (/)
+Languages: French (primary, /), English (/en/)
 Source: ${siteConfig.url}/llms-full.txt
 Shorter summary: ${siteConfig.url}/llms.txt
 

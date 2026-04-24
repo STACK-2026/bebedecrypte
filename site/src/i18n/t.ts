@@ -3,10 +3,10 @@
 // FR + EN bilingual (FR default , marché principal)
 // ============================================
 
-export type Locale = "en" | "fr";
+export type Locale = "fr" | "en";
 
-export const LOCALES: Locale[] = ["en", "fr"];
-export const DEFAULT_LOCALE: Locale = "en";
+export const LOCALES: Locale[] = ["fr", "en"];
+export const DEFAULT_LOCALE: Locale = "fr";
 
 export interface Translation {
   en: string;
@@ -15,21 +15,21 @@ export interface Translation {
 
 // Utility: pick the right language from a translation object
 export function t(tr: Translation, locale: Locale = DEFAULT_LOCALE): string {
-  return tr[locale] || tr.en;
+  return tr[locale] || tr.fr;
 }
 
-// Utility: get the URL prefix for a locale (en = "", fr = "/fr")
+// Utility: get the URL prefix for a locale (fr = "", en = "/en")
 export function localeUrl(path: string, locale: Locale = DEFAULT_LOCALE): string {
-  if (locale === "en") return path;
-  if (path === "/") return "/fr/";
-  return "/fr" + (path.startsWith("/") ? path : "/" + path);
+  if (locale === "fr") return path;
+  if (path === "/") return "/en/";
+  return "/en" + (path.startsWith("/") ? path : "/" + path);
 }
 
 // Utility: detect current locale from Astro URL
 export function getLocale(url: URL | string): Locale {
   const pathname = typeof url === "string" ? url : url.pathname;
-  if (pathname.startsWith("/fr/") || pathname === "/fr") return "fr";
-  return "en";
+  if (pathname.startsWith("/en/") || pathname === "/en") return "en";
+  return "fr";
 }
 
 // ============================================

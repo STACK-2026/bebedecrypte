@@ -7,14 +7,14 @@ export async function GET(context: any) {
   const posts = (
     await getCollection("blog", ({ data }) => !data.draft && data.date <= now)
   )
-    .filter((p) => (p.data.lang || "en") === "en")
+    .filter((p) => (p.data.lang || "en") === "fr")
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
     .slice(0, 50);
 
   return rss({
     title: `${siteConfig.name} Blog`,
     description:
-      "Independent pet food ratings from A to E. Brand reviews, species guides, ingredient deep-dives.",
+      "Notation indépendante de l'alimentation bébé de A à E. Guides nutrition, analyses d'ingrédients, enquêtes marques, rappels produits.",
     site: siteConfig.url,
     items: posts.map((post) => ({
       title: post.data.title,
@@ -24,6 +24,6 @@ export async function GET(context: any) {
       categories: post.data.tags,
       author: post.data.author,
     })),
-    customData: `<language>en</language>`,
+    customData: `<language>fr</language>`,
   });
 }

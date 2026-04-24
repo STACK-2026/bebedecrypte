@@ -95,7 +95,7 @@ const productLd = {
 const gradeColors: Record<string, string> = { A: "var(--grade-a)", B: "var(--grade-b)", C: "var(--grade-c)", D: "var(--grade-d)", E: "var(--grade-e)" };
 ---
 
-<BaseLayout title={data.title} description={data.description} jsonLd={[productLd, breadcrumb]}>
+<BaseLayout title={data.title} description={data.description} jsonLd={[productLd, breadcrumb]} localized={false}>
   <article class="product-page">
     <nav class="breadcrumb" aria-label="Fil d'Ariane">
       <a href="/">Accueil</a> <span aria-hidden="true">·</span>
